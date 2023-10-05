@@ -1,0 +1,64 @@
+<section id="test">
+       <h2>Keito</h2>
+       <a href="keito.html">
+         <img
+            class="fit-picture"
+            src="images/keito.png"
+            alt="Keito link."></a></section>
+     <section id="test">
+       <h2>Kuro</h2>
+       <a href="kuro.html">
+         <img
+            class="fit-picture"
+            src="images/kuro.png"
+            alt="Kuro link."></a></section>
+     <section id="test">
+       <h2>Souma</h2>
+       <a href="souma.html">
+         <img
+            class="fit-picture"
+            src="images/souma.png"
+            alt="Souma link."></a></section>
+     <section id="test">
+       <h2>Chiaki</h2>
+       <a href="chiaki.html">
+         <img
+            class="fit-picture"
+            src="images/chiaki.png"
+            alt="Chiaki link."></a></section>
+     <section id="test">
+       <h2>Kanata</h2>
+       <a href="kanata.html">
+         <img
+            class="fit-picture"
+            src="images/kanata.png"
+            alt="Kanata link."></a></section>
+     <section id="test">
+       <h2>Tetora</h2>
+       <a href="tetora.html">
+         <img
+            class="fit-picture"
+            src="images/tetora.png"
+            alt="Tetora link."></a></section>
+     <section id="test">
+       <h2>Midori</h2>
+       <a href="midori.html">
+         <img
+            class="fit-picture"
+            src="images/midori.png"
+            alt="Midori link."></a></section>
+     <section id="test">
+       <h2>Shinobu</h2>
+       <a href="shinobu.html">
+         <img
+            class="fit-picture"
+            src="images/shinobu.png"
+            alt="Shinobu link."></a></section>
+
+     <section id="Essays">
+       <h2>Essays</h2>
+       <a href="shinobu.html">
+         <img
+            class="fit-picture"
+            src="images/shinobu.png"
+            alt="Shinobu link."></a></section>

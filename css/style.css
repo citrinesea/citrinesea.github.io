@@ -1,0 +1,50 @@
+body {font-family: Georgia, Garamond, "Times New Roman", serif;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+       "header"
+       "main"
+       "footer";
+      grid-gap: 16px;
+
+      text-align: center;}
+
+h1, h2, h3 {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+                  text-align: center;}
+h1{text-transform: uppercase;
+         font-size: 4em;
+         color: rgba(255, 255, 255, 1);
+
+         margin-top: 0.5em;
+         margin-bottom: 0.3em;}
+h2{font-size: 2em;
+         color: rgba(150, 150, 150, 1);}
+
+
+header, footer {background-color: rgba(5, 1, 13, 1)}
+main{
+     display: grid;
+     grid-template-rows: 1fr;
+     grid-gap: 16px;
+    }
+
+.question {
+background-color: #b4b4b4;}
+
+.essay {
+background-color: white;
+text-align:left;}
+
+.quote {
+background-color: #f0f0f0;
+color: black;}
+
+footer p{color: rgba(255, 255, 255, 1);
+         font-size: 0.7em;}
+
+
+a:link {color: rgba(229,152,155,1);}
+a:visited {color: rgba(181, 131, 141,1);}
+a:hover{color: rgba(255, 221, 210,1);}
+a:active{color: rgba(217, 204, 217, 1);}
+
