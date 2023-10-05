@@ -26,11 +26,20 @@ main{
      grid-template-rows: 1fr;
      grid-gap: 16px;
     }
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
 
 img {
   width: auto ;
   max-width: 100% ;
   height: auto ;
+}
+div {
+    width: 100vw;
+    height: 100vh;
 }
 
 .question {
