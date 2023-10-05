@@ -26,17 +26,30 @@ main{
      grid-template-rows: 1fr;
      grid-gap: 16px;
     }
-body {
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-}
 
 img {
   width: auto ;
   max-width: 100% ;
-  height: auto ;
+  height: auto ;}
+
+.square {
+  height: auto;
+  width: auto;
+  position: relative;
 }
+
+.square {
+transition: box-shadow .3s;
+background-color: #f0f0f0;
+margin: 15px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: left;
+color: black;
+text-align:center;}
+
+.square:hover {
+  box-shadow: 0 0 15px rgba(33,33,33,.4);} 
 
 .preview{
     width: 100vw;
@@ -47,11 +60,21 @@ background-color: #b4b4b4;}
 
 .essay {
 background-color: white;
-text-align:left;}
+text-align:left;
+margin: 15px;}
 
 .quote {
+transition: box-shadow .3s;
 background-color: #f0f0f0;
-color: black;}
+margin: 15px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: left;
+color: black;
+text-align:center;}
+
+.quote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);} 
 
 footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
