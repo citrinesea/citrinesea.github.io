@@ -37,10 +37,10 @@ img {
   max-width: 100% ;
   height: auto ;
 }
-div {
+
+.preview{
     width: 100vw;
-    height: 100vh;
-}
+    height: 100vh;}
 
 .question {
 background-color: #b4b4b4;}
