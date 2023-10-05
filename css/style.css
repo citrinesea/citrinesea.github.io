@@ -11,8 +11,7 @@ body {font-family: Georgia, Garamond, "Times New Roman", serif;
 
 h1, h2, h3 {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
                   text-align: center;}
-h1{text-transform: uppercase;
-         font-size: 4em;
+h1{      font-size: 4em;
          color: rgba(255, 255, 255, 1);
 
          margin-top: 0.5em;
