@@ -6,16 +6,16 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
        "main"
        "footer";
       grid-gap: 16px;
-      text-align: center;}
+      text-align: left;}
 
 h1, h2, h3 {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
-                  text-align: center;}
+                  text-align: left;}
 h1{      font-size: 4em;
          color: rgba(255, 255, 255, 1);
-         margin-top: 0.5em;
-         margin-bottom: 0.3em;}
-h2{font-size: 1.7em;
-         color: rgba(255, 255, 255, 1);}
+         margin: 25px}
+h2{      font-size: 1.7em;
+         color: rgba(255, 255, 255, 1);
+	 margin: 25px}
 
 
 header, footer {background-color: #173243}
@@ -29,6 +29,11 @@ img {
   width: auto ;
   max-width: 100% ;
   height: auto ;}
+
+.profileimg{
+  max-width: 200px;
+  max-height: 200px;
+  }
 
 .row:after {
   content: "";
@@ -44,17 +49,60 @@ img {
 .nav {
   overflow: hidden;
   background-color: #5F8053;
+  color: white;
 }
 .nav a {
   float: center;
   color: #f2f2f2;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.5em;
 }
-.nav a:hover {
-  background-color: #ddd;
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 24px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.nav a:hover, .dropdown:hover .dropbtn {
+  background-color: #BDD561;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #5F8053;
+  min-width: 160px;
+  font-size: 24px;  
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
   color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #BDD561;
+  color: #040D2B;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .square {
@@ -107,12 +155,80 @@ text-align:center;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
+.producerdeco {
+  text-align: center;
+  max-width: 200px;}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+.keitodot {
+  height: 25px;
+  width: 25px;
+  background-color: #4C7B14;
+  border-radius: 50%;
+  display: inline-block;
+}
+.kurodot {
+  height: 25px;
+  width: 25px;
+  background-color: #922B2B;
+  border-radius: 50%;
+  display: inline-block;
+}
+.soumadot {
+  height: 25px;
+  width: 25px;
+  background-color: #9242A9;
+  border-radius: 50%;
+  display: inline-block;
+}
+.chiakidot {
+  height: 25px;
+  width: 25px;
+  background-color: #D70000;
+  border-radius: 50%;
+  display: inline-block;
+}
+.kanatadot {
+  height: 25px;
+  width: 25px;
+  background-color: #018FCD;
+  border-radius: 50%;
+  display: inline-block;
+}
+.tetoradot {
+  height: 25px;
+  width: 25px;
+  background-color: #4F4055;
+  border-radius: 50%;
+  display: inline-block;
+}
+.midoridot {
+  height: 25px;
+  width: 25px;
+  background-color: #42B113;
+  border-radius: 50%;
+  display: inline-block;
+}
+.shinobudot {
+  height: 25px;
+  width: 25px;
+  background-color: #FFC300;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
 
 
-a:link {color: rgba(255, 255, 255,1);}
-a:visited {color: rgba(181, 131, 141,1);}
-a:hover{color: rgba(255, 221, 210,1);}
-a:active{color: rgba(217, 204, 217, 1);}
+a:link {color: white;}
+a:visited {color: white;}
+a:hover{color: white;}
+a:active{color: white;}
 
