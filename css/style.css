@@ -1,4 +1,4 @@
-body {font-family: Georgia, Garamond, "Times New Roman", serif;
+body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
       display: grid;
       grid-template-rows: 1fr;
       grid-template-areas:
@@ -6,57 +6,86 @@ body {font-family: Georgia, Garamond, "Times New Roman", serif;
        "main"
        "footer";
       grid-gap: 16px;
-
       text-align: center;}
 
 h1, h2, h3 {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
                   text-align: center;}
 h1{      font-size: 4em;
          color: rgba(255, 255, 255, 1);
-
          margin-top: 0.5em;
          margin-bottom: 0.3em;}
-h2{font-size: 2em;
-         color: rgba(150, 150, 150, 1);}
+h2{font-size: 1.7em;
+         color: rgba(255, 255, 255, 1);}
 
 
-header, footer {background-color: rgba(5, 1, 13, 1)}
+header, footer {background-color: #173243}
 main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
-    }
+}
 
 img {
   width: auto ;
   max-width: 100% ;
   height: auto ;}
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column{
+  float: left;
+  column-gap: 20%;  
+  width: 50%;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #5F8053;
+}
+.nav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 .square {
   height: auto;
   width: auto;
   position: relative;
 }
-
 .square {
 transition: box-shadow .3s;
-background-color: #f0f0f0;
+background-color: #F2F4F1;
 margin: 15px;
 border-radius:10px;
 border: 1px solid #ccc;
 float: left;
 color: black;
-text-align:center;}
-
+text-align:center;
+}
 .square:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);} 
 
-.preview{
-    width: 100vw;
-    height: 100vh;}
+.hide {
+  display: none;
+}
+.square:hover + .hide {
+  display: block;
+  color: black;
+}
 
 .question {
-background-color: #b4b4b4;}
+background-color: #5F8053;
+color: white;}
 
 .essay {
 background-color: white;
@@ -65,22 +94,24 @@ margin: 15px;}
 
 .quote {
 transition: box-shadow .3s;
-background-color: #f0f0f0;
+width: 100%;
+background-color: #F2F4F1;
 margin: 15px;
 border-radius:10px;
 border: 1px solid #ccc;
 float: left;
 color: black;
-text-align:center;}
-
+text-align:center;
+}
 .quote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);} 
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
 
 footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
 
 
-a:link {color: rgba(229,152,155,1);}
+a:link {color: rgba(255, 255, 255,1);}
 a:visited {color: rgba(181, 131, 141,1);}
 a:hover{color: rgba(255, 221, 210,1);}
 a:active{color: rgba(217, 204, 217, 1);}
