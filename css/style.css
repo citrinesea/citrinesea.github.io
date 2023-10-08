@@ -110,6 +110,11 @@ img {
   display: block;
 }
 
+.category{
+text-align: center;
+font-size: 15px;
+}
+
 .square {
   height: auto;
   width: auto;
