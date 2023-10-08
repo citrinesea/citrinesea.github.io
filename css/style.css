@@ -147,12 +147,19 @@ text-align:center;
 padding: 15px;
 margin: 5px;
 background-color: #5F8053;
-color: white;}
+color: white;
+width: 80%;
+display: inline-block;}
+
+.essaybox {
+text-align:center;}
 
 .essay {
 background-color: white;
 text-align:left;
-margin: 5px;}
+margin: 5px;
+width: 80%;
+display: inline-block;}
 
 .note{
 font-size: 12px;
@@ -174,6 +181,9 @@ text-align:center;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
+.keitolabel {
+text-align:left;
+}
 .keitoquote {
 transition: box-shadow .3s;
 background-color: #ddf2d3;
@@ -295,11 +305,21 @@ text-align:center;
 }  
 .citationtext{
 text-align: right;
-font-size: 14px;}
+font-size: 14px;
+}
 
+.about{
+text-align: center;
+}
+.aboutTOS{
+display: inline-block;
+text-align: left;
+width:80%;
+}
 .producerdeco {
   text-align: center;
-  max-width: 200px;}
+  display: inline-block;
+}
 
 .dot {
   height: 25px;
@@ -308,6 +328,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.dot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
 .keitodot {
   height: 25px;
   width: 25px;
@@ -315,6 +339,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.keitodot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .kurodot {
   height: 25px;
   width: 25px;
@@ -322,6 +350,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.kurodot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .soumadot {
   height: 25px;
   width: 25px;
@@ -329,6 +361,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.soumadot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .chiakidot {
   height: 25px;
   width: 25px;
@@ -336,6 +372,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.chiakidot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .kanatadot {
   height: 25px;
   width: 25px;
@@ -343,6 +383,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.kanatadot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .tetoradot {
   height: 25px;
   width: 25px;
@@ -350,6 +394,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.tetoradot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .midoridot {
   height: 25px;
   width: 25px;
@@ -357,6 +405,10 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.midoridot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
+
 .shinobudot {
   height: 25px;
   width: 25px;
@@ -364,6 +416,9 @@ font-size: 14px;}
   border-radius: 50%;
   display: inline-block;
 }
+.shinobudot:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.7);
+} 
 
 footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
