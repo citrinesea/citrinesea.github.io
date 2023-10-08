@@ -18,7 +18,8 @@ h2{      font-size: 1.7em;
 	 margin: 25px}
 
 
-header, footer {background-color: #173243}
+header, footer {background-color: white;
+padding: 15px;}
 main{
      display: grid;
      grid-template-rows: 1fr;
@@ -29,6 +30,10 @@ img {
   width: auto ;
   max-width: 100% ;
   height: auto ;}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;}
 
 .profileimg{
   max-width: 200px;
@@ -48,7 +53,7 @@ img {
 
 .nav {
   overflow: hidden;
-  background-color: #5F8053;
+  background-color: #9b1919;
   color: white;
 }
 .nav a {
@@ -80,7 +85,7 @@ img {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #5F8053;
+  background-color: #9b1919;
   min-width: 160px;
   font-size: 24px;  
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -132,13 +137,20 @@ text-align:center;
 }
 
 .question {
+padding: 15px;
+margin: 5px;
 background-color: #5F8053;
 color: white;}
 
 .essay {
 background-color: white;
 text-align:left;
-margin: 15px;}
+margin: 5px;}
+
+.note{
+font-size: 12px;
+text-align: center
+}
 
 .quote {
 transition: box-shadow .3s;
@@ -154,6 +166,99 @@ text-align:center;
 .quote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
+
+.keitoquote {
+transition: box-shadow .3s;
+background-color: #ddf2d3;
+padding: 5px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.keitoquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.soumaquote {
+transition: box-shadow .3s;
+background-color: #e3d3f2;
+padding: 5px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.soumaquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.kanataquote {
+transition: box-shadow .3s;
+background-color: #d3e9f2;
+padding: 5px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.kanataquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.midoriquote {
+transition: box-shadow .3s;
+background-color: #eaf2d3;
+padding: 5px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.midoriquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
+.otherquote {
+transition: box-shadow .3s;
+background-color: #e8e3df;
+padding: 5px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.otherquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+
+.citation{
+transition: box-shadow .3s;
+background-color: #F2F4F1;
+margin: 10px;
+border-radius:10px;
+border: 1px solid #ccc;
+font-size: 14px;
+color: black;
+text-align:center;
+}
+.citation:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+.citationtext{
+text-align: right;
+font-size: 14px;}
 
 .producerdeco {
   text-align: center;
