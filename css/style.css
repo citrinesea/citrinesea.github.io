@@ -8,14 +8,15 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
       grid-gap: 16px;
       text-align: left;}
 
-h1, h2, h3 {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+h1, h2, h3 {font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
                   text-align: left;}
 h1{      font-size: 4em;
          color: rgba(255, 255, 255, 1);
          margin: 25px}
-h2{      font-size: 1.7em;
-         color: rgba(255, 255, 255, 1);
-	 margin: 25px}
+h2{      font-size: 1.5em;
+         color: black;
+	 margin: 0px 15px 0px 20px;
+	 text-align: left;}
 
 
 header, footer {background-color: white;
@@ -29,16 +30,20 @@ main{
 img {
   width: auto ;
   max-width: 100% ;
+  max-height: 100% ;
   height: auto ;}
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;}
 
+.profilepage{
+  text-align:center;
+}
 .profileimg{
   max-width: 200px;
   max-height: 200px;
-  }
+}
 
 .row:after {
   content: "";
@@ -81,13 +86,18 @@ img {
 .nav a:hover, .dropdown:hover .dropbtn {
   background-color: #BDD561;
 }
+.nav a:link {color: white;}
+.nav a:visited {color: white;}
+.nav a:hover{color: white;}
+.nav a:active{color: white;}
 
 .dropdown-content {
   display: none;
   position: absolute;
+  color: white;
   background-color: #9b1919;
   min-width: 160px;
-  font-size: 16px;  
+  font-size: 16px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -169,10 +179,10 @@ text-align: center
 .quote {
 transition: box-shadow .3s;
 width: 100%;
-background-color: #F2F4F1;
+background-color: white;
 margin: 15px;
 border-radius:10px;
-border: 1px solid #ccc;
+border: 0px solid #ccc;
 float: left;
 color: black;
 text-align:center;
@@ -180,6 +190,10 @@ text-align:center;
 .quote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
+.quotelabel{
+text-align:left;
+text-indent: 1px;
+padding: 10px 10px 1px 10px;}
 
 .keitolabel {
 text-align:left;
@@ -217,7 +231,7 @@ text-align:left;
 .chiakiquote {
 transition: box-shadow .3s;
 background-color: #f2d3d3;
-padding: 5px;
+padding: 0px 3px 5px 10px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -225,14 +239,14 @@ float: center;
 color: black;
 text-align:left;
 }
-.shinobuquote:hover {
+.chiakiquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 } 
 
 .kanataquote {
 transition: box-shadow .3s;
 background-color: #d3e9f2;
-padding: 5px;
+padding: 3px 3px 5px 10px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -244,10 +258,25 @@ text-align:left;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
+.tetoraquote {
+transition: box-shadow .3s;
+background-color: #D1CCD2;
+padding: 3px 3px 5px 10px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.tetoraquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
 .midoriquote {
 transition: box-shadow .3s;
 background-color: #eaf2d3;
-padding: 5px;
+padding: 3px 3px 5px 10px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -424,8 +453,8 @@ footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
 
 
-a:link {color: white;}
-a:visited {color: white;}
-a:hover{color: white;}
-a:active{color: white;}
+a:link {color: black;}
+a:visited {color: black;}
+a:hover{color: black;}
+a:active{color: black;}
 
