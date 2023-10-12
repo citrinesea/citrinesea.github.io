@@ -143,6 +143,14 @@ color: white;
 width: 100%;
 display: inline-block;}
 
+.citationcategoryribbon{
+padding: 0px;
+margin: 5px;
+background-color: #7e827a;
+color: white;
+width: 100%;
+display: inline-block;}
+
 .square {
   height: auto;
   width: auto;
