@@ -139,13 +139,18 @@ img {
 text-align: center;
 font-size: 15px;
 }
+.categorylanes{
+width: 80%;
+display: inline-block;
+}
+
 .disclaimer{
 transition: box-shadow .3s;
-background-color: #f6fae8;
-padding: 5px;
+background-color: white;
+padding: 15px;
 margin: auto;
 border-radius:10px;
-border: 0px solid #ccc;
+border: 1px solid #ccc;
 float: center;
 color: black;
 width: 70%;
@@ -202,7 +207,8 @@ text-align:center;
 .question {
 padding: 15px;
 margin: 5px;
-background-color: #5F8053;
+border-radius:10px;
+background-color: #372a45;
 color: white;
 width: 80%;
 display: inline-block;}
@@ -257,6 +263,25 @@ color: black;
 text-align:left;
 }
 .keitoquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.kurolabel {
+text-align:left;
+}
+.kuroquote {
+transition: box-shadow .3s;
+background-color: #F3D0C0;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.kuroquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
