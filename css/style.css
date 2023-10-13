@@ -37,6 +37,26 @@ img {
   margin-left: auto;
   margin-right: auto;}
 
+.figure {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+  }
+  .figure img.Sirv.image-hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .figure:hover img.Sirv.image-hover {
+    opacity: 1;
+  }
+
+
 .profilepage{
   text-align:center;
 }
@@ -138,7 +158,7 @@ text-align:left;
 .categoryribbon{
 padding: 0px;
 margin: 5px;
-background-color: #5F8053;
+background-color: #372a45;
 color: white;
 width: 100%;
 display: inline-block;}
@@ -169,7 +189,8 @@ color: black;
 text-align:center;
 }
 .square:hover {
-  box-shadow: 0 0 15px rgba(33,33,33,.4);} 
+  box-shadow: 0 0 15px rgba(33,33,33,.4);
+  }
 
 .hide {
   display: none;
@@ -228,6 +249,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #ddf2d3;
 padding: 5px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -243,6 +265,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #e3d3f2;
 padding: 5px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -258,6 +281,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #f2d3d3;
 padding: 0px 3px 5px 10px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -273,6 +297,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #d3e9f2;
 padding: 3px 3px 5px 10px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -288,6 +313,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #D1CCD2;
 padding: 3px 3px 5px 10px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -303,6 +329,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #eaf2d3;
 padding: 3px 3px 5px 10px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -318,6 +345,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #f2eed3;
 padding: 5px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
@@ -333,6 +361,7 @@ text-align:left;
 transition: box-shadow .3s;
 background-color: #e8e3df;
 padding: 5px;
+padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
