@@ -15,27 +15,32 @@ h1{      font-size: 4em;
          margin: 25px}
 h2{      font-size: 1.5em;
          color: black;
-	 margin: 0px 15px 0px 20px;
-	 text-align: left;}
+	 margin: 15;
+	 text-align: center;}
 
 
 header, footer {background-color: white;
-padding: 15px;}
+padding: 15px;
+text-align:center;}
 main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
+     background-color: white;
 }
 
 img {
   width: auto ;
   max-width: 100% ;
   max-height: 100% ;
-  height: auto ;}
-.center {
-  display: block;
+  height: auto ;}  
+.logo {
   margin-left: auto;
-  margin-right: auto;}
+  margin-right: auto;
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  float: left;}
 
 .figure {
     position: relative;
@@ -55,7 +60,6 @@ img {
     opacity: 1;
   }
 
-
 .profilepage{
   text-align:center;
 }
@@ -74,11 +78,23 @@ img {
   column-gap: 20%;  
   width: 50%;
 }
+.navcolumn{
+  float: right;
+  column-gap: 5%;
+  width: 10%
+}
+.contentcolumn{
+  float: left;
+  column-gap: 5%;  
+  width: 85%;
+}
 
 .nav {
   overflow: hidden;
-  background-color: #9b1919;
+  background-color: #9b1108;
   color: white;
+  border-radius:10px;
+  width: 100%
 }
 .nav a {
   float: center;
@@ -86,9 +102,8 @@ img {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 .dropdown {
-  float: left;
+  float: center;
   overflow: hidden;
 }
 .dropdown .dropbtn {
@@ -103,6 +118,7 @@ img {
 
 .nav a:hover, .dropdown:hover .dropbtn {
   background-color: #BDD561;
+  min-width: 100%;
 }
 .nav a:link {color: white;}
 .nav a:visited {color: white;}
@@ -114,7 +130,9 @@ img {
   position: absolute;
   color: white;
   background-color: #9b1919;
+  border-radius:10px;
   min-width: 160px;
+  max-width: 100%
   font-size: 16px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -130,9 +148,20 @@ img {
 .dropdown-content a:hover {
   background-color: #BDD561;
   color: #040D2B;
+  max-width: 100;
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.chibi-nav{
+width: 75px;
+height: 75px;
+display: inline-block;
+transition: transform .1s;
+}
+.chibi-nav:hover {
+transform: scale(1.5);;
 }
 
 .category{
@@ -155,6 +184,7 @@ float: center;
 color: black;
 width: 70%;
 text-align:left;
+font-size: 14px;
 }
 .disclaimer:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -162,7 +192,8 @@ text-align:left;
 .categoryribbon{
 padding: 0px;
 margin: 5px;
-background-color: #372a45;
+background-color: #5c0010;
+border-radius:10px;
 color: white;
 width: 100%;
 display: inline-block;}
@@ -208,7 +239,7 @@ text-align:center;
 padding: 15px;
 margin: 5px;
 border-radius:10px;
-background-color: #372a45;
+background-color: #5c0010;
 color: white;
 width: 80%;
 display: inline-block;}
@@ -430,6 +461,20 @@ width:80%;
   margin: 15px;	
   max-width: auto;
 }
+.producersquare {
+  height: auto;
+  width: auto;
+  position: relative;
+  background-color: white;
+  border-radius:10px;
+  text-color: white;
+  padding: 10px;
+}
+.producersquare a:link {color: black; text-decoration: none;}
+.producersquare a:visited {color: #436e3f; text-decoration: none;}
+.producersquare a:hover{color: #95b092; text-decoration: none;}
+.producersquare a:active{color: black; text-decoration: none;}
+
 .TOSsquare {
   height: auto;
   width: auto;
@@ -553,8 +598,8 @@ footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
 
 
-a:link {text-decoration: none;}
-a:visited {color: black;}
-a:hover{color: black;}
-a:active{color: black;}
+a:link {color: ##3d7500; text-decoration: none;}
+a:visited {color: #436e3f; text-decoration: none;}
+a:hover{color: #95b092; text-decoration: none;}
+a:active{color: black; text-decoration: none;}
 
