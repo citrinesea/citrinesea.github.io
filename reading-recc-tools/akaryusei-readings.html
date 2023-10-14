@@ -17,9 +17,9 @@
    <main>
      <div class="nav">
 	<div class="dropdown">
-		<button class="dropbtn"><a href="../index.html">home</a></button></div>
+		<a href="../index.html"><button class="dropbtn">home</button></a></div>
 	<div class="dropdown">
-		<button class="dropbtn"><a href="../contributor-pages/about.html">about</a></button></div>
+		<a href="../contributor-pages/about.html"><button class="dropbtn">about</button></a></div>
 	<div class="dropdown">
   		<button class="dropbtn">sort by contributor</button>
   		<div class="dropdown-content">
@@ -44,11 +44,34 @@
 <div class="categoryribbon">
 <p><b>AKARYUSEI READING RECOMMENDATION LIST</b></p></div>
 
-<p> Choose one AKATSUKI member </p>
-<div id="akatsukiSelection"></div>
+<div class="row"><div class="column">
+
+<h2>WORK IN PROGRESS</h2>
+<img id="placeholder" src="../images/reading-recc-thumbnails/wip-placeholder.jpg" /></div>
+
+
+<div class="column">
 
 <p> Choose one RYUSEITAI member </p>
-<div id="ryuseitaiSelection"></div>
+	<select id = "dropdown" onchange = "changeImage()">
+      		<option>Chiaki</option>
+      		<option>Kanata</option>
+      		<option>Tetora</option>
+      		<option>Midori</option>
+      		<option>Shinobu</option>
+   	</select>
+
+	<p> KEITO </p>
+	<img id="keito" src="" />
+
+	<p> KURO </p>
+	<img id="kuro" src="" />
+
+
+	<p> SOUMA </p>
+	<img id="souma" src="" />
+</div>
+
 
 <script src="../js/myScript.js" defer></script>
 
