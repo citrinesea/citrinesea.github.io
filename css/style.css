@@ -17,19 +17,36 @@ h2{      font-size: 1.5em;
          color: black;
 	 margin: 15;
 	 text-align: center;}
-h3{      font-size: 17px;
+h3{      font-size: 18px;
          color: black;
-	 text-align: left;}
+	 text-align: center;
+         text-indent: 5px;}
 
 
 header, footer {background-color: white;
-padding: 15px;
-text-align:center;}
+text-align:center;
+font-size: 16px
+}
+
 main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
      background-color: white;
+}
+
+hr {
+  height: 2px;
+  width: 20%;
+  border-width:0;
+  background-color:#bfa9a8;
+}
+
+.sectionnames{
+transition: transform .2s;
+}
+.sectionnames:hover {
+transform: scale(1.2);
 }
 
 img {
@@ -166,7 +183,9 @@ transition: transform .1s;
 .chibi-nav:hover {
 transform: scale(1.5);;
 }
-
+.chibi-nav-essay{
+text-align: center;
+}
 .category{
 text-align: center;
 font-size: 16px;
@@ -201,14 +220,6 @@ color: white;
 width: 100%;
 display: inline-block;}
 
-.citationcategoryribbon{
-padding: 0px;
-margin: 5px;
-background-color: #7e827a;
-color: white;
-width: 100%;
-display: inline-block;}
-
 .square {
   height: auto;
   width: auto;
@@ -238,6 +249,9 @@ text-align:center;
   color: black;
 }
 
+.entireessaybox{
+background-color: #f5f3f2;
+}
 .question {
 padding: 15px;
 margin: 5px;
@@ -245,26 +259,48 @@ border-radius:10px;
 background-color: #5c0010;
 color: white;
 width: 90%;
-display: inline-block;}
+display: inline-block;
+}
+
+.author{
+display: flex;
+align-items: center; 
+justify-content: center;
+}
+.author a:link {color: #396e00; text-decoration: none;}
+.author a:visited {color: #396e00; text-decoration: none;}
+.author a:hover{color: #95b092; text-decoration: none;}
+.author a:active{color: black; text-decoration: none;}
+
+.author-icon {
+max-width: 100px;
+}
+.datenote{
+font-size: 14px;
+text-align: left;
+}
 
 .essaybox {
 text-align:center;
 }
-.essay {
+.essaybg {
 background-color: white;
 text-align:left;
-margin: 5px;
 width: 90%;
 display: inline-block;
 }
-.essayribbon{
-text-align: left;
-padding: 10px;
-background-color: #9b1108;
-border-radius:5px;
-color: white;
-width: 100%;
-display: inline-block;}
+.essay {
+background-color: white;
+text-align:left;
+margin: 13px;
+display: inline-block;
+}
+.essay-analysis {
+background-color: white;
+text-align:left;
+margin: 5px;
+display: inline-block;
+}
 
 .note{
 font-size: 14px;
@@ -273,7 +309,7 @@ text-align: center
 
 .quote {
 transition: box-shadow .3s;
-width: 100%;
+width: 95%;
 background-color: white;
 padding: 10px;
 border-radius:10px;
@@ -295,7 +331,7 @@ text-align:left;
 }
 .keitoquote {
 transition: box-shadow .3s;
-background-color: #ddf2d3;
+background-color: #d2e3ca;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -314,7 +350,7 @@ text-align:left;
 }
 .kuroquote {
 transition: box-shadow .3s;
-background-color: #F3D0C0;
+background-color: #ebcfca;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -346,7 +382,7 @@ text-align:left;
 
 .chiakiquote {
 transition: box-shadow .3s;
-background-color: #f2d3d3;
+background-color: #ffc9c9;
 padding: 0px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
@@ -410,7 +446,7 @@ text-align:left;
 
 .shinobuquote {
 transition: box-shadow .3s;
-background-color: #f2eed3;
+background-color: #f5f2dc;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -440,18 +476,26 @@ text-align:left;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
-
-.citation{
+.citationbox{
+text-align: center;
+margin-left: auto;
+margin-right: auto;
 transition: box-shadow .3s;
-background-color: #F2F4F1;
-margin: 10px;
+background-color: white;
 border-radius:10px;
 border: 1px solid #ccc;
-font-size: 14px;
-color: black;
-text-align:center;
+font-size: 15px;
+color: #5c0010;
+justify-content: center;
+width: 80%;
 }
-.citation:hover {
+.citation{
+}
+.citation a:link {color: #396e00; text-decoration: none;}
+.citation a:visited {color: #396e00; text-decoration: none;}
+.citation a:hover{color: #95b092; text-decoration: none;}
+.citation a:active{color: black; text-decoration: none;}
+.citationbox:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 .citationtext{
@@ -506,105 +550,6 @@ text-align:left;
 }
 .TOSsquare:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);} 
-
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-.dot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
-
-.keitodot {
-  height: 25px;
-  width: 25px;
-  background-color: #316846;
-  border-radius: 50%;
-  display: inline-block;
-}
-.keitodot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.kurodot {
-  height: 25px;
-  width: 25px;
-  background-color: #E83A29;
-  border-radius: 50%;
-  display: inline-block;
-}
-.kurodot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.soumadot {
-  height: 25px;
-  width: 25px;
-  background-color: #5655A2;
-  border-radius: 50%;
-  display: inline-block;
-}
-.soumadot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.chiakidot {
-  height: 25px;
-  width: 25px;
-  background-color: #E51D35;
-  border-radius: 50%;
-  display: inline-block;
-}
-.chiakidot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.kanatadot {
-  height: 25px;
-  width: 25px;
-  background-color: #008DB7;
-  border-radius: 50%;
-  display: inline-block;
-}
-.kanatadot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.tetoradot {
-  height: 25px;
-  width: 25px;
-  background-color: #302833;
-  border-radius: 50%;
-  display: inline-block;
-}
-.tetoradot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.midoridot {
-  height: 25px;
-  width: 25px;
-  background-color: #01533F;
-  border-radius: 50%;
-  display: inline-block;
-}
-.midoridot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
-
-.shinobudot {
-  height: 25px;
-  width: 25px;
-  background-color: #FEDB00;
-  border-radius: 50%;
-  display: inline-block;
-}
-.shinobudot:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.7);
-} 
 
 footer p{color: rgba(255, 255, 255, 1);
          font-size: 0.7em;}
