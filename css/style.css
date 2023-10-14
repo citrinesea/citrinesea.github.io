@@ -17,6 +17,9 @@ h2{      font-size: 1.5em;
          color: black;
 	 margin: 15;
 	 text-align: center;}
+h3{      font-size: 17px;
+         color: black;
+	 text-align: left;}
 
 
 header, footer {background-color: white;
@@ -166,10 +169,10 @@ transform: scale(1.5);;
 
 .category{
 text-align: center;
-font-size: 15px;
+font-size: 16px;
 }
 .categorylanes{
-width: 80%;
+width: 90%;
 display: inline-block;
 }
 
@@ -184,7 +187,7 @@ float: center;
 color: black;
 width: 70%;
 text-align:left;
-font-size: 14px;
+font-size: 16px;
 }
 .disclaimer:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -214,7 +217,7 @@ display: inline-block;}
 .square {
 transition: box-shadow .3s;
 background-color: white;
-font-size: 15px;
+font-size: 16px;
 margin: 15px;
 padding: 5px;
 border-radius:10px;
@@ -241,7 +244,7 @@ margin: 5px;
 border-radius:10px;
 background-color: #5c0010;
 color: white;
-width: 80%;
+width: 90%;
 display: inline-block;}
 
 .essaybox {
@@ -251,11 +254,20 @@ text-align:center;
 background-color: white;
 text-align:left;
 margin: 5px;
-width: 80%;
+width: 90%;
+display: inline-block;
+}
+.essayribbon{
+text-align: left;
+padding: 10px;
+background-color: #9b1108;
+border-radius:5px;
+color: white;
+width: 100%;
 display: inline-block;}
 
 .note{
-font-size: 12px;
+font-size: 14px;
 text-align: center
 }
 
@@ -263,9 +275,9 @@ text-align: center
 transition: box-shadow .3s;
 width: 100%;
 background-color: white;
-margin: 15px;
+padding: 10px;
 border-radius:10px;
-border: 0px solid #ccc;
+border: 0px solid #5c0010;
 float: left;
 color: black;
 text-align:center;
@@ -483,7 +495,7 @@ width:80%;
 .TOSsquare {
 transition: box-shadow .3s;
 background-color: white;
-font-size: 15px;
+font-size: 16px;
 margin: 15px;
 padding: 10px;
 border-radius:10px;
