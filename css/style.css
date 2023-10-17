@@ -112,6 +112,10 @@ img {
   column-gap: 5%;  
   width: 85%;
 }
+.timelinecolumn{
+  float: left;
+  width: 25%;
+}
 
 .nav {
   overflow: hidden;
@@ -244,6 +248,22 @@ text-align:center;
 .square:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);
   }
+
+.timelinesquare{
+transition: box-shadow .3s;
+transition: transform .2s;
+background-color: white;
+font-size: 14px;
+margin: 7px;
+border-radius:10px;
+float: left;
+color: black;
+text-align:center;
+}
+.timelinesquare:hover {
+box-shadow: 0 0 15px rgba(33,33,33,.4);
+transform: scale(1.2);
+}
 
 .hide {
   display: none;
