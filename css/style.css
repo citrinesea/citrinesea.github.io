@@ -97,9 +97,16 @@ width: 100%
 
 .row:after {
   content: "";
-  display: table;
+  display: block;
   clear: both;
 }
+
+@media only screen and (max-width:767px) {
+  .row:after{
+    display: flex;
+  }
+}
+
 .column{
   float: left;
   column-gap: 20%;  
