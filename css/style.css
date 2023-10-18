@@ -116,6 +116,11 @@ img {
   float: left;
   width: 25%;
 }
+.fivecolumn{
+  float: left;
+  width: 20%;
+}
+
 
 .nav {
   overflow: hidden;
@@ -264,6 +269,7 @@ text-align:center;
 box-shadow: 0 0 15px rgba(33,33,33,.4);
 transform: scale(1.2);
 }
+
 
 .hide {
   display: none;
