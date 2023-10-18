@@ -70,6 +70,9 @@ img {
     position: relative;
     max-width: 100%;
   }
+.figure img{
+width: 100%
+}
   .figure img.Sirv.image-hover {
     position: absolute;
     top: 0;
