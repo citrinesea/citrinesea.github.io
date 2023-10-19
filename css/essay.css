@@ -1,0 +1,255 @@
+.essaybox {
+text-align:center;
+}
+.essaybg {
+background-color: white;
+text-align:left;
+width: 90%;
+display: inline-block;
+}
+.essay {
+background-color: white;
+text-align:left;
+margin: 5px;
+display: inline-block;
+}
+.essay-analysis {
+background-color: white;
+text-align:left;
+margin: 5px;
+display: inline-block;
+font-size: 16px;
+}
+.entireessaybox{
+background-color: #e3e0de;
+}
+.question {
+padding: 15px;
+margin: 5px;
+border-radius:10px;
+background-color: #5c0010;
+color: white;
+width: 90%;
+display: inline-block;
+}
+
+.note{
+font-size: 14px;
+text-align: center
+}
+
+.quote {
+transition: box-shadow .3s;
+width: 95%;
+background-color: white;
+padding: 10px;
+border-radius:10px;
+border: 0px solid #5c0010;
+float: left;
+color: black;
+text-align:center;
+}
+.quote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+.quotelabel{
+text-align:left;
+text-indent: 1px;
+padding: 10px 10px 1px 10px;}
+
+.keitolabel {
+text-align:left;
+}
+.keitoquote {
+transition: box-shadow .3s;
+background-color: #d2e3ca;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.keitoquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.kurolabel {
+text-align:left;
+}
+.kuroquote {
+transition: box-shadow .3s;
+background-color: #ebcfca;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.kuroquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.soumaquote {
+transition: box-shadow .3s;
+background-color: #e3d3f2;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.soumaquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.chiakiquote {
+transition: box-shadow .3s;
+background-color: #ffc9c9;
+padding: 0px 3px 5px 10px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.chiakiquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
+.kanataquote {
+transition: box-shadow .3s;
+background-color: #d3e9f2;
+padding: 3px 3px 5px 10px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.kanataquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.tetoraquote {
+transition: box-shadow .3s;
+background-color: #D1CCD2;
+padding: 3px 3px 5px 10px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.tetoraquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
+.midoriquote {
+transition: box-shadow .3s;
+background-color: #eaf2d3;
+padding: 3px 3px 5px 10px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.midoriquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
+.shinobuquote {
+transition: box-shadow .3s;
+background-color: #f5f2dc;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.shinobuquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+} 
+
+.otherquote {
+transition: box-shadow .3s;
+background-color: #e8e3df;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.otherquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.author{
+display: flex;
+align-items: center; 
+justify-content: center;
+}
+.author a:link {color: #396e00; text-decoration: none;}
+.author a:visited {color: #396e00; text-decoration: none;}
+.author a:hover{color: #95b092; text-decoration: none;}
+.author a:active{color: black; text-decoration: none;}
+
+.author-icon {
+max-width: 100px;
+}
+.datenote{
+font-size: 14px;
+text-align: left;
+}
+
+.citationbox{
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+transition: box-shadow .3s;
+background-color: white;
+border-radius:10px;
+border: 0px solid #ccc;
+font-size: 15px;
+color: #5c0010;
+justify-content: center;
+width: 80%;
+}
+.citation{
+}
+.citation a:link {color: #396e00; text-decoration: none;}
+.citation a:visited {color: #396e00; text-decoration: none;}
+.citation a:hover{color: #95b092; text-decoration: none;}
+.citation a:active{color: black; text-decoration: none;}
+.citationbox:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+.citationtext{
+text-align: right;
+font-size: 14px;
+}
+
+
