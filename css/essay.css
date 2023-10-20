@@ -12,13 +12,13 @@ box-shadow: 0 0 11px rgba(33,33,33,.2);
 
 .essay-header{
 text-align:center;
-padding: 0 50px 0 50px;
+padding: 0 25px 0 25px;
 }
 .bigessay {
 background-color: white;
 text-align:left;
 font-size: 15px;
-padding: 0 50px 0 50px;
+padding: 0 25px 0 25px;
 display: inline-block;
 }
 .essay-analysis {

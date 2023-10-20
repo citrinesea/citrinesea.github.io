@@ -5,7 +5,7 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
        "header"
        "main"
        "footer";
-
+	
       background-color: #e3e0de;
       text-align: left;
       }
@@ -27,7 +27,7 @@ h4{      font-size: 16px;
          color: black;
 	 text-align: center;
          text-indent: 5px;}
-h5{      font-size: 14px;
+h5{      font-size: 16px;
          color:#7d6664;
 	 text-align: center;
          text-indent: 5px;}
@@ -263,7 +263,7 @@ justify: center;
 .bg {
 background-color: white;
 text-align:left;
-width: 90%;
+width: 95%;
 display: inline-block;
 box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
