@@ -1,24 +1,31 @@
 .essaybox {
 text-align:center;
+justify: center;
 }
 .essaybg {
 background-color: white;
 text-align:left;
 width: 90%;
 display: inline-block;
+box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
-.essay {
+
+.essay-header{
+text-align:center;
+padding: 0 50px 0 50px;
+}
+.bigessay {
 background-color: white;
 text-align:left;
-margin: 5px;
+font-size: 15px;
+padding: 0 50px 0 50px;
 display: inline-block;
 }
 .essay-analysis {
 background-color: white;
 text-align:left;
 margin: 5px;
-display: inline-block;
-font-size: 16px;
+font-size: 15px;
 }
 .entireessaybox{
 background-color: #e3e0de;
@@ -40,8 +47,9 @@ text-align: center
 
 .quote {
 transition: box-shadow .3s;
-width: 95%;
+width: 100%;
 background-color: white;
+margin: 5px;
 padding: 10px;
 border-radius:10px;
 border: 0px solid #5c0010;
@@ -113,7 +121,7 @@ text-align:left;
 
 .chiakiquote {
 transition: box-shadow .3s;
-background-color: #ffc9c9;
+background-color: #f2d3d3;
 padding: 0px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
@@ -224,6 +232,12 @@ max-width: 100px;
 font-size: 14px;
 text-align: left;
 }
+.producerdeco {
+  text-align: center;
+  display: inline-block;
+  margin: 15px;	
+  max-width: auto;
+}
 
 .citationbox{
 text-align: center;
@@ -233,7 +247,7 @@ transition: box-shadow .3s;
 background-color: white;
 border-radius:10px;
 border: 0px solid #ccc;
-font-size: 15px;
+font-size: 13px;
 color: #5c0010;
 justify-content: center;
 width: 80%;
@@ -249,7 +263,25 @@ width: 80%;
 }  
 .citationtext{
 text-align: right;
-font-size: 14px;
+font-size: 13px;
 }
 
-
+.TOSsquare {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.TOSsquare {
+transition: box-shadow .3s;
+background-color: white;
+font-size: 14px;
+margin: 15px;
+padding: 10px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.TOSsquare:hover {
+  box-shadow: 0 0 15px rgba(33,33,33,.4);} 

@@ -22,6 +22,14 @@ z-index: 1;
     }
 }
 
+.sectionnames{
+transition: transform .2s;
+}
+.sectionnames:hover {
+transform: scale(1.2);
+}
+
+
 .timelinesquare{
 position: relative;
 background-color: white;

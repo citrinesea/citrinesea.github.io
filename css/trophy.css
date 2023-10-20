@@ -1,0 +1,15 @@
+.trophyrow {
+   display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    gap: .5em
+}
+.trophycolumn {
+    position: relative;
+    border-radius: .25em;
+    overflow: hidden
+}
+@media only screen and (max-width: 600px) {
+    .trophyrow {
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+    }
+}
