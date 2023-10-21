@@ -285,3 +285,38 @@ text-align:left;
 }
 .TOSsquare:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);} 
+
+.story-rec{
+display: flex;
+align-items: center;
+grid-template-columns: auto auto;}
+
+.story-thumbnail{
+float: left;
+transition: box-shadow .3s;
+max-width: 300px;
+}
+.story-thumbnail:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.5);
+}  
+
+.story-desc{
+padding: 0px 15px 0px 15px;
+float: left;
+}
+
+.otherrow {
+   display: flex;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: .5em
+}
+.othercolumn {
+    position: relative;
+    border-radius: .25em;
+    overflow: hidden
+}
+@media only screen and (max-width: 600px) {
+    .otherrow {
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+    }
+}
