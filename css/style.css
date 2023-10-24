@@ -6,7 +6,8 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
        "main"
        "footer";
 	
-      background-color: #e3e0de;
+      background-image: url(../images/background/healing-jungle3.jpg);
+      background-size:cover;
       text-align: left;
       }
 
@@ -28,7 +29,7 @@ h4{      font-size: 16px;
 	 text-align: center;
          text-indent: 5px;}
 h5{      font-size: 12px;
-         color:#7d6664;
+         color:white;
 	 text-align: center;
          text-indent: 5px;}
 h6{      font-size: 16px;
@@ -42,9 +43,10 @@ text-align:center;
 font-size: 16px;
 }
 
-footer {background-color: #e3e0de;
+footer {
 text-align:center;
 font-size: 14px;
+color: white;
 }
 
 main{
@@ -121,7 +123,7 @@ width: 100%
 
 .nav {
   overflow: hidden;
-  background-color: #9b1108;
+  background-color: #a13300;
   color: white;
   width: 100%
 }
@@ -236,6 +238,7 @@ transition: transform .2s;
 text-align: left;
 text-indent: 15px;
 font-size: 20px;
+color: #07383d;
 }
 .labelcategory:hover {
 transform: scale(1.01);
@@ -253,7 +256,9 @@ display: inline-block;
 .line {
   display: inline-block;
   width: 100%;
-  border-top: 1px solid #bfa9a8;
+  border-image: linear-gradient(90deg, #a8db83, #ffa200) 30;
+  border-width: 2px 0px 0px 0px;
+  border-style: solid;
 }
 
 .box {
@@ -265,7 +270,7 @@ background-color: white;
 text-align:left;
 width: 97%;
 display: inline-block;
-box-shadow: 0 0 11px rgba(33,33,33,.2);
+box-shadow: 0 0 11px rgba(33,33,33,.5);
 }
 .essay {
 background-color: white;
@@ -276,7 +281,7 @@ margin: 10px;
 display: inline-block;
 }
 .entirebox{
-background-color: #e3e0de;
+background-color: white;
 }
 
 .square {
@@ -325,7 +330,7 @@ float: center;
 }
 
 
-a:link {color: ##3d7500; text-decoration: none;}
+a:link {color: #125E66; text-decoration: none;}
 a:visited {color: #436e3f; text-decoration: none;}
 a:hover{color: #95b092; text-decoration: none;}
 a:active{color: black; text-decoration: none;}
