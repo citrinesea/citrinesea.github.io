@@ -6,7 +6,7 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
        "main"
        "footer";
 	
-      background-image: url(../images/background/healing-jungle3.jpg);
+      background-image: url(../images/background/sandstorm-resortcrop.png);
       background-size:cover;
       text-align: left;
       }
@@ -53,7 +53,6 @@ main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
-     background-color: #e3e0de;
 }
 
 hr {
@@ -282,6 +281,16 @@ display: inline-block;
 }
 .entirebox{
 background-color: white;
+}
+
+.indexcontent-box{
+background-color: rgba(255, 255, 255, 1);
+border-left: 15px solid #a13300;
+color: black;
+text-align: left;
+font-size: 16px;
+border-radius:10px;
+padding: 0 25px 0 25px;
 }
 
 .square {

@@ -21,22 +21,6 @@ z-index: 1;
         grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
     }
 }
-.story-timelinerow{
-display: grid;
-grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-gap: .5em
-z-index: 1;
-text-align: center;
-}
-
-@media only screen and (max-width: 600px) {
-    .story-timelinerow {
-        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
-    }
-}
-.relevant-thumbnail{
-max-width: 200px
-}
 
 .sectionnames{
 transition: transform .2s;
@@ -73,19 +57,4 @@ padding: 10px;
 z-index: 1;
 }
 
-.relevantstory-box{
-transition: box-shadow .3s;
-background-color: white;
-padding: 15px;
-margin: auto;
-border-radius:10px;
-border: 2px solid #F5F3F3;
-float: center;
-color: black;
-width: 90%;
-text-align:center;
-font-size: 14px;
-}
-.disclaimer:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
+

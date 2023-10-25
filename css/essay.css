@@ -1,13 +1,7 @@
-.essaybox {
+.essay {
 text-align:center;
 justify: center;
-}
-.essaybg {
-background-color: white;
-text-align:left;
-width: 97%;
-display: inline-block;
-box-shadow: 0 0 11px rgba(33,33,33,.2);
+width: 90%;
 }
 
 .essay-header{
@@ -18,6 +12,7 @@ padding: 0 25px 0 25px;
 background-color: white;
 text-align:left;
 font-size: 15px;
+border-radius: 10px;
 padding: 0 25px 0 25px;
 display: inline-block;
 }
@@ -34,7 +29,7 @@ background-color: #e3e0de;
 padding: 15px;
 margin: 5px;
 border-radius:10px;
-background-color: #5c0010;
+background-color: #a13300;
 color: white;
 width: 90%;
 display: inline-block;
@@ -303,6 +298,35 @@ padding: 0px 15px 0px 15px;
 float: left;
 }
 
+.relevantstory-box{
+background-color: rgba(255, 255, 255, 1);
+margin: auto;
+float: center;
+color: black;
+width: 90%;
+text-align: left;
+font-size: 16px;
+}
+.relevant-thumbnail{
+transition: transform .1s;
+max-width: 200px
+}
+.relevant-thumbnail:hover {
+  transform: scale(1.1);
+}
+.story-timelinerow{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+z-index: 1;
+text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .story-timelinerow {
+        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
+    }
+}
+
 .otherrow {
    display: flex;
     grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
@@ -319,6 +343,10 @@ float: left;
     }
 }
 
+.epiloguebox{
+background-color: white;
+border-radius: 10px;
+}
 
 .collapsible {
   background-color: #777;
