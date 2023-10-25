@@ -1,7 +1,8 @@
 .essay {
-text-align:center;
-justify: center;
 width: 90%;
+background-color: white;
+display: inline-block;
+border-radius:10px;
 }
 
 .essay-header{
