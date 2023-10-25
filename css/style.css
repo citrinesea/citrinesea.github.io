@@ -41,6 +41,7 @@ header {
 background-color: white;
 text-align:center;
 font-size: 16px;
+border-radius: 10px;
 }
 
 footer {
@@ -285,7 +286,7 @@ background-color: white;
 
 .indexcontent-box{
 background-color: rgba(255, 255, 255, 1);
-border-left: 15px solid #a13300;
+border-left: 5px solid #a13300;
 color: black;
 text-align: left;
 font-size: 16px;
