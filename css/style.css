@@ -121,6 +121,23 @@ width: 100%
     }
 }
 
+.navrow {
+   display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr 2fr));
+    gap: .5em
+}
+.navcolumn {
+    position: relative;
+    border-radius: .25em;
+    overflow: hidden
+}
+@media only screen and (max-width: 600px) {
+    .navrow {
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+    }
+}
+
+
 .nav {
   overflow: hidden;
   background-color: #a13300;
@@ -197,6 +214,17 @@ transform: scale(1.5);;
 .chibi-nav-essay{
 text-align: center;
 }
+
+.chara-profile{
+width: 150px;
+height: auto;
+display: inline-block;
+transition: transform .1s;
+}
+.chara-profile:hover {
+transform: scale(1.1);;
+}
+
 .category{
 text-align: center;
 font-size: 16px;
@@ -231,7 +259,6 @@ color: white;
 width: 500px;
 display: inline-block;
 }
-
 
 .labelcategory{
 transition: transform .2s;
@@ -294,6 +321,23 @@ border-radius:10px;
 padding: 0 25px 0 25px;
 }
 
+.main-nav{
+padding: 2px;
+background-color: #1f3542;
+color: white;
+text-align: center;
+font-size: 18px;
+border-radius:10px;
+padding: 0 25px 0 25px;
+}
+.profile-box{
+color: black;
+text-align: center;
+font-size: 16px;
+border-radius:10px;
+padding: 0 25px 0 25px;
+}
+
 .square {
   height: auto;
   width: auto;
@@ -314,6 +358,30 @@ text-align:left;
   box-shadow: 0 0 15px rgba(33,33,33,.4);
   }
 
+.wip-desc{
+position: absolute;
+text-align: center;
+justify: center;
+top: 80%;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(255, 255, 255, 1);
+color: black;
+visibility: hidden;
+opacity: 0;
+
+transition: opacity .2s ease, visibility .2s ease;
+}
+
+.wip-square {
+  position: relative;
+}
+.wip-square:hover .wip-desc{
+  visibility: visible;
+  opacity: 1;
+}
+
 .postersquare{
   max-width: 200px;
   position: relative;
@@ -330,6 +398,7 @@ float: center;
 .postersquare:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);
   }
+
 
 .hide {
   display: none;
