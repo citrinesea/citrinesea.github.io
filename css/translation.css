@@ -1,0 +1,32 @@
+.translationsquare {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.translationsquare {
+transition: box-shadow .3s;
+background-color: white;
+font-size: 14px;
+margin: 2px;
+padding: 5px;
+border-radius:10px;
+float: center;
+color: black;
+text-align:left;
+}
+.translationsquare:hover {
+  box-shadow: 0 0 15px rgba(33,33,33,.4);
+  }
+.translationsquare-desc{
+position: relative;
+justify: center;
+
+background-color: white;
+color: black;
+text-align: left;
+font-size: 15px;
+border-radius: 10px;
+padding: 0 25px 0 25px;
+bottom: 0;
+left: 0;
+}
