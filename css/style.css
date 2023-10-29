@@ -357,29 +357,41 @@ text-align:left;
 .square:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);
   }
+.square-desc{
+position: relative;
+justify: center;
+
+background-color: white;
+color: black;
+text-align: left;
+font-size: 15px;
+border-radius: 10px;
+padding: 0 25px 0 25px;
+bottom: 0;
+left: 0;
+}
 
 .wip-desc{
 position: absolute;
-text-align: center;
 justify: center;
-top: 80%;
+
+background-color: #7f8a79;
+color: white;
+text-align: left;
+font-size: 10px;
+border-radius: 10px;
+padding: 0 25px 0 25px;
 bottom: 0;
 left: 0;
-right: 0;
-background: rgba(255, 255, 255, 1);
-color: black;
-visibility: hidden;
-opacity: 0;
 
-transition: opacity .2s ease, visibility .2s ease;
+transition: box-shadow .3s;
 }
 
 .wip-square {
   position: relative;
 }
 .wip-square:hover .wip-desc{
-  visibility: visible;
-  opacity: 1;
+  box-shadow: 0 0 15px rgba(33,33,33,.4);
 }
 
 .postersquare{
