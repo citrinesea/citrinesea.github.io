@@ -353,7 +353,7 @@ padding: 0 25px 0 25px;
 
 .main-nav{
 padding: 2px;
-background-color: #a13300;
+background-color: #233338;
 color: white;
 text-align: center;
 font-size: 18px;
@@ -469,7 +469,7 @@ background-color: #BDD561;
 
 .main-section-holder {
 display: grid;
-grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+grid-template-columns: repeat(auto-fill,minmax(435px,1fr));
 gap: 1em;
 padding: 0px 10px 0px 10px;
 }
