@@ -13,7 +13,7 @@ table, th, td {
   float: left;
   width: 30%;
   position: fixed;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -36,7 +36,7 @@ width: 45%
 }
 .character {
 border-radius: 10px;
-padding: 10px;
+padding: 5px;
 max-width: 350px;
 }
 .character img{
@@ -50,7 +50,7 @@ flex-direction: column;
 justify-content: flex-end;
 position: absolute;
 
-background-color: #1f3542;
+background-color: #316745;
 color: white;
 text-align: center;
 font-size: 12px;
@@ -58,10 +58,6 @@ border-radius: 10px;
 padding: 0 25px 0 25px;
 bottom: 0;
 right: 0;
-transition: transform .1s;
-}
-.character-name:hover {
-  transform: scale(1.03);
 }
 
 .chara-square {
@@ -79,3 +75,53 @@ transition: transform .1s;
 .chara-square:hover img{
   transform: scale(1.03);
 }
+
+.profile-wrap{
+display: inline-block;
+width: 90%;
+text-align: center;
+justify-content: center;
+}
+
+.profile-widget{
+border-radius: 10px;
+display: inline-block;
+background-color: #316745;
+color: white;
+float: center;
+width: 75%;
+padding: 2px 0 0 10px;
+margin-left: 10px;
+margin-bottom: 5px;
+text-align: left;
+font-size: 16px;
+transition: transform .1s;
+}
+.profile-widget:hover{
+  transform: scale(1.03);
+}
+
+.profile-widget2{
+border-radius: 10px;
+display: inline-block;
+background-color: white;
+width: 75%;
+margin-left: 10px;
+color: black;
+float: center;
+padding: 2px 0 0 10px;
+text-align: left;
+font-size: 16px;
+}
+
+.profilecharacter {
+
+}
+.profilecharacter img{
+border: 2px solid black;
+border-radius: 10px;
+max-width: 250px;
+margin: 5px auto;
+}
+
+
