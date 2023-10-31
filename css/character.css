@@ -1,0 +1,81 @@
+table, th, td {
+  border:1px solid black;
+  width: 100%;
+  font-size: 14px;
+  table-layout: fixed;
+}
+
+.sidebar, .content-column {
+  box-sizing: border-box;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  position: fixed;
+  padding: 20px;
+  text-align: center;
+}
+
+.content-column {
+  float: left;
+  width: 65%;
+  padding: 10px;
+  margin-left: 30%;
+}
+
+.charachibi-nav{
+padding: 2px;
+background-color: #160101;
+color: white;
+text-align: center;
+font-size: 16px;
+border-radius:15px;
+padding: 2px 15px 2px 20px;
+width: 45%
+}
+.character {
+border-radius: 10px;
+padding: 10px;
+max-width: 350px;
+}
+.character img{
+border-radius: 10px;
+border: 2px solid black;
+}
+
+.character-name{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+position: absolute;
+
+background-color: #1f3542;
+color: white;
+text-align: center;
+font-size: 12px;
+border-radius: 10px;
+padding: 0 25px 0 25px;
+bottom: 0;
+right: 0;
+transition: transform .1s;
+}
+.character-name:hover {
+  transform: scale(1.03);
+}
+
+.chara-square {
+position: relative;
+  height: auto;
+  width: auto;
+max-width: 400px;
+}
+.chara-square img{
+background-color: black;
+padding: 2px;
+border-radius: 10px;
+transition: transform .1s;
+}
+.chara-square:hover img{
+  transform: scale(1.03);
+}

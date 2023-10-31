@@ -41,174 +41,6 @@ font-size: 14px;
 text-align: center
 }
 
-.quote {
-transition: box-shadow .3s;
-width: 100%;
-background-color: white;
-border-radius:10px;
-border: 0px solid #5c0010;
-float: left;
-color: black;
-text-align:center;
-}
-.quote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-.quotelabel{
-text-align:left;
-text-indent: 1px;
-padding: 10px 10px 1px 10px;}
-
-.keitolabel {
-text-align:left;
-}
-.keitoquote {
-transition: box-shadow .3s;
-background-color: #d2e3ca;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.keitoquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.kurolabel {
-text-align:left;
-}
-.kuroquote {
-transition: box-shadow .3s;
-background-color: #ebcfca;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.kuroquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.soumaquote {
-transition: box-shadow .3s;
-background-color: #e3d3f2;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.soumaquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.chiakiquote {
-transition: box-shadow .3s;
-background-color: #f2d3d3;
-padding: 0px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.chiakiquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
-
-.kanataquote {
-transition: box-shadow .3s;
-background-color: #d3e9f2;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.kanataquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.tetoraquote {
-transition: box-shadow .3s;
-background-color: #D1CCD2;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.tetoraquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
-
-.midoriquote {
-transition: box-shadow .3s;
-background-color: #eaf2d3;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.midoriquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
-
-.shinobuquote {
-transition: box-shadow .3s;
-background-color: #f5f2dc;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.shinobuquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
-
-.otherquote {
-transition: box-shadow .3s;
-background-color: #e8e3df;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-float: center;
-color: black;
-text-align:left;
-}
-.otherquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
 .author{
 display: flex;
 align-items: center; 
@@ -283,12 +115,13 @@ text-align:left;
 .story-rec{
 display: flex;
 align-items: center;
-grid-template-columns: auto auto;}
+grid-template-columns: auto auto;
+max-width: 250px;}
 
 .story-thumbnail{
 float: left;
 transition: box-shadow .3s;
-max-width: 250px;
+
 }
 .story-thumbnail:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.5);
