@@ -10,6 +10,7 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
       background-size:cover;
       background-repeat: no-repeat;
       text-align: left;
+      font-size: 18px;
       }
 
 h1, h2, h3, h4 {font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
@@ -41,7 +42,7 @@ h6{      font-size: 16px;
 header {
 background-color: white;
 text-align:center;
-font-size: 16px;
+font-size: 18px;
 border-radius: 10px;
 }
 
@@ -275,7 +276,7 @@ float: center;
 color: black;
 width: 70%;
 text-align:left;
-font-size: 14px;
+font-size: 16px;
 }
 .disclaimer:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);

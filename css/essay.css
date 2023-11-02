@@ -21,7 +21,7 @@ display: inline-block;
 background-color: white;
 text-align:left;
 margin: 5px;
-font-size: 15px;
+font-size: 18px;
 }
 .entireessaybox{
 background-color: #e3e0de;
@@ -34,10 +34,11 @@ background-color: #a13300;
 color: white;
 width: 90%;
 display: inline-block;
+font-size: 18px;
 }
 
 .note{
-font-size: 14px;
+font-size: 15px;
 text-align: center
 }
 
@@ -73,7 +74,7 @@ transition: box-shadow .3s;
 background-color: white;
 border-radius:10px;
 border: 0px solid #ccc;
-font-size: 13px;
+font-size: 16px;
 color: #5c0010;
 justify-content: center;
 width: 80%;
@@ -89,7 +90,7 @@ width: 80%;
 }  
 .citationtext{
 text-align: right;
-font-size: 13px;
+font-size: 16px;
 }
 
 .TOSsquare {
