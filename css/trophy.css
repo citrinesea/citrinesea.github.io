@@ -1,6 +1,6 @@
 .trophyrow {
    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
     gap: .5em
 }
 .trophycolumn {
@@ -10,6 +10,22 @@
 }
 @media only screen and (max-width: 600px) {
     .trophyrow {
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+    }
+}
+
+.gachastat-row {
+   display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    gap: .5em
+}
+.gachastat-column {
+    position: relative;
+    border-radius: .25em;
+    overflow: hidden
+}
+@media only screen and (max-width: 600px) {
+    .gachastat-row {
         grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
     }
 }
