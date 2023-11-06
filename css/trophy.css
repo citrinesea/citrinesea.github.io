@@ -6,7 +6,8 @@
 .trophycolumn {
     position: relative;
     border-radius: .25em;
-    overflow: hidden
+    overflow: hidden;
+    max-width: 500px;
 }
 @media only screen and (max-width: 600px) {
     .trophyrow {
