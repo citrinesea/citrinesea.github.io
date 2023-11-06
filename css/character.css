@@ -1,3 +1,11 @@
+table
+{width: 100%;
+}
+table, th, td {
+  text-align: left;
+  padding: 1px;
+}
+
 .sidebar, .content-column {
   box-sizing: border-box;
 }
@@ -48,7 +56,6 @@ padding: 0px 10px 0px 10px;
         grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
     }
 }
-
 
 .charachibi-nav{
 padding: 2px;
@@ -168,10 +175,15 @@ left: 0;
 max-width: 500px;
 background-color: white;
 border: 2px solid #827d78;
+border-radius: 10px;
 padding: 2px;
 float: center;
 color: black;
 text-align:left;}
+
+.loresquare img{
+border-radius: 20px;
+}
 
 .profile-wrap{
 display: inline-block;
@@ -228,5 +240,79 @@ border: 2px solid black;
 border-radius: 10px;
 max-width: 250px;
 margin: 5px auto;
+}
+
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 450px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  border: 3px solid #316745;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 10000;
+  top: 70%;
+  left: 60%;
+  padding: 10px;
+  margin-left: -80px;
+}
+
+.dismiss-message{
+text-align: right;
+  font-size: 13px;
+}
+.profiledetails{
+text-align: left;
+font-size: 14px;
+background-color: #e4e8dc;
+border-radius: 6px;
+color: black;
+margin: 10px;
+padding: 1px 0 1px 10px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  margin-left: 5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #316745 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 0.3s;
+  animation: fadeIn 0.3s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
 

@@ -26,61 +26,93 @@
 <div class="line"></div>
 
 <div class="sidebar">
-<div class="character">
-<div class="keitocharacter-name">
-<p><b>Keito Hasumi</b>, leader of AKATSUKI</div>
-<img src="../images/profiles/keito.jpg">
+
+<div class = "square">
+<div class="popup" onclick="myFunction()"><div class = "square">
+<div class="wip-desc"><p><b>Click here</b></p></div>
+<img 
+            src="../images/profiles/keito-banner.jpg"
+            alt="Keito Hasumi's Profile."></div>
+<span class="popuptext" id="myPopup">
+<p><b>Keito Hasumi</b></p>
+<p><i>The lotus who decorates the mundane world with melody.</i></p>
+
+<p>As the son of a Buddhist priest, he tends to drone on when giving lectures. While he may seem overly serious, and perhaps a bit moody, he becomes slightly vulnerable when unexpected incidents occur. He carries out captivating performances with the flow of his mellow singing voice.</p>
+<p>He serves as the leader of AKATSUKI from Rhythm Link.</p>
+
+<div class=profiledetails>
+<table>
+<tr>
+<td><b>Birthday</b></td>
+<td>September 6th</td>
+<td><b>Likes</b></td>
+<td>Manga</td>
+</tr>
+
+<tr>
+<td><b>Blood Type</b></td>
+<td>A</td>
+<td><b>Dislikes</b></td>
+<td>Soybeans</td>
+</tr>
+
+<tr>
+<td><b>Hobby</b></td>
+<td>Reading</td>
+</tr>
+
+<tr>
+<td><b>Specialty</b></td>
+<td>Shamisen</td>
+</tr>
+
+<tr>
+<td><b>Idol Color</b></td>
+<td>#316745</td>
+</tr>
+
+</table>
 </div>
+
+<div class=dismiss-message><i>Click to Dismiss</i></div></p>
+</span>
+</div>
+
 <a href="../index.html"><div class="back-button">
 <p><b>back</b></p></div></a>
-</div>
+</div></div>
 
 <div class="content-column">
 <div class="row">
 
-	<div class = "square">
-	 <div class="wip-desc"><p><b>(Coming Soon)</b></p></div>
-<img 
-            src="../images/profiles/keito-banner.jpg"
-            alt="Keito Hasumi's Profile.">
-</div></div>
-
-<div class="row">
-
         <div class = "loresquare">
-	<div class = "square">
        	<a href="../main-sections/essays/ninja-essay.html">
          <img
             src="../images/essay-previews/alumni-ninja-association.jpg"
             alt="Alumni Ninja Association."></a>
-	</div></div>
+	</div>
 
          <div class = "loresquare">
-	 <div class = "square">
        	 <a href="../main-sections/essays/mizuhanome-essay.html">
           <img
             src="../images/essay-previews/manga-club.jpg"
             alt="Mizuhanome and the Yuru Enthusiast."></a>
-	</div></div>
+	</div>
 
          <div class = "loresquare">
-	 <div class = "square">
        	 <a href="../main-sections/essays/kanakei-essay.html">
           <img
             src="../images/essay-previews/kanata-and-keito.jpg"
             alt="The Human God and the God Killing Human."></a>
-	</div></div>
+	</div>
 
          <div class = "loresquare">
-	 <div class = "square">
           <img
             src="../images/essay-previews/shinobu-kanakei.jpg"
             alt="Shinobu as Kanata and Keito.">
-	</div></div>
+	</div>
 
 	<div class = "loresquare">
-	<div class = "square">
-	 <div class="wip-desc"><p><b>(Coming Soon)</b></p></div>
           <img
             src="../images/essay-previews/keito-and-juniors.jpg"
             alt="Keito and his Juniors.">
@@ -93,5 +125,14 @@
      </main>
   <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+
+<script>
+// When the user clicks on div, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
  </body>
 </html>
