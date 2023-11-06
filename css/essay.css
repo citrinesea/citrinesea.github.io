@@ -3,6 +3,7 @@ width: 90%;
 background-color: white;
 display: inline-block;
 border-radius:10px;
+box-shadow: 0 0 3px 0 #888888;
 }
 
 .essay-header{
