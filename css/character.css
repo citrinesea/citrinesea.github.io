@@ -11,8 +11,9 @@ table, th, td {
 }
 
 .sidebar {
+box-shadow: 0 0 3px 0 #888888;
   float: left;
-  background-color: #870700;
+  background-color: #FEFFF7;
   width: 30%;
   position: fixed;
   padding: 10px;
@@ -83,10 +84,44 @@ border: 2px solid black;
 
 .profilequote{
 color: #4D1700;
-font-size: 18px;
+font-size: 17px;
 font-family: Georgia, serif;
 text-align: center;
-padding: 0px 10px 0px 10px;}
+padding: 10px;}
+
+.keitonav {
+  overflow: hidden;
+  background-color: #3C6800  ;
+  color: white;
+  width: 100%;
+}
+.keitonav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.keitonav a:hover {
+  background-color: #BDD561;
+  min-width: 100%;
+}
+.keitodropdown {
+  float: center;
+  overflow: hidden;
+}
+.keitodropdown .keitodropbtn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.keitonav a:hover, .keitodropdown:hover .keitodropbtn {
+  background-color: #BDD561;
+  min-width: 100%;
+}
 
 .keitocharacter-name{
 display: flex;
@@ -104,9 +139,41 @@ bottom: 20%;
 right: 0;
 transition: transform .1s;
 }
-.keitocharacter-name:hover{
-  transform: scale(1.03);
+
+.chiakinav {
+  overflow: hidden;
+  background-color: #870700;
+  color: white;
+  width: 100%;
 }
+.chiakinav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.chiakinav a:hover {
+  background-color: #EC625D ;
+  min-width: 100%;
+}
+.chiakidropdown {
+  float: center;
+  overflow: hidden;
+}
+.chiakidropdown .chiakidropbtn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.chiakinav a:hover, .chiakidropdown:hover .chiakidropbtn {
+  background-color: #EC625D ;
+  min-width: 100%;
+}
+
 
 .chiakicharacter-name
 {
@@ -129,6 +196,40 @@ transition: transform .1s;
   transform: scale(1.03);
 } 
 
+.kanatanav {
+  overflow: hidden;
+  background-color: #003399;
+  color: white;
+  width: 100%;
+}
+.kanatanav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.kanatanav a:hover {
+  background-color: #63B9D0;
+  min-width: 100%;
+}
+.kanatadropdown {
+  float: center;
+  overflow: hidden;
+}
+.kanatadropdown .kanatadropbtn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.kanatanav a:hover, .kanatadropdown:hover .kanatadropbtn {
+  background-color: #63B9D0;
+  min-width: 100%;
+}
+
 .kanatacharacter-name
 {
 display: flex;
@@ -147,6 +248,117 @@ right: 0;
 transition: transform .1s;
 }
 .kanatacharacter-name:hover{
+  transform: scale(1.03);
+} 
+
+
+.soumanav {
+  overflow: hidden;
+  background-color: #1B165B;
+  color: white;
+  width: 100%;
+}
+.soumanav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.soumanav a:hover {
+  background-color: #9C75AA;
+  min-width: 100%;
+}
+.soumadropdown {
+  float: center;
+  overflow: hidden;
+}
+.soumadropdown .soumadropbtn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.soumanav a:hover, .soumadropdown:hover .soumadropbtn {
+  background-color: #9C75AA;
+  min-width: 100%;
+}
+
+.soumacharacter-name
+{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+position: absolute;
+
+background-color: #4D3D6A;
+color: white;
+text-align: center;
+font-size: 12px;
+border-radius: 15px;
+padding: 0 25px 0 25px;
+bottom: 20%;
+right: 0;
+transition: transform .1s;
+}
+.soumacharacter-name:hover{
+  transform: scale(1.03);
+} 
+
+.shinobunav {
+  overflow: hidden;
+  background-color: #1B165B;
+  color: white;
+  width: 100%;
+}
+.shinobunav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.shinobunav a:hover {
+  background-color: #9C75AA;
+  min-width: 100%;
+}
+.shinobudropdown {
+  float: center;
+  overflow: hidden;
+}
+.shinobudropdown .shinobudropbtn {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+.shinobunav a:hover, .shinobudropdown:hover .shinobudropbtn {
+  background-color: #9C75AA;
+  min-width: 100%;
+}
+
+.shinobucharacter-name
+{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+position: absolute;
+
+background-color: #D5A700;
+color: white;
+text-align: center;
+font-size: 12px;
+border-radius: 15px;
+padding: 0 25px 0 25px;
+bottom: 20%;
+right: 0;
+transition: transform .1s;
+}
+.soumacharacter-name:hover{
   transform: scale(1.03);
 } 
 
