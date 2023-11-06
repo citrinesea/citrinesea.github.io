@@ -116,7 +116,7 @@ width: 100%
 .column {
     position: relative;
     border-radius: .25em;
-    overflow: hidden
+    overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
     .row {
