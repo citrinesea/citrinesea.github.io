@@ -12,6 +12,7 @@ table, th, td {
 
 .sidebar {
   float: left;
+  background-color: #870700;
   width: 30%;
   position: fixed;
   padding: 10px;
@@ -34,17 +35,20 @@ color: #07383d;
 transform: scale(1.01);
 }
 
+.content-bg{
+background-color:white;
+box-shadow: 0 0 3px 0 #888888;
+}
+
 .content-column {
   float: left;
   width: 65%;
-  padding: 10px;
-  margin-left: 30%;
+  margin-left: 32%;
 }
 .content-column {
 display: grid;
 grid-template-columns: repeat(auto-fill,minmax(425px,1fr));
 gap: 1em;
-padding: 0px 10px 0px 10px;
 }
 .column {
     position: relative;

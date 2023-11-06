@@ -6,7 +6,7 @@ body {font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
        "main"
        "footer";
 	
-      background-image: url(../images/background/sandstorm-resortcrop.png);
+      background-color: #1c000c;
       background-size:cover;
       background-repeat: no-repeat;
       text-align: left;
@@ -56,6 +56,7 @@ main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
+background-color: #f5f1e4;
 }
 
 hr {
@@ -142,7 +143,7 @@ width: 100%
 
 .nav {
   overflow: hidden;
-  background-color: #a13300;
+  background-color: #870700;
   color: white;
   width: 100%
 }
@@ -236,7 +237,7 @@ justify-content: flex-end;
 position: absolute;
 
 padding: 2px;
-background-color: #1f3542;
+background-color:#870700;
 color: white;
 text-align: center;
 font-size: 12px;
@@ -345,7 +346,9 @@ background-color: white;
 .indexcontent-box{
 background-color: rgba(255, 255, 255, 1);
 color: black;
-border: 2px solid #667a6e;
+border: 0px solid #667a6e;
+box-shadow: 0 0 3px 0 #888888;
+
 text-align: left;
 font-size: 16px;
 border-radius:10px;
@@ -354,7 +357,7 @@ padding: 0 25px 0 25px;
 
 .main-nav{
 padding: 2px;
-background-color: #233338;
+background-color: #870700;
 color: white;
 text-align: center;
 font-size: 18px;
@@ -488,18 +491,19 @@ padding: 0px 10px 0px 10px;
 .main-square {
   height: auto;
   width: auto;
+
 }
 .main-square img{
-background-color: black;
-padding: 2px;
+padding: 1px;
 border-radius: 10px;
 transition: transform .1s;
+box-shadow: 0 0 3px 0 #888888;
 }
 .main-square:hover img{
   transform: scale(1.03);
 }
 
-a:link {color: #125E66; text-decoration: none;}
+a:link {color: #bf6000; text-decoration: none;}
 a:visited {color: #436e3f; text-decoration: none;}
 a:hover{color: #95b092; text-decoration: none;}
 a:active{color: black; text-decoration: none;}
