@@ -85,7 +85,8 @@ border: 2px solid black;
 color: #4D1700;
 font-size: 18px;
 font-family: Georgia, serif;
-text-align: center;}
+text-align: center;
+padding: 0px 10px 0px 10px;}
 
 .keitocharacter-name{
 display: flex;
