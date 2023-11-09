@@ -30,7 +30,9 @@
 <div class="indexcontent-box">
 <br></br>
 <div class="profilerow">
-
+<a href="keito.html"><div class="back-button">
+<p><b>back</b></p></div></a>
+<br></br>
 <div class = "column">
 
 <img 
@@ -42,7 +44,9 @@
 <div class = "profile-column">
 
 
-<p><b>Keito Hasumi</b></p>
+<div class="labelcategory">
+<p><b>Keito Hasumi</b></p></div>
+<div class="line"></div>
 
 <p>As the son of a Buddhist priest, he tends to drone on when giving lectures. While he may seem overly serious, and perhaps a bit moody, he becomes slightly vulnerable when unexpected incidents occur. He carries out captivating performances with the flow of his mellow singing voice.</p>
 <p>He serves as the leader of AKATSUKI from Rhythm Link.</p>
@@ -87,10 +91,8 @@
 
 </table>
 </div>
-<a href="keito.html"><div class="back-button">
-<p><b>back</b></p></div></a>
-<br></br>
 
+<br></br>
 
 <div class="labelcategory">
 <p><b>UNITS</b></p></div>
@@ -106,6 +108,9 @@
             alt="Akatsuki."></div>
 </div>
 
+<button type="button" class="collapsible">Temporary Units</button>
+<div class="content">
+<br></br>
 <div class="unit2-row">
 <div class="profile-unitsquare2">
 <div class="unit-name">
@@ -158,7 +163,7 @@
 	<img 
             src="../images/reading-recc-thumbnails/ring.jpg"
             alt="Ring."></div>
-</div></div>
+</div></div></div>
 
 </div></div>
 
@@ -167,7 +172,10 @@
 <div class="labelcategory">
 <p><b>RELEVANT STORIES</b></p></div>
 <div class="line"></div>
-<p><b>Event Stories</b></p>
+<br></br>
+<button type="button" class="collapsible">Event Stories</button>
+<div class="content">
+<br></br>
 <div class="profile-stories">
 
 	<div class = "relevant-thumbnail">
@@ -310,10 +318,13 @@
             src="../images/reading-recc-thumbnails/submarine.jpg"
             alt="Submarine."></div>
 
-</div>
-
+</div></div>
+<br></br>
 <div class="timelinerow">
-<p><b>Scout Stories</b></p>
+
+<button type="button" class="collapsible">Scout Stories</button>
+<div class="content">
+<br></br>
 <div class="profile-stories">
 	<div class = "relevant-thumbnail">
 	<div class = "relevantstory-name">
@@ -385,7 +396,7 @@
             src="../images/reading-recc-thumbnails/manga-club.jpg"
             alt="Manga Club."></div>
 
-</div></div>
+</div></div></div>
 <br></br>
 </div></div>
 </div>
@@ -395,6 +406,23 @@
      </main>
   <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+   </script>
 
  </body>
 </html>
