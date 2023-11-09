@@ -1,6 +1,6 @@
 .profilerow {
    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
     gap: 1em
 }
 @media only screen and (max-width: 600px) {
@@ -15,6 +15,7 @@ table
 table, th, td {
   text-align: left;
   padding: 1px;
+  font-size: 16px;
 }
 
 .sidebar, .content-column {
@@ -95,6 +96,72 @@ max-width: 350px;
 .character img{
 border-radius: 10px;
 border: 2px solid black;
+}
+
+.profile-stories{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+gap: .5em
+}
+
+.unitsrow{
+max-width: auto;
+}
+
+.unit2-row{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+
+.unit-story-hint {
+  max-height: auto;
+  max-width: 300px;
+  position: relative;
+  object-fit: cover;
+  padding: 10px 0 10px 10px;
+}
+
+.unit-name{
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+position: absolute;
+
+background-color: black;
+color: white;
+text-align: left;
+font-size: 12px;
+border-radius: 10px;
+padding: 0 25px 0 25px;
+bottom: 0;
+left: 0;
+bottom: 10%;
+
+visibility: hidden;
+opacity: 0;
+
+transition: opacity .3s ease, visibility .2s ease;
+}
+.profile-unitsquare {
+  max-height: auto;
+  max-width: auto;
+  position: relative;
+  object-fit: cover;
+}
+.profile-unitsquare:hover .unit-name {
+  visibility: visible;
+  opacity: 1;
+}
+
+.profile-unitsquare2 {
+  max-height: auto;
+  max-width: auto;
+  position: relative;
+  object-fit: cover;
+}
+.profile-unitsquare2:hover .unit-name {
+  visibility: visible;
+  opacity: 1;
 }
 
 .profilequote{
@@ -481,6 +548,10 @@ margin: 5px auto;
   justify-content: center;
 }
 
+.entire-profile-container{
+padding: 5px;
+}
+
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -514,6 +585,14 @@ margin: 5px auto;
 text-align: right;
   font-size: 13px;
 }
+
+.profile-middle-row{
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .profiledetails{
 text-align: left;
 font-size: 14px;

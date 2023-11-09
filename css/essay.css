@@ -171,7 +171,6 @@ opacity: 0;
 transition: opacity .2s ease, visibility .2s ease;
 }
 .relevant-thumbnail{
- 
   position: relative;
   object-fit: cover;
 }
