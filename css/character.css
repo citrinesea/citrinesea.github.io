@@ -79,6 +79,10 @@ font-size: 16px;
 
 }
 
+.profile-render{
+max-width: 600px;
+}
+
 .charachibi-nav{
 padding: 2px;
 background-color: #160101;
@@ -236,7 +240,7 @@ transition: transform .1s;
   text-decoration: none;
 }
 .chiakinav a:hover {
-  background-color: #EC625D ;
+  background-color: #e35430;
   min-width: 100%;
 }
 .chiakidropdown {
@@ -253,7 +257,7 @@ transition: transform .1s;
   margin: 0;
 }
 .chiakinav a:hover, .chiakidropdown:hover .chiakidropbtn {
-  background-color: #EC625D ;
+  background-color: #e35430;
   min-width: 100%;
 }
 
