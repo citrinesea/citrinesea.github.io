@@ -24,6 +24,8 @@ table, th, td {
 
 .sidebar {
 box-shadow: 0 0 3px 0 #888888;
+position: fixed;
+  width: 30%;
   float: left;
   background-color: #FEFFF7;
   padding: 10px;
