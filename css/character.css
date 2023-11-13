@@ -26,8 +26,6 @@ table, th, td {
 box-shadow: 0 0 3px 0 #888888;
   float: left;
   background-color: #FEFFF7;
-  width: 30%;
-  position: fixed;
   padding: 10px;
   text-align: center;
 }
