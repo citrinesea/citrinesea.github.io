@@ -13,9 +13,10 @@ text-align:center;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 .quotelabel{
+color: #152925;
 text-align:left;
 text-indent: 1px;
-font-size: 16px;
+font-size: 19px;
 padding: 10px 10px 1px 10px;}
 
 .keitoquote {
@@ -29,7 +30,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .keitoquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -46,7 +47,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .kuroquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -63,7 +64,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .soumaquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -80,7 +81,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .chiakiquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -97,7 +98,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .kanataquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -114,7 +115,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .tetoraquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -131,7 +132,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .midoriquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -148,7 +149,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .shinobuquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -165,7 +166,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .otherquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -182,7 +183,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .maoquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -199,7 +200,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .yuzuruquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -216,7 +217,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .toriquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -233,7 +234,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .adonisquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -250,7 +251,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .leoquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -267,7 +268,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .tsukasaquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
@@ -284,7 +285,7 @@ border: 1px solid #ccc;
 float: center;
 color: black;
 text-align:left;
-font-size: 16px;
+font-size: 18px;
 }
 .shuquote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
