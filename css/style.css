@@ -1,4 +1,4 @@
-body {font-family: Calibri, sans-serif;
+body {font-family: "Avantgarde", Calibri, sans-serif;
       display: grid;
       grid-template-rows: 1fr;
       grid-template-areas:
@@ -161,7 +161,7 @@ width: 100%
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  font-size: 16px;
+font-size: 18px;
   color: white;
   padding: 14px 16px;
   background-color: inherit;
@@ -209,10 +209,10 @@ justify-content: flex-end;
 position: absolute;
 
 padding: 2px;
-background-color:white;
-color: black;
+background-color:#002b27;
+color: white;
 text-align: center;
-font-size: 12px;
+font-size: 14px;
 border-radius: 10px;
 padding: 0 25px 0 25px;
 bottom: 0;
@@ -321,7 +321,7 @@ color: black;
 border: 0px solid #667a6e;
 
 text-align: left;
-font-size: 16px;
+font-size: 18px;
 border-radius:10px;
 padding: 0 25px 0 25px;
 }
