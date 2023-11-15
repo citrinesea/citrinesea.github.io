@@ -82,6 +82,7 @@ img {
 .figure {
     position: relative;
     max-width: 100%;
+height: 100%;
   }
 .figure img{
 width: 100%
@@ -473,7 +474,7 @@ box-shadow: 0 0 3px 0 #888888;
   transform: scale(1.03);
 }
 
-a:link {color: #bf6000; text-decoration: none;}
+a:link {color: #005063; text-decoration: none;}
 a:visited {color: #436e3f; text-decoration: none;}
 a:hover{color: #95b092; text-decoration: none;}
 a:active{color: black; text-decoration: none;}
