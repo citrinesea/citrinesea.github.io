@@ -26,7 +26,6 @@
    <main>
 <div class="line"></div>
 <div class="indexcontent-box">
-<div class="fade-in-on-load">
 <div class="labelcategory">
 <p><b>MISSION STATEMENT & TERMS AND CONDITIONS</b></p></div>
 <div class="line"></div>
@@ -48,7 +47,7 @@
 
 <p>Below is an example of what should be included for it to be <b>proper attribution</b>:</p>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quotelabel">
 <b>MIDORI</b>
 </div>
@@ -80,18 +79,17 @@
 
 <p>I have also opened this space for other contributors to submit and house their pieces on lore and analysis.</p> 
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="TOSsquare">
 <p> • This website focuses on Ryuseitai and Akatsuki <b>only</b>. With few exceptions (i.e. Madara), discussion on other characters should be limited.</p>
 <p> • I manually approve and format analyses for release. However, <b>opinions and analysis belong to the contributor who wrote it.</b></p>
-<p> • <b>All contributors</b> (current and future) are held to the citation standard I hold for myself, and are provided a style guide for citations.</p></div>
+<p> • <b>All contributors</b> (current and future) are held to the citation standard I hold for myself, and are provided a style guide for citations.</p></div></div>
 
 Submissions for contribution are currently <b>closed</b>.
 
 <p>The written pieces on this website are color-coded by the author. Click on a profile below to explore a contributor's analyses.</p>
-</div>
 
-<div class="fade-in-on-load">
+<div class="fade-in-right-on-scroll">
 <div class="category">
     <div class="row">
      <div class="column">
@@ -124,7 +122,7 @@ Submissions for contribution are currently <b>closed</b>.
 </div></div></div>
 
 <br></br>
-</div></div></div>
+</div></div>
 
      </main>
     <footer><h5>© 2023 citrinesea</h5>
@@ -139,6 +137,19 @@ if (elementsToFadeInUpOnScroll) {
         element.classList.add("fade-in-up");
       } else {
         element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
       }
     });
   });

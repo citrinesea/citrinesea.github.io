@@ -478,31 +478,72 @@ box-shadow: 0 0 3px 0 #888888;
 }
 
 @keyframes fadeInUp {
-  from {
+  0% {
     transform: translateY(50px);
     opacity: 0;
   }
-  to {
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 .fade-in-up {
-  animation: 0.75s both fadeIn;
+  animation: fadeInUp 0.5s;
+  -webkit-animation: fadeInUp 0.5s;
+  -moz-animation: fadeInUp 0.5s;
+  -o-animation: fadeInUp 0.5s;
+  -ms-animation: fadeInUp 0.5s;
 }
 
-@keyframes fadeIn {
-  from {
-    transform: translateY(50px);
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-50px);
     opacity: 0;
   }
-  to {
-    transform: translateY(0);
+  100% {
+    transform: translateX(0);
     opacity: 1;
   }
 }
+.fade-in-right {
+  animation: fadeInRight 0.5s;
+  -webkit-animation: fadeInRight 0.5s;
+  -moz-animation: fadeInRight 0.5s;
+  -o-animation: fadeInRight 0.5s;
+  -ms-animation: fadeInRight 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .fade-in {
-  animation: 0.75s both fadeIn;
+  animation: fadeIn 1.1s;
+  -webkit-animation: fadeIn 1.1s;
+  -moz-animation: fadeIn 1.1s;
+  -o-animation: fadeIn 1.1s;
+  -ms-animation: fadeIn 1.1s;
 }
 
 a:link {color: #005063; text-decoration: none;}

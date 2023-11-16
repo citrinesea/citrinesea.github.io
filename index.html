@@ -25,7 +25,6 @@
 <div class="line"></div>
 
 <div class="indexcontent-box">
-<div class="fade-in-on-load">
 <div class="labelcategory">
 <p><b>★ INTRO & PROGRESS</b></p></div>
 <div class="line"></div>
@@ -53,7 +52,7 @@
 
 <p>• Work on translation format.</p>
 <p>• Fix story thumbnails in timeline, continue adding scroll-over boxes to the rest.</p>
-</div></div>
+</div>
 
 <div class="fade-in-up-on-scroll">
 <div class="main-section-holder">
@@ -81,7 +80,7 @@
      alt="Translations."></a>
 </div></div></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="profile-box">
 <div class="labelcategory">
 <p><b>★ PROFILES AND NAVIGATION</b></p></div>
@@ -162,6 +161,19 @@ if (elementsToFadeInUpOnScroll) {
         element.classList.add("fade-in-up");
       } else {
         element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
       }
     });
   });

@@ -107,7 +107,7 @@
 <div class="indexcontent-box">
 <div class="entirebox">
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>SHINOBU</b></div>
@@ -124,7 +124,7 @@
 
 <div class="essay-analysis"><p>In his first weeks at Yumenosaki, Shinobu aims to start the Ninja Association. Thanks to his new leader's encouragement, he takes steps to make it happen.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>SHINOBU</b>
@@ -138,15 +138,15 @@
 <br></br>
 </section></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <section id='keito and chiaki'>
 <div class="labelcategory">
 <p><b>Ninja Senpai</b></p></div>
-<div class="line"></div>
+<div class="line"></div></div>
 
 <div class="essay-analysis"><p>In Scroll of the Elements, Shinobu brings up a potential gig for a joint live performance between Akatsuki and Ryuseitai. Chiaki leads the charge in convincing Keito to take it on and make it into a proposal. Keito does so and praises Shinobu for running the Ninja Association on his own.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>KEITO</b>
@@ -154,12 +154,11 @@
 <div class="keitoquote">
 <p>It seems you are sponsoring the Ninja Association or such, aren’t you? You are the master of your own house. Be more resolute. Isara was worried, you know. Although club activities are gatherings for hobbies, strive at it without reserve.</p></div>
 <div class="citationtext">
-<p>!-Era | ❦ Autumn | Scroll of the Elements (Looks after rainbows)</p></div></div></div></div>
-
+<p>!-Era | ❦ Autumn | Scroll of the Elements (Looks after rainbows)</p></div></div></div>
 
 <div class="essay-analysis"><p>After the events of Scrolls, Keito grows interested in Shinobu as (a) a member of Broadcasting Committee (centralized information) and (b) a member of the Student Council. To keep tabs on Mao, Keito employs him as a secret emissary.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>KEITO</b>
@@ -172,7 +171,7 @@
 
 <div class="essay-analysis"><p>In Submarine, Keito asks Shinobu to fulfill the same duty. However, Shinobu refers him to Chiaki instead: Chiaki's secret order makes it easier to be discreet.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>SHINOBU</b>
@@ -193,7 +192,9 @@
 <p>!!-Era | ❆ Winter | Submarine (310mc)</p></div>
 </div></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="essay-analysis"></div>
+
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>CHIAKI</b>
@@ -214,10 +215,9 @@
 <p>!!-Era | ❆ Winter | Submarine (310mc)</p></div>
 <div class="note"><b>contributor's note</b>: post-Submarine, I like to imagine Chiaki trails after them like "how are you doing, fellow ninja? (:" (desperately buzzing and seeking connection with the two of them)</div></div></div>
 
-<br></br>
 <div class="essay-analysis"><p>And Shinobu’s not the only one looking for friends.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>MIDORI</b>
@@ -242,7 +242,7 @@
 
 <div class="essay-analysis"><p>It’s really cute that they both indulge him, and I find it special Shinobu has senpai who look after him and empower his interests.</p></div>
 
-<div class="fade-in-up-on-scroll">
+<div class="fade-in-right-on-scroll">
 <div class="quote">
 <div class="quotelabel">
 <b>SHINOBU</b></div>
@@ -296,6 +296,20 @@ if (elementsToFadeInUpOnScroll) {
         element.classList.add("fade-in-up");
       } else {
         element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
       }
     });
   });
