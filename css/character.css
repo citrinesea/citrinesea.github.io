@@ -27,9 +27,12 @@ box-shadow: 0 0 3px 0 #888888;
 position: fixed;
   width: 30%;
   float: left;
-  background-color: #FEFFF7;
+  background-color: white;
   padding: 10px;
   text-align: center;
+  border-image: linear-gradient(90deg, #a8db83, #42b9f5) 30;
+  border-width: 2px 0px 2px 0px;
+  border-style: solid;
 }
 .sidebar-box{
 padding: 10px 25px 10px 25px;
@@ -95,7 +98,7 @@ width: 45%
 .character {
 border-radius: 10px;
 padding: 5px;
-max-width: 350px;
+max-width: 400px;
 }
 .character img{
 border-radius: 10px;

@@ -47,12 +47,14 @@ justify-content: flex-end;
 position: absolute;
 
 padding: 2px;
-background-color: rgba(255, 255, 255, 0.9);
-color: black;
+background-color: #01211e;
+color: white;
 text-align: left;
 font-size: 12px;
 border-radius: 10px;
-border: 1px solid #d49b00;
+  border-image: linear-gradient(90deg, #a8db83, #42b9f5) 30;
+  border-width: 2px;
+  border-style: solid;
 padding: 0 25px 0 25px;
 top: 0;
 left: 0;
@@ -81,5 +83,4 @@ border: 5px solid rgba(245, 235, 235,.8);
 padding: 10px;
 z-index: 1;
 }
-
 

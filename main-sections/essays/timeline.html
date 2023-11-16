@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="../../css/style.css">
    <link rel="stylesheet" href="../../css/timeline-style.css">
    <link rel="stylesheet" href="../../css/essay.css">
+   <link rel="stylesheet" href="../../css/character.css">
  </head>
 
 <body>
@@ -26,8 +27,10 @@
 <div class="line"></div>
 
 <div class="indexcontent-box">
+
+<div class="main-content-header">
+<p><b>TIMELINE</b></p></div>
 <div class="entirebox">
-<br></br>
 <div class="disclaimer">
 <p><b>Work in Progress</b></p> 
 <p>This is a <b>very loose</b> timeline based on seasons stated in-game. This will be updated over time: stories will be added and positions will change.</p>
@@ -35,16 +38,11 @@
 <p><b>Scroll over or click a thumbnail for more details about each story.</b></p>
 </div>
 
-<br></br>
-<div class="labelcategory">
-<p><b>TIMELINE</b></p></div>
-<div class="line"></div>
-
-<br></br>
 <div class="labelcategory">
 <p><b>Pre-!-Era</b></p></div>
 <div class="line"></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="timelinesquare-spring">
 <div class="timelinerow">
 
@@ -115,9 +113,11 @@
             alt="Meteor Impact."></div>
 
 
-</div></div>
+</div></div></div>
 
 </div>
+
+
 <div class="labelcategory">
 <p><b>!-Era</b></p></div>
 <div class="line"></div>
@@ -125,9 +125,8 @@
 <div class="timelinesquare-spring">
 <div class="season-header">
 <p><b>❀ Spring</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
-<br></br>
+
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 <div class = "timelinesquare">
@@ -258,10 +257,8 @@
 <div class="timelinesquare-summer">
 <div class="season-header">
 <p><b>☀︎ Summer</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
 
-<br></br>
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 <div class = "timelinesquare">
@@ -530,8 +527,7 @@
 <div class="timelinesquare-autumn">
 <div class="season-header">
 <p><b>❦ Autumn</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -609,8 +605,7 @@
 <div class="timelinesquare-winter">
 <div class="season-header">
 <p><b>❆ Winter</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -714,8 +709,7 @@
 <div class="timelinesquare-spring">
 <div class="season-header">
 <p><b>❀ Spring (Graduation)</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -764,8 +758,7 @@
 <div class="timelinesquare-summer">
 <div class="season-header">
 <p><b>☀︎ Summer</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -888,8 +881,7 @@
 <div class="timelinesquare-autumn">
 <div class="season-header">
 <p><b>❦ Autumn</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -975,8 +967,7 @@
 <div class="timelinesquare-winter">
 <div class="season-header">
 <p><b>❆ Winter</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -1062,8 +1053,7 @@
 <div class="timelinesquare-spring">
 <div class="season-header">
 <p><b>❀ Spring</b></p><div>
-<button type="button" class="collapsible">Open Collapsible</button>
-<div class="content">
+<div class="fade-in-up-on-scroll">
 <div class="timelinerow">
 
 	<div class = "timelinesquare">
@@ -1078,6 +1068,7 @@
      </main>
    <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+
 <script>
 var coll = document.getElementsByClassName("collapsible");
 var i;
@@ -1091,6 +1082,19 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.display = "block";
     }
+  });
+}
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
   });
 }
    </script>

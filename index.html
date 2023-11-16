@@ -52,16 +52,15 @@
 
 <p>• Work on translation format.</p>
 <p>• Fix story thumbnails in timeline, continue adding scroll-over boxes to the rest.</p>
-<br></br>
 </div></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="main-section-holder">
 <div class="main-square">
 <a href="main-sections/lore.html">
 <img src="images/main-buttons/lore-button.jpg"
      alt="Lore."></a>
 </div>
-
 
 <div class="main-square">
 <a href="main-sections/analyses.html">
@@ -79,9 +78,9 @@
 <a href="main-sections/translations.html">
 <img src="images/main-buttons/translation-button.jpg"
      alt="Translations."></a>
-</div></div>
+</div></div></div>
 
-
+<div class="fade-in-up-on-scroll">
 <div class="profile-box">
 <div class="labelcategory">
 <p><b>★ PROFILES AND NAVIGATION</b></p></div>
@@ -140,7 +139,7 @@
 	<a href="category-by-character-pages/shinobu.html"><img 
             src="images/profile-icons/shinobu-sengoku-profile.jpg"
             alt="Shinobu Sengoku's Profile."></a>
-</div>
+</div></div>
 
 
 </div>
@@ -151,5 +150,20 @@
      </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

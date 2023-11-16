@@ -36,7 +36,7 @@
 <p><b>EVENTS</b></p></div>
 <div class="line"></div>
 <br></br>
-
+<div class="fade-in-up-on-scroll">
  <div class="trophyrow">
 
      <div class="trophycolumn">
@@ -65,12 +65,13 @@
 	<div class="note"><p>someone has to learn how to park (thank you for running with me swanee!) (oct 2023)</p></div></div></div>
 </div>
 <p></p>
-</div>
+</div></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="indexcontent-box">
 <p><b>coming soon</b> scarlet halloween (keito), ninja clan (shinobu), summer bird (souma), high and low (midori), black jack (shinobu), butokai (kuro), supervillain (tetora), wedding march (chiaki), tropical (midori)(T1-10)</p>
 		
-</div>
+</div></div>
 
 <div class="indexcontent-box">
 <div class="labelcategory">
@@ -78,6 +79,7 @@
 <div class="line"></div>
 <br></br>
 
+<div class="fade-in-up-on-scroll">
 <div class="trophyrow">
 
      <div class="trophycolumn">
@@ -95,7 +97,7 @@
      <div class="trophycolumn">
 	<div class = "square"><img src = "../images/nin-nin/submaringabell-midori.jpg"></div></div>
 
-</div>
+</div></div>
 </div>
 
 <div class="indexcontent-box">
@@ -103,16 +105,18 @@
 <p><b>GACHA</b></p></div>
 <div class="line"></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="gachastat-row">
 <div class = "square"><img src = "../images/nin-nin/ushimairi-pulls.jpg">
 <div class="note"><p>this is like an anti-flex, but I did end up getting all of the wishlist cards I wanted while keito was being cruel to me</p>
 <p>(mar 2023)</p></div></div>
-</div>
+</div></div>
 
 <div class="labelcategory">
 <p><b>SOLO PULLS Hall of Fame</b></p></div>
 <div class="line"></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="trophyrow">
 
      <div class="trophycolumn">
@@ -140,11 +144,13 @@
 	<img src = "../images/nin-nin/pull-apollo-souma.jpg">
 	</div></div>
 </div>
+</div>
 
 <div class="labelcategory">
 <p><b>"I'm happy you came home" Hall of Fame</b></p></div>
 <div class="line"></div>
 
+<div class="fade-in-up-on-scroll">
 <div class="trophyrow">
 
      <div class="trophycolumn">
@@ -191,7 +197,7 @@
 	<div class = "square">
 	<img src = "../images/nin-nin/pull-shinolim.jpg">
 	</div></div>
-</div>
+</div></div>
 
 </div></div>
 
@@ -201,6 +207,7 @@
 <p><b>TRANSLATION PLANS</b></p></div>
 <div class="line"></div>
 
+<div class="fade-in-up-on-scroll">
 <p><b>Explain yourself Rin.</b></p>
 <p> For starters, I'll likely never call myself a translator, it's not my occupation nor expertise: I just do translations.</p>
 <p>I took Japanese in undergraduate school and I honestly miss it. It was fun learning a language I could <i>actually</i> get good at, over other languages like Spanish (sweats in second-gen). My main goals with translating are (a) to keep up practice and start getting better again and (b) have a personal library of AKATSUKI and RYUSEITAI stories that I love and can keep. The thing about games like Enstars is that they'll end one day. If I can archive it for myself, with my own skillset, I'll feel happy. Translators do thankless work for the community: they're very key to preservation and accessibility.</p>
@@ -215,10 +222,25 @@
 <p>I hope that they can be useful to anyone who finds them.</p>
 </div>
 <p></p>
-</div>
+</div></div>
 
      </main>
    <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+
+<script>
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

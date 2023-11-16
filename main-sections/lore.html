@@ -60,6 +60,8 @@
 
 </div></div>
 <p></p>
+
+<div class="fade-in-up-on-scroll">
 <div class = "article-bin">
 <div class = "article-preview">
 	<a href="essays/mizuhanome-essay.html">
@@ -85,8 +87,9 @@
 <div class="chibi-nav"><a href="../../category-by-character-pages/keito.html"><img src="../images/chibis/keito.png"></a></div>
 <div class="chibi-nav"><a href="../../category-by-character-pages/midori.html"><img src="../images/chibis/midori.png"></a></div>
 
-</div></div>
+</div></div></div>
 <p></p>
+<div class="fade-in-up-on-scroll">
 <div class = "article-bin">
 <div class = "article-preview">
 	<a href="essays/recruitment-essay.html">
@@ -118,9 +121,8 @@
 <div class="chibi-nav"><a href="../../category-by-character-pages/kuro.html"><img src="../images/chibis/kuro.png"></a></div>
 <div class="chibi-nav"><a href="../../category-by-character-pages/souma.html"><img src="../images/chibis/souma.png"></a></div></a>
 
-</div></div>
-
-<br></br>
+</div></div></div></div>
+<div class="fade-in-up-on-scroll">
 <p><b>WORKS IN PROGRESS</b></p>
 <div class = "row">
 
@@ -143,7 +145,7 @@
           <img
             src="../images/essay-previews/keito-and-juniors.jpg"
             alt="Keito and his Juniors.">
-	</div>
+	</div></div>
 <br></br>
 
 </div>
@@ -152,5 +154,21 @@
 
    </main>
 <footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

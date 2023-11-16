@@ -11,6 +11,7 @@ body {font-family: "Avantgarde", Calibri, sans-serif;
       background-repeat: no-repeat;
       text-align: left;
       font-size: 18px;
+
       }
 
 h1, h2, h3, h4 {font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
@@ -198,6 +199,9 @@ position: relative;
 object-fit: cover;
 transition: transform .1s;
 }
+.chara-profile img{
+border-radius: 10px;
+}
 .chara-profile:hover {
 transform: scale(1.1);;
 }
@@ -215,7 +219,7 @@ text-align: center;
 font-size: 14px;
 border-radius: 10px;
 padding: 0 25px 0 25px;
-bottom: 0;
+top: 0;
 left: 0;
 
 visibility: hidden;
@@ -287,7 +291,7 @@ display: inline-block;
 .line {
   display: inline-block;
   width: 100%;
-  border-image: linear-gradient(90deg, #a8db83, #ffa200) 30;
+  border-image: linear-gradient(90deg, #a8db83, #42b9f5) 30;
   border-width: 2px 0px 0px 0px;
   border-style: solid;
 }
@@ -472,6 +476,20 @@ box-shadow: 0 0 3px 0 #888888;
 }
 .main-square:hover img{
   transform: scale(1.03);
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-up {
+  animation: 0.75s both fadeInUp;
 }
 
 a:link {color: #005063; text-decoration: none;}

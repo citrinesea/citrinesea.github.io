@@ -29,11 +29,9 @@
 <div class="character">
 <div class="keitocharacter-name">
 <p><b>Keito Hasumi</b>, Leader of AKATSUKI</div>
-<img src="../images/profiles/keito.jpg">
+<img src="../images/profile-icons/keito-hasumi-profile.jpg">
 
 </div>
-<a href="../index.html"><div class="back-button">
-<p><b>back</b></p></div></a>
 </div>
 
 <div class="content-column">
@@ -50,7 +48,7 @@
 </div>
 
 <div class="labelcategory">
-<p><b>Relevant Essays</b></p></div>
+<p>Relevant Essays</p></div>
 <div class="line"></div>
 <div class="row">
 
@@ -102,5 +100,19 @@
   <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
 
+<script>
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+</script>
  </body>
 </html>
