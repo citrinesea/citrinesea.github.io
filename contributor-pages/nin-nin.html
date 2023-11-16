@@ -27,16 +27,17 @@
 <div class="indexcontent-box">
 
 <br></br>
+<div class="fade-in-on-load">
 <div class="chibi-nav-essay">
 <div class="chibi-nav"><img src="../images/chibis/shinobu.png"></div>
 <p>nin nin! you found my secret trophy room!</p></div></div>
 
+<div class="fade-in-on-load">
 <div class="indexcontent-box">
 <div class="labelcategory">
 <p><b>EVENTS</b></p></div>
 <div class="line"></div>
 <br></br>
-<div class="fade-in-up-on-scroll">
  <div class="trophyrow">
 
      <div class="trophycolumn">
@@ -63,7 +64,7 @@
 	<div class = "square">
 	<img src = "../images/nin-nin/moonlight-disco.jpg">
 	<div class="note"><p>someone has to learn how to park (thank you for running with me swanee!) (oct 2023)</p></div></div></div>
-</div>
+
 <p></p>
 </div></div>
 
@@ -222,7 +223,8 @@
 <p>I hope that they can be useful to anyone who finds them.</p>
 </div>
 <p></p>
-</div></div>
+</div></div></div>
+</div>
 
      </main>
    <footer><h5>© 2023 citrinesea</h5>
@@ -237,6 +239,19 @@ if (elementsToFadeInUpOnScroll) {
         element.classList.add("fade-in-up");
       } else {
         element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-on-load");
+if (elementsToFadeInOnLoad) {
+  window.addEventListener("load", function(event) {
+    elementsToFadeInOnLoad.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in");
+      } else {
+        element.classList.remove("fade-in");
       }
     });
   });

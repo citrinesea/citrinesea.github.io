@@ -27,12 +27,15 @@
 <div class="line"></div>
 
 <div class="indexcontent-box">
+<div class="fade-in-up-on-load">
 <div class="main-content-header">
 <p><b>TRANSLATIONS</b></p></div>
 
 <p><b>Terms of Service (TBA)</b></p>
 <p><b></b></p> 
 
+
+<div class="fade-in-up-on-load">
 <div class="labelcategory">
 <p><b>Ensemble Stars! Magazine</b></p></div>
 
@@ -52,6 +55,7 @@
 <p><b>TRANSLATOR     |     PROOFREADER</b></p>
 <a href="../contributor-pages/citrinesea.html"<p>citrinesea</a>    |    <a href="https://310mc.github.io/"<p>310mc</p></a>
 </div></div>
+
 <div class = "article-characters">
 <b>RELEVANT CHARACTERS</b>
 <p></p>
@@ -97,11 +101,39 @@
 	<img 
             src="../images/essay-previews/akatsuki-quiz.jpg"
             alt="Quiz."></div></div>
-</div></div>
+</div></div></div>
 <br></br></div>
 
    </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+<script>
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-up-on-load");
+if (elementsToFadeInOnLoad) {
+  window.addEventListener("load", function(event) {
+    elementsToFadeInOnLoad.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

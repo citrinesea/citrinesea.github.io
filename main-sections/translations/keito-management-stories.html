@@ -31,6 +31,7 @@
 <div class="indexcontent-box">
 <div class="entirebox">
 
+<div class="fade-in-on-load">
 <div class = "article-bin">
 <div class = "article-preview">
 	<img 
@@ -52,6 +53,7 @@
 <div class="chibi-nav"><a href="../../category-by-character-pages/keito.html"><img src="../../images/chibis/keito.png"></a></div>
 </div></div>
 
+<br></br>
 <div class="essay-header">
 <div class="chibi-nav-essay">
 <b>SECTIONS</b>
@@ -63,6 +65,7 @@
 
 </div></div>
 
+<div class="fade-in-on-load">
 <div class="indexcontent-box">
 <div class="entirebox">
 <br></br>
@@ -257,19 +260,48 @@ I don't like soybeans either. It's not something I’m going to force myself to 
 <div class="keitoquote"><p>It's normal for the student council to be busy, so it's important to take breaks.
 </p></div>
 <div class="keitoquote"><p>It’s been a long time since we’ve seen each other, so it would be nice to take our time catching up over coffee.
-</p></div>
+</p></div></div>
 <section>
 
 <br></br>
 
+<div class="fade-in-up-on-scroll">
 <div class="citationbox">
 <div class="citation">
 <b>Ensemble Stars Basic, !-Era, citrinesea
 </div>
-</div></div>
+</div></div></div>
 <br></br>
    </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-on-load");
+if (elementsToFadeInOnLoad) {
+  window.addEventListener("load", function(event) {
+    elementsToFadeInOnLoad.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in");
+      } else {
+        element.classList.remove("fade-in");
+      }
+    });
+  });
+}
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

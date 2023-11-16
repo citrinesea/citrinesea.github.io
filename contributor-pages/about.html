@@ -26,7 +26,7 @@
    <main>
 <div class="line"></div>
 <div class="indexcontent-box">
-<br></br>
+<div class="fade-in-on-load">
 <div class="labelcategory">
 <p><b>MISSION STATEMENT & TERMS AND CONDITIONS</b></p></div>
 <div class="line"></div>
@@ -48,6 +48,7 @@
 
 <p>Below is an example of what should be included for it to be <b>proper attribution</b>:</p>
 
+<div class="fade-in-up-on-scroll">
 <div class="quotelabel">
 <b>MIDORI</b>
 </div>
@@ -61,7 +62,7 @@
 <div class="citationtext">
 <p>Submarine (310mc)</p></div>
 <div class="note"><i>Include name of story and translator</i></div>
-<p><b></b></p>
+<p><b></b></p></div>
 
 <p><b>I reiterate that it is best to go to the original source</b>, so I have made that process as easy as possible.</p>
 </div>
@@ -72,12 +73,14 @@
 </div>
 
 <div class="indexcontent-box">
+
 <div class="labelcategory">
 <p><b>CONTRIBUTORS</b></p></div>
 <div class="line"></div>
 
 <p>I have also opened this space for other contributors to submit and house their pieces on lore and analysis.</p> 
 
+<div class="fade-in-up-on-scroll">
 <div class="TOSsquare">
 <p> • This website focuses on Ryuseitai and Akatsuki <b>only</b>. With few exceptions (i.e. Madara), discussion on other characters should be limited.</p>
 <p> • I manually approve and format analyses for release. However, <b>opinions and analysis belong to the contributor who wrote it.</b></p>
@@ -86,8 +89,9 @@
 Submissions for contribution are currently <b>closed</b>.
 
 <p>The written pieces on this website are color-coded by the author. Click on a profile below to explore a contributor's analyses.</p>
+</div>
 
-
+<div class="fade-in-on-load">
 <div class="category">
     <div class="row">
      <div class="column">
@@ -117,13 +121,41 @@ Submissions for contribution are currently <b>closed</b>.
 <p></p>
 <p></p>
 </div>
-</div></div>
+</div></div></div>
 
 <br></br>
-</div></div> 
+</div></div></div>
 
      </main>
     <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+<script>
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-on-load");
+if (elementsToFadeInOnLoad) {
+  window.addEventListener("load", function(event) {
+    elementsToFadeInOnLoad.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in");
+      } else {
+        element.classList.remove("fade-in");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

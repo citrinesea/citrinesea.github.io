@@ -27,6 +27,7 @@
 <div class="line"></div>
 
 <div class="indexcontent-box">
+<div class="fade-in-on-load">
 <div class="entirebox">
 
 <div class="main-content-header">
@@ -71,7 +72,9 @@
 <p><b>CONTRIBUTOR</b></p>
 <a href="../contributor-pages/citrinesea.html"<p>citrinesea</p></a></div></div></div>
 <p></p>
+</div>
 
+<div class="fade-in-up-on-scroll">
 <p><b>WORKS IN PROGRESS</b></p>
 <div class = "row">
 	<div class = "wip-square">
@@ -80,7 +83,7 @@
             src="../images/essay-previews/recc-tool-aktk.jpg"
             alt="Reading Reccomendations Timeline.">
 	</div>
-</div>
+</div></div>
 
 <br></br>
 </div></div>
@@ -89,5 +92,33 @@
    </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+<script>
+
+const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
+if (elementsToFadeInUpOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInUpOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-up");
+      } else {
+        element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-on-load");
+if (elementsToFadeInOnLoad) {
+  window.addEventListener("load", function(event) {
+    elementsToFadeInOnLoad.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in");
+      } else {
+        element.classList.remove("fade-in");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>

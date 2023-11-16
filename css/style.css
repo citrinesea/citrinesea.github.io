@@ -11,7 +11,6 @@ body {font-family: "Avantgarde", Calibri, sans-serif;
       background-repeat: no-repeat;
       text-align: left;
       font-size: 18px;
-
       }
 
 h1, h2, h3, h4 {font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
@@ -489,7 +488,21 @@ box-shadow: 0 0 3px 0 #888888;
   }
 }
 .fade-in-up {
-  animation: 0.75s both fadeInUp;
+  animation: 0.75s both fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: 0.75s both fadeIn;
 }
 
 a:link {color: #005063; text-decoration: none;}
