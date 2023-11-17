@@ -595,6 +595,17 @@ margin: 5px auto;
 padding: 5px;
 }
 
+.chara-fact-bullet{
+  position: relative;
+  display: inline-block;
+margin: 10px;
+width: 90px;
+transition: transform .1s;
+}
+.chara-fact-bullet:hover{
+  transform: scale(1.03);
+}
+
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
@@ -639,7 +650,7 @@ text-align: right;
 .profiledetails{
 text-align: left;
 font-size: 14px;
-background-color: #e4e8dc;
+background-color: white;
 border-radius: 6px;
 color: black;
 margin: 10px;
