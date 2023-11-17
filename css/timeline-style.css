@@ -30,12 +30,12 @@ main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
-background-color: black;
+background-color: #00050E;
 color: white;
 }
 
 .indexcontent-boxdark{
-background-color: black;
+background-color: #00050E;
 color: #ffffff;
 border: 0px solid #667a6e;
 

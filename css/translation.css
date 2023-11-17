@@ -104,4 +104,47 @@ transition: transform .1s;
 transform: translate(0, 10px);
 }
 
+.translation-bin{
+display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 5px;
+max-width: 100%;
+border-radius: 10px;
+border: 2px solid #6a8a87;
+
+}
+.translation-title{
+font-size: 22px;
+}
+
+.translation-preview{
+object-fit: cover;
+height: 100%;
+background-color: white;
+}
+
+.translation-details{
+display: inline-block;
+font-size: 20px;
+padding: 0 0 0 10px;
+color: black;
+text-align: left;}
+
+.translation-contributor{
+display: inline-block;
+font-size: 18px;
+color: black;
+text-align: left;}
+
+.translation-characters{
+display: inline-block;
+padding: 2px;
+font-size: 16px;
+color: black;
+text-align: center;
+margin: auto;
+position: relative;
+top: 0; left: 0; bottom: 0; right: 0;
+padding: 10px;}
+
         
