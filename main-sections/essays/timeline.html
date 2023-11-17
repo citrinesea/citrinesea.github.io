@@ -26,27 +26,14 @@
    <main>
 <div class="line"></div>
 
-<div class="indexcontent-box">
+<div class="indexcontent-boxdark">
 
-<div class="main-content-header">
-<p><b>TIMELINE</b></p></div>
-<div class="entirebox">
-<div class="disclaimer">
-<p><b>Work in Progress</b></p> 
-<p>This is a <b>very loose</b> timeline based on seasons stated in-game. This will be updated over time: stories will be added and positions will change.</p>
-
-<p><b>Scroll over or click a thumbnail for more details about each story.</b></p>
-</div>
-
-<div class="labelcategory">
-<p><b>Pre-!-Era</b></p></div>
+<div class="timelinelabel">
+<p><b>Pre !-Era</b></p></div>
 <div class="line"></div>
 
-<div class="timelinesquare-spring">
-<div class="timelinerow">
-
-<div class="timelinecolumn">
 <p><b>Pre-War ❀ Spring</b></p>
+<div class="timelinerow">
 	
 <div class = "timelinesquare">
 <div class = "relevantstory-timeline">
@@ -62,10 +49,22 @@
             src="../../images/reading-recc-thumbnails/crossroad.jpg"
             alt="Crossroad."></div>
 
+<div class = "timelinesquare">
+<div class = "relevantstory-timeline">
+<p><b>Resurrection Sunday</b> (flashback)</p>
+<div class = "chibi-nav-essay">
+<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
+<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
+
+</div></div>
+	<img 
+            src="../../images/reading-recc-thumbnails/resurrection-sunday.jpg"
+            alt="Resurrection Sunday."></div>
+
 </div>
 
-<div class="timelinecolumn">
 <p><b>Pre-War ☀︎ Summer</b></p>
+<div class="timelinerow">
 
 <div class = "timelinesquare">
 <div class = "relevantstory-timeline">
@@ -88,8 +87,21 @@
 
 </div>
 
-<div class="timelinecolumn">
 <p><b>War Era ❦ Autumn</b></p>
+<div class="timelinerow">
+
+<div class = "timelinesquare">
+<div class = "relevantstory-timeline">
+<p><b>Marionette</b></p>
+<div class = "chibi-nav-essay">
+
+<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
+
+</div></div>
+
+	<img
+            src="../../images/reading-recc-thumbnails/marionette.jpg"
+            alt="Meteor Impact."></div>
 	
 <div class = "timelinesquare">
 <div class = "relevantstory-timeline">
@@ -112,13 +124,12 @@
             alt="Meteor Impact."></div>
 
 
-</div></div></div>
+</div>
 
-
-
-<div class="labelcategory">
+<div class="fade-in-right-on-scroll">
+<div class="timelinelabel">
 <p><b>!-Era</b></p></div>
-<div class="line"></div>
+<div class="line"></div></div>
 
 <div class="timelinesquare-spring">
 <div class="season-header">
@@ -749,9 +760,10 @@
 </div></div></div></div></div>
 <p><b></b></p>
 
-<div class="labelcategory">
+<div class="fade-in-right-on-scroll">
+<div class="timelinelabel">
 <p><b>!!-Era</b></p></div>
-<div class="line"></div>
+<div class="line"></div></div>
 
 <div class="timelinesquare-summer">
 <div class="season-header">
@@ -1076,6 +1088,19 @@ if (elementsToFadeInUpOnScroll) {
         element.classList.add("fade-in-up");
       } else {
         element.classList.remove("fade-in-up");
+      }
+    });
+  });
+}
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
       }
     });
   });
