@@ -184,7 +184,7 @@ display: inline-block;
 transition: transform .1s;
 }
 .chibi-nav:hover {
-transform: scale(1.5);;
+transform: scale(1.5);
 }
 .chibi-nav-essay{
 text-align: center;
