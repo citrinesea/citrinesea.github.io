@@ -30,7 +30,7 @@ main{
      display: grid;
      grid-template-rows: 1fr;
      grid-gap: 16px;
-background-color: #00050E;
+background-color: white;
 color: white;
 }
 
@@ -78,7 +78,7 @@ transform: scale(1.2);
 
 .timelinesquare{
 position: relative;
-background-color: #00050E;
+background-color: white;
 font-size: 14px;
 margin: 2px;
 border-radius:10px;
@@ -136,7 +136,7 @@ transition: transform .2s;
 text-align: left;
 text-indent: 16px;
 font-size: 50px;
-color: white;
+color: black;
 }
 .timelinelabel:hover {
 transform: scale(1.01);
