@@ -102,6 +102,7 @@ max-width: 400px;
 .character img{
 border-radius: 10px;
 border: 2px solid black;
+max-height: 300px;
 }
 
 .profile-stories{
