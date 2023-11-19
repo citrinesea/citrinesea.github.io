@@ -30,7 +30,7 @@ position: fixed;
   padding: 10px;
   text-align: center;
   border-image: linear-gradient(90deg, #a8db83, #42b9f5) 30;
-  border-width: 0px 0px 0px 0px;
+  border-width: 2px 0px 0px 0px;
   border-style: solid;
 }
 .sidebar-box{
