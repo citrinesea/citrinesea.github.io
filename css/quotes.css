@@ -21,9 +21,7 @@ padding: 10px 10px 1px 10px;}
 
 .keitoquote {
 transition: box-shadow .3s;
-background: rgb(203,232,195);
-background: linear-gradient(90deg, rgba(203,232,195,1) 0%, rgba(255,255,255,0) 100%);
-
+background-color: #e9f5e1;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -40,9 +38,7 @@ font-size: 18px;
 
 .kuroquote {
 transition: box-shadow .3s;
-background: rgb(232,195,195);
-background: linear-gradient(90deg, rgba(232,195,195,1) 0%, rgba(255,255,255,0) 100%);
-
+background-color: #fae1e1;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -178,7 +174,7 @@ font-size: 18px;
 
 .maoquote {
 transition: box-shadow .3s;
-background-color: #f7cfc8;
+background-color: #f7dfe7;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -263,7 +259,7 @@ font-size: 18px;
 
 .tsukasaquote {
 transition: box-shadow .3s;
-background-color: #f5cdc1;
+background-color: #f7e5df;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
