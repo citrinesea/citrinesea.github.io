@@ -290,7 +290,7 @@ border-radius: 10px;
 }
 
 .collapsible {
-  background-color: #a13300;
+  background-color: #004647;
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -302,7 +302,7 @@ border-radius: 10px;
   font-size: 15px;
 }
 .active, .collapsible:hover {
-  background-color: #e0a212;
+  background-color: #367e80;
 }
 .content {
   padding: 0 18px;
