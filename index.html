@@ -26,7 +26,7 @@
 
 <div class="indexcontent-box">
 <div class="labelcategory">
-<p><b>★ INTRO & PROGRESS</b></p></div>
+<p><b>★ INTRO</b></p></div>
 <div class="line"></div>
 <br></br>
 
@@ -34,27 +34,9 @@
 
 <p>The goal of citrinesea is to house the polished versions of my thoughts and theories I have about different iterations of Ryuseitai and Akatsuki. Additionally, I also have lore written down with its sources, so the next time I go "when did that happen?" I actually have a clean space to sift through. This is essentially a glorified notebook.</p>
 
-<p><b>note the following!!</b></p> 
-
-<p>• I use direct quotes from different stories to support my essays, both from translations and the game. All quotes listed are thoroughly cited according to the terms of service of each translator, and all quotes translated by me are labeled as such. <b><i>I do not encourage using this website for screenshots of quotes.</i></b> Support the original translator instead: I have made it <i>extremely</i> easy to do so. Read more <a href="contributor-pages/about.html"><b>here</b></a></p>
-
-<p><i>The only exception is for things I've personally translated. You can screenshot those as long as the citation is included.</i></p>
-
-<p>• This website may be frequently under construction as I figure out what layout works best. I will give updates whenever it undergoes major construction.</p>
-
-<p>• I host others' thinkpieces as well, as long as they have to do with Ryuseitai, Akatsuki or both! Contributor submissions are currently <b>closed</b></p>
-
-<p>If you have any questions or concerns, email me at citrinesea.io@gmail.com or DM me on Twitter @citrinesea.</p>
-
-<div class="line"></div>
-<br></br>
-<p><b>current to-do list (OCT. 2023)</b> | <a href="contributor-pages/update-log.html"><b>update log</b></a></p> 
-
-<p>• Work on translation format.</p>
-<p>• Fix story thumbnails in timeline, continue adding scroll-over boxes to the rest.</p>
+<p>Read more <a href="contributor-pages/about.html"><b>here</b></a>
 </div>
 
-<div class="fade-in-up-on-scroll">
 <div class="main-section-holder">
 <div class="main-square">
 <a href="main-sections/lore.html">
@@ -78,12 +60,12 @@
 <a href="main-sections/translations.html">
 <img src="images/main-buttons/translation-button.jpg"
      alt="Translations."></a>
-</div></div></div>
+</div></div>
 
 <div class="fade-in-right-on-scroll">
 <div class="profile-box">
 <div class="labelcategory">
-<p><b>★ PROFILES AND NAVIGATION</b></p></div>
+<p><b>★ NAVIGATION</b></p></div>
 
 	<div class = "chara-profile">
 	<div class = "chara-name"><b>Keito Hasumi</b></div>
@@ -139,10 +121,19 @@
 	<a href="category-by-character-pages/shinobu.html"><img 
             src="images/profile-icons/shinobu-sengoku-profile.jpg"
             alt="Shinobu Sengoku's Profile."></a>
-</div></div>
+</div></div></div>
 
+<div class="indexcontent-box">
+<div class="labelcategory">
+<p><b>★ PROGRESS AND UPDATES</b></p></div>
+<div class="line"></div>
+<p><b>current to-do list (NOV. 2023)</b> | <a href="contributor-pages/update-log.html"><b>update log</b></a></p> 
 
-</div></div>
+<p>• Work on profile completion.</p>
+<p>• Fix recommendation page and link TLs for stories.</p>
+</div>
+
+</div>
 <p></p>
 </div></div>
 </div></div>
@@ -174,19 +165,6 @@ if (elementsToFadeInRightOnScroll) {
         element.classList.add("fade-in-right");
       } else {
         element.classList.remove("fade-in-right");
-      }
-    });
-  });
-}
-
-const elementsToFadeInOnLoad = document.querySelectorAll(".fade-in-on-load");
-if (elementsToFadeInOnLoad) {
-  window.addEventListener("load", function(event) {
-    elementsToFadeInOnLoad.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in");
-      } else {
-        element.classList.remove("fade-in");
       }
     });
   });

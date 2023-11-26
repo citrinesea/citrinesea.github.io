@@ -477,6 +477,17 @@ box-shadow: 0 0 3px 0 #888888;
   transform: scale(1.03);
 }
 
+.recommendation-box {
+display: inline-block;
+text-align: left;
+max-width: auto;
+padding: 0 10px 0 10px;
+border-radius: 10px;
+background-color: #f7fcfc;
+box-shadow: 0 0 3px 0 #888888;
+}
+
+
 @keyframes fadeInUp {
   0% {
     transform: translateY(50px);
