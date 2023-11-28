@@ -12,6 +12,45 @@ text-align:center;
 .quote:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
+
+.outsidequotebox {
+display: inline-block;
+transition: box-shadow .3s;
+width: 100%;
+background-color: #608a81;
+border-radius:10px;
+border: 0px solid #5c0010;
+float: left;
+color: black;
+text-align:center;
+}
+.outsidequotebox:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}  
+
+.outsidequote {
+transition: box-shadow .3s;
+background-color: white;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+font-size: 18px;
+}
+.outsidequote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.outsidequotelabel{
+color: #152925;
+text-align:left;
+font-size: 19px;
+padding: 10px 0 0 0;}
+
 .quotelabel{
 color: #152925;
 text-align:left;
