@@ -457,8 +457,8 @@ padding: 0px 10px 0px 10px;
     overflow: hidden
 }
 @media only screen and (max-width: 600px) {
-    .row {
-        grid-template-columns:repeat(auto-fill,minmax(175px,1fr))
+    .main-section-holder {
+        grid-template-columns:repeat(auto-fill,minmax(400px,1fr))
     }
 }
 
