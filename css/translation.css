@@ -30,6 +30,12 @@ padding: 0 25px 0 25px;
 bottom: 0;
 left: 0;
 }
+.translationsquare img{
+  height: auto;
+  width: auto;
+max-width: 100% ;
+max-height: 100% ;
+}
 
 .dialogue-icon{
 max-width: 100px;
@@ -90,6 +96,8 @@ left: 0;
 }
 
 .magazine-storyblock img {
+  height: auto;
+  width: auto;
 max-width: 100% ;
 max-height: 100% ;
 }
@@ -115,6 +123,8 @@ transform: translate(0, -10px);
 }
 
 .management-storyblock img{
+  height: auto;
+  width: auto;
 max-width: 100% ;
 max-height: 100% ;
 }
@@ -130,6 +140,8 @@ transition: transform .1s;
 }
 
 .management-storyblock-wip img{
+  height: auto;
+  width: auto;
 max-width: 100% ;
 max-height: 100% ;
 }
@@ -146,10 +158,6 @@ max-width: 100%;
 border-radius: 10px;
 border: 2px solid #6a8a87;
 
-}
-.translationsquare img{
-max-width: 100% ;
-max-height: 100% ;
 }
 
 .translation-title{
