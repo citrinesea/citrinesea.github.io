@@ -84,6 +84,11 @@ left: 0;
   opacity: 1;
 }
 
+.magazine-storyblock img {
+max-width: 100% ;
+max-height: 100% ;
+}
+
 .magazine-storyblock{
 position: relative;
 width: 400px;
@@ -104,6 +109,11 @@ transition: transform .1s;
 transform: translate(0, -10px);
 }
 
+.management-storyblock img{
+max-width: 100% ;
+max-height: 100% ;
+}
+
 .management-storyblock-wip{
 position: relative;
 width: 150px;
@@ -112,6 +122,11 @@ filter: grayscale(80%);
 opacity: 0.5;
 background-color: white;
 transition: transform .1s;
+}
+
+.management-storyblock-wip img{
+max-width: 100% ;
+max-height: 100% ;
 }
 
 .management-storyblock-wip:hover{

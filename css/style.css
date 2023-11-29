@@ -183,6 +183,10 @@ height: 75px;
 display: inline-block;
 transition: transform .1s;
 }
+.chibi-nav img{
+max-width: 100% ;
+max-height: 100% ;
+}
 .chibi-nav:hover {
 transform: scale(1.5);
 }
@@ -365,6 +369,10 @@ float: center;
 color: black;
 text-align:left;
 }
+.square img{
+max-width: 100% ;
+max-height: 100% ;
+}
 .square:hover {
   box-shadow: 0 0 15px rgba(33,33,33,.4);
   }
@@ -401,6 +409,10 @@ transition: box-shadow .3s;
 
 .wip-square {
   position: relative;
+}
+.wip-square img{
+max-width: 100% ;
+max-height: 100% ;
 }
 .wip-square:hover .wip-desc{
   box-shadow: 0 0 15px rgba(33,33,33,.4);
@@ -491,6 +503,10 @@ background-color: #f7fcfc;
 box-shadow: 0 0 3px 0 #888888;
 }
 
+.recommendation-box img{
+max-width: 100% ;
+max-height: 100% ;
+}
 
 @keyframes fadeInUp {
   0% {
