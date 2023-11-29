@@ -95,6 +95,13 @@ font-size: 16px;
     }
 }
 
+.relevantessayrow .square{
+  height: auto;
+  width: auto;
+max-width: 100% ;
+max-height: 100% ;
+}
+
 .relevantessaycolumn {
   height: auto;
   width: auto;
