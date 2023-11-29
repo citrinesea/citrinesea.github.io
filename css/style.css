@@ -200,6 +200,8 @@ transition: transform .1s;
 }
 .chara-profile img{
 border-radius: 10px;
+max-width: 100% ;
+max-height: 100% ;
 }
 .chara-profile:hover {
 transform: scale(1.1);;
