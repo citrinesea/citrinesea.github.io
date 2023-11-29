@@ -77,7 +77,27 @@ gap: 1em;
 .profile-column {
     text-align: left;
 font-size: 16px;
+}
 
+.relevantessaycolumn {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.relevantessaycolumn {
+transition: box-shadow .3s;
+background-color: white;
+font-size: 14px;
+margin: 2px;
+padding: 5px;
+border-radius:10px;
+float: center;
+color: black;
+text-align:left;
+}
+.relevantessaycolumn img{
+max-width: 100% ;
+max-height: 100% ;
 }
 
 .profile-render{
@@ -100,6 +120,8 @@ padding: 5px;
 max-width: 400px;
 }
 .character img{
+max-width: 100% ;
+max-height: 100% ;
 border-radius: 10px;
 filter: grayscale(80%);
 opacity: 0.5;
@@ -398,40 +420,6 @@ transition: transform .1s;
 .soumacharacter-name:hover{
   transform: scale(1.03);
 } 
-
-.shinobunav {
-  overflow: hidden;
-  background-color: #1B165B;
-  color: white;
-  width: 100%;
-}
-.shinobunav a {
-  float: center;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.shinobunav a:hover {
-  background-color: #9C75AA;
-  min-width: 100%;
-}
-.shinobudropdown {
-  float: center;
-  overflow: hidden;
-}
-.shinobudropdown .shinobudropbtn {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-.shinobunav a:hover, .shinobudropdown:hover .shinobudropbtn {
-  background-color: #9C75AA;
-  min-width: 100%;
-}
 
 .shinobucharacter-name
 {
