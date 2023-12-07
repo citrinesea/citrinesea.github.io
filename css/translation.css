@@ -194,6 +194,17 @@ position: relative;
 top: 0; left: 0; bottom: 0; right: 0;
 padding: 10px;}
 
+.translation-chapters{
+display: inline-block;
+padding: 2px;
+font-size: 20px;
+color: black;
+text-align: center;
+margin: auto;
+position: relative;
+top: 0; left: 0; bottom: 0; right: 0;
+padding: 10px;}
+
 .translation-card img{
 height: auto;
 width: auto;
