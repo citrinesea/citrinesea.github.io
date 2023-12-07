@@ -96,7 +96,7 @@ font-size: 18px;
 
 .soumaquote {
 transition: box-shadow .3s;
-background-color: #e6ddf0;
+background-color: #f1edf5;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -114,13 +114,13 @@ font-size: 18px;
 
 .chiakiquote {
 transition: box-shadow .3s;
-background-color: #f2d3d3;
+background-color: #f5e9e4;
 padding: 0px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5e4f45;
+border-left: 10px solid #734146;
 float: center;
 color: black;
 text-align:left;
@@ -132,13 +132,13 @@ font-size: 18px;
 
 .kanataquote {
 transition: box-shadow .3s;
-background-color: #d3e9f2;
+background-color: #edf4f5;
 padding: 3px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #455a5e;
+border-left: 10px solid #415973;
 float: center;
 color: black;
 text-align:left;
@@ -150,13 +150,13 @@ font-size: 18px;
 
 .tetoraquote {
 transition: box-shadow .3s;
-background-color: #D1CCD2;
+background-color: #e7e8e3;
 padding: 3px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5e4558;
+border-left: 10px solid #4c4d4c;
 float: center;
 color: black;
 text-align:left;
@@ -168,13 +168,13 @@ font-size: 18px;
 
 .midoriquote {
 transition: box-shadow .3s;
-background-color: #eaf2d3;
+background-color: #eaf0e6;
 padding: 3px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5a5e45;
+border-left: 10px solid #5c8026;
 float: center;
 color: black;
 text-align:left;
