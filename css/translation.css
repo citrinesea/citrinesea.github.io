@@ -194,4 +194,91 @@ position: relative;
 top: 0; left: 0; bottom: 0; right: 0;
 padding: 10px;}
 
-        
+.translation-card img{
+height: auto;
+width: auto;
+max-width: 100%;
+max-height: 100%;}
+
+.preview-container{
+padding: 5px;
+display: grid;
+justify-content: start;
+grid-template-columns: 425px 570px auto;
+gap: 10px;
+
+box-shadow: 0 0 15px rgba(33,33,33,.4);
+border: 2px solid #6a8a87;
+border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .preview-container {
+        grid-template-columns:repeat(auto-fill,minmax(425px,1fr))
+    }
+}
+
+.preview-image{
+display: inline-block;
+max-width: 100%;
+}
+.preview-image img{
+height: auto;
+width: auto;
+max-width: 100%;
+max-height: 100%;
+border-radius: 10px;
+transition: transform .1s;
+}
+.preview-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(33,33,33,.4);
+}
+
+.preview-details{
+display: inline-block;
+padding: 10px;
+max-width: 100%;
+transition: transform .1s;
+border-radius: 10px;
+}
+
+.preview-details2{
+display: inline-block;
+padding: 10px;
+max-width: 100%;
+border-radius: 10px;
+}
+
+.preview-title{
+font-size: 30px;
+color: #05211a;
+}
+.preview-desc{
+font-size: 18px;
+}
+.preview-chapters{
+font-size: 18px;
+border-radius: 10px;
+transition: transform .1s;
+}
+.preview-chapters:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(33,33,33,.4);
+}
+.preview-season{
+font-size: 18px;
+}
+.preview-characters{
+font-size: 18px;
+}
+.preview-characters img{
+height: auto;
+width: auto;
+max-width: 80px;
+max-height: 80px;
+}
+.preview-characters img:hover {
+  transform: scale(1.1);
+}
+  

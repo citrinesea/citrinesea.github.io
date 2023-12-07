@@ -1,0 +1,207 @@
+body {font-family: "Avantgarde", Calibri, sans-serif;
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+       "header"
+       "main"
+       "footer";
+	
+      background-color: #000708;
+      background-size:cover;
+      background-repeat: no-repeat;
+      text-align: left;
+      font-size: 18px;
+      }
+
+h1, h2, h3, h4 {font-family: "Avantgarde", TeX Gyre Adventor, URW Gothic L, sans-serif;
+                  text-align: left;}
+h1{      font-size: 4em;
+         color: rgba(255, 255, 255, 1);
+         margin: 25px}
+h2{      font-size: 1.5em;
+         color: color: white;
+	 margin: 15;
+	 text-align: center;}
+
+header {
+background-color: #000807;
+color: white;
+text-align:center;
+font-size: 18px;
+border-radius: 10px;
+}
+
+footer {
+text-align:center;
+font-size: 14px;
+color: white;
+}
+
+main{
+     display: grid;
+     grid-template-rows: 1fr;
+     grid-gap: 16px;
+background-color: white;
+}
+
+hr {
+  height: 2px;
+  width: 20%;
+  border-width:0;
+  background-color:#bfa9a8;
+}
+
+img {
+  width: auto ;
+  height: auto ;
+}  
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 150px;
+  max-height: 150px;
+  float: left;}
+
+.nav {
+  overflow: hidden;
+  background-color: #004028;
+  color: white;
+  width: 100%
+}
+.nav a {
+  float: center;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.dropdown {
+  float: center;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  border: none;
+  outline: none;
+font-size: 18px;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.nav a:hover, .dropdown:hover .dropbtn {
+  background-color: #BDD561;
+  min-width: 100%;
+}
+
+.nav a:link {color: white;}
+.nav a:visited {color: white;}
+.nav a:hover{color: white;}
+.nav a:active{color: white;}
+
+.labelcategory{
+display: inline-block;
+transition: transform .2s;
+text-align: left;
+font-size: 22px;
+color: black;
+}
+.labelcategory:hover {
+transform: scale(1.01);
+}
+
+.line {
+  display: inline-block;
+  width: 100%;
+  border-image: linear-gradient(90deg, #a8db83, #42b9f5) 30;
+  border-width: 2px 0px 0px 0px;
+  border-style: solid;
+}
+
+.indexcontent-box{
+color: black;
+border: 0px solid #667a6e;
+
+text-align: left;
+font-size: 18px;
+border-radius:10px;
+padding: 0 25px 0 25px;
+}
+
+.resources {
+border-left: 10px solid #768583;
+display: inline-block;
+width: auto;
+padding:  0 0 0 10px;
+color: black;
+text-align: center;
+background-color: white;
+}
+
+.resources img{
+max-width: 550px;
+max-height: 250px;
+}
+
+.text-resources {
+border-left: 10px solid #768583;
+display: inline-block;
+width: auto;
+padding:  0 5px 0 10px;
+color: black;
+text-align: left;
+background-color: white;
+}
+
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.fade-in-right {
+  animation: fadeInRight 0.5s;
+  -webkit-animation: fadeInRight 0.5s;
+  -moz-animation: fadeInRight 0.5s;
+  -o-animation: fadeInRight 0.5s;
+  -ms-animation: fadeInRight 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1.1s;
+  -webkit-animation: fadeIn 1.1s;
+  -moz-animation: fadeIn 1.1s;
+  -o-animation: fadeIn 1.1s;
+  -ms-animation: fadeIn 1.1s;
+}
