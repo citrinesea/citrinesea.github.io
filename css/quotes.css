@@ -58,6 +58,25 @@ text-indent: 1px;
 font-size: 19px;
 padding: 10px 10px 1px 10px;}
 
+.locationquote {
+transition: box-shadow .3s;
+background-color: #fcfafa;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+border-left: 10px solid #505e45;
+float: center;
+color: #505e45;
+text-align:left;
+font-size: 18px;
+}
+.locationquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+
 .keitoquote {
 transition: box-shadow .3s;
 background-color: #e9f5e1;
@@ -78,7 +97,7 @@ font-size: 18px;
 
 .kuroquote {
 transition: box-shadow .3s;
-background-color: #fae1e1;
+background-color: #f5e5e1;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -96,7 +115,7 @@ font-size: 18px;
 
 .soumaquote {
 transition: box-shadow .3s;
-background-color: #f1edf5;
+background-color: #e7e1f5;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
@@ -114,7 +133,7 @@ font-size: 18px;
 
 .chiakiquote {
 transition: box-shadow .3s;
-background-color: #f5e9e4;
+background-color: #f5e1e3;
 padding: 0px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
@@ -132,7 +151,7 @@ font-size: 18px;
 
 .kanataquote {
 transition: box-shadow .3s;
-background-color: #edf4f5;
+background-color: #e1f2f5;
 padding: 3px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
@@ -168,7 +187,7 @@ font-size: 18px;
 
 .midoriquote {
 transition: box-shadow .3s;
-background-color: #eaf0e6;
+background-color: #eff5e1;
 padding: 3px 3px 5px 10px;
 padding-left: 15px;
 margin: 5px;
