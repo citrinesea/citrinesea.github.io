@@ -158,6 +158,10 @@ display: grid;
 grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
 gap: .5em
 }
+.profile-stories img{
+max-width: 100% ;
+max-height: 100% ;
+}
 
 .unitsrow{
 max-width: auto;
@@ -226,39 +230,6 @@ font-family: Georgia, serif;
 text-align: center;
 padding: 10px;}
 
-.keitonav {
-  overflow: hidden;
-  background-color: #3C6800  ;
-  color: white;
-  width: 100%;
-}
-.keitonav a {
-  float: center;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.keitonav a:hover {
-  background-color: #BDD561;
-  min-width: 100%;
-}
-.keitodropdown {
-  float: center;
-  overflow: hidden;
-}
-.keitodropdown .keitodropbtn {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-.keitonav a:hover, .keitodropdown:hover .keitodropbtn {
-  background-color: #BDD561;
-  min-width: 100%;
-}
 
 .keitocharacter-name{
 display: flex;
@@ -276,41 +247,6 @@ bottom: 20%;
 right: 0;
 transition: transform .1s;
 }
-
-.chiakinav {
-  overflow: hidden;
-  background-color: #870700;
-  color: white;
-  width: 100%;
-}
-.chiakinav a {
-  float: center;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.chiakinav a:hover {
-  background-color: #e35430;
-  min-width: 100%;
-}
-.chiakidropdown {
-  float: center;
-  overflow: hidden;
-}
-.chiakidropdown .chiakidropbtn {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-.chiakinav a:hover, .chiakidropdown:hover .chiakidropbtn {
-  background-color: #e35430;
-  min-width: 100%;
-}
-
 
 .chiakicharacter-name
 {
@@ -333,40 +269,6 @@ transition: transform .1s;
   transform: scale(1.03);
 } 
 
-.kanatanav {
-  overflow: hidden;
-  background-color: #003399;
-  color: white;
-  width: 100%;
-}
-.kanatanav a {
-  float: center;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.kanatanav a:hover {
-  background-color: #63B9D0;
-  min-width: 100%;
-}
-.kanatadropdown {
-  float: center;
-  overflow: hidden;
-}
-.kanatadropdown .kanatadropbtn {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-.kanatanav a:hover, .kanatadropdown:hover .kanatadropbtn {
-  background-color: #63B9D0;
-  min-width: 100%;
-}
-
 .kanatacharacter-name
 {
 display: flex;
@@ -387,41 +289,6 @@ transition: transform .1s;
 .kanatacharacter-name:hover{
   transform: scale(1.03);
 } 
-
-
-.soumanav {
-  overflow: hidden;
-  background-color: #1B165B;
-  color: white;
-  width: 100%;
-}
-.soumanav a {
-  float: center;
-  color: #f2f2f2;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-.soumanav a:hover {
-  background-color: #9C75AA;
-  min-width: 100%;
-}
-.soumadropdown {
-  float: center;
-  overflow: hidden;
-}
-.soumadropdown .soumadropbtn {
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-.soumanav a:hover, .soumadropdown:hover .soumadropbtn {
-  background-color: #9C75AA;
-  min-width: 100%;
-}
 
 .soumacharacter-name
 {
@@ -616,11 +483,15 @@ padding: 5px;
 }
 
 .chara-fact-bullet{
-  position: relative;
-  display: inline-block;
+position: relative;
+display: inline-block;
 margin: 10px;
 width: 110px;
 transition: transform .1s;
+}
+.chara-fact-bullet img{
+max-width: 100% ;
+max-height: 100% ;
 }
 .chara-fact-bullet:hover{
   transform: scale(1.03);
