@@ -6,7 +6,7 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
        "main"
        "footer";
 	
-      background-color: #01211e;
+      background-color: #08565e;
       color: #32403b;
       background-size:cover;
       background-repeat: no-repeat;
@@ -330,7 +330,7 @@ background-color: white;
 
 .indexcontent-box{
 background-color: rgba(255, 255, 255, 1);
-color: black;
+color: #32403b;
 border: 0px solid #667a6e;
 
 text-align: left;
@@ -350,7 +350,7 @@ padding: 0 0 0 0;
 }
 .profile-box{
 color: black;
-text-align: center;
+text-align: left;
 font-size: 16px;
 border-radius:10px;
 padding: 0 25px 0 25px;
