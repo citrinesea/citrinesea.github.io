@@ -1,33 +1,3 @@
-.quote {
-display: inline-block;
-transition: box-shadow .3s;
-width: 100%;
-background-color: white;
-border-radius:10px;
-border: 0px solid #5c0010;
-float: left;
-color: black;
-text-align:center;
-}
-.quote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.outsidequotebox {
-display: inline-block;
-transition: box-shadow .3s;
-width: 100%;
-background-color: #608a81;
-border-radius:10px;
-border: 0px solid #5c0010;
-float: left;
-color: black;
-text-align:center;
-}
-.outsidequotebox:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
 .outsidequote {
 transition: box-shadow .3s;
 background-color: white;
@@ -35,7 +5,7 @@ padding: 5px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
-border: 1px solid #ccc;
+border: 3px solid #608a81;
 float: center;
 color: black;
 text-align:left;
@@ -46,13 +16,13 @@ font-size: 18px;
 }
 
 .outsidequotelabel{
-color: #152925;
+color: #2b3624;
 text-align:left;
 font-size: 19px;
 padding: 10px 0 0 0;}
 
 .quotelabel{
-color: #152925;
+color: #213017;
 text-align:left;
 text-indent: 1px;
 font-size: 19px;
@@ -84,14 +54,15 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #505e45;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .keitoquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+transform: translate(5px);
 }
 
 .kuroquote {
@@ -102,14 +73,15 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5e4545;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .kuroquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+transform: translate(5px);
 }  
 
 .soumaquote {
@@ -120,14 +92,15 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #57455e;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .soumaquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+transform: translate(5px);
 }  
 
 .chiakiquote {
@@ -138,15 +111,16 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #734146;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .chiakiquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
+transform: translate(5px);
+}  
 
 .kanataquote {
 transition: box-shadow .3s;
@@ -156,14 +130,15 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #415973;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .kanataquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+transform: translate(5px);
 }  
 
 .tetoraquote {
@@ -174,15 +149,16 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #4c4d4c;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .tetoraquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
+transform: translate(5px);
+}  
 
 .midoriquote {
 transition: box-shadow .3s;
@@ -192,33 +168,35 @@ padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5c8026;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .midoriquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
+transform: translate(5px);
+}  
 
 .shinobuquote {
 transition: box-shadow .3s;
-background-color: #f5f2dc;
+background-color: #fff2db;
 padding: 5px;
 padding-left: 15px;
 margin: 5px;
 border-radius:10px;
 border: 1px solid #ccc;
-border-left: 10px solid #5e5c45;
+border-left: 10px solid #788074;
 float: center;
 color: black;
 text-align:left;
 font-size: 18px;
+transition: transform .2s;
 }
 .shinobuquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-} 
+transform: translate(5px);
+}  
 
 .maoquote {
 transition: box-shadow .3s;
