@@ -72,6 +72,12 @@
 </div>
 <div class="shinobuquote"><p>Ah, pardon me! Here, I'll pick them up~♪</p></div> 
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-prologuea.jpg"
+            alt="Scroll of the Wind Ch. 4."></div></div>
+
 <div class="quotelabel">
 <b>SOUMA</b>
 </div>
@@ -114,6 +120,12 @@
 <div class="soumaquote"><p>At any rate, Sengoku, are you free right now? Hasumi-dono asked me to put up these “posutaa” on the bulletin board.</p></div>  
 <div class="soumaquote"><p>However, I’m having a difficult time with the amount. I’d appreciate your help.</p></div>  
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-prologueb.jpg"
+            alt="Scroll of the Wind Ch. 4."></div></div>
+
 <div class="quotelabel">
 <b>SHINOBU</b>
 </div>
@@ -145,12 +157,24 @@
 <div class="soumaquote"><p>…Hm? Forgive me, Anzu-dono. I was about to kick you. Why are you kneeling here?</p></div>  
 <div class="soumaquote"><p>Are you feeling unwell? Are you okay? Should I take you to the infirmary?</p></div>
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-prologuec.jpg"
+            alt="Scroll of the Wind Ch. 4."></div></div>
+
 <div class="quotelabel">
 <b>SHINOBU</b>
 </div>
 <div class="shinobuquote"><p>You don't look like you've slept much, Producer-dono. I'm worried that you might be overworked!</p></div>
 <div class="shinobuquote"><p>If you give us your order, we who serve our “lord” will take care of all your troubles☆</p></div>
 <div class="shinobuquote"><p>Hya!? Eh!? “Don't refer to me as "lord" too much”...? I’d have understood it if you just said it~ I don't like you pinching my cheeks!</p></div>
+
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-prologued.jpg"
+            alt="Scroll of the Wind Ch. 4."></div></div>
 
 <div class="quotelabel">
 <b>SOUMA</b>
@@ -189,6 +213,12 @@
 <div class="soumaquote"><p>Is that right…? Then let me explain just in case, but I have government authorization to wear a sword! Look, look, my license~♪
 </p></div>  
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-prologuee.jpg"
+            alt="Scroll of the Wind Ch. 4."></div></div>
+
 <div class="quotelabel">
 <b>SHINOBU</b>
 </div>
@@ -222,5 +252,21 @@
    </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>
