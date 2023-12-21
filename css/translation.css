@@ -349,6 +349,12 @@ color: white;
 padding: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+    .rel-story-bin {
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+    }
+}
+
 .rel-story-bin a:link {color: #fffcde; text-decoration: none;}
 .rel-story-bin a:visited {color: #e9fc9d; text-decoration: none;}
 .rel-story-bin a:hover{color: #95b092; text-decoration: none;}
