@@ -37,6 +37,33 @@ max-width: 100% ;
 max-height: 100% ;
 }
 
+.translationribbon {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.translationribbon {
+transition: box-shadow .3s;
+background-color: white;
+font-size: 14px;
+margin: 2px;
+padding: 5px;
+
+border-radius:10px;
+float: center;
+color: black;
+text-align:left;
+}
+.translationribbon img{
+  height: auto;
+  width: auto;
+max-width: 100% ;
+max-height: 100% ;
+border-left: 10px solid #505e45;
+border-radius:10px;
+}
+
+
 .dialogue-icon{
 max-width: 100px;
 }

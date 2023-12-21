@@ -82,6 +82,12 @@
 <div class="soumaquote"><p>Oh–! Buchou-dono! I see that you’re in a good mood as always ♪
 </p></div>
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1a.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div>  
+
 <div class="quotelabel">
 <b>KANATA</b>
 </div>
@@ -114,6 +120,12 @@
 <div class="kanataquote"><p>You’re so reserved, Shinobu ~ It’s one for all~♪
 </p></div>
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1b.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div> 
+
 <div class="quotelabel">
 <b>CHIAKI</b>
 </div>
@@ -143,6 +155,13 @@
 </div>
 <div class="midoriquote"><p>Something I want to do… Okay then, can I go home already…?~♪
 </p></div>
+
+
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1c.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div>  
 
 <div class="quotelabel">
 <b>TETORA</b>
@@ -177,6 +196,12 @@
 </div>
 <div class="soumaquote"><p>Heh. Sometimes exchanging fists is also part of friendship, Buchou-dono. A true blade is forged by striking it over and over again until sparks fly…♪
 </p></div>
+
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1d.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div>  
 
 <div class="quotelabel">
 <b>KANATA</b>
@@ -216,6 +241,12 @@
 <div class="shinobuquote"><p>Aaah… so it really is impossible…? Actually, Anzu-dono was also really worried about what to do, given that it’s such an unreasonable request on her~
 </p></div>
 
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1e.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div> 
+
 <div class="quotelabel">
 <b>CHIAKI</b>
 </div>
@@ -241,6 +272,12 @@
 </p></div>
 <div class="chiakiquote"><p>Your presence here is somewhat like fate. I’d be glad if we could have your cooperation.
 </p></div>
+
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1f.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div> 
 
 <div class="quotelabel">
 <b>SOUMA</b>
@@ -283,6 +320,12 @@
 </p></div>
 <div class="tetoraquote"><p>– …C’mon, Midori-kun, don’t just go home, ‘kay~?
 </p></div>
+
+<div class="fade-in-right-on-scroll">
+<div class = "translationribbon">
+	<img
+            src="../../images/translations/event-stories/scrolls-wind1g.jpg"
+            alt="Scroll of the Wind Ch. 1."></div></div> 
 
 <div class="quotelabel">
 <b>MIDORI</b>
@@ -777,7 +820,7 @@
 
 <br></br>
 <div class="location-narration">
-<p><b><a href="scrolls.html">Prologue</a> | <a href="scrolls-preview.html">★ Home</a> | Scroll of the Clouds</b></p></div>
+<p><b><a href="scrolls.html">Prologue</a> | <a href="scrolls-preview.html">★ Home</a> | <a href="scrolls-s2.html">Scroll of the Clouds</a></b></p></div>
 
 <div class="citationbox">
 <div class="citation">
@@ -790,5 +833,21 @@
    </main>
 
 <footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
+      }
+    });
+  });
+}
+   </script>
  </body>
 </html>
