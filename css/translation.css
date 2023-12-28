@@ -391,7 +391,7 @@ transition: transform .1s;
 .relevant-story img{
 height: auto;
 width: auto;
-max-width: 600px;
+max-width: 450px;
 max-height: auto;}
 
 .relevant-story:hover {
