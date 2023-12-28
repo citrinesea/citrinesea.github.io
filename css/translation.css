@@ -354,7 +354,7 @@ font-size: 18px;
 }
 .preview-chapters{
 border-radius: 10px;
-padding: 10px 0 5px 10px;
+padding: 10px;
 transition: transform .1s;
 border:  1.5px dotted #031e26; 
 color: black;
@@ -440,7 +440,7 @@ padding: 10px;
 
 @media only screen and (max-width: 600px) {
     .rel-story-bin {
-        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
+        grid-template-columns:repeat(auto-fill,minmax(150px,1fr))
     }
 }
 
