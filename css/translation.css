@@ -318,7 +318,7 @@ max-width: 100%;
 }
 .preview-image img{
 height: auto;
-width: 400px;
+width: 500px;
 max-width: 100%;
 max-height: 100%;
 border-radius: 10px;
@@ -392,7 +392,7 @@ transition: transform .1s;
 .relevant-story img{
 height: auto;
 width: auto;
-max-width: 500px;
+max-width: 200px;
 max-height: auto;}
 
 .relevant-story:hover {
@@ -430,7 +430,6 @@ transform: scale(1.05);
 .rel-story-bin {
    display: grid;
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-    gap: .5em;
 
 background-repeat: no-repeat;
 background-color: white;
