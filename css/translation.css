@@ -428,7 +428,7 @@ transform: scale(1.05);
 
 .rel-story-bin {
    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
 
 background-repeat: no-repeat;
 background-color: white;
