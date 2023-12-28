@@ -353,7 +353,6 @@ color: #05211a;
 font-size: 18px;
 }
 .preview-chapters{
-border-radius: 10px;
 padding: 10px;
 transition: transform .1s;
 border:  1.5px dotted #031e26; 
@@ -392,7 +391,7 @@ transition: transform .1s;
 .relevant-story img{
 height: auto;
 width: auto;
-max-width: 200px;
+max-width: 600px;
 max-height: auto;}
 
 .relevant-story:hover {
@@ -429,7 +428,7 @@ transform: scale(1.05);
 
 .rel-story-bin {
    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
 
 background-repeat: no-repeat;
 background-color: white;
@@ -439,7 +438,7 @@ padding: 10px;
 
 @media only screen and (max-width: 600px) {
     .rel-story-bin {
-        grid-template-columns:repeat(auto-fill,minmax(150px,1fr))
+        grid-template-columns:repeat(auto-fill,minmax(350px,1fr))
     }
 }
 
