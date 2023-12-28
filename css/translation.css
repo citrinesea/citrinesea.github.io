@@ -318,7 +318,7 @@ max-width: 100%;
 }
 .preview-image img{
 height: auto;
-width: auto;
+width: 400px;
 max-width: 100%;
 max-height: 100%;
 border-radius: 10px;
@@ -342,6 +342,7 @@ display: inline-block;
 padding: 10px;
 max-width: 100%;
 border-radius: 10px;
+
 }
 
 .preview-title{
@@ -352,9 +353,11 @@ color: #05211a;
 font-size: 18px;
 }
 .preview-chapters{
-font-size: 18px;
 border-radius: 10px;
+padding: 10px 0 5px 10px;
 transition: transform .1s;
+border:  1.5px dotted #031e26; 
+color: black;
 }
 .preview-chapters:hover {
   transform: scale(1.03);
@@ -369,8 +372,8 @@ font-size: 18px;
 .preview-characters img{
 height: auto;
 width: auto;
-max-width: 70px;
-max-height: 70px;
+max-width: 60px;
+max-height: 60px;
 transition: transform .2s;
 }
 .preview-characters img:hover {
@@ -384,32 +387,60 @@ transition: transform .2s;
   width: auto;
   position: relative;
 overflow: hidden;
+transition: transform .1s;
 }
 .relevant-story img{
 height: auto;
 width: auto;
 max-width: 500px;
-max-height: auto;
-transition: transform .2s;
+max-height: auto;}
+
+.relevant-story:hover {
+transform: scale(1.05);
 }
-.relevant-story img:hover {
-  transform: scale(1.1);
+
+.relevant-story .name {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+transition: transform .1s;
+
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+position: absolute;
+
+padding: 2px;
+background-color:#002b27;
+color: white;
+text-align: center;
+font-size: 18px;
+padding: 0 25px 0 25px;
+
+max-width: 100%;
+bottom: 15px;
+}
+
+.relevant-story .name:hover{
+transition: transform .1s;
+background-color: #008a8f;
+transform: scale(1.05);
 }
 
 .rel-story-bin {
    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(325px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     gap: .5em;
 
 background-repeat: no-repeat;
-background-color: #031e26;
-color: white;
+background-color: white;
+color: black;
 padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
     .rel-story-bin {
-        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
     }
 }
 
