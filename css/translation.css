@@ -420,9 +420,13 @@ max-width: 100%;
 bottom: 15px;
 }
 
+.inner-monologue{
+color:#008531;
+}
+
 .relevant-story .name:hover{
 transition: transform .1s;
-background-color: #008a8f;
+background-color: #00a39e;
 transform: scale(1.05);
 }
 
