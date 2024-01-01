@@ -46,6 +46,24 @@ font-size: 16px;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
+.cwquote {
+transition: box-shadow .3s;
+background-color: white;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #8EDAC8 ;
+border-left: 10px solid #8EDAC8 ;
+float: center;
+color: #505e45;
+text-align:left;
+font-size: 16px;
+}
+.cwquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
 .keitoquote {
 transition: box-shadow .3s;
 background-color: #e9f5e1;
