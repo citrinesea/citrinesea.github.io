@@ -434,12 +434,16 @@ transition: transform .2s;
   position: relative;
 overflow: hidden;
 transition: transform .1s;
+
 }
 .relevant-story img{
 height: auto;
 width: auto;
 max-width: 415px;
-max-height: auto;}
+max-height: auto;
+
+border-radius: 10px;
+border: 2px solid #514c63;}
 
 .relevant-story:hover {
 transform: scale(1.05);
@@ -464,7 +468,7 @@ font-size: 18px;
 padding: 0 25px 0 25px;
 
 max-width: 100%;
-bottom: 15px;
+top: 25px;
 }
 
 .relevant-story-wip .name {
