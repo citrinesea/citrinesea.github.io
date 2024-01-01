@@ -391,7 +391,7 @@ transition: transform .1s;
 .relevant-story img{
 height: auto;
 width: auto;
-max-width: 450px;
+max-width: 415px;
 max-height: auto;}
 
 .relevant-story:hover {
@@ -420,8 +420,13 @@ max-width: 100%;
 bottom: 15px;
 }
 
+.relevant-story .time {
+text-align: right;
+font-size: 16px;
+}
+
 .inner-monologue{
-color:#008531;
+color: #260399;
 }
 
 .relevant-story .name:hover{

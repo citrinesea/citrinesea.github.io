@@ -24,7 +24,7 @@ display: inline-block;
 background-color: white;
 text-align:left;
 margin: 5px;
-font-size: 18px;
+font-size: 16px;
 }
 .entireessaybox{
 background-color: #e3e0de;
@@ -37,7 +37,7 @@ background-color: #2a635e;
 color: white;
 width: 90%;
 display: inline-block;
-font-size: 18px;
+font-size: 16px;
 }
 
 .chapter-navigation{
@@ -74,21 +74,21 @@ background-color: white;
 
 .essaydetail-details{
 display: inline-block;
-font-size: 18px;
+font-size: 16px;
 padding: 0 0 0 10px;
 color: black;
 text-align: left;}
 
 .essaydetail-contributor{
 display: inline-block;
-font-size: 18px;
+font-size: 16px;
 color: black;
 text-align: left;}
 
 .essaydetail-characters{
 display: inline-block;
 padding: 2px;
-font-size: 18px;
+font-size: 16px;
 color: black;
 text-align: center;
 margin: auto;
@@ -109,7 +109,7 @@ padding: 25px 25px 0 25px;
 }
 
 .note{
-font-size: 18px;
+font-size: 16px;
 text-align: center
 }
 
@@ -213,7 +213,7 @@ float: center;
 color: black;
 width: 90%;
 text-align: left;
-font-size: 18px;
+font-size: 16px;
 }
 .stories{
 display: grid;
@@ -306,7 +306,7 @@ border-radius: 10px;
   background-color: #004647;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 16px;
   width: 100%;
   border: none;
   border-radius: 10px;

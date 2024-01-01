@@ -11,7 +11,7 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
       background-size:cover;
       background-repeat: no-repeat;
       text-align: left;
-      font-size: 18px;
+      font-size: 16px;
       }
 
 h1, h2, h3, h4 {font-family: "Nunito Sans", Calibri, sans-serif;
@@ -274,7 +274,7 @@ float: center;
 color: black;
 width: 70%;
 text-align:left;
-font-size: 18px;
+font-size: 16px;
 }
 .disclaimer:hover {
   box-shadow: 0 0 11px rgba(33,33,33,.2);
