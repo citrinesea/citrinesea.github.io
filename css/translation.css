@@ -439,7 +439,7 @@ transition: transform .1s;
 .relevant-story img{
 height: auto;
 width: auto;
-max-width: 415px;
+max-width: 400px;
 max-height: auto;
 
 border-radius: 10px;
@@ -468,7 +468,7 @@ font-size: 18px;
 padding: 0 25px 0 25px;
 
 max-width: 100%;
-top: 25px;
+top: 0px;
 }
 
 .relevant-story-wip .name {
@@ -515,8 +515,9 @@ transform: scale(1.05);
 
 
 .relevant-story .time {
-text-align: right;
+text-align: center;
 font-size: 16px;
+padding: 0 0
 }
 
 .inner-monologue{
