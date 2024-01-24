@@ -497,6 +497,22 @@ max-height: 100% ;
   transform: scale(1.03);
 }
 
+.chara-fact-bullet-grey{
+position: relative;
+display: inline-block;
+margin: 10px;
+width: 110px;
+transition: transform .1s;
+filter: grayscale(1);
+}
+.chara-fact-bullet-grey img{
+max-width: 100% ;
+max-height: 100% ;
+}
+.chara-fact-bullet-grey:hover{
+  transform: scale(1.03);
+}
+
 /* Popup container - can be anything you want */
 .popup {
   position: relative;
