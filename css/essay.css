@@ -324,3 +324,40 @@ border-radius: 10px;
   max-height: max-content;
   background-color: #white;
 }
+
+.directory{
+   display: flex;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+gap: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+    .directory {
+        grid-template-columns:repeat(auto-fill,minmax(250px,1fr))
+    }
+}
+
+.directory-content{
+background-color: #f7fdff;
+border: solid 1px #5c8594;
+padding: 2px;
+max-width: 600px;
+}
+
+.directory-stories{
+margin: auto;
+float: left;
+color: black;
+text-align: left;
+font-size: 16px;
+}
+.stories{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+gap: .5em
+}
+
+.directory-stories img{
+max-width: 100% ;
+max-height: 100% ;
+}
