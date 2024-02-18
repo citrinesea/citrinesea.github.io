@@ -407,6 +407,11 @@ background: #F9F4EA}
   margin:1%;
 }
 
+@media only screen and (max-width: 600px) {
+    filterbox {width: 100%;}
+    .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+    }
+
 .selected {
   color: #fff;
   border-bottom-color: #97c5e0;
