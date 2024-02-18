@@ -365,3 +365,119 @@ max-height: 100% ;
 .statistics-sheet img{
 max-width: 600px;
 }
+
+a {
+  text-decoration: none;
+}
+
+.filterbox {
+  width: 100%;
+  background: #151515;
+  position: relative;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.filterbox .filters {padding:10px 45px 0 45px;}
+.filterbox ul {padding:0;}
+
+.filterbox li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.filterbox li a {
+  color: #ffe2de;
+  border-bottom: 1px solid #454545;
+  margin: 0 5px;
+}
+
+.filterbox ul b {
+  margin: 0 5px;
+}
+
+.grid{
+background: #F9F4EA}
+
+.grid .item {
+  display: block;
+  padding: 10px;
+  width: 46%;
+  box-sizing: border-box;
+  margin:1%;
+}
+
+.selected {
+  color: #fff;
+  border-bottom-color: #97c5e0;
+  font-weight: bold;
+}
+
+.item {
+font-size: 16px;
+}
+
+.item a {
+  padding: 5px 15px;
+  background: #852938;
+  border: 1px solid #957D75;
+  color: #fff;
+  transition: 0.4s ease;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.item a:hover {
+  background: transparent;
+  color: #852938;
+}
+
+.detail-text{
+font-size: 15px;
+}
+
+.detail-text b{
+font-size: 15px;
+color: #852938;
+}
+
+.detail-text a {
+color: #0f6270;
+}
+
+.chibi-filter{
+width: 50px;
+height: 50px;
+display: inline-block;
+transition: transform .1s;
+}
+.chibi-filter img{
+max-width: 100% ;
+max-height: 100% ;
+}
+.chibi-filter:hover {
+transform: translate(0, 1.5px);
+}
+
+.chibi-holder{
+background: green;
+}
+
+.preview-thumbnail{
+max-width: 50%;
+}
+
+.season-text{
+font-size: 15px;
+width: fit-content;
+max-width: 50%;
+border: 1px solid #957D75;
+background: white;
+border-radius: 5px;
+padding: 5px;
+
+position: absolute;
+right:0;
+top:0;
+}
+

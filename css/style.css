@@ -515,13 +515,16 @@ box-shadow: 0 0 3px 0 #888888;
 }
 
 .recommendation-box {
+color: #0B0C22;
 display: inline-block;
+padding: 5px;
 text-align: left;
 max-width: auto;
 padding: 0 10px 0 10px;
 border-radius: 10px;
-background-color: #f7fcfc;
-box-shadow: 0 0 3px 0 #888888;
+border: 2px solid #675D55;
+background-color: #FEFEFE;
+box-shadow: -5px 5px #9e6f65;
 }
 
 .recommendation-box img{

@@ -1,14 +1,59 @@
+<!--
+
+credits: isotope combination filtering tutorial by magnusthemes.tumblr.com
+
+-->
+
 <!doctype html>
 <html lang="en">
  <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width">
-   <title>citrinesea</title>
+   <title>AKARYUSEI Reccomendation Tool | citrinesea</title>
    <link rel="shortcut icon" href="../../images/icons/site-logo-small.png"/>
    <link rel="stylesheet" href="../../css/style.css">
    <link rel="stylesheet" href="../../css/essay.css">
    <link rel="stylesheet" href="../css/translation.css">
- </head>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".item", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
+</head>
 
  <body>
    <header>
@@ -28,736 +73,850 @@
 <div class="entirebox">
 
 <div class="labelcategory">
-<p><b>PREFACE</b></p></div>
+<p><b>GROUP STORIES</b></p></div>
 <div class="line"></div>
 
-<p>This is a reading recommendation list for dynamics between AKATSUKI and RYUSEITAI members. Sections are divided by RST members, and subsections are Akatsuki members. I’ll give a sort of spoiler-free summary, and then the characters each story is relevant to. Translations are linked. <b>Scroll over or click a thumbnail for story names.</b></p>
+<p>If you want a comprehensive look at RYUSEITAI and AKATSUKI as a whole, <b>Meteor Impact, Scroll of the Elements, and Submarine</b> are must-reads. They’re way longer than the individual character story recommendations below, but they are mandatory if you want to understand the two units together.</b></p>
 
-<p><b>Individual Dynamics Sections</b></p>
-<div class="chibi-nav"><a href="#chiaki"><img src="../../images/chibis/chiaki.png"></a></div>
-<div class="chibi-nav"><a href="#kanata"><img src="../../images/chibis/kanata.png"></a></div>
-<div class="chibi-nav"><a href="#tetora"><img src="../../images/chibis/tetora.png"></a></div>
-<div class="chibi-nav"><a href="#midori"><img src="../../images/chibis/midori.png"></a></div>
-<div class="chibi-nav"><a href="#shinobu"><img src="../../images/chibis/shinobu.png"></a></div>
+<div class="grid">
+<div class="item translated wbm event scout idol chiaki kanata tetora midori shinobu keito kuro souma">
 
-</div></div>
-
-<div class="indexcontent-box">
-<div class="labelcategory">
-<p><b>Ryuseitai and Akatsuki</b></p></div>
-<div class="line"></div>
-
-<p>If you want a comprehensive look at Ryuseitai and Akatsuki as a whole, Meteor Impact, Scroll of the Elements, and Submarine are must-reads. They’re way longer than the individual character story recommendations below, but they are mandatory if you want to understand both units.</p>
-
-
-<div class="fade-in-right-on-scroll">
 <div class="recommendation-box">
-<p><b>Meteor Impact |<a href="https://310mc.github.io/meteor_impact/" target="_blank">➤ Read here </a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Meteor Impact</b></p></div>
+<p><b>★ Meteor Impact</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
             alt="Meteor Impact."></div>
+
+<p>The <b>origin story</b> of present-day AKATSUKI AND RYUSEITAI.</p>
+<p>Meteor Impact is a story with <b>highly sensitive themes</b>, so be mindful of the disclaimers before you give it a look.</p>
+
+<p><a href="https://310mc.github.io/meteor_impact/" target="_blank"><b>Read here</b></a></p>
+
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Origin story for pre-war Ryuseitai (Madara and Chiaki)</p>
+<p>⭑ Origin story for the student council (Keito and Chiaki)</p>
+<p>⭑ Origin story for Akatsuki’s role in the war (Keito, Kuro, Souma)</p> 
+<p>⭑ Kanata’s subjugation & the Battle of the Sea God (Akatsuki v. Kanata)</p> 
+<p>⭑ Kanzaki-Shinkai relations (Souma and Kanata)</p> 
+<p>⭑ Why Kuro has a heavy hand in RST Live Shows (Kuro and Chiaki)</p> 
 </div>
 
-<p>In short, Meteor Impact is the origin story for pre-war Ryuseitai (Madara and Chiaki), the student council (Keito and Chiaki), Akatsuki’s role in the war (Keito, Kuro, Souma), and the reason for Kanata’s entire subjugation + Battle of the Sea God (Akatsuki v. Kanata). It also covers Kanzaki-Shinkai relations (Souma and Kanata) and why Kuro has a heavy hand in RST Live Shows (Kuro and Chiaki). The war-era part of this story ends with Chiaki and Kanata being what’s left of RST, until the 1st years (Noritama) come in the spring.</p>
-<p>The story spans all three years of Yumenosaki !-era. There are highly sensitive themes and it’s a very heavy read, so be mindful of the disclaimers before you give it a look.</p>
+<p></p>
 
 </div></div>
 
-<br></br>
+<div class="item translated wbm event scout idol chiaki kanata tetora midori shinobu keito kuro souma">
 
-<div class="fade-in-right-on-scroll">
 <div class="recommendation-box">
-<p><b>Scroll of the Elements <a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div></div>
+<p><b>★ Scroll of the Elements</b></p>
 
-<p>This is a big story for AKTK+RST post-Meteor Impact (timeline-wise), as they perform at a local tourist spot. I’ll go into some detail below when we get to what this means for some individual characters, but it’s a great story for Souma and Shinobu, and there are notable moments for Souma and RST, and Keito and Midori. It’s more slice of life-adjacent than Meteor Impact is, so it’s a lighter read!</p>
-</div></div>
-
-<br></br>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤ Read here</a></b></p>
-<div class="story-rec">
-<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div></div>
-
-<p>Submarine takes place in !!-era, during the SS Arc. This is AKTK+RST’s third major story together, and it pulls together elements from both Meteor Impact and Scrolls. Akatsuki and Ryuseitai travel to Okinawa during the SS Tournament, and face war on the island with local idols. Because of secret orders, Akatsuki is led by Souma and Ryuseitai is led (indirectly) by Kanata. This is story reconstructs AKTK+RST’s relationship going forward</p>
-
-</div></div></div>
-
-<section id='chiaki'>
-<div class="indexcontent-box">
-<div class="fade-in-right-on-scroll">
-
-<div class="labelcategory">
-<p><div class="chibi-nav"><img src="../../images/chibis/chiaki.png"></div>
-<b>Chiaki and...</b></p></div>
-<div class="line"></div></div>
-
-<p><b>Keito</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b></b></p>
-<p><b>Rin's Recommendation</b> Crossroad | <b><a href="https://310mc.github.io/crossroad/" target="_blank">➤ Read here</a></b></p>
-	<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Crossroad</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/crossroad.jpg"
-            alt="Meteor Impact."></div></div>
-
-	<p>Combined with Meteor Impact, Crossroads is a good exploration of 2nd-years Chiaki and Keito. Keito grows an intrigue with Chiaki (specifically, the difference between his actions and his timid personality).</p>
-
-<p><b>Other Stories</b></p>
-
-	<p>Keito and Chiaki tend to favor bigger stories for interactions, so if you’re looking for more, (War Era) Meteor Impact, (!-era) Scrolls and (!!-era) Submarine is where you’ll find it.</p>
-
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Meteor Impact |<a href="https://310mc.github.io/meteor_impact/" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Meteor Impact</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
-
-	<div class = "relevant-thumbnail">
-<p><b>Scroll of the Elements <a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
             alt="Scroll of the Elements."></div>
+<p>A <b>live show between AKATSUKI and RYUSEITAI</b> at a local tourist spot.</p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
+<div class="season-text"><b>!</b> ❦ Autumn</i></div>
+<p><a href="https://citrinesea.github.io/main-sections/translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ A slice of life read!</p>
+<p>⭑ Ninja Association activities</p>
+<p>⭑ Shinobu and Souma's relationship</p>
+<p>⭑ Souma interacting with RYUSEITAI</p>
+<p>⭑ Keito helping Shinobu with the Ninja Association</p>
+
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated wbm event scout idol chiaki kanata tetora midori shinobu keito kuro souma">
+<div class="recommendation-box">
+
+<p><b>★ Submarine</b></p>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/submarine.jpg"
             alt="Submarine."></div>
-</div></div></div>
+<p><b>AKATSUKI and RYUSEITAI</b> travel to Okinawa for the SS Tournament and face war against local idols.</p>
 
-<p><b>Kuro</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/kuro.png"></div>
-<p><b></b></p>
+<div class="season-text"><b>!!</b> ❆ Winter</i></div>
+<p><a href="https://310mc.github.io/submarine/" target="_blank"><b>Read here</b></a></p>
 
-<div class="fade-in-right-on-scroll">
+<p><div class="detail-text"><i>translated by <b>verdantgrove, 310mc</b></i></div></p>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Dictated by secret orders, Souma leads AKATSUKI, Kanata leads RYUSEITAI</p>
+<p>⭑ More about Kanata and the Shinkai Cult worshippers on Okinawa</p>
+<p>⭑ Chiaki and Keito working together behind the scenes to work with local idols amidst war</p>
+<p>⭑ Souma interacting with RYUSEITAI, and Midori's angst towards Souma and Keito as strangers to him</p>
+
+</div>
+<p></p>
+
+</div></div>
+</div></div>
+
+<div class="detail-text">
+<p><i>(Check out Mika Enstars' <b><a href="https://enstarsmasterlist.github.io/scoutevent" target="_blank">Scout & Event Story</a></b> and <b><a href="https://enstarsmasterlist.github.io/featureidol" target="_blank">Feature & Idol Story</a></b> masterlists, and <b>use the AKATSUKI and RYUSETAI filters</b> for a complete list of different AKATSUKI and RYUSEITAI stories.)</b></i></p></div>
+
+
+<div class="labelcategory">
+<p><b>RELATIONSHIPS</b></p></div>
+<div class="line"></div>
+<p>Browse stories below! Click on a character to see which stories I recommend for them and various members of the other group!</p>
+<div class="detail-text"><p><i>These are just a few personal recommendations of mine. The full list of stories AKARYUSEI members appear in together is longer. <a href="https://citrinesea.github.io/main-sections/essays/akaryusei-storysurvey.html" target="_blank"><b>See more here</b></i></a></p></div>
+
+<div class="filterbox">
+<div class="filters">
+
+   <ul class="filter option-set exclusive" data-filter-group="characters">
+     <li><b>Characters</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".chiaki">Chiaki</a></li>
+     <li><a href="#" data-filter-value=".kanata">Kanata</a></li>
+     <li><a href="#" data-filter-value=".tetora">Tetora</a></li>
+     <li><a href="#" data-filter-value=".midori">Midori</a></li>
+     <li><a href="#" data-filter-value=".shinobu">Shinobu</a></li>
+     <li><a href="#" data-filter-value=".keito">Keito</a></li>
+     <li><a href="#" data-filter-value=".kuro">Kuro</a></li>
+     <li><a href="#" data-filter-value=".souma">Souma</a></li>
+   </ul>
+
+   <ul class="filter option-set exclusive" data-filter-group="story-translations">
+     <li><b>Translations</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".translated">Translated</a></li>
+     <li><a href="#" data-filter-value=".wbm">Wayback Machine</a></li>
+   </ul>
+
+<ul class="filter option-set exclusive" data-filter-group="events">
+     <li><b>Story</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".event">Event</a></li>
+     <li><a href="#" data-filter-value=".scout">Scout</a></li>
+     <li><a href="#" data-filter-value=".idol">Idol</a></li>
+   </ul>
+
+
+</div></div>
+
+<div class="grid">
+
+<div class="item translated event chiaki keito">
 <div class="recommendation-box">
-<p><b></b></p>
-<p><b>Rin's Recommendation</b> Tough Guy | <b><a href="https://310mc.github.io/tough_guy/" target="_blank">➤ Read here</a></b></p>
-	<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Tough Guy</b></p></div>
+
+<p><b>★ Crossroad</b></p>
+<div class="season-text"><b>!</b> ❦ Autumn</div>
+
+<div class="preview-thumbnail">
+	<img
+            src="../../images/reading-recc-thumbnails/crossroad.jpg"
+            alt="Crossroad."></div>
+
+<p><a href="https://310mc.github.io/crossroad/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b> (Chiaki scenes only)</i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/chiaki.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Before the War begins, Keito grows an intrigue with Chiaki</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout kuro chiaki tetora midori">
+<div class="recommendation-box">
+
+<p><b>★ Tough Guy</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/tough-guy.jpg"
-            alt="Tough Guy."></div></div>
+            alt="Tough Guy."></div>
+<p><a href="https://310mc.github.io/tough_guy/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<p>Kuro needs help practicing for the filming of a school drama, and Chiaki takes the initiative to go and help! Alongside Tetora and Midori, this is Chiaki’s repayment to Kuro for all that he’s done for them. Chiaki, Kuro, Midori and Tetora practice lines for a script… and flop terribly. It’s amazing, this story is hilarious. Bonus points for Midori and Kuro’s first meeting as well.</p>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-<p><b>Other Stories</b></p>
-<p>These two have a lot of history together, so Meteor Impact is a good story for how they met and how their relationship developed.</p>
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Meteor Impact |<a href="https://310mc.github.io/meteor_impact/" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Meteor Impact</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Supernova |<a href="https://doublerainbow82.livejournal.com/35774.html" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Supernova</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/chiaki.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kuro needs help practicing for the filming of a school drama. Slapstick for Kuro, Chiaki, Tetora and Midori, and a fundamental story for Kuro and Midori</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated event kuro chiaki kanata tetora">
+<div class="recommendation-box">
+
+<p><b>★ Supernova</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/supernova.jpg"
             alt="Supernova."></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Gang |<a href="https://310mc.github.io/gang/" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Gang</b></p></div>
+<p><a href="https://doublerainbow82.livejournal.com/35774.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>doublerainbow82</b></i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/chiaki.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+
+<p>⭑ Kuro and Kanata bond over being their groups' second-in-commands</p>
+<p>⭑ How Kuro repays Chiaki following the events of Meteor Impact</p>
+<p>⭑ A standard story for Tetora and Kuro's relationship</p>
+
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout kuro chiaki">
+<div class="recommendation-box">
+
+<p><b>★ Gang</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/gang.jpg"
             alt="Gang."></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Astraea's Atelier</b></p>
-	<div class = "relevantstory-name">
-	<p><b>Astraea's Atelier</b></p></div>
+<p><a href="https://310mc.github.io/gang/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/chiaki.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ A good look at Chiaki and Kuro's friendship, as Kuro considers putting himself at risk.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item scout kuro chiaki">
+<div class="recommendation-box">
+
+<p><b>★ Astraea's Atelier</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/astraea-atelier.jpg"
             alt="Astraea's Atelier."></div>
 
-</div></div></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/chiaki.png"></div>
 
-<p><b>Souma</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/souma.png"></div>
-<p><b></b></p>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kuro and Chiaki visit Shu in France and discover naughty books.</p>
+</div>
+<p></p>
 
-<div class="fade-in-right-on-scroll">
+</div></div>
+
+<div class="item translated scout keito kuro kanata">
 <div class="recommendation-box">
-<p><b></b></p>
-<p><b>Rin's Recommendation</b> Scroll of the Elements <b><a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank">| ➤ Read here</a></b></p>
-	<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div></div>
 
-	<p>Souma and Chiaki don’t have much facetime together, but do interact a lot during Scrolls, when Souma heads the effort in getting Shinobu’s proposal through Keito. They think highly of each other – highlighted in Submarine!</p></div>
+<p><b>★ Comic World</b></p>
 
-</div></div></div>
-</section>
-
-<section id='kanata'>
-<div class="indexcontent-box">
-<div class="labelcategory">
-<p><div class="chibi-nav"><img src="../../images/chibis/kanata.png"></div><b>Kanata and...</b></p></div>
-<div class="line"></div>
-
-<p><b>Keito and Kuro</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
-<div class="chibi-nav"><img src="../../images/chibis/kuro.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b></b></p>
-<p><b>Rin's Recommendation</b> Comic World <b><a href="https://310mc.github.io/comic_world/" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Comic World</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/comic-world.jpg"
-            alt="Comic World."></div></div>
+            alt="Comic World."></div>
 
-	<p>Kanata enlists Kuro to help him tie up Kaoru’s surfboards during a typhoon, and Keito comes along. At the same time, Keito is trying to pin down who is releasing manga based on him, Kanata and the war. This story is incredibly key to understanding Kanata’s feelings about the War. It also illustrates his and Keito’s different philosophies on how they plan to move forward from it: the same path, but different methods).</p>
+<p><a href="https://310mc.github.io/gang/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-<p><b>Other Stories</b></p>
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Meteor Impact |<a href="https://310mc.github.io/meteor_impact/" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Meteor Impact</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Scroll of the Elements <a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
-</div></div></div>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
 
-<p><b>Souma</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/souma.png"></div>
-<p><b></b></p>
+<p>⭑ Kanata's feelings about the War, Keito, and their differing philosophies about moving on from it.</p>
+<p>⭑ The passage we see of the doujin Keito finds revolves around him and Kanata</p>
+<p>⭑ Kanata seeking out Kuro's assistance</p>
+</div>
+<p></p>
 
-<div class="fade-in-right-on-scroll">
+</div></div>
+
+<div class="item translated scout souma kanata">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Palace of the Ocean <b><a href="https://enstars-translates.dreamwidth.org/23761.html" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Palace of the Ocean</b></p></div>
+
+<p><b>★ Palace of the Ocean</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/palace-of-the-ocean.jpg"
-            alt="Palace of the Ocean."></div></div>
+            alt="Palace of the Ocean."></div>
 
-	<p>Souma and Kanata are very entwined– childhood acquaintances, doomed roles to each other, etc. There’s a handful of stories that you could read to understand them in their full context. Here, I’ll recommend Palace of the Ocean. Souma becomes enamored with a turtle and spends the story taking good care of it. The last few chapters set a good baseline for Kanata and Souma’s interactions: if you read Submarine and were confused as to why Kanata is so comfortable terrorizing Souma, this is a good answer.</p>
+<p><a href="https://enstars-translates.dreamwidth.org/23761.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>rii-translates</b></i></div></p>
 
-<p><b>Other Stories</b></p>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
 
-	<p>For extra RST+AKTK goodness, read Crash Course, a faux unit swap story. It’s a close second to my recommendation list, and you get to see AKTK!Kanata and RST!Souma. Colorful Autumn is good for their slice of life dynamic too.</p>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Souma's activities in Marine Life Club</p>
+<p>⭑ A good slice-of-life story with groundwork on how Souma and Kanata interact with each other</p>
+</div>
+<p></p>
 
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Crash Course <a href="https://enstars-translates.dreamwidth.org/9657.html" target="_blank">| ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Crash Course</b></p></div>
+</div></div>
+
+<div class="item translated scout souma kanata">
+<div class="recommendation-box">
+
+<p><b>★ Crash Course</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/crash-course.jpg"
             alt="Crash Course."></div>
+<p><a href="https://enstars-translates.dreamwidth.org/9657.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>rii-translates</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Colorful Autumn <a href="https://310mc.github.io/colorful_autumn/" target="_blank">| ➤ </a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Colorful Autumn</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Souma and Kanata train each other how to be a member of AKATSUKI and RYUSEITAI</p>
+<p>⭑ Keito and Shinobu are also in the story, but seperately.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout souma kanata midori">
+<div class="recommendation-box">
+
+<p><b>★ Colorful Autumn</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/colorful-autumn.jpg"
             alt="Colorful Autumn."></div>
+<p><a href="https://310mc.github.io/colorful_autumn/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Kabukimono <a href="https://web.archive.org/web/20210820133328/https://ensemble-stars.fandom.com/wiki/Kabukimono" target="_blank">| ➤ (WBM)</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Kabukimono</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/kabukimono.jpg"
-            alt="Kabukimono."></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Athletics <a href="https://web.archive.org/web/20210817155609/https://ensemble-stars.fandom.com/wiki/Athletics" target="_blank">| ➤ (WBM)</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Athletics</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Midori enlists Souma and Kanata to help him paint signboards. Tetora also appears.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item wbm event souma kanata">
+<div class="recommendation-box">
+
+<p><b>★ Athletics</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/athletics.jpg"
             alt="Athletics."></div>
+<p><a href="https://web.archive.org/web/20210817155609/https://ensemble-stars.fandom.com/wiki/Athletics" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>ABYSS <a href="https://310mc.github.io/abyss/" target="_blank">| ➤ </a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>ABYSS</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kanata appears to support his friends as UNDEAD and AKATSUKI compete together.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout souma kanata">
+<div class="recommendation-box">
+
+<p><b>★ ABYSS</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/abyss.jpg"
             alt="ABYSS."></div>
+<p><a href="https://310mc.github.io/abyss/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
+<p>A Look Back story about Kanata, Madara, Souma and the Shinkai Clan.</p>
 
-</div></div></div>
-</section>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kanata.png"></div>
 
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ How Kanata and Souma meet as children.</p>
 </div>
-</div>
+<p></p>
 
-<section id='tetora'>
-<div class="indexcontent-box">
-<div class="labelcategory">
-<p><div class="chibi-nav"><img src="../../images/chibis/tetora.png"></div><b>Tetora and...</b></p></div>
-<div class="line"></div>
-
-<p><b>Keito</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Opera <b><a href="https://doublerainbow82.livejournal.com/16147.html" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Opera</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/opera.jpg"
-            alt="Opera."></div></div>
-
-	<p>Akatsuki puts on an opera, and Tetora jumps at the opportunity to be a part of it. At the same time, he grapples with his intimidation of Keito after having been rejected from Akatsuki. This story has a big breakthrough for the preparation of that tension, as Keito and Tetora tentatively prod around each other more personally.</p>
-
-<p><b>Other Stories</b></p>
-<p>Submarine has a few good moments that continue these reparations.</p>
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
-
-	<div class = "relevant-thumbnail">
-<p><b>Keito Lecture | <a href="https://mephinomaly.tumblr.com/post/689778066929696768/tl-keito-lecturestory-directory" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Keito Lecture</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/keito-lecture.jpg"
-            alt="Keito Lecture."></div>
-</div>
 </div></div>
 
-<p><b>Kuro</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/kuro.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
+<div class="item translated scout tetora kuro keito">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Four Beasts of Fistfighting <b><a href="https://web.archive.org/web/20210817203121/https://ensemble-stars.fandom.com/wiki/The_Four_Beasts_of_Fistfighting" target="_blank">| ➤ Read here (Wayback)</a></b></p>
 
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Four Beasts of Fistfighting</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/four-beasts-of-fistfighting.jpg"
-            alt="Four Beasts of Fistfighting."></div></div>
+<p><b>★ Opera</b></p>
 
-	<p>If you’re looking for a deep dive on Akatsuki lore and Tetora’s involvement in all of it, it’s here. What Supervillain!Tetora was to Chiaki is what Four Beasts!Tetora is to Kuro. This is the precedent to elevating Tetora’s senpai-worship/Kuro’s mentorship relationship. If you want to understand Tetora and Kuro at an atomic level, this is your story.</p>
-
-	<p>Besides that, it goes into how Tetora found RST post-Akatsuki rejection, the Dragon King Competition, and even why the Student Council broke it up during the Main Story.<p>
-
-<p><b>Other Stories</b></p>
-<div class="timelinerow">
-
-	<div class = "relevant-thumbnail">
-<p><b>Opera | <a href="https://doublerainbow82.livejournal.com/16147.html" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Opera</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/opera.jpg"
             alt="Opera."></div>
+<p><a href="https://doublerainbow82.livejournal.com/16147.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>doublerainbow82</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>School Festival 4 | <a href="https://310mc.github.io/school_festival_4/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>School Festival 4</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Tetora requests to join the opera AKATSUKI is putting on.</p>
+<p>⭑ Delves into Tetora's failed AKATSUKI exam and his feelings about Keito as they interact at the performance.</p>
+<p>⭑ Chiaki and Souma also appear</p>
+
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout keito kuro tetora">
+<div class="recommendation-box">
+
+<p><b>★ Keito Lecture</b></p>
+
+<div class="preview-thumbnail">
+	<img
+            src="../../images/reading-recc-thumbnails/keito-lecture.jpg"
+            alt="Keito Lecture."></div>
+<p><a href="https://mephinomaly.tumblr.com/post/689778066929696768/tl-keito-lecturestory-directory"  target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>mephinomaly</b></i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kuro and Tetora appear and eat lunch with Keito and the members of Keito Lecture.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item wbm scout kuro tetora">
+<div class="recommendation-box">
+
+<p><b>★ Four Beasts of Fistfighting</b></p>
+
+<div class="preview-thumbnail">
+	<img
+            src="../../images/reading-recc-thumbnails/four-beasts-of-fistfighting.jpg"
+            alt="Four Beasts of Fistfighting."></div>
+
+<p><a href="https://web.archive.org/web/20210817203121/https://ensemble-stars.fandom.com/wiki/The_Four_Beasts_of_Fistfighting"  target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Foundational story for Kuro and Tetora and what they mean to each other</p>
+<p>⭑ A deep dive on AKATSUKI lore, Tetora’s involvement in all of it, and how Tetora found RST post-Akatsuki rejection</p>
+<p>⭑ Origins of the Dragon King Competition, and why the Student Council broke it up during the Main Story.</p>
+<p>⭑ Keito also appears</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated event kuro tetora">
+<div class="recommendation-box">
+
+<p><b>★ School Festival 4</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/school-fes-4.jpg"
             alt="School Festival 4."></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Keito Lecture | <a href="https://mephinomaly.tumblr.com/post/689778066929696768/tl-keito-lecturestory-directory" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Keito Lecture</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/keito-lecture.jpg"
-            alt="Keito Lecture."></div>
+<p><a href="https://310mc.github.io/school_festival_4/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Secret Jeweller</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Secret Jeweller</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Tetora tries to emulate the cool delinquent look like Kuro, and learns how he stands out from the rest of them.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item scout tetora kuro">
+<div class="recommendation-box">
+
+<p><b>★ Secret Jeweller</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/secret-jeweller.jpg"
             alt="Secret Jeweller."></div>
 
-</div></div></div>
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
 
-<p><b>Souma</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/souma.png"></div>
-<p><b></b></p>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Tetora has to bear with Kuro's odd behavior</p>
+<p>⭑ Keito also appears.</p>
+</div>
+<p></p>
 
-<div class="fade-in-right-on-scroll">
+</div></div>
+
+<div class="item scout souma tetora midori shinobu">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Colorful Autumn <b><a href="https://310mc.github.io/colorful_autumn/" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Colorful Autumn</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/colorful-autumn.jpg"
-            alt="Colorful Autumn."></div></div>
 
-	<p>Precious story. Tetora, Souma and Kanata help Midori paint signboards for his family’s grocer! Tetora mentions having had Souma’s cooking before, and expresses the desire to get to know Souma better at the end of the story.<p>
+<p><b>★ One Man Army</b></p>
 
-<p><b>Other Stories</b></p>
-<p>Submarine is very Noritama and Souma heavy, and Kanata’s FS2 story also have them gathered with Kanata in AOUMI aquarium.</p>
-<div class="timelinerow">
-
-	<div class = "relevant-thumbnail">
-<p><b>One Man Army</b></p>
-	<div class = "relevantstory-name">
-	<p><b>One Man Army</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/one-man-army.jpg"
             alt="One Man Army."></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
-</div></div></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/tetora.png"></div>
 
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ The Student Council tries to confiscate Souma's sword, and Shinobu runs reconnaissance for them. Tetora and Midori take Souma's side and leave him be.</p>
 </div>
-</div>
-</section>
+<p></p>
+</div></div>
 
-<section id='midori'>
-<div class="indexcontent-box">
-<div class="labelcategory">
-<p><div class="chibi-nav"><img src="../../images/chibis/midori.png"></div><b>Midori and...</b></p></div>
-<div class="line"></div>
-
-<p><b>Keito</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
+<div class="item translated scout keito midori">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Biblio <b><a href="https://310mc.github.io/biblio/" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Biblio</b></p></div>
+
+<p><b>★ Biblio</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/biblio.jpg"
-            alt="Biblio."></div></div>
+            alt="Biblio."></div>
+<p><a href="https://310mc.github.io/biblio/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<p>Midori, Hajime, Keito and Tsumugi are trapped in the school during a typhoon! (Keito, what is with you and being the harbinger of typhoons?). This is another story to made to soften up Keito’s impression to both Ra*bits and Ryuseitai juniors.</p>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-<p><b>Other Stories</b></p>
-<p>Midori and Keito have a lot of good moments scattered across stories: a whole chapter in Scrolls, moments in Submarine before the epilogue, and the Manga Club Scout story. They’re in Ring, and Hinata’s Practice to be a Little Brother! (!!-era) story too.</p>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Somehow, the second time Keito gets trapped with a RYUSEITAI member during a summer storm</p>
+</div>
+<p></p>
 
-<div class="timelinerow">
+</div></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Zodiac<a href="https://310mc.github.io/senpai_turned_into_a_dog/" target="_blank">| ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Zodiac</b></p></div>
+<div class="item translated scout keito midori">
+<div class="recommendation-box">
+
+<p><b>★ Zodiac</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/zodiac.jpg"
             alt="Zodiac."></div>
+<p><a href="https://310mc.github.io/senpai_turned_into_a_dog/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b> (Midori scenes only)</i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Scroll of the Elements <a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank"> ➤ </a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>Manga Club<a href="https://310mc.github.io/manga_club/" target="_blank">| ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Manga Club</b></p></div>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Keito chases Midori down, who has a dog he thinks is Chiaki</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout keito midori">
+<div class="recommendation-box">
+
+<p><b>★ Manga Club</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/manga-club.jpg"
             alt="Manga Club."></div>
+<p><a href="https://310mc.github.io/manga_club/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Ring<a href="https://ecemichi.tumblr.com/post/678365858276524032/ring1" target="_blank">| ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Ring</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Midori and Keito study together with the rest of their circle to compete in a manga trivia competition</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated event keito midori">
+<div class="recommendation-box">
+
+<p><b>★ Ring</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/ring.jpg"
             alt="Ring."></div>
 
-</div></div></div>
+<p><a href="https://ecemichi.tumblr.com/post/678365858276524032/ring1" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>kirinece</b></i></div></p>
 
-<p><b>Kuro</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/kuro.png"></div>
-<p><b></b></p>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-<div class="fade-in-right-on-scroll">
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Midori and Keito participate in the same Shuffle Unit together</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated idol midori kuro">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> The Crimson's Pure Heart <b><a href="https://310mc.github.io/crimsons_pure_heart/" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>The Crimson's Pure Heart</b></p></div>
+
+<p><b>★ The Crimson's Pure Heart</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/essay-previews/crimson-pure-heart.png"
-            alt="Crimson's Pure Heart."></div></div>
+            alt="The Crimson's Pure Heart."></div>
 
-<p>This is actually a short idol story (!-era), but it’s very precious. Kuro seeks out Midori for help learning about mascots, and Midori happily obliges.</p>
+<p><a href="https://310mc.github.io/crimsons_pure_heart/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
 
-<p><b>Other Stories</b></p>
-<p>Tough Guy is very foundational for Kuro and Midori. Consider Crimson’s Pure Heart a post-Tough Guy snack if you want more of them.</p>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/midori.png"></div>
 
-<div class="timelinerow">
-
-	<div class = "relevant-thumbnail">
-<p><b>Tough Guy<a href="https://310mc.github.io/tough_guy/" target="_blank"> | ➤ </a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Tough Guy</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/tough-guy.jpg"
-            alt="Tough Guy."></div>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kuro seeks out Midori for help learning about mascots, and Midori happily obliges. A post-Tough Guy story.</p>
 </div>
+<p></p>
 
 </div></div>
 
-<p><b>Souma</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/souma.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
+<div class="item wbm scout shinobu keito">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Colorful Autumn <b><a href="https://310mc.github.io/colorful_autumn/" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Colorful Autumn</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/colorful-autumn.jpg"
-            alt="Colorful Autumn."></div></div>
 
-	<p>Tetora, Souma and Kanata help Midori paint signboards for his family’s grocer! (deja vu). There’s a lot of cute direct interactions with them here– Midori is affectionate with everyone in the story, and Souma being one of them… so good.</p>
+<p><b>★ Ukiyo Air Ride</b></p>
 
-<p>Midori has a fixation on the lack of relationship between him in Souma in Submarine.</p>
-
-<p><b>Other Stories</b></p>
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>One Man Army</b></p>
-	<div class = "relevantstory-name">
-	<p><b>One Man Army</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/one-man-army.jpg"
-            alt="One Man Army."></div>
-
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
-</div></div></div>
-
-</div></div>
-</section>
-
-<section id='shinobu'>
-<div class="indexcontent-box">
-<div class="labelcategory">
-<p><div class="chibi-nav"><img src="../../images/chibis/shinobu.png"></div><b>Shinobu and...</b></p></div>
-<div class="line"></div>
-
-<p><b>Keito</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Scroll of the Elements <b><a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank">| ➤ Read here</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div></div>
-
-	<p>THIS STORY IS SO IMPORTANT TO THEM, hence its inclusion here, as opposed to a shorter story. As Shinobu tries to put together a proposal for a joint live, Keito greenlights it and maneuvers it to be a sponsored event by the Ninja Association in order to promote it. He encourages Shinobu to have pride in his club. This story establishes a strong relationship between them. After graduation, Keito enlists Shinobu as his spy for the student council to keep an eye on Mao. Chiaki and Keito discuss it further in Submarine.</p>
-
-<p><b>Other Stories</b></p>
-<p>I include Sparkly First Years for Shinobu approaching student council for the first time, though it doesn't have Keito in it. Ukiyo Air Ride is the first time they meet.</p>
-
-<div class="timelinerow">
-	<div class = "relevant-thumbnail">
-<p><b>Ukiyo Air Ride<a href="https://web.archive.org/web/20210825204400/https://ensemble-stars.fandom.com/wiki/Air_Ride" target="_blank"> ➤ (WBM)</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Ukiyo Air Ride</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/ukiyo-air-ride.jpg"
             alt="Ukiyo Air Ride."></div>
+<p><a href="https://web.archive.org/web/20210825204400/https://ensemble-stars.fandom.com/wiki/Air_Ride" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Sparkly First Years<a href="https://meatball124.wordpress.com/2017/04/08/sparkly-first-years-masterlist/" target="_blank"> ➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Sparkly First Years</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ One of the first times Shinobu and Keito meet.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item scout souma keito shinobu">
+<div class="recommendation-box">
+
+<p><b>★ Hanafuda</b></p>
+
+<div class="preview-thumbnail">
+	<img
+            src="../../images/reading-recc-thumbnails/hanafuda.jpg"
+            alt="Hanafuda."></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Shinobu joins Souma in looking for a missing Hanafuda card.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated scout shinobu keito">
+<div class="recommendation-box">
+
+<p><b>★ Sparkly First Years</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/sparkly-first-years.jpg"
             alt="Sparkly First Years."></div>
+<p><a href="https://meatball124.wordpress.com/2017/04/08/sparkly-first-years-masterlist/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>meatball124</b></i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>Submarine | <a href="https://310mc.github.io/submarine/" target="_blank">➤</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>Submarine</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
+<div class="chibi-filter"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
 
-</div></div></div>
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Even though Keito does not appear in it, I include Sparkly First Years for Shinobu approaching student council for the first time with Chiaki's encouragement.</p>
+<p>⭑ Also includes the tail-end of Tetora being recruited into RYUSEITAI by Chiaki.</p>
+</div>
+<p></p>
 
-<p><b>Kuro</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/kuro.png"></div>
-<p><b></b></p>
-
-<div class="fade-in-right-on-scroll">
-<div class="recommendation-box">
-<p><b>Rin's Recommendation</b> The Wolf and Red Riding Hood <b><a href="https://web.archive.org/web/20210818045005/https://ensemble-stars.fandom.com/wiki/The_Wolf_and_Red_Riding_Hood" target="_blank">| ➤ Read here (Wayback)</a></b></p>
-<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>The Wolf and Red Riding Hood</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/wolf-and-red-riding-hood.jpg"
-            alt="The Wolf and Red Riding Hood."></div></div>
-
-	<p>Kuro helps the Broadcasting Committee put on a play for a local school. It’s also just a great story for seeing Shinobu’s role in Broadcasting Committee. Bonus points for Shinobu and Souma. Kuro spends the story looking at their relationship fondly– happy to see Souma have a kouhai.</p>
 </div></div>
 
-<p><b>Souma</b></p>
-<div class="chibi-nav"><img src="../../images/chibis/souma.png"></div>
-<p><b></b></p>
-	
-<div class="fade-in-right-on-scroll">
+<div class="item wbm scout souma shinobu kuro">
 <div class="recommendation-box">
-<p><b>Rin's Recommendation</b> Scroll of the Elements <b><a href="../translations/Event-Stories/Scroll-of-the-Elements/scrolls-preview.html" target="_blank">| ➤ Read here</a></b></p>
-	<div class="story-rec">
-	<div class = "relevant-thumbnail">
-	<div class = "relevantstory-name">
-	<p><b>Scroll of the Elements</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div></div>
 
-	<p>As roommates (!!-era), Souma and Shinobu have great slice-of-life stories together. This, with Tsukasa’s FS1 are very light reads.</p>
+<p><b>★ The Wolf and Red Riding Hood</b></p>
 
-<p>These two have a very close relationship. Scroll of the Elements is an important foundational work for them (!-era)-- given it’s their center event. The Wolf and Red Riding Hood pairs them as well. Souma supports Shinobu in the student council.</p>
-
-<p><b>Other Stories</b></p>
-<div class="timelinerow">
-
-	<div class = "relevant-thumbnail">
-<p><b>Wolf + Red Riding <a href="https://web.archive.org/web/20210818045005/https://ensemble-stars.fandom.com/wiki/The_Wolf_and_Red_Riding_Hood" target="_blank"> ➤ (WBM)</a></b></p>
-	<div class = "relevantstory-name">
-	<p><b>The Wolf and Red Riding Hood</b></p></div>
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/wolf-and-red-riding-hood.jpg"
             alt="The Wolf and Red Riding Hood."></div>
+<p><a href="https://web.archive.org/web/20210818045005/https://ensemble-stars.fandom.com/wiki/The_Wolf_and_Red_Riding_Hood" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
 
-	<div class = "relevant-thumbnail">
-<p><b>One Man Army</b></p>
-	<div class = "relevantstory-name">
-	<p><b>One Man Army</b></p></div>
-	<img
-            src="../../images/reading-recc-thumbnails/one-man-army.jpg"
-            alt="One Man Army."></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
 
-	<div class = "relevant-thumbnail">
-<p><b>ATLANTIS</b></p>
-	<div class = "relevantstory-name">
-	<p><b>ATLANTIS</b></p></div>
+<div class="chibi-filter"><img src="../../images/chibis/kuro.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Kuro helps the Broadcasting Committee put on a play for a local school.</p>
+<p>⭑ Kuro fondly looks at Shinobu and Souma's relationship, happy to see Souma have a junior.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item event souma shinobu">
+<div class="recommendation-box">
+
+<p><b>★ ATLANTIS</b></p>
+
+<div class="preview-thumbnail">
 	<img
             src="../../images/reading-recc-thumbnails/atlantis.jpg"
             alt="ATLANTIS."></div>
 
-</div></div></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ Souma supports Shinobu's candidacy as Student Council president.</p>
+</div>
+<p></p>
+
+</div></div>
+
+<div class="item translated idol souma shinobu">
+<div class="recommendation-box">
+
+<p><b>★ Samurai and Ninjas</b></p>
+
+<div class="preview-thumbnail">
+	<img
+            src="../../images/essay-previews/warriors-and-ninjas.png"
+            alt="Samurai and Ninjas."></div>
+
+<p><a href="https://citrinesea.github.io/main-sections/translations/Idol-Stories/samurai-and-ninjas.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+
+<div class="chibi-filter"><img src="../../images/chibis/shinobu.png"></div>
+<div class="chibi-filter"><img src="../../images/chibis/souma.png"></div>
+
+<div class="detail-text">
+<p><b>AKARYUSEI highlights</b></p>
+<p>⭑ The first time Shinobu and Souma meet!</p>
+
+</div>
+<p></p>
+
+</div></div>
+
+<br></br>
+</div>
+
 <br></br>
 </div></div>
      </main>
@@ -766,31 +925,22 @@
    <p></p></footer>
 
 <script>
-const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
-if (elementsToFadeInUpOnScroll) {
-  window.addEventListener("scroll", function(event) {
-    elementsToFadeInUpOnScroll.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in-up");
-      } else {
-        element.classList.remove("fade-in-up");
-      }
-    });
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
   });
 }
 
-const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
-if (elementsToFadeInRightOnScroll) {
-  window.addEventListener("scroll", function(event) {
-    elementsToFadeInRightOnScroll.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in-right");
-      } else {
-        element.classList.remove("fade-in-right");
-      }
-    });
-  });
-}
-   </script>
+</script>
  </body>
 </html>
