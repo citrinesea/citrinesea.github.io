@@ -402,9 +402,10 @@ background: #F9F4EA}
 .grid .item {
   display: block;
   padding: 10px;
-  width: 46%;
+  width: 48%;
   box-sizing: border-box;
   margin:1%;
+  overflow: hidden;
 }
 
 .preview-thumbnail{
