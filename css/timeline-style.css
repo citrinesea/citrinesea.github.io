@@ -151,3 +151,134 @@ color: black;
 .timelinelabel:hover {
 transform: scale(1.01);
 }
+
+.timelinefilterbox {
+  width: 100%;
+  background: white;
+  position: relative;
+  color: #4d140b;
+border-radius: 5px;
+}
+
+.timelinefilterbox .filters {padding: 0 10px 0 5px;}
+.timelinefilterbox ul {padding:0;}
+
+.timelinefilterbox li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.timelinefilterbox li a {
+  color: #3c9183;
+  border-bottom: 1px solid #454545;
+  margin: 0 5px;
+}
+
+.timelinefilterbox ul b {
+  margin: 0 5px;
+}
+
+.timelinegrid{
+background: white}
+
+.timelinegrid .item {
+  display: block;
+  padding: 5px;
+  width: 23%;
+  box-sizing: border-box;
+  margin:1%;
+  overflow: hidden;
+}
+
+.TLpreview-thumbnail{
+max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    filterbox {width: 100%;}
+    .timelinegrid .item {width: 46%; display: inline-block; margin: 1% 0;}
+    .preview-thumbnail{max-width: 100%;}
+    }
+
+.selected {
+  color: #fff;
+  border-bottom-color: #97c5e0;
+  font-weight: bold;
+}
+
+.item {
+font-size: 16px;
+}
+
+.item a {
+  padding: 5px 15px;
+  background: #852938;
+  border: 1px solid #b8c7a5;
+  color: #fff;
+  transition: 0.4s ease;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.item a:hover {
+  background: transparent;
+  color: #852938;
+}
+
+.TLrecommendation-box {
+color: #0B0C22;
+display: inline-block;
+padding: 5px;
+text-align: left;
+max-width: auto;
+padding: 0 10px 0 10px;
+border-radius: 10px;
+border: 2px solid #1b1f4a;
+background-color: #FEFEFE;
+box-shadow: -3px 3px #b57474;
+}
+
+.TLrecommendation-box img{
+max-width: 100% ;
+max-height: 100% ;
+}
+
+.time-text{
+font-size: 12px;
+text-align: right;
+}
+
+.TLcollapsible {
+  background-color: #1b1f4a;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 0px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+.active, .TLcollapsible:hover {
+  background-color: #4e56ad;
+}
+.content {
+  display: none;
+  overflow: hidden;
+  max-height: max-content;
+  background-color: #white;
+}
+
+.banner{
+background-image: url('../images/background/resting-room.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+
+.banner-white{
+background: white;
+padding: 5px;
+width: 95%;
+margin: 0 0 0 10px;
+}

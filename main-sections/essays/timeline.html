@@ -1,15 +1,59 @@
- <!doctype html>
+<!--
+
+credits: isotope combination filtering tutorial by magnusthemes.tumblr.com
+
+-->
+
+<!doctype html>
 <html lang="en">
  <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width">
-   <title>Timeline | AKATSUKI and RYUSEITAI Stories citrinesea</title>
+   <title>AKARYUSEI Timeline citrinesea</title>
    <link rel="shortcut icon" href="../../images/icons/site-logo-small.png"/>
    <link rel="stylesheet" href="../../css/style.css">
    <link rel="stylesheet" href="../../css/timeline-style.css">
    <link rel="stylesheet" href="../../css/essay.css">
    <link rel="stylesheet" href="../../css/character.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".timelinegrid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $timelinegrid = $container.isotope({
+   itemSelector: ".item", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $timelinegrid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
  </head>
 
 <body>
@@ -29,1876 +73,1495 @@
 
 <div class="indexcontent-box">
 
-<br></br>
-<div class="relevantstory-box">
-<b>NAVIGATION</b>
-<p><a href="#pre!">Pre !-Era</a> ⋆ <a href="#!">!-Era</a> ⋆ <a href="#!!">!!-Era</a></p>
-</div>
+<div class="banner">
+<div class="banner-white">
 
-<section id='pre'>
-<div class="timelinelabel">
-<p><b>Pre !-Era</b></p></div>
+<div class="labelcategory">
+<p><b>AKARYUSEI Timeline</b> (v. 1.0)</p></div>
 <div class="line"></div>
 
-<p><b>☀︎ Summer (2 Years Before !)</b></p>
-<div class="timelinerow">
-	
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Meteor Impact</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-</div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
+<p>An interactable timeline of all stories members of AKATSUKI and RYUSEITAI appear in! Sort by different filters below.</p>
+<p><div class="detail-text">For recommendations based off of AKARYUSEI relationships, see <a  href="https://citrinesea.github.io/main-sections/reading-recc-tools/rstaktk-recs.html"><b>here</b></a></div></p>
 
-</div>
+<button type="button" class="TLcollapsible"><b>Story Filters</b></button>
+<div class="content">
+<div class="timelinefilterbox">
+<div class="filters">
 
-<p><b>Pre-War ❀ Spring</b></p>
-<div class="timelinerow">
-	
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Crossroad</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
+   <ul class="filter option-set exclusive" data-filter-group="characters">
+     <li><b>Era</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".beforebasic">Before !-Era</a></li>
+     <li><a href="#" data-filter-value=".basic">!-Era</a></li>
+     <li><a href="#" data-filter-value=".music">!!-Era</a></li>
+   </ul>
 
-</div></div>
-	<img
-            src="../../images/reading-recc-thumbnails/crossroad.jpg"
-            alt="Crossroad."></div>
+   <ul class="filter option-set exclusive" data-filter-group="story-translations">
+     <li><b>Story</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".event">Event</a></li>
+     <li><a href="#" data-filter-value=".scout">Scout</a></li>
+   </ul>
 
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Resurrection Sunday</b> (flashback)</p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
+   <ul class="filter option-set exclusive" data-filter-group="story-translations">
+     <li><b>Season</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".spring">Spring</a></li>
+     <li><a href="#" data-filter-value=".summer">Summer</a></li>
+     <li><a href="#" data-filter-value=".autumn">Autumn</a></li>
+     <li><a href="#" data-filter-value=".winter">Winter</a></li>
+   </ul>
 
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/resurrection-sunday.jpg"
-            alt="Resurrection Sunday."></div>
+   <ul class="filter option-set combine" data-filter-group="characters">
+     <li><b>Characters</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".chiaki">Chiaki</a></li>
+     <li><a href="#" data-filter-value=".kanata">Kanata</a></li>
+     <li><a href="#" data-filter-value=".tetora">Tetora</a></li>
+     <li><a href="#" data-filter-value=".midori">Midori</a></li>
+     <li><a href="#" data-filter-value=".shinobu">Shinobu</a></li>
+     <li><a href="#" data-filter-value=".keito">Keito</a></li>
+     <li><a href="#" data-filter-value=".kuro">Kuro</a></li>
+     <li><a href="#" data-filter-value=".souma">Souma</a></li>
+   </ul>
 
-</div>
+<ul class="filter option-set exclusive" data-filter-group="characters">
+     <li><b>Character Arcs</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".arc1">Chiaki</a></li>
+     <li><a href="#" data-filter-value=".arc2">Kanata</a></li>
+     <li><a href="#" data-filter-value=".arc3">Tetora</a></li>
+     <li><a href="#" data-filter-value=".arc4">Midori</a></li>
+     <li><a href="#" data-filter-value=".arc5">Shinobu</a></li>
+     <li><a href="#" data-filter-value=".arc6">Keito</a></li>
+     <li><a href="#" data-filter-value=".arc7">Kuro</a></li>
+     <li><a href="#" data-filter-value=".arc8">Souma</a></li>
+   </ul>
 
-<p><b>Pre-War ☀︎ Summer</b></p>
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Shinsegumi</b> (flashback)</p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/shinsengumi.jpg"
-            alt="Shinsengumi."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Meteor Impact</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
-
-</div>
-
-<p><b>War Era ❦ Autumn</b></p>
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Marionette</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/marionette.jpg"
-            alt="Meteor Impact."></div>
-	
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Meteor Impact</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
-
-
-</div>
-</section>
-
-<section id='!'>
-<div class="fade-in-right-on-scroll">
-<div class="timelinelabel">
-<p><b>!-Era</b></p></div>
-<div class="line"></div></div>
-
-<div class="timelinesquare-spring">
-<div class="season-header">
-<p><b>❀ Spring</b></p><div>
-
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Sparkly First Years</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img 
-            src="../../images/reading-recc-thumbnails/sparkly-first-years.jpg"
-            alt="Sparkly First Years."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Flower Festival</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/flower-fes.jpg"
-            alt="Flower Festival."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Palace of the Ocean</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/palace-of-the-ocean.jpg"
-            alt="Palace of the Ocean."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Gang</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/gang.jpg"
-            alt="Gang."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Resurrection Sunday</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/resurrection-sunday.jpg"
-            alt="Resurrection Sunday."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Purple Wisterias of May</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-	<img 
-            src="../../images/reading-recc-thumbnails/wisterias.jpg"
-            alt="Wisterias."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Fresh Green Martial Artist</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-	<img
-            src="../../images/reading-recc-thumbnails/fresh-green.jpg"
-            alt="Fresh Green Martial Artist."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>The Spectacular Cinderella Show</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-	<img
-            src="../../images/reading-recc-thumbnails/cinderella.jpg"
-            alt="Cinderella."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>School Festival 4</b></p>
-<div class = "chibi-nav-essay">
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-	<img
-            src="../../images/reading-recc-thumbnails/school-fes-4.jpg"
-            alt="School Festival 4."></div>
-
-</div></div>
-
+<ul class="filter option-set exclusive" data-filter-group="characters">
+     <li><b>Clubs and Circles</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".club1">Ninja Association</a></li>
+     <li><a href="#" data-filter-value=".club2">Karate Club</a></li>
+     <li><a href="#" data-filter-value=".club3">Basketball Club</a></li>
+     <li><a href="#" data-filter-value=".club4">Marine Life Club</a></li>
+     <li><a href="#" data-filter-value=".club5">Broadcasting Committee</a></li>
+   </ul>
 </div></div></div>
-
-<div class="timelinesquare-summer">
-<div class="season-header">
-<p><b>☀︎ Summer</b></p><div>
-
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Ukiyo Air Ride</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/ukiyo-air-ride.jpg"
-            alt="Ukiyo Air Ride."></div>
+<div class="detail-text">
+<p><b>Sometimes switching between too many filters at once gets things mixed up. Reset filters to all when making new searches.</b></p></div>
 
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Hero Show</b></p>
-<div class = "chibi-nav-essay">
+<div class="timelinegrid">
 
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
+<!-- PRE-WAR to WAR (Pre-Basic)-->
 
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/hero-show.jpg"
-            alt="Hero Show."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Biblio</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/biblio.jpg"
-            alt="Biblio."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Shinsegumi</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/shinsengumi.jpg"
-            alt="Shinsengumi."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Chinatown</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/chinatown.jpg"
-            alt="Chinatown."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Supernova</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/supernova.jpg"
-            alt="Supernova."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Kabukimono</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/kabukimono.jpg"
-            alt="Kabukimono."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Comic World</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/comic-world.jpg"
-            alt="Comic World."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Tanabata Festival Wishes</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/tanabata-fes.jpg"
-            alt="Tanabata Festival Wishes."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Milky Way</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/milky-way.jpg"
-            alt="Milky Way."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Orihime and Hikoboshi</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/orihime.jpg"
-            alt="Orihime and Hikoboshi."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Dogfight</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/dogfight.jpg"
-            alt="Dogfight."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Pirate Festival</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/pirate-fes.jpg"
-            alt="Pirate Festival."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Summer Night Festival</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/summer-night-fes.jpg"
-            alt="Summer Night Festival."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Beach Match</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/beach-match.jpg"
-            alt="Beach Match."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Buddy</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/buddy.jpg"
-            alt="Buddy."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Aquarium</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/aquarium.jpg"
-            alt="Aquarium."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Quarrel Festival</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/quarrel-fes.jpg"
-            alt="Quarrel Festival."></div>
-
-</div></div></div></div></div>
-
-<div class="timelinesquare-autumn">
-<div class="season-header">
-<p><b>❦ Autumn</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Tsukimi Live</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/tsukimi-live.jpg"
-            alt="Tsukimi Live."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Hanafuda</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/hanafuda.jpg"
-            alt="Hanafuda."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Crash Course</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/crash-course.jpg"
-            alt="Crash Course."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Scroll of the Elements</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
-            alt="Scroll of the Elements."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Toryumon</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/toryumon.jpg"
-            alt="Toryumon."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Sweet Halloween</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/sweet-halloween.jpg"
-            alt="Sweet Halloween."></div>
-
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Hospital Visit</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/hospital-visit.jpg"
-            alt="Hospital Visit."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Colorful Autumn</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/colorful-autumn.jpg"
-            alt="Colorful Autumn."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Tough Guy</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/tough-guy.jpg"
-            alt="Tough Guy."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Underdoctor</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/underdoctor.jpg"
-            alt="Underdoctor."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Autumn Forest</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/autumn-forest.jpg"
-            alt="Autumn Forest."></div>
-
-</div></div></div></div></div>
-
-<div class="timelinesquare-winter">
-<div class="season-header">
-<p><b>❆ Winter</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>The Wolf and Red Riding Hood</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/wolf-and-red-riding-hood.jpg"
-            alt="The Wolf and Red Riding Hood."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Greek Legends</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/greek-legends.jpg"
-            alt="Greek Legends."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Philosopher's Guidance</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/philosopher-guidance.jpg"
-            alt="Philosopher's Guidance."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Snowboard</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/snowboard.jpg"
-            alt="Snowboard."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Cats and the Camellia Train</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/cats-and-camelia-train.jpg"
-            alt="Cats and the Camellia Train."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Christmas Live</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/christmas-live.jpg"
-            alt="Christmas Live."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Starry Night Festival</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/starry-night-fes.jpg"
-            alt="Starry Night Festival."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Radiant Hot Holiday Party</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/holiday-party.jpg"
-            alt="Radiant Hot Holiday Party."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Zodiac</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/zodiac.jpg"
-            alt="Zodiac."></div>
+<div class="item beforebasic event kanata souma arc2 arc8">
+<div class="TLrecommendation-box">
 	
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Zodiac 2</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/zodiac-2.jpg"
-            alt="Zodiac 2."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Meteor Impact</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
-            alt="Meteor Impact."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Daikagura</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/daikagura.jpg"
-            alt="Daikagura."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Opera</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/opera.jpg"
-            alt="Opera."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Diner Live</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/diner-live.jpg"
-            alt="Diner Live."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Four Beasts of Fist-Fighting</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/four-beasts-of-fistfighting.jpg"
-            alt="Four Beasts of Fist-Fighting."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Decorate</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/decorate.jpg"
-            alt="Decorate."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Hot and Elegant Chocolat Fes</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/hot-and-elegant.jpg"
-            alt="Hot and Elegant Chocolat Fes."></div>
-
-</div></div></div></div></div>
-
-<div class="timelinesquare-spring">
-<div class="season-header">
-<p><b>❀ Spring (Graduation)</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Beasts</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/beasts.jpg"
-            alt="Beasts."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Chuunibyou</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/chuunibyou.jpg"
-            alt="Chuunibyou."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Repayment Festival</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/repayment-fes.jpg"
-            alt="Repayment Festival."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Climax</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/climax.jpg"
-            alt="Climax."></div>
-	
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Athletics</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/athletics.jpg"
-            alt="Athletics."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Strawberry Picking</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/strawberry-picking.jpg"
-            alt="Strawberry Picking."></div>
-
-</div></div></div></div></div>
-</section>
-<p><b></b></p>
-
-<section id='!!'>
-<div class="fade-in-right-on-scroll">
-<div class="timelinelabel">
-<p><b>!!-Era</b></p></div>
-<div class="line"></div></div>
-
-<div class="timelinesquare-summer">
-<div class="season-header">
-<p><b>☀︎ Summer</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Astraea's Atelier</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/astraea-atelier.jpg"
-            alt="Astraea's Atelier."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Polka Dots</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/polka-dots.jpg"
-            alt="Polka Dots."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Ushimairi</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/ushimairi.jpg"
-            alt="Ushimairi."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Red Hot Summer</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/red-hot-summer.jpg"
-            alt="Red Hot Summer."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Summer Bird</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/summer-bird.jpg"
-            alt="Summer Bird."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Century Wars</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/century-wars.jpg"
-            alt="Century Wars."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Vagabond</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/vagabond.jpg"
-            alt="Vagabond."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Ninja Clan</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/ninja-club.jpg"
-            alt="Ninja Clan."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Date Plan</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/date-plan.jpg"
-            alt="Date Plan."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Butoukai</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/butoukai.jpg"
-            alt="Butoukai."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>RELOADED</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/reloaded.jpg"
-            alt="RELOADED."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Phantom Thief: FAKE</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/phantom-thief.jpg"
-            alt="Phantom Thief: FAKE."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Motor Show</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/motor-show.jpg"
-            alt="Motor Show."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Awakened Night Patrollers</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/night-patroller.jpg"
-            alt="Night Patrollers."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Dollhouse</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/dollhouse.jpg"
-            alt="Dollhouse."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Summer Show</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/summer-snow.jpg"
-            alt="Summer Snow."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Dead-End Land</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/dead-end.jpg"
-            alt="Dead-End Land."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Comet Show</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/comet-show.jpg"
-            alt="Comet Show."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Butlers</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/butlers.jpg"
-            alt="Butlers."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>ASOBI Club</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/asobi.jpg"
-            alt="ASOBI Club."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Orient</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/orient.jpg"
-            alt="Orient."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Keito Lecture</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/keito-lecture.jpg"
-            alt="Keito Lecture."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Spy THE Mission</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/spy-the-mission.jpg"
-            alt="Spy THE Mission."></div>
-
-</div></div></div></div></div>
-
-<div class="timelinesquare-autumn">
-<div class="season-header">
-<p><b>❦ Autumn</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Chill Yellow</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/chill-yellow.jpg"
-            alt="Chill Yellow."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Gemsphere</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/gemsphere.jpg"
-            alt="Gemsphere."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Succession Match</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/succession-match.jpg"
-            alt="Succession Match."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Unification by Force</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/unification-by-force.jpg"
-            alt="Unification by Force."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Secret Jeweller</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/secret-jeweller.jpg"
-            alt="Secret Jeweller."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>One Man Army</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/one-man-army.jpg"
-            alt="One Man Army."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Beneath the Clouded Moon</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/beneath-clouded-moon.jpg"
-            alt="Beneath the Clouded Moon."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Ring</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/ring.jpg"
-            alt="Ring."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Myriad</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/myriad.jpg"
-            alt="Myriad."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Scarlet Halloween</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/scarlet-halloween.jpg"
-            alt="Scarlet Halloween."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Wedding March</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/wedding-march.jpg"
-            alt="Wedding March."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Escape Mansion</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/escape-mansion.jpg"
-            alt="Escape Mansion."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>High and Low</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/high-and-low.jpg"
-            alt="High and Low."></div>
-
-</div></div></div></div></div>
-
-<div class="timelinesquare-winter">
-<div class="season-header">
-<p><b>❆ Winter</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Submarine</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/submarine.jpg"
-            alt="Submarine."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>MIRAGE</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/mirage.jpg"
-            alt="MIRAGE."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Moonlight Mirror Ball</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/kaguya-hime.jpg"
-            alt="Moonlight Mirror Ball."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Blush Flash</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/blush-flash.jpg"
-            alt="Blush Flash."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Manga Club</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/keito.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-
-</div></div>
-
-	<img
-            src="../../images/reading-recc-thumbnails/manga-club.jpg"
-            alt="Manga Club."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
 <p><b>ABYSS</b></p>
-<div class = "chibi-nav-essay">
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/abyss.jpg"
+     alt="Abyss."></div>
+<div class="time-text"><p><b>Childhood (flashback)</b></p></div>
+</div></div>
 
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
+<div class="item beforebasic event chiaki kanata keito kuro arc1 arc2 arc6 arc7">
+<div class="TLrecommendation-box">
+	
+<p><b>Meteor Impact</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
+     alt="Meteor Impact."></div>
+<div class="time-text"><p><b>2 Years Before ! ☀︎ (Summer)</b></p></div>
+</div></div>
+
+<div class="item beforebasic spring event chiaki keito kuro souma arc6">
+<div class="TLrecommendation-box">
+	
+<p><b>Crossroad</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/crossroad.jpg"
+     alt="Crossroad."></div>
+<div class="time-text"><p><b>Pre-War ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item beforebasic spring event keito arc6">
+<div class="TLrecommendation-box">
+	
+<p><b>Resurrection Sunday</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/resurrection-sunday.jpg"
+     alt="Resurrection Sunday."></div>
+<div class="time-text"><p><b>Pre-War ❀ Spring (flashback)</b></p></div>
 
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/abyss.jpg"
-            alt="ABYSS."></div>
+<div class="item beforebasic summer event keito kuro souma arc6 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Shinsegumi</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/shinsengumi.jpg"
+     alt="Resurrection Sunday."></div>
+<div class="time-text"><p><b>Pre-War ☀︎ Summer (flashback)</b></p></div>
+</div></div>
 
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item beforebasic summer event chiaki kanata keito kuro souma arc1 arc2 arc6 arc7 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Meteor Impact</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
+     alt="Meteor Impact."></div>
+<div class="time-text"><p><b>Pre-War ☀︎ Summer (flashback)</b></p></div>
+</div></div>
+
+<div class="item beforebasic autumn event kuro arc7">
+<div class="TLrecommendation-box">
+	
+<p><b>Marionette</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/marionette.jpg"
+     alt="Marionette."></div>
+<div class="time-text"><p><b>War Era ❦ Autumn</b></p></div>
+
+</div></div>
+
+<div class="item beforebasic autumn event chiaki kanata keito kuro souma arc1 arc2 arc6 arc7 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Meteor Impact</b></p>
+
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
+     alt="Meteor Impact."></div>
+<div class="time-text"><p><b>War Era ❦ Autumn</b></p></div>
+</div></div>
+
+
+
+<!-- BASIC ERA -->
+
+<div class="item basic spring scout shinobu midori chiaki arc4 arc5 club1">
+<div class="TLrecommendation-box">
+	
+<!-- SPRING -->
+
+<p><b>Sparkly First Years</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/sparkly-first-years.jpg"
+     alt="Sparkly First Years."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring event keito kuro souma arc6">
+<div class="TLrecommendation-box">
+	
+<p><b>Flower Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/flower-fes.jpg"
+     alt="Flower Festival."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring scout souma kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Palace of the Ocean</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/palace-of-the-ocean.jpg"
+     alt="Palace of the Ocean."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring scout chiaki kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Gang</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/gang.jpg"
+     alt="Gang."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring event keito souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Resurrection Sunday</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/resurrection-sunday.jpg"
+     alt="Resurrection Sunday."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring event kanata souma chiaki shinobu arc2 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Purple Wisterias of May</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/wisterias.jpg"
+     alt="Purple Wisterias of May."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring scout keito souma kuro tetora club2">
+<div class="TLrecommendation-box">
+	
+<p><b>Fresh Green Martial Artist</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/fresh-green.jpg"
+     alt="Fresh Green Martial Artist."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring event keito kuro souma tetora">
+<div class="TLrecommendation-box">
+	
+<p><b>The Spectacular Cinderella Show</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/cinderella.jpg"
+     alt="The Spectacular Cinderella Show."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<div class="item basic spring event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>School Festival 4</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/school-fes-4.jpg"
+     alt="School Festival 4."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring</b></p></div>
+</div></div>
+
+<!-- SUMMER -->
+
+<div class="item basic summer scout keito shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Ukiyo Air Ride</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/ukiyo-air-ride.jpg"
+     alt="Ukiyo Air Ride."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout chiaki kanata tetora midori shinobu arc3">
+<div class="TLrecommendation-box">
+	
+<p><b>Hero Show</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/hero-show.jpg"
+     alt="Hero Show."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout keito midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Biblio</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/biblio.jpg"
+     alt="Biblio."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event keito kuro souma arc6 arc7 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Shinsengumi</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/shinsengumi.jpg"
+     alt="Shinsegumi."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout keito">
+<div class="TLrecommendation-box">
+	
+<p><b>Chinatown</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/chinatown.jpg"
+     alt="Chinatown."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event chiaki kanata tetora midori shinobu kuro arc1 arc2 arc3 arc4 arc5 arc7">
+<div class="TLrecommendation-box">
+	
+<p><b>Supernova</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/supernova.jpg"
+     alt="Supernova."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event kanata keito kuro souma club4">
+<div class="TLrecommendation-box">
+	
+<p><b>Kabukimono</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/kabukimono.jpg"
+     alt="Kabukimono."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout kanata keito kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Comic World</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/comic-world.jpg"
+     alt="Comic World."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Tanabata Fes</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/tanabata-fes.jpg"
+     alt="Tanabata Fes."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event kanata keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Milky Way</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/milky-way.jpg"
+     alt="Milky Way."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event chiaki kanata tetora midori shinobu arc4 arc5">
+<div class="TLrecommendation-box">
+	
+<p><b>Orihime and Hikoboshi</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/orihime.jpg"
+     alt="Orihime and Hikoboshi."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout chiaki midori club3">
+<div class="TLrecommendation-box">
+	
+<p><b>Dogfight</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/dogfight.jpg"
+     alt="Dogfight."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Pirate Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/pirate-fes.jpg"
+     alt="Pirate Festival."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Summer Night Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/summer-night-fes.jpg"
+     alt="Summer Night Festival."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Beach Match</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/beach-match.jpg"
+     alt="Beach Match."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout chiaki midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Buddy</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/buddy.jpg"
+     alt="Buddy."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event kanata souma arc2 arc8 club4">
+<div class="TLrecommendation-box">
+	
+<p><b>Aquarium</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/aquarium.jpg"
+     alt="Aquarium."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event keito kuro souma kanata arc6">
+<div class="TLrecommendation-box">
+	
+<p><b>Quarrel Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/quarrel-fes.jpg"
+     alt="Quarrel Festival."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer event chiaki kanata tetora midori shinobu kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Shooting Star Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/shooting-star-festival.jpg"
+     alt="Shooting Star Festival."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item basic summer scout tetora kuro midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Cooking</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/cooking.jpg"
+     alt="Cooking."></div>
+<div class="time-text"><p><b>!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<!-- AUTUMN -->
+
+<div class="item basic autumn event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Tsukimi Live</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/tsukimi-live.jpg"
+     alt="Tsukimi Live."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout keito kuro souma shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Hanafuda</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/hanafuda.jpg"
+     alt="Hanafuda."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn event keito kanata souma shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Crash Course</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/crash-course.jpg"
+     alt="Crash Course."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn event chiaki kanata tetora midori shinobu keito kuro souma club1">
+<div class="TLrecommendation-box">
+	
+<p><b>Scroll of the Elements</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/scroll-of-the-elements.jpg"
+     alt="Scroll of the Elements."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Toryumon</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/toryumon.jpg"
+     alt="Toryumon."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Sweet Halloween</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/sweet-halloween.jpg"
+     alt="Sweet Halloween."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn event chiaki keito souma shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Hospital Visit</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/hospital-visit.jpg"
+     alt="Hospital Visit."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout midori tetora souma kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Colorful Autumn</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/colorful-autumn.jpg"
+     alt="Colorful Autumn."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout chiaki kuro midori tetora club3">
+<div class="TLrecommendation-box">
+	
+<p><b>Tough Guy</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/tough-guy.jpg"
+     alt="Tough Guy."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout kuro keito souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Underdoctor</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/underdoctor.jpg"
+     alt="Underdoctor."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item basic autumn scout kuro keito souma club5">
+<div class="TLrecommendation-box">
+	
+<p><b>Autumn Forest</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/autumn-forest.jpg"
+     alt="Autumn Forest."></div>
+<div class="time-text"><p><b>!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<!-- WINTER -->
+
+<div class="item basic winter scout kuro souma shinobu club5">
+<div class="TLrecommendation-box">
+	
+<p><b>The Wolf and Red Riding Hood</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/wolf-and-red-riding-hood.jpg"
+     alt="The Wolf and Red Riding Hood."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Greek Legends</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/greek-legends.jpg"
+     alt="Greek Legends."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout keito">
+<div class="TLrecommendation-box">
+	
+<p><b>Philosopher's Guidance</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/philosopher-guidance.jpg"
+     alt="Philosopher's Guidance."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout tetora midori kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Snowboard</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/snowboard.jpg"
+     alt="Snowboard."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Cats and the Camellia Train</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/cats-and-camelia-train.jpg"
+     alt="Cats and the Camellia Train."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Christmas Live</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/christmas-live.jpg"
+     alt="Christmas Live."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event kanata shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Starry Night Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/starry-night-fes.jpg"
+     alt="Starry Night Festival."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Holiday Party</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/holiday-party.jpg"
+     alt="Radiant Hot Holiday Party."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout midori keito">
+<div class="TLrecommendation-box">
+	
+<p><b>Zodiac</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/zodiac.jpg"
+     alt="Zodiac."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout kanata souma shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Zodiac 2</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/zodiac-2.jpg"
+     alt="Zodiac."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Meteor Impact</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/meteor-impact.jpg"
+     alt="Meteor Impact."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Daikagura</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/daikagura.jpg"
+     alt="Daikagura."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event tetora keito kuro souma chiaki arc3 club2">
+<div class="TLrecommendation-box">
+	
+<p><b>Opera</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/opera.jpg"
+     alt="Opera."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event keito kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Diner Live</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/diner-live.jpg"
+     alt="Diner Live."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter scout tetora keito kuro midori arc3 arc7 club2">
+<div class="TLrecommendation-box">
+	
+<p><b>Four Beasts of Fist-Fighting</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/four-beasts-of-fistfighting.jpg"
+     alt="Four Beasts of Fist-Fighting."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Decorate</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/decorate.jpg"
+     alt="Decorate."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item basic winter event chiaki kanata tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Hot and Elegant Chocolat Fes</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/hot-and-elegant.jpg"
+     alt="Hot and Elegant Chocolat Fes."></div>
+<div class="time-text"><p><b>!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<!-- SPRING -->
+
+<div class="item basic spring scout tetora midori arc3">
+<div class="TLrecommendation-box">
+	
+<p><b>Beasts</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/beasts.jpg"
+     alt="Beasts."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<div class="item basic winter scout shinobu midori club1">
+<div class="TLrecommendation-box">
+	
+<p><b>Chuunibyou</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/chuunibyou.jpg"
+     alt="Chuunibyou."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<div class="item basic spring event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Repayment Festival</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/repayment-fes.jpg"
+     alt="Repayment Festival."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<div class="item basic spring event chiaki kanata tetora midori shinobu arc1 arc3 arc4">
+<div class="TLrecommendation-box">
+	
+<p><b>Climax</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/climax.jpg"
+     alt="Climax."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<div class="item basic spring event keito kuro souma kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Athletics</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/athletics.jpg"
+     alt="Athletics."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<div class="item basic spring scout shinobu midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Strawberry Picking</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/strawberry-picking.jpg"
+     alt="Strawberry Holiday."></div>
+<div class="time-text"><p><b>!-Era ❀ Spring (Graduation)</b></p></div>
+</div></div>
+
+<!-- MUSIC ERA -->
+
+<div class="item music summer scout chiaki kuro">
+<div class="TLrecommendation-box">
+
+<!-- SUMMER -->
+	
+<p><b>Astraea's Atelier</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/astraea-atelier.jpg"
+     alt="Astraea's Atelier."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout tetora">
+<div class="TLrecommendation-box">
+	
+<p><b>Polka Dots</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/polka-dots.jpg"
+     alt="Polka Dots."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout keito kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Ushimairi</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/ushimairi.jpg"
+     alt="Ushimairi."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout chiaki">
+<div class="TLrecommendation-box">
+	
+<p><b>Red Hot Summer</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/red-hot-summer.jpg"
+     alt="Red Hot Summer."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Summer Bird</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/summer-bird.jpg"
+     alt="Red Hot Summer."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout tetora shinobu midori arc3 club2">
+<div class="TLrecommendation-box">
+	
+<p><b>Century Wars</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/century-wars.jpg"
+     alt="Century Wars."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Vagabond</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/vagabond.jpg"
+     alt="Vagabond."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event chiaki kanata tetora midori shinobu club1">
+<div class="TLrecommendation-box">
+	
+<p><b>Ninja Clan</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/ninja-club.jpg"
+     alt="Ninja Clan."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event chiaki">
+<div class="TLrecommendation-box">
+	
+<p><b>Date Plan</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/date-plan.jpg"
+     alt="Date Plan."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event kuro tetora">
+<div class="TLrecommendation-box">
+	
+<p><b>Butoukai</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/butoukai.jpg"
+     alt="Butoukai."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event kuro tetora">
+<div class="TLrecommendation-box">
+	
+<p><b>Sports Survivors</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/sports-survivors.jpg"
+     alt="Sports Survivors."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>RELOADED</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/reloaded.jpg"
+     alt="RELOADED."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Phantom Thief: FAKE</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/phantom-thief.jpg"
+     alt="Phantom Thief: FAKE."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event chiaki kanata tetora midori shinobu arc3">
+<div class="TLrecommendation-box">
+	
+<p><b>Motor Show</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/motor-show.jpg"
+     alt="Motor Show."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Motor Show</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/night-patroller.jpg"
+     alt="Awakened Night Patrollers."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout chiaki midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Dollhouse</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/dollhouse.jpg"
+     alt="Dollhouse."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Summer Snow</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/summer-snow.jpg"
+     alt="Summer Snow."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout shinobu club1">
+<div class="TLrecommendation-box">
+	
+<p><b>Dead-End Land</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/dead-end.jpg"
+     alt="Dead-End Land."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event chiaki kanata tetora midori shinobu arc1 arc3 arc4">
+<div class="TLrecommendation-box">
+	
+<p><b>Comet Show</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/comet-show.jpg"
+     alt="Comet Show."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer event souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Butlers</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/butlers.jpg"
+     alt="Butlers."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>ASOBI Club</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/asobi.jpg"
+     alt="ASOBI Club."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Orient</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/orient.jpg"
+     alt="Orient."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout keito kuro tetora">
+<div class="TLrecommendation-box">
+	
+<p><b>Keito Lecture</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/keito-lecture.jpg"
+     alt="Keito Lecture."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<div class="item music summer scout keito kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Spy THE Mission</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/spy-the-mission.jpg"
+     alt="Spy THE Mission."></div>
+<div class="time-text"><p><b>!!-Era ☀︎ Summer</b></p></div>
+</div></div>
+
+<!-- AUTUMN -->
+
+<div class="item music autumn scout keito">
+<div class="TLrecommendation-box">
+	
+<p><b>Chill Yellow</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/chill-yellow.jpg"
+     alt="Chill Yellow."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn scout tetora shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Gemsphere</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/gemsphere.jpg"
+     alt="Gemsphere."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event keito kuro souma arc6">
+<div class="TLrecommendation-box">
+	
+<p><b>Succession Match</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/succession-match.jpg"
+     alt="Succession Match."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event keito kuro souma arc7 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Unification by Force</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/unification-by-force.jpg"
+     alt="Unification by Force."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn scout keito kuro tetora club2">
+<div class="TLrecommendation-box">
+	
+<p><b>Secret Jeweller</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/secret-jeweller.jpg"
+     alt="Secret Jeweller."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn scout souma tetora midori shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>One Man Army</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/secret-jeweller.jpg"
+     alt="One Man Army."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn scout chiaki kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Beneath the Clouded Moon</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/beneath-clouded-moon.jpg"
+     alt="Beneath the Clouded Moon."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event keito midori arc4">
+<div class="TLrecommendation-box">
+	
+<p><b>Ring</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/ring.jpg"
+     alt="Ring."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn scout kanata souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Myriad</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/myriad.jpg"
+     alt="Myriad."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event keito kuro souma shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Scarlet Halloween</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/scarlet-halloween.jpg"
+     alt="Scarlet Halloween."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event chiaki midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Wedding March</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/wedding-march.jpg"
+     alt="Wedding March."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event keito midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Escape Mansion</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/escape-mansion.jpg"
+     alt="Escape Mansion."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<div class="item music autumn event tetora midori shinobu arc3 arc4">
+<div class="TLrecommendation-box">
+	
+<p><b>High and Low</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/high-and-low.jpg"
+     alt="High and Low."></div>
+<div class="time-text"><p><b>!!-Era ❦ Autumn</b></p></div>
+</div></div>
+
+<!-- WINTER -->
+
+<div class="item music winter event chiaki kanata tetora midori shinobu keito kuro souma arc2 arc8">
+<div class="TLrecommendation-box">
+	
+<p><b>Submarine</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/submarine.jpg"
+     alt="Submarine."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout shinobu arc5">
+<div class="TLrecommendation-box">
+	
+<p><b>MIRAGE</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/mirage.jpg"
+     alt="MIRAGE."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter event kanata">
+<div class="TLrecommendation-box">
+	
+<p><b>Moonlight Mirror Ball</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/kaguya-hime.jpg"
+     alt="Moonlight Mirror Ball."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Blush Flash</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/blush-flash.jpg"
+     alt="Blush Flash."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout midori">
+<div class="TLrecommendation-box">
+	
+<p><b>Manga Club</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/manga-club.jpg"
+     alt="Manga Club."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout kuro">
+<div class="TLrecommendation-box">
+	
+<p><b>Knights Killers</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/knights-killers.jpg"
+     alt="Knights Killers."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout kanata souma">
+<div class="TLrecommendation-box">
+	
+<p><b>ABYSS</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/abyss.jpg"
+     alt="ABYSS."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
+
+<div class="item music winter scout souma kanata">
+<div class="TLrecommendation-box">
+	
 <p><b>Raindrop Store Window</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/raindrop-show-window.jpg"
+     alt="Raindrop Store Window."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/raindrop-show-window.jpg"
-            alt="Raindrop Store Window."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
-<p><b>Whimsical City Rider</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="item music winter scout midori tetora shinobu">
+<div class="TLrecommendation-box">
+	
+<p><b>Whimsical City Ride</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/whimsical-city.jpg"
+     alt="Whimsical City Ride."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/whimsical-city.jpg"
-            alt="Whimsical City Rider."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music winter event kanata midori shinobu">
+<div class="TLrecommendation-box">
+	
 <p><b>Easter</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/easter.jpg"
+     alt="Easter."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/easter.jpg"
-            alt="Easter."></div>
+<div class="item music winter event keito kuro souma">
+<div class="TLrecommendation-box">
+	
+<p><b>Heaven and Earth</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/heaven-and-earth.jpg"
+     alt="Heaven and Earth."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
+</div></div>
 
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music winter event souma shinobu arc5">
+<div class="TLrecommendation-box">
+	
 <p><b>Atlantis</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/souma.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/atlantis.jpg"
+     alt="Atlantis."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/atlantis.jpg"
-            alt="Atlantis."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music winter event chiaki kanata tetora midori shinobu arc1 arc3">
+<div class="TLrecommendation-box">
+	
 <p><b>Supervillain</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/supervillain.jpg"
+     alt="Supervillain."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/supervillain.jpg"
-            alt="Supervillain."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music winter event kuro">
+<div class="TLrecommendation-box">
+	
 <p><b>Remplacer</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/kuro.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/remplacer.jpg"
+     alt="Remplacer."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/remplacer.jpg"
-            alt="Remplacer."></div>
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music winter event shinobu arc8">
+<div class="TLrecommendation-box">
+	
 <p><b>2x2</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/2x2.jpg"
+     alt="2x2."></div>
+<div class="time-text"><p><b>!!-Era ❆ Winter</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/2x2.jpg"
-            alt="2x2."></div>
+<!-- Spring -->
 
-</div></div></div></div></div>
-
-<div class="timelinesquare-spring">
-<div class="season-header">
-<p><b>❀ Spring</b></p><div>
-<div class="fade-in-up-on-scroll">
-<div class="timelinerow">
-
-<div class = "timelinesquare">
-<div class = "relevantstory-timeline">
+<div class="item music spring event chiaki kanata tetora midori shinobu arc4">
+<div class="TLrecommendation-box">
+	
 <p><b>Tropical</b></p>
-<div class = "chibi-nav-essay">
-
-<div class = "chibi-relevant"><img src="../../images/chibis/chiaki.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/kanata.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/tetora.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/midori.png"></div>
-<div class = "chibi-relevant"><img src="../../images/chibis/shinobu.png"></div>
-
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/tropical.jpg"
+     alt="Tropical."></div>
+<div class="time-text"><p><b>!!-Era ❆ Spring (ES Year 2)</b></p></div>
 </div></div>
 
-	<img
-            src="../../images/reading-recc-thumbnails/tropical.jpg"
-            alt="Tropical."></div>
+<div class="item music spring event chiaki kanata tetora midori shinobu arc2">
+<div class="TLrecommendation-box">
+	
+<p><b>Stella Maris</b></p>
+<div class="TLpreview-thumbnail">
+<img
+     src="../../images/reading-recc-thumbnails/stella-maris.jpg"
+     alt="Stella Maris."></div>
+<div class="time-text"><p><b>!!-Era ❆ Spring (ES Year 2)</b></p></div>
+</div></div>
 
-</div></div></div></div></div>
-</section>
+</div>
+
 
 <br></br>
 </div></div></div>
@@ -1908,29 +1571,18 @@
    <p></p></footer>
 
 <script>
-const elementsToFadeInUpOnScroll = document.querySelectorAll(".fade-in-up-on-scroll");
-if (elementsToFadeInUpOnScroll) {
-  window.addEventListener("scroll", function(event) {
-    elementsToFadeInUpOnScroll.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in-up");
-      } else {
-        element.classList.remove("fade-in-up");
-      }
-    });
-  });
-}
+var coll = document.getElementsByClassName("TLcollapsible");
+var i;
 
-const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
-if (elementsToFadeInRightOnScroll) {
-  window.addEventListener("scroll", function(event) {
-    elementsToFadeInRightOnScroll.forEach(function(element) {
-      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
-        element.classList.add("fade-in-right");
-      } else {
-        element.classList.remove("fade-in-right");
-      }
-    });
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
   });
 }
    </script>
