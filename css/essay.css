@@ -489,7 +489,7 @@ top:0;
 }
 
 .infographic{
-width: 900px;
+width: 700px;
 margin-left: auto;
     margin-right: auto;
 }
@@ -499,9 +499,9 @@ max-height: 100% ;
 }
 
 .infographic-vid{
-width: 900px;
+width: 700px;
 margin-left: auto;
-    margin-right: auto;
+margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
