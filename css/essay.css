@@ -505,7 +505,7 @@ margin-right: auto;
 }
 
 @media only screen and (max-width: 600px) {
-    .infographic {width: 100%; display: inline-block; margin: 1% 0;}  
-    .infographic-vid {100%; display: inline-block; margin: 1% 0;} 
+    .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
+    .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
     }
 
