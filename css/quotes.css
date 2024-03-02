@@ -1,6 +1,5 @@
 .quotes {
 font-size: 18px;
-text-indent: 5px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -11,7 +10,7 @@ text-indent: 5px;
 .quotelabel{
 color: #213017;
 text-align:left;
-padding: 10px 10px 1px 10px;
+padding-left: 10px;
 }
 
 .quote {
