@@ -1,3 +1,128 @@
+.quotes {
+font-size: 18px;
+text-indent: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    .quotes {font-size: 16px;}
+    }
+}
+
+.quotelabel{
+color: #213017;
+text-align:left;
+padding: 10px 10px 1px 10px;
+}
+
+.quote {
+transition: box-shadow .3s;
+padding: 5px;
+padding-left: 10px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #ccc;
+border-left: 10px solid #788074;
+float: center;
+color: black;
+text-align:left;
+transition: transform .2s;
+}
+.quote:hover {
+transform: translate(5px);
+}
+
+#keito {
+background-color: #e9f5e1;
+}
+
+#kuro {
+background-color: #f5e5e1;
+}
+
+#souma{
+background-color: #e7e1f5;
+}
+
+#chiaki {
+background-color: #f5e1e3;
+}
+
+#kanata {
+background-color: #e1f2f5;
+}
+
+#tetora {
+background-color: #e7e8e3;
+}
+
+#midori {
+background-color: #eff5e1;
+}
+
+#shinobu {
+background-color: #fff2db;
+}
+
+#mao {
+background-color: #f7dfe7;
+}
+
+#yuzuru {
+background-color: #e3edff;
+}
+
+#tori {
+background-color: #ffebee;
+}  
+
+#adonis {
+background-color: #eed4ff;
+}
+
+#leo {
+background-color: #F7E7D1;
+}
+
+#tsukasa {
+background-color: #f7e5df;
+}
+
+#shu {
+background-color: #fae1e8;
+}  
+
+#eichi {
+background-color: #f2f0d8;
+}
+
+#wataru {
+background-color: #e1f3f5;
+}  
+
+#location {
+background-color: #fcfafa;
+color: #505e45;
+border: 1px solid white;
+border-left: 10px solid #788074;
+}
+
+.cwquote {
+transition: box-shadow .3s;
+background-color: white;
+padding: 5px;
+padding-left: 15px;
+margin: 5px;
+border-radius:10px;
+border: 1px solid #614945;
+border-left: 10px solid #614945;
+float: center;
+color: #8a3621;
+text-align:left;
+}
+.cwquote:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
 .outsidequote {
 transition: box-shadow .3s;
 background-color: white;
@@ -20,324 +145,3 @@ color: #2b3624;
 text-align:left;
 font-size: 19px;
 padding: 10px 0 0 0;}
-
-.quotelabel{
-color: #213017;
-text-align:left;
-text-indent: 1px;
-font-size: 16px;
-padding: 10px 10px 1px 10px;}
-
-.locationquote {
-transition: box-shadow .3s;
-background-color: #fcfafa;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid white;
-border-left: 10px solid #505e45;
-float: center;
-color: #505e45;
-text-align:left;
-font-size: 16px;
-}
-.locationquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-
-.cwquote {
-transition: box-shadow .3s;
-background-color: white;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #8EDAC8 ;
-border-left: 10px solid #8EDAC8 ;
-float: center;
-color: #505e45;
-text-align:left;
-font-size: 16px;
-}
-.cwquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}
-
-.keitoquote {
-transition: box-shadow .3s;
-background-color: #e9f5e1;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.keitoquote:hover {
-transform: translate(5px);
-}
-
-.kuroquote {
-transition: box-shadow .3s;
-background-color: #f5e5e1;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.kuroquote:hover {
-transform: translate(5px);
-}  
-
-.soumaquote {
-transition: box-shadow .3s;
-background-color: #e7e1f5;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.soumaquote:hover {
-transform: translate(5px);
-}  
-
-.chiakiquote {
-transition: box-shadow .3s;
-background-color: #f5e1e3;
-padding: 0px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.chiakiquote:hover {
-transform: translate(5px);
-}  
-
-.kanataquote {
-transition: box-shadow .3s;
-background-color: #e1f2f5;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.kanataquote:hover {
-transform: translate(5px);
-}  
-
-.tetoraquote {
-transition: box-shadow .3s;
-background-color: #e7e8e3;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.tetoraquote:hover {
-transform: translate(5px);
-}  
-
-.midoriquote {
-transition: box-shadow .3s;
-background-color: #eff5e1;
-padding: 3px 3px 5px 10px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.midoriquote:hover {
-transform: translate(5px);
-}  
-
-.shinobuquote {
-transition: box-shadow .3s;
-background-color: #fff2db;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-transition: transform .2s;
-}
-.shinobuquote:hover {
-transform: translate(5px);
-}  
-
-.maoquote {
-transition: box-shadow .3s;
-background-color: #f7dfe7;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.maoquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.yuzuruquote {
-transition: box-shadow .3s;
-background-color: #e3edff;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.yuzuruquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.toriquote {
-transition: box-shadow .3s;
-background-color: #ffebee;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.toriquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.adonisquote {
-transition: box-shadow .3s;
-background-color: #eed4ff;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.adonisquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.leoquote {
-transition: box-shadow .3s;
-background-color: #f5dfc1;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.leoquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.tsukasaquote {
-transition: box-shadow .3s;
-background-color: #f7e5df;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.tsukasaquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
-
-.shuquote {
-transition: box-shadow .3s;
-background-color: #fae1e8;
-padding: 5px;
-padding-left: 15px;
-margin: 5px;
-border-radius:10px;
-border: 1px solid #ccc;
-border-left: 10px solid #788074;
-float: center;
-color: black;
-text-align:left;
-font-size: 16px;
-}
-.shuquote:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
-}  
