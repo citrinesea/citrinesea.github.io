@@ -362,8 +362,15 @@ max-width: 100% ;
 max-height: 100% ;
 }
 
+.statistics-sheet{
+margin: 0 auto;
+}
+
 .statistics-sheet img{
-max-width: 600px;
+max-width: 100% ;
+max-height: 100% ;
+
+width: 500px;
 }
 
 a {
@@ -506,9 +513,47 @@ max-width: 100% ;
 max-height: 100% ;
 }
 
+.chartbox {
+width: 700px;
+margin: 0 auto;
+}
+.chartbox-pie {
+width: 300px;
+margin: 0 auto;
+}
+.resultsbox {
+width: 1000px;
+margin: 0 auto;
+}
+
+.pollbin{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+}
+.pollbin2{
+   display: grid;
+   grid-template-columns: repeat(auto-fill,minmax(800px,1fr));
+}
+
+@media only screen and (max-width: 600px) {
+    .pollbin {
+        grid-template-columns:repeat(auto-fill,minmax(400px,1fr))
+    }
+.pollbin2 {
+        grid-template-columns:repeat(auto-fill,minmax(400px,1fr))
+    }
+}
+
+.pollitem {
+max-width: 500px;
+margin: 0 auto;
+}
+
 @media only screen and (max-width: 600px) {
     .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
     .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
+    .resultsbox {width: 500px; height:auto; display: inline-block;}  
+
     }
 
 .mvanalysis-box {

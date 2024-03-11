@@ -9,6 +9,9 @@
    <link rel="stylesheet" href="../../css/essay.css">
    <link rel="stylesheet" href="../../css/quotes.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ 
  </head>
 
  <body>
@@ -26,14 +29,11 @@
    <main> 
 <div class="line"></div> 
 
-
-<div class="indexcontent-box">
-<div class="entirebox">
-
 <div class="essay-header">
 <div class="labelcategory">
 <p><b>AKARYUSEI Interaction Analysis and Survey</b></p></div>
 <div class="line"></div>
+</div>
 
 <div class="indexcontent-box"><p><b>AKATSUKI and RYUSEITAI have history</b></p>
 
@@ -42,50 +42,385 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 
 <p>Additionally, <b>84 AKARYUSEI producers</b> took a survey where I asked the same questions. Together, our hypotheses were tested against the actual numbers.</p>
 
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat1.jpg"></div>
-
 <p>I collected all <b>event and scout</b> stories from 2015-2023, which featured <b>at least one AKATSUKI member</b> and <b>at least one RYUSEITAI member</b>. Story appearances do not guarantee interactions.</p>
 
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat2a.jpg"></div>
-</section>
-
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat2b.jpg"></div>
-</section>
-
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat2c.jpg"></div>
-</section>
-
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat2d.jpg"></div>
-</section>
-
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/akaryusei-stat3.jpg"></div>
-</section>
-
-
-
-<p><b>☆ APPENDIX</b></p>
-<section id="raw-data">
-<div class="statistics-sheet">
-<img src = "../../images/pdfs/AKARYUSEI-STATS.png"></div>
-</section>
+<section id="results-data">
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>RESULTS</b></p></div>
+<div class="line"></div>
 </div>
 
+<div class="resultsbox">
+  <canvas id="stories"></canvas>
+</div>
+
+<div class="resultsbox">
+  <canvas id="pairsreality"></canvas>
+</div>
+</section>
+
+<section id="poll-data">
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>PRODUCER POLLS</b></p></div>
+<div class="line"></div>
+</div>
+<div class="chibi-nav-essay">
+<br></br>
+<div class="chibi-nav"><img src="../../images/chibis/keito.png"></div>
+<div class="chibi-nav"><img src="../../images/chibis/midori.png"></div>
+</div>
+<div class="resultsbox">
+  <canvas id="producers"></canvas>
+</div>
+
+<div class="pollbin">
+
+<div class="pollitem">
+<div class="statistics-sheet">
+<img src = "../../images/pdfs/akaryusei-stat2a.jpg"></div>
+
+<div class="chartbox-pie">
+  <canvas id="akatsukiCLOSE"></canvas>
+</div>
+</div>
+
+<div class="pollitem">
+<div class="statistics-sheet">
+<img src = "../../images/pdfs/akaryusei-stat2b.jpg"></div>
+
+<div class="chartbox-pie">
+  <canvas id="ryuseitaiCLOSE"></canvas>
+</div>
+</div>
+
+<div class="pollitem">
+<div class="statistics-sheet">
+<img src = "../../images/pdfs/akaryusei-stat2c.jpg"></div>
+
+<div class="chartbox-pie">
+  <canvas id="akatsukiDISTANCE"></canvas>
 </div></div>
 
+<div class="pollitem">
+<div class="statistics-sheet">
+<img src = "../../images/pdfs/akaryusei-stat2d.jpg"></div>
+
+<div class="chartbox-pie">
+  <canvas id="ryuseitaiDISTANCE"></canvas>
+</div></div>
+</div>
+
+<div class="statistics-sheet">
+<img src = "../../images/pdfs/akaryusei-stat3.jpg"></div>
+
+<div class="resultsbox">
+  <canvas id="pairs"></canvas>
+</div>
+</section>
+
+</div>
 <br></br>
 </main>
    <footer><h5>© 2023 citrinesea</h5>
    <p></p></footer>
+
+<script>
+  const data={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Producers',
+        data: [37, 23, 23, 21, 26, 33, 38, 31],
+	backgroundColor: ['rgba(230, 0, 51, 1)', 'rgba(0, 141, 183, 1)', 'rgba(48, 40, 51, 1)', 'rgba(0, 83, 63, 1)', 'rgba(255, 220, 0, 1)', 'rgba(49, 103, 69, 1)', 'rgba(232, 57, 41, 1)', 'rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const config =  {
+    type: 'bar',
+    data,
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  }; 
+
+const ProducerChart = new Chart(
+document.getElementById('producers'),
+config
+);
+
+const databubble={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Total Stories (x, y, THIS NUMBER)',
+        data: [{x: 20, y: 50, r: 33}, {x: 25, y: 40, r: 41}, {x: 20, y: 30, r: 47}, {x: 25, y: 20, r: 31}, {x: 20, y: 10, r: 52}, {x: 35, y: 45, r: 64}, {x: 30, y: 30, r: 69}, {x: 35, y: 15, r: 71}],
+	backgroundColor: ['rgba(230, 0, 51, 1)', 'rgba(0, 141, 183, 1)', 'rgba(48, 40, 51, 1)', 'rgba(0, 83, 63, 1)', 'rgba(255, 220, 0, 1)', 'rgba(49, 103, 69, 1)', 'rgba(232, 57, 41, 1)', 'rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const config2 =  {
+    type: 'bubble',
+    data: databubble,
+    options: {
+    }
+  }; 
+
+const StoryChart = new Chart(
+document.getElementById('stories'),
+config2
+);
+
+// AKATSUKI closeness poll
+const datapie1={
+labels: ['Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: '# of Votes',
+        data: [6, 49, 29],
+	backgroundColor: ['rgba(49, 103, 69, 1)', 'rgba(232, 57, 41, 1)', 'rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const configpie1 =  {
+    type: 'pie',
+    data: datapie1,
+    options: {
+    }
+}; 
+
+const AkatsukiCloseness = new Chart(
+document.getElementById('akatsukiCLOSE'),
+configpie1
+);
+
+// RYUSEITAI closeness poll
+const datapie2={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu'],
+      datasets: [{
+        label: '# of Votes',
+        data: [19, 36, 26, 0, 3],
+	backgroundColor: ['rgba(230, 0, 51, 1)', 'rgba(0, 141, 183, 1)', 'rgba(48, 40, 51, 1)', 'rgba(0, 83, 63, 1)', 'rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const configpie2 =  {
+    type: 'pie',
+    data: datapie2,
+    options: {
+    }
+}; 
+
+const RyuseitaiCloseness = new Chart(
+document.getElementById('ryuseitaiCLOSE'),
+configpie2
+);
+
+// AKATSUKI distance poll
+const datapie3={
+labels: ['Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: '# of Votes',
+        data: [62, 4, 18],
+	backgroundColor: ['rgba(49, 103, 69, 1)', 'rgba(232, 57, 41, 1)', 'rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const configpie3 =  {
+    type: 'pie',
+    data: datapie3,
+    options: {
+    }
+}; 
+
+const AkatsukiDistance = new Chart(
+document.getElementById('akatsukiDISTANCE'),
+configpie3
+);
+
+// RYUSEITAI distance poll
+const datapie4={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu'],
+      datasets: [{
+        label: '# of Votes',
+        data: [0, 1, 0, 78, 5],
+	backgroundColor: ['rgba(230, 0, 51, 1)', 'rgba(0, 141, 183, 1)', 'rgba(48, 40, 51, 1)', 'rgba(0, 83, 63, 1)', 'rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const configpie4 =  {
+    type: 'pie',
+    data: datapie4,
+    options: {
+    }
+}; 
+
+const RyuseitaiDistance = new Chart(
+document.getElementById('ryuseitaiDISTANCE'),
+configpie4
+);
+
+// Pair votes
+  const datapairs={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Chiaki',
+        data: [0, 0, 0, 0, 0, 3, 8, 0],
+	backgroundColor: ['rgba(230, 0, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kanata',
+        data: [0, 0, 0, 0, 0, 0, 2, 32],
+	backgroundColor: ['rgba(0, 141, 183, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Tetora',
+        data: [0, 0, 0, 0, 0, 0, 37, 0],
+	backgroundColor: ['rgba(48, 40, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Midori',
+        data: [0, 0, 0, 0, 0, 0, 0, 0],
+	backgroundColor: ['rgba(0, 83, 63, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Shinobu',
+        data: [0, 0, 0, 0, 0, 1, 0, 3],
+	backgroundColor: ['rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Keito',
+        data: [3, 0, 0, 0, 1, 0, 0, 0],
+	backgroundColor: ['rgba(49, 103, 69, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kuro',
+        data: [8, 2, 37, 0, 5, 0, 0, 0],
+	backgroundColor: ['rgba(232, 57, 41, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Souma',
+        data: [0, 32, 0, 0, 3, 0, 0, 0],
+	backgroundColor: ['rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+}]
+}
+
+const configPairs =  {
+    type: 'bar',
+    data: datapairs,
+    options: {
+      scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+                stacked: true
+            }
+      }
+    }
+  }; 
+
+const PairsChart = new Chart(
+document.getElementById('pairs'),
+configPairs
+);
+
+// Pair Expectations vs. Reality votes
+  const datapairs2={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Chiaki',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 9, 14, 10],
+	backgroundColor: ['rgba(230, 0, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kanata',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 10, 12, 19],
+	backgroundColor: ['rgba(0, 141, 183, 1)'],
+        borderWidth: 1
+      }, {
+       label: 'Tetora',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 14, 19, 14],
+	backgroundColor: ['rgba(48, 40, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Midori',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 12, 12, 7],
+	backgroundColor: ['rgba(0, 83, 63, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Shinobu',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 19, 12, 21],
+	backgroundColor: ['rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Keito',
+        type: "bar",
+        stack: "Reality",
+        data: [9, 10, 14, 12, 19, 0, 0, 0],
+	backgroundColor: ['rgba(49, 103, 69, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kuro',
+        type: "bar",
+        stack: "Reality",
+        data: [14, 12, 19, 12, 12, 0, 0, 0],
+	backgroundColor: ['rgba(232, 57, 41, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Souma',
+        type: "bar",
+        stack: "Reality",
+        data: [10, 19, 14, 7, 21, 0, 0, 0],
+	backgroundColor: ['rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+}]
+}
+
+const configPairsReality =  {
+    type: 'bar',
+    data: datapairs2,
+    options: {
+	indexAxis: 'y',
+      scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+                stacked: true
+            }
+      }
+    }
+  }; 
+
+
+const PairsRealityChart = new Chart(
+document.getElementById('pairsreality'),
+configPairsReality
+);
+
+
+</script>
+
+
  </body>
 </html>
