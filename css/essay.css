@@ -522,8 +522,16 @@ width: 300px;
 margin: 0 auto;
 }
 .resultsbox {
-width: 1000px;
+position: relative;
 margin: 0 auto;
+max-width: 1000px;
+padding: 10px;
+
+border: 3px dashed #cae8d7;
+}
+
+.chartdec {
+font-size: 14px;
 }
 
 .pollbin{
