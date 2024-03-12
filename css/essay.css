@@ -560,7 +560,7 @@ margin: 0 auto;
 @media only screen and (max-width: 600px) {
     .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
     .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
-    .resultsbox {width: 500px; height:auto; display: inline-block;}  
+    .resultsbox {width: 450px; height:auto; display: inline-block;}  
 
     }
 
