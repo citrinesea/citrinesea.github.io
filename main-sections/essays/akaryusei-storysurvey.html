@@ -62,8 +62,9 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 
 <div class="resultsbox">
 <p><b>This chart shows how many stories one member shared with each member of the other unit.</b></p>
+<div style="height: 700px">  
   <canvas id="pairsreality"></canvas>
-</div>
+</div></div>
 </section>
 
 <section id="poll-data">
@@ -80,7 +81,9 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 
 <p><b>This chart shows how many times one member shared a story with the other unit.</b> Kuro and Souma were fairly close for AKATSUKI, while Shinobu was the most for RYUSEITAI.</p>
 <div class="resultsbox">
+<div style="width: 475px">  
   <canvas id="producers"></canvas>
+</div>
 </div>
 <p></p>
 
@@ -131,7 +134,8 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 <img src = "../../images/pdfs/akaryusei-stat3.jpg"></div>
 
 <p><b>Nobody thinks of Midori when it comes to AKATUSKI</b></p>
-  <canvas id="pairs"></canvas>
+<div style="height: 700px">  
+<canvas id="pairs"></canvas></div>
 </div>
 </section>
 
@@ -156,6 +160,7 @@ const config =  {
     type: 'bar',
     data,
     options: {
+      responsive: true,
       maintainAspectRatio: false,
       scales: {
         y: {
@@ -347,6 +352,8 @@ const configPairs =  {
     type: 'bar',
     data: datapairs,
     options: {
+      responsive: true,
+	maintainAspectRatio: false,
 	indexAxis: 'y',
       scales: {
             x: {
@@ -430,6 +437,8 @@ const configPairsReality =  {
     type: 'bar',
     data: datapairs2,
     options: {
+      responsive: true,
+	maintainAspectRatio: false,
 	indexAxis: 'y',
       scales: {
             x: {
