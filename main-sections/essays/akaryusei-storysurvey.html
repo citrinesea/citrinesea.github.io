@@ -52,7 +52,11 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 
 <div class="resultsbox">
 <p><b>This chart shows how many times one member shared a story with the other unit.</b> Kuro and Souma were fairly close for AKATSUKI, while Shinobu was the most for RYUSEITAI.</p>
+
+<div style="height: 700px">  
   <canvas id="stories"></canvas>
+</div>
+
 <div class="chartdec"><p><i>Because RYUSEITAI has more members than AKATSUKI, their numbers are spread out and look much lower.</i></p></div>
 </div>
 
@@ -191,6 +195,8 @@ const config2 =  {
     type: 'bubble',
     data: databubble,
     options: {
+      responsive: true,
+	maintainAspectRatio: false,
 	plugins: {
             title: {
                 display: true,
