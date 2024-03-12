@@ -87,12 +87,12 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 </div>
 
 <div class="resultsbox">
-<p><b>84 AKARYUSEI producers</b> took a survey where I asked them the same questions. Together, our hypotheses were tested against the actual numbers.</p>
+<p><b>84 AKARYUSEI producers</b> took a survey where I asked them the same questions. Together, our hypotheses were tested against the actual numbers. Participants could answer this question with more than one member (some did all 8!) </p>
 
 <div style="height: 700px">  
   <canvas id="producers"></canvas>
 </div>
-<div class="chartdec"><p>When it came to voters, we had a fairly even spread! Participants could answer this question with more than one member. (Some did all 8!) They skewed slightly AKTK. but taking into account group size, respondents averaged into closely equal AKATSUKI Ps and RST Ps!</p>
+<div class="chartdec"><p>When it came to voters, we had a fairly even spread! They skewed slightly AKTK. but taking into account group size, respondents averaged into closely equal AKATSUKI Ps and RST Ps!</p>
 </div></div>
 <p></p>
 
@@ -105,8 +105,12 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 <div class="chartbox-pie">
 <p>In both the polls and reality, <b>Kuro and Souma were fairly matched</b> in the amount of times they shared a story with a RST member!</p>
   <canvas id="akatsukiCLOSE"></canvas>
-<p>Ultimately, Souma (n=71) won out, but I wouldn’t blame you if you considered it a tie with Kuro (n=69)</p>
-</div>
+<div class="chartdec"><p><b>IN REALITY:</b> Ultimately, Souma (n=71) won out, but I wouldn’t blame you if you considered it a tie with Kuro (n=69)</p></div>
+
+<div style="height: 300px">  
+  <canvas id="minibars1"></canvas>
+</div></div>
+
 </div>
 
 <div class="pollitem">
@@ -116,10 +120,17 @@ Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2)
 <div class="chartbox-pie">
 <p>Now THIS was a poll. <b>Shinobu was a complete underdog</b>— only 3 people voted for him.</p>
   <canvas id="ryuseitaiCLOSE"></canvas>
-<p>Surprisingly, Chiaki (n=33) didn’t share as many stories with AKTK. Half of Kanata’s (n=41) stories included Souma. Tetora (n=47) had many with all three members. Yet, Shinobu (n=52) won!</p>
-</div>
-</div>
+<div class="chartdec"><p><b>IN REALITY:</b> Surprisingly, <span style="color: #961212"><b>Chiaki</b></span> (n=33) didn’t share as many stories with AKTK. Half of <span style="color: #1e7296"><b>Kanata’s</b></span> (n=41) stories included Souma. <span style="color: #20212e"><b>Tetora</b></span> (n=47) had many with all three members. Yet, <span style="color: #b58500"><b>Shinobu</b></span> (n=52) won!</p></div>
 
+<div style="height: 300px">  
+  <canvas id="minibars2"></canvas>
+</div></div>
+
+</div></div>
+
+<p>This is when we get to the predictable “wins”. Regardless of favorite character, participants tended to agree that Midori (n=31) and Keito (n=64) were least connected from each group.</p>
+
+<div class="pollbin">
 <div class="pollitem">
 <div class="statistics-sheet">
 <img src = "../../images/pdfs/akaryusei-stat2c.jpg"></div>
@@ -484,6 +495,112 @@ document.getElementById('pairsreality'),
 configPairsReality
 );
 
+//Mini Bars
+
+  const dataMini1={
+labels: ['Kuro', 'Souma'],
+      datasets: [{
+        label: 'Chiaki',
+        type: "bar",
+        stack: "Reality",
+        data: [14, 10],
+	backgroundColor: ['rgba(230, 0, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kanata',
+        type: "bar",
+        stack: "Reality",
+        data: [12, 19],
+	backgroundColor: ['rgba(0, 141, 183, 1)'],
+        borderWidth: 1
+      }, {
+       label: 'Tetora',
+        type: "bar",
+        stack: "Reality",
+        data: [19, 14],
+	backgroundColor: ['rgba(48, 40, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Midori',
+        type: "bar",
+        stack: "Reality",
+        data: [12, 7],
+	backgroundColor: ['rgba(0, 83, 63, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Shinobu',
+        type: "bar",
+        stack: "Reality",
+        data: [12, 21],
+	backgroundColor: ['rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }]
+}
+
+const configMini1 =  {
+    type: 'bar',
+    data: dataMini1,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+	indexAxis: 'y',
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  }; 
+
+const Mini1Chart = new Chart(
+document.getElementById('minibars1'),
+configMini1
+);
+
+  const dataMini2={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Shinobu'],
+      datasets: [{
+        label: 'Keito',
+        type: "bar",
+        stack: "Reality",
+        data: [9, 10, 14, 19],
+	backgroundColor: ['rgba(49, 103, 69, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kuro',
+        type: "bar",
+        stack: "Reality",
+        data: [14, 12, 19, 12],
+	backgroundColor: ['rgba(232, 57, 41, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Souma',
+        type: "bar",
+        stack: "Reality",
+        data: [10, 19, 14, 21],
+	backgroundColor: ['rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+}]
+}
+const configMini2 =  {
+    type: 'bar',
+    data: dataMini2,
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+	indexAxis: 'y',
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  }; 
+
+const Mini2Chart = new Chart(
+document.getElementById('minibars2'),
+configMini2
+);
 
 </script>
 
