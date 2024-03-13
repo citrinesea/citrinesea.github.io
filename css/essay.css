@@ -527,7 +527,7 @@ margin: 0 auto;
 max-width: 1000px;
 padding: 10px;
 
-border: 3px dashed #cae8d7;
+border-bottom: 2mm ridge rgba(76, 156, 116, .6);
 }
 
 .chartdec {
@@ -555,6 +555,7 @@ font-size: 14px;
 .pollitem {
 max-width: 500px;
 margin: 0 auto;
+padding: 10px;
 }
 
 @media only screen and (max-width: 600px) {
