@@ -526,8 +526,6 @@ position: relative;
 margin: 0 auto;
 max-width: 1000px;
 padding: 10px;
-
-border-bottom: 2mm ridge rgba(76, 156, 116, .6);
 }
 
 .chartdec {
