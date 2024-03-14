@@ -532,6 +532,30 @@ max-width: 100% ;
 max-height: 100% ;
 }
 
+.newholder{
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
+}
+.newfeature{
+border-radius: 5px;
+padding: 5px;
+transition: transform .1s;
+}
+.newfeature:hover {
+  transform: scale(1.03);
+}
+
+.newfeature img{
+max-width: 100% ;
+max-height: 100% ;
+}
+
+@media only screen and (max-width: 600px) {
+    .newholder {
+        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
+    }
+}
+
 @keyframes fadeInUp {
   0% {
     transform: translateY(50px);
