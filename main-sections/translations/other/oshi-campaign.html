@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>Oshi Campaign 2024 | citrinesea</title>
+   <link rel="shortcut icon" href="../../../images/icons/site-logo-small.png"/>
+   <link rel="stylesheet" href="../../../css/style.css">
+   <link rel="stylesheet" href="../../../css/essay.css">
+   <link rel="stylesheet" href="../../../css/translation.css">
+   <link rel="stylesheet" href="../../../css/quotes.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   oshiitemSelector: ".oshiitem", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+ 
+ </head>
+
+ <body>
+   <header>
+     <h2><b>c i t r i n e s e a</b></h2>
+     <div class="nav">
+	<div class="dropdown">
+		<button class="dropbtn"><a href="/"><b>home</b></a></button></div>
+	<div class="dropdown">
+		<button class="dropbtn"><a href="../contributor-pages/about.html"><b>about</b></a></button></div>
+  	</div></div></div>    
+	</div>
+   </header>
+
+   <main>
+
+<div class="line"></div>
+<div class="indexcontent-box">
+
+<br></br>
+<div class="quotes">
+
+<div class="translation-title"><p><b>Oshi Campaign 2024</b></p>
+<div class="translation-chapters"><p>Translator | <b>citrinesea, 310mc</b> | Proofreader | <b>ryuseipuka</b></div></div>
+
+
+<div class="labelcategory">
+<p><b>Profiles</b></p></div>
+<div class="line"></div>
+<div class="detail-text" id="oshi">
+<span style="color:green"><p><b>Click the filters below to explore different characters.</b></p></div></span>
+
+<div class="filterbox" id="oshifilter">
+<div class="filters">
+
+   <ul class="filter option-set exclusive" data-filter-group="charms">
+     <li><b>Charm</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".cute">Cute</a></li>
+     <li><a href="#" data-filter-value=".cool">Cool</a></li>
+     <li><a href="#" data-filter-value=".smart">Intellectual</a></li>
+     <li><a href="#" data-filter-value=".genki">Lively</a></li>
+     <li><a href="#" data-filter-value=".athlete">Muscular</a></li>
+     <li><a href="#" data-filter-value=".clean">Neat and Tidy</a></li>
+     <li><a href="#" data-filter-value=".messy">A Little Messy</a></li>
+   </ul>
+
+   <ul class="filter option-set exclusive" data-filter-group="family">
+     <li><b>Details</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".youngerbro">Younger Brother</a></li>
+     <li><a href="#" data-filter-value=".olderbro">Older Brother</a></li>
+     <li><a href="#" data-filter-value=".onlykid">Only Child</a></li>
+     <li><a href="#" data-filter-value=".drive">Certified Driver</a></li>
+     <li><a href="#" data-filter-value=".athleticclub">Athletic Club Member</a></li>
+     <li><a href="#" data-filter-value=".cultureclub">Culture Club Member</a></li>
+   </ul>
+
+   <ul class="filter option-set exclusive" data-filter-group="family">
+     <li><b>"My Kind of Guy" Ads</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".healing">Cute and Healing</a></li>
+     <li><a href="#" data-filter-value=".cheerful">Cheerful</a></li>
+     <li><a href="#" data-filter-value=".reliable">Reliable</a></li>
+     <li><a href="#" data-filter-value=".megane">Intelligent</a></li>
+     <li><a href="#" data-filter-value=".musclebro">Musclebro</a></li>
+     <li><a href="#" data-filter-value=".slowsteady">My Pace</a></li>
+     <li><a href="#" data-filter-value=".coolguy">Cool</a></li>
+   </ul>
+
+</div></div>
+
+<div class="grid" id="oshi">
+
+<div class="oshiitem smart youngerbro athleticclub clean megane">
+<div class="container">
+  <img src="../../../images/profiles/keito-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem cool olderbro athleticclub athlete clean musclebro">
+<div class="container">
+  <img src="../../../images/profiles/kuro-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem cool olderbro coolguy">
+<div class="container">
+  <img src="../../../images/profiles/souma-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem onlykid athleticclub genki athlete musclebro">
+<div class="container">
+  <img src="../../../images/profiles/tetora-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem cool youngerbro athleticclub messy healing">
+<div class="container">
+  <img src="../../../images/profiles/midori-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem cute onlykid cultureclub cheerful">
+<div class="container">
+  <img src="../../../images/profiles/shinobu-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem onlykid drive athleticclub genki athlete clean reliable">
+<div class="container">
+  <img src="../../../images/profiles/chiaki-bullet.png" alt="a cat">
+</div>
+</div>
+
+<div class="oshiitem cute cultureclub slowsteady">
+<div class="container">
+  <img src="../../../images/profiles/kanata-bullet.png" alt="a cat">
+</div>
+</div>
+
+</div>
+
+<div class="labelcategory">
+<p><b>Where would you go on a first date?</b></p></div>
+<div class="line"></div>
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>A manga museum. I'd like to show you my favorite works, but if we can't read them all in one day, we can come back another time.</p></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>How about window-shoppin’? We won't run outta things to talk about when we’re lookin’ at all the different shops and goods. We can find out each other’s taste in fashion and what sorta trends are hot, too.
+</p></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>What about a “cat ka-fay”? Cats look so adorable, just seeing them is sure to make the two of us smile...~♪
+</p></div> 
+
+<div class="quotelabel">
+<b>TETORA</b>
+</div>
+<div class="quote" id="tetora"><p>I’d like to go to a theme park! ‘Cuz there’s all sortsa things we could do there together, like going on a buncha rides, buying souvenirs, and so much more~♪
+</p></div> 
+
+<div class="quotelabel">
+<b>MIDORI</b>
+</div>
+<div class="quote" id="midori"><p>I think it’d be fun anywhere, as long as I’m with the person I love, but… For me, it’d be even more fun if we’re at a place that has yuruchara.
+</p></div> 
+
+<div class="quotelabel">
+<b>SHINOBU</b></div>
+<div class="quote" id="shinobu"><p>I would love an opportunity to lead the way around a ninja village! I want to show you all there is to know about my favorite thing! Be it by witnessing ninjutsu, having a first-hand experience with it, or anything else of the like~♪
+</p></div> 
+
+<div class="quotelabel">
+<b>CHIAKI</b>
+</div>
+<div class="quote" id="chiaki"><p>A date means going to the amusement park! There’s roller coasters, the ferris wheel, and most importantly, hero shows! The day would pass by in a flash! ☆ 
+</p></div> 
+
+<div class="quotelabel">
+<b>KANATA</b>
+</div>
+<div class="quote" id="kanata"><p>on warm days, i would like to have fun at the [ocean]~ and in the colder seasons, we can visit the [aquarium]...♪</p></div> 
+
+<div class="labelcategory">
+<p><b>Where would you go on a first date?</b></p></div>
+<div class="line"></div>
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>I contacted Kiryu and Kanzaki about our work schedules, but neither of them responded. Well, that isn’t unusual, though.</p></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>I wanted to hear what their plans were for our new song, so I hit ‘em up. After that, we ended up meetin' up and talkin' face-to-face.
+</p></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>I hadn't realized I'd sent an incomprehensible string of characters, so I contacted my seniors to apologize. Handling a "sumaho" is difficult…
+</p></div> 
+
+<div class="quotelabel">
+<b>TETORA</b>
+</div>
+<div class="quote" id="tetora"><p>I messaged everyone ‘bout when we’ll have our next practice session together! Midori-kun’s the only one who hasn’t responded yet, so I’m just gonna go and ask him directly!
+</p></div> 
+
+<div class="quotelabel">
+<b>MIDORI</b>
+</div>
+<div class="quote" id="midori"><p>My parents gave me lots of vegetables, so I asked everyone in my unit if they’d like some before I offered them to anyone else. I’ll carry some with me later.
+</p></div> 
+
+<div class="quotelabel">
+<b>SHINOBU</b></div>
+<div class="quote" id="shinobu"><p>Tetora-kun sent me our schedule for the practice session, so I replied to that! I’m in charge of booking us a practice room~♪
+</p></div> 
+
+<div class="quotelabel">
+<b>CHIAKI</b>
+</div>
+<div class="quote" id="chiaki"><p>I got my hands on some ninja-themed sentai merchandise, so I couldn’t help but message Sengoku about it. It made me happy to get a text praising how cool it looks! ☆ 
+</p></div> 
+
+<div class="quotelabel">
+<b>KANATA</b>
+</div>
+<div class="quote" id="kanata"><p>i messaged chiaki that i am at the [ocean]. he gets [worried] when i do not tell him [where] i am.</p></div>
+
+<div class="labelcategory">
+<p><b>Why are you so cool?</b></p></div>
+<div class="line"></div>
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>It's because of the support and encouragement around me. My friends and allies are the reason I can stand on stage and strive for greater heights.</p></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>I guess it's ‘cuz AKATSUKI is where I can be with Hasumi ‘n Kanzaki. When I see those two honest guys, it’s like my spine just straightens up on its own.
+</p></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>There's something about that comment that makes me feel bashful. However, I'm pleased if my daily training has led to that kind of impression.
+</p></div> 
+
+<div class="quotelabel">
+<b>TETORA</b>
+</div>
+<div class="quote" id="tetora"><p>Maybe it’s ‘cuz everyone’s always supporting me? Also, if you think my constant hard work towards my goal is somethin’ “cool”, then I’m real happy ‘bout that!
+</p></div> 
+
+<div class="quotelabel">
+<b>MIDORI</b>
+</div>
+<div class="quote" id="midori"><p>I don’t really know how to answer that… But I think that it’s thanks to my parents that I was born with this face, so I’ll express my gratitude to them later…
+</p></div> 
+
+<div class="quotelabel">
+<b>SHINOBU</b></div>
+<div class="quote" id="shinobu"><p>I-I’m cool? It surprises me to hear that, but I’d certainly be glad if you consider ninjas to be something cool!
+</p></div> 
+
+<div class="quotelabel">
+<b>CHIAKI</b>
+</div>
+<div class="quote" id="chiaki"><p>It might be because I dream of becoming a hero. And not just any hero, but a “cool” one…☆
+</p></div> 
+
+<div class="quotelabel">
+<b>KANATA</b>
+</div>
+<div class="quote" id="kanata"><p>it is because there are so many [cool] people around me~ so maybe i am also more likely to be seen as cool along with them…?</p></div>
+
+<div class="labelcategory">
+<p><b>What are your best subjects?</b></p></div>
+<div class="line"></div>
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>You could say that liberal arts as a whole are my strongpoint. I believe I've not only excelled in Japanese language and history, but also in civics.</p></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>I'm good at sewin’ and cookin’, so Home Ec. is my forte. I usually suck at studying the classic way... especially math; it hurts my head.
+</p></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>I enjoy classical literature and Japanese history. On the contrary, I am not as good at English and world history. While I improve on my current abilities, I want to overcome my weaknesses too.
+</p></div> 
+
+<div class="quotelabel">
+<b>TETORA</b>
+</div>
+<div class="quote" id="tetora"><p>I’m confident with my practical classes, like P.E. and home economics~♪ I wanna get better at theory-based subjects too, but it’s pretty difficult for me…
+</p></div> 
+
+<div class="quotelabel">
+<b>MIDORI</b>
+</div>
+<div class="quote" id="midori"><p>Math’s my best subject, or more like, it’s the only thing I can do…? I’m not at all good with other subjects, so I think I’m pretty compatible with it.
+</p></div> 
+
+<div class="quotelabel">
+<b>SHINOBU</b></div>
+<div class="quote" id="shinobu"><p>I’ve got a bit of confidence when it comes to Japanese history! I studied a whole lot to make myself well-versed with the era of ninjas~♪ 
+</p></div> 
+
+<div class="quotelabel">
+<b>CHIAKI</b>
+</div>
+<div class="quote" id="chiaki"><p>My best subjects are the liberal arts, like Japanese literature and language! And my weakest subject is Math. I would always study until late at night before a test for that class.
+</p></div> 
+
+<div class="quotelabel">
+<b>KANATA</b>
+</div>
+<div class="quote" id="kanata"><p>[history] and [biology] might be my best subjects? well, i say [biology], but i actually mean [marine] biology...♪</p></div>
+
+<div class="labelcategory">
+<p><b>What’s the first thing you do when you wake up?</b></p></div>
+<div class="line"></div>
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>I try to set aside the time for meditation. Not only does it improve my ability to concentrate and relax, but it seems to have a positive effect on creativity too.</p></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>A while ago, I fell asleep with the light on in my room. Guess that’s why the first thing I do when I get up is to check if they’re still on.
+</p></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>I prepare breakfast. Now that I have a new kitchen knife, I look forward to cooking with it every day~♪
+</p></div> 
+
+<div class="quotelabel">
+<b>TETORA</b>
+</div>
+<div class="quote" id="tetora"><p>I heard it was good for your health if you drink a glass of water in the morning, so I do that. After that, I go out for my morning training routine.
+</p></div> 
+
+<div class="quotelabel">
+<b>MIDORI</b>
+</div>
+<div class="quote" id="midori"><p>I play a yuruchara game on my phone. That’s the best way to spend time whenever you wanna lie in bed for a little longer, yeah?
+</p></div> 
+
+<div class="quotelabel">
+<b>SHINOBU</b></div>
+<div class="quote" id="shinobu"><p>I try to do exercises that help you grow taller. I hope it works out, even if I only grow a tiny bit more~ 
+</p></div> 
+
+<section id="11"></section>
+<div class="quotelabel">
+<b>CHIAKI</b>
+</div>
+<div class="quote" id="chiaki"><p>I begin my day with a fresh start by doing radio exercises!<sup><a href="#1"><b>(1)</b></a></sup> I get to move every muscle in my body in an efficient manner, and it also feels really good to refresh my mind and body first thing!
+</p></div> 
+
+<div class="quotelabel">
+<b>KANATA</b>
+</div>
+<div class="quote" id="kanata"><p>i have new [fishies] in my room’s [water tanks], so i [check] how they are doing when i [greet] them~♪</p></div>
+
+<br></br>
+<section id="oshicall">
+<div class="translation-title"><p><b>"Please Choose Me" Oshi Call</b></p>
+<div class="translation-chapters"><p><i>After you've chosen your top three oshi.</i></p></div></div>
+
+<div class = "translationsquare">
+	<img
+            src="../../../images/translations/other/keito-oshicall.jpg"
+            alt="Keito Oshi."></div> 
+
+<div class="quotelabel">
+<b>KEITO</b>
+</div>
+<div class="quote" id="keito"><p>This is Keito Hasumi from AKATSUKI. To put it bluntly, I’m wondering if you’ll choose me as your “oshi”.</p></div>
+<div class="quote" id="keito"><p>Er, I’m sorry if I caught you off guard. I should probably talk more about my charm in my own words in order to be chosen. Well then…</p></div>
+<div class="quote" id="keito"><p>As AKATSUKI’s leader, I gain experience as an idol day by day. I work hard to make sure everyone knows who AKATSUKI is.</p></div>
+<div class="quote" id="keito"><p>Also…… Well, it’d be a long story if I were to go on. I’ll strive to give it my all, and let my work speak for itself. Keep your eyes on me, and see if I’m worthy of being your “oshi”.
+</p></div>
+
+<div class = "translationsquare">
+	<img
+            src="../../../images/translations/other/kuro-oshicall.jpg"
+            alt="Keito Oshi."></div> 
+
+<div class="quotelabel">
+<b>KURO</b>
+</div>
+<div class="quote" id="kuro"><p>Yo, it’s Kuro Kiryu. I’m part of AKATSUKI.</p></div>
+<div class="quote" id="kuro"><p>I'm not really used to sellin’ myself, but this is a great opportunity. I want you to know a little bit about me.</p></div>
+<div class="quote" id="kuro"><p>The thing I'm good at is sewin’. I make costumes for AKATSUKI, but I also take orders for other people if they request it. Well, guess you could say I'm good with my hands.</p></div>
+<div class="quote" id="kuro"><p>I dunno if that did the trick…… but if you choose me to support, I'll (make it worth your while/repay it in full). If it’s fine, come out with me.
+</p></div>
+
+<div class = "translationsquare">
+	<img
+            src="../../../images/translations/other/souma-oshicall.jpg"
+            alt="Keito Oshi."></div> 
+
+<div class="quotelabel">
+<b>SOUMA</b>
+</div>
+<div class="quote" id="souma"><p>Ohhh, it connected~♪ You there, I see that you are an “aidoru fan”. I am Kanzaki Souma, (Pleased to meet you/I am in your care/I’m counting on you)!</p></div>
+<div class="quote" id="souma"><p>I am an idol who is a part of the “yunitto” AKATSUKI. As the descendant of a samurai (clan/family), I’ve a sword on one side and a mindfulness of “tii-pii-ooh” on the other!
+</p></div>
+<div class="quote" id="souma"><p>...... To tell you the truth, I’m not sure I know what an “oshi” really entails yet. I’m wondering if it’s similar to a samurai’s pledge of devotion to their lord..?</p></div>
+<div class="quote" id="souma"><p>I’ll show you I’m a splendid “aidoru” worthy of your support. Please continue cheering me on….~♪
+</p></div>
+
+</section>
+
+<div class="quote" id="location">
+<p><b>TL NOTES</b></p>
+<p id="1">
+<a href="#11">[1]</a> Radio calisthenics (ラジオ体操 lit., "radio exercises") are warm-up calisthenics performed to music and guidance from radio broadcasts.</p>
+</div>
+
+<div class="citationbox">
+<div class="citation">
+<b>Ensemble Stars Basic, !!-Era</b>, citrinesea, 310mc, ryuseipuka
+</div>
+</div>
+<br></br>
+
+</div></div>
+
+   </main>
+
+<footer><h5>© 2023 citrinesea</h5></footer>
+
+<script>
+
+   </script>
+ </body>
+</html>

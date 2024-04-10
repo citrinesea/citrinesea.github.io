@@ -385,6 +385,24 @@ a {
   color: #fff;
 }
 
+#oshifilter {
+background: white;
+color: #6d9394;
+}
+
+#oshifilter li a{
+color: #707a64;
+text-decoration: none; 
+}
+
+.container{
+max-width: 120px;
+}
+.container img {
+  height: 100%;
+  width: 100%;
+}
+
 .filterbox .filters {padding:10px 45px 0 45px;}
 .filterbox ul {padding:0;}
 
@@ -406,10 +424,35 @@ a {
 .grid{
 background: #F9F4EA}
 
+#oshi{
+background: white;
+}
+
+.quote-container{
+overflow: hidden; 
+}
+
 .grid .item {
   display: block;
   padding: 10px;
   width: 48%;
+  box-sizing: border-box;
+  margin:1%;
+  overflow: hidden;
+}
+
+.grid .oshiitem {
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+  margin:1%;
+  overflow: hidden;
+}
+
+.grid .interview {
+  display: block;
+  width: 90%;
+  padding: 5px;
   box-sizing: border-box;
   margin:1%;
   overflow: hidden;
@@ -422,6 +465,7 @@ max-width: 50%;
 @media only screen and (max-width: 600px) {
     filterbox {width: 100%;}
     .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+    .grid .oshiitem {display: inline-block; margin: 1% 0;}
     .preview-thumbnail{max-width: 100%;}
     }
 
@@ -461,6 +505,11 @@ color: #852938;
 
 .detail-text a {
 color: #0f6270;
+}
+
+#oshi b{
+font-size: 15px;
+color: green;
 }
 
 .chibi-filter{
@@ -556,12 +605,6 @@ margin: 0 auto;
 padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
-    .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
-    .resultsbox {width: auto; height:auto; display: inline-block;}  
-    }
-
 .mvanalysis-box {
 background-color: white;
 display: inline-block;
@@ -570,3 +613,37 @@ border-radius: 10px;
 box-shadow: 0 0 3px 0 #888888;
 }
 
+.oshiquestions {
+font-size: 16px;
+}
+
+#oshidialogue {
+display: inline-block;
+background: white;
+}
+
+#iconleft{
+display: inline-block;
+text-align: left;
+}
+
+#iconright{
+display: inline-block;
+text-align: right;
+}
+
+.graph {
+max-width: 1300px;
+float: center;
+}
+.graph img{
+max-width: 100% ;
+max-height: 100% ;
+}
+
+@media only screen and (max-width: 600px) {
+    .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
+    .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
+    .resultsbox {width: auto; height:auto; display: inline-block;} 
+    .graph {width: 500px;} 
+    }
