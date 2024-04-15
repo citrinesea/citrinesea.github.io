@@ -423,12 +423,33 @@ background: url("../images/background/opera.png");
 width: fit-content;
 }
 
+.entrain-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.entraintrainer-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+
+.entrain-exercise{
+}
+
+
 @media only screen and (max-width: 600px) {
     .preview-container {
 	max-width: 95%;
 	overflow: hidden;
-        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
-    }
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.entrain-wrapper {
+  grid-template-columns: 1fr;
+}
+.entraintrainer-wrapper {
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
+}
 }
 
 .preview-image{
@@ -594,7 +615,6 @@ max-height: auto;}
 .relevant-story-wip:hover {
 transform: scale(1.05);
 }
-
 
 .relevant-story .time {
 text-align: center;

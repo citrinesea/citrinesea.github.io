@@ -325,6 +325,11 @@ border-radius: 10px;
   background-color: #white;
 }
 
+#entraining {
+  background-color: #344ded;
+  color: white;
+}
+
 .directory{
    display: flex;
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
