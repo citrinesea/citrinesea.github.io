@@ -125,8 +125,8 @@ bottom: 15px;
     .story-holder {width: 100%;}
     .story-holder .event-storyblock {width: 100%; display: inline-block; margin: 1% 0;}
     .story-holder .idol-storyblock {width: 45%; display: inline-block; margin: 1% 0;}
-    .story-holder .management-storyblock {width: 20%; display: inline-block; margin: 1% 0;}
-    .story-holder .management-storyblock-wip {width: 20%; display: inline-block; margin: 1% 0;}
+    .story-holder .management-storyblock {width: 40%; display: inline-block; margin: 1% 0;}
+    .story-holder .management-storyblock-wip {width: 40%; display: inline-block; margin: 1% 0;}
     .story-holder .magazine-storyblock {width: 100%; display: inline-block; margin: 1% 0;}
     .event-storyblock img{max-width: 100%;}
     }
