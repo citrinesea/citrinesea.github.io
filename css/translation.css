@@ -39,6 +39,26 @@ max-height: 100% ;
 
 }
 
+.infographicsquare {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.infographicsquare {
+padding: 5px;
+border-radius:10px;
+float: center;
+text-align:left;
+}
+.infographicsquare img{
+  height: auto;
+  width: auto;
+max-width: 100% ;
+max-height: 100% ;
+
+}
+
+
 .translationribbon {
   height: auto;
   width: auto;
