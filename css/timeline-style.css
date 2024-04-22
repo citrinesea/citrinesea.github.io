@@ -6,7 +6,7 @@ body {
        "main"
        "footer";
 	
-      background-color: #01211e;
+      background-color: white;
       background-size:cover;
       background-repeat: no-repeat;
       text-align: left;
@@ -23,7 +23,7 @@ border-radius: 10px;
 footer {
 text-align:center;
 font-size: 14px;
-color: white;
+color: black;
 }
 
 main{
@@ -31,7 +31,7 @@ main{
      grid-template-rows: 1fr;
      grid-gap: 16px;
 background-color: white;
-color: white;
+color: black;
 }
 
 .indexcontent-boxdark{

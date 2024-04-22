@@ -6,7 +6,7 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
        "main"
        "footer";
 	
-      background-color: #08565e;
+      background-color: white;
       color: #32403b;
       background-size:cover;
       background-repeat: no-repeat;
@@ -50,7 +50,7 @@ border-radius: 10px;
 footer {
 text-align:center;
 font-size: 14px;
-color: white;
+color: black;
 }
 
 main{
@@ -70,44 +70,6 @@ hr {
 img {
   width: auto ;
   height: auto ;
-}  
-
-.logo {
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  max-width: 150px;
-  max-height: 150px;
-  float: left;}
-
-.figure {
-    position: relative;
-    max-width: 100%;
-height: 100%;
-  }
-.figure img{
-width: 100%
-}
-  .figure img.Sirv.image-hover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    object-fit: contain;
-    opacity: 0;
-    transition: opacity .2s;
-  }
-  .figure:hover img.Sirv.image-hover {
-    opacity: 1;
-  }
-
-.profilepage{
-  text-align:center;
-}
-.profileimg{
-  max-width: 150px;
-  max-height: 150px;
 }
 
 .row {
@@ -126,26 +88,9 @@ width: 100%
     }
 }
 
-.navrow {
-   display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr 2fr));
-    gap: .5em
-}
-.navcolumn {
-    position: relative;
-    border-radius: .25em;
-    overflow: hidden
-}
-@media only screen and (max-width: 600px) {
-    .navrow {
-        grid-template-columns:repeat(auto-fill,minmax(300px,1fr))
-    }
-}
-
-
 .nav {
   overflow: hidden;
-  background-color: #004028;
+  background-color: #142157;
   color: white;
   width: 100%
 }
@@ -177,6 +122,47 @@ font-size: 18px;
 .nav a:visited {color: white;}
 .nav a:hover{color: white;}
 .nav a:active{color: white;}
+
+.logo img{
+width: 200px;
+}
+
+.summer-banner {
+overflow: auto;
+}
+
+.summer-banner img{
+width: 100%;
+-webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+}
+
+.mainwrapper{
+position: relative;  
+justify-content: center;
+align-items: center;
+}
+
+.mainpage-box{
+position: absolute;
+top: 50%;
+left: 0; 
+right: 0; 
+margin-left: auto; 
+margin-right: auto; 
+width: 100px; 
+
+z-index: 1;
+
+background-color: white;
+color: #32403b;
+width: 90%;
+
+text-align: left;
+font-size: 18px;
+border-radius: 10px;
+padding: 25px;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 .chibi-nav{
 width: 75px;
@@ -212,47 +198,32 @@ max-width: 100%;
 bottom: 15px;
 }
 
-.chara-profile{
-width: 160px;
-height: auto;
-display: inline-block;
-position: relative;
-object-fit: cover;
-transition: transform .1s;
-}
-.chara-profile img{
-border-radius: 10px;
-height: auto;
-width: 240px;
-max-width: 100% ;
-max-height: 100% ;
-}
-.chara-profile:hover {
-transform: scale(1.1);;
+.song-analysis-holder {
+   display: relative;
 }
 
-.chara-profile:hover .chara-name {
-  visibility: visible;
-  opacity: 1;
+.rstcenter {
 }
 
-.unit-profile{
-width: 160px;
-height: auto;
-display: inline-block;
-position: relative;
-object-fit: cover;
-transition: transform .1s;
-
-
+.gallery-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
 }
-.unit-profile img{
-height: auto;
-width: 160px;
-max-width: 100% ;
-max-height: 100% ;
+.gallery-infographics{
+}
+.gallery-infographics img{
+width: 100%;
+}
+.gallery-infographics vid{
+width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    .gallery-wrapper {
+        grid-template-columns: 1fr;)
+    }
+}
 
 .category{
 text-align: center;
@@ -346,6 +317,7 @@ background-color: rgba(255, 255, 255, 1);
 color: #32403b;
 border: 0px solid #667a6e;
 
+z-index: 1;
 text-align: left;
 font-size: 18px;
 border-radius:10px;

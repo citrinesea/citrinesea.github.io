@@ -102,7 +102,7 @@ font-size: 22px;
 }
 
 .translation-title {
-text-align:center;
+text-align:left;
 font-size: 30px;
 }
 .translation-titlechapters {
@@ -177,13 +177,6 @@ transition: transform .1s;
 transform: scale(1.05);
 }
 
-.magazine-storyblock img {
-height: auto;
-width: auto;
-max-width: 100% ;
-max-height: 100% ;
-}
-
 .magazine-storyblock{
 position: relative;
 width: 400px;
@@ -193,12 +186,14 @@ transition: transform .1s;
 .magazine-storyblock:hover{
 transform: translate(0, -10px);
 }
+
 .magazine-storyblock img{
   height: auto;
   width: auto;
 max-width: 100% ;
 max-height: 100% ;
 border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .management-storyblock{
@@ -216,6 +211,7 @@ transform: translate(0, -10px);
   width: auto;
 max-width: 100% ;
 max-height: 100% ;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .management-storyblock-wip{
@@ -233,7 +229,7 @@ transition: transform .1s;
   width: auto;
 max-width: 100% ;
 max-height: 100% ;
-
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .management-storyblock-wip:hover{
@@ -257,6 +253,7 @@ max-width: 100% ;
 max-height: 100% ;
 
 border-radius: 10px;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .idol-storyblock .name {
@@ -293,7 +290,6 @@ width: 400px;
 margin: 5px;
 display: inline-block;
 transition: transform .1s;
-
 }
 .event-storyblock:hover{
 transform: translate(0, -10px);
@@ -305,8 +301,8 @@ transform: translate(0, -10px);
 max-width: 100% ;
 max-height: 100% ;
 border-radius: 10px;
-border: 2px solid #514c63;
 
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .event-storyblock .name {
@@ -397,11 +393,6 @@ width: auto;
 max-width: 100%;
 max-height: 100%;}
 
-.TLbackground{
-background: black;
-color: white;
-}
-
 .TLindexcontent-box{
 background: #fcfffa;
 border: 0px solid #667a6e;
@@ -422,11 +413,9 @@ gap: 10px;
 color: white;
 max-width: 98%;
 
-box-shadow: 0 0 15px rgba(33,33,33,.4);
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 border: 2px solid #bab520;
 
-border-top: 15px solid black;
-border-bottom: 15px solid black;
 }
 
 .preview-container a{
@@ -584,7 +573,6 @@ justify-content: flex-end;
 position: absolute;
 
 padding: 2px;
-background-color:#002b27;
 color: white;
 text-align: center;
 font-size: 18px;
