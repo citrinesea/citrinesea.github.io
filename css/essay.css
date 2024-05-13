@@ -550,9 +550,6 @@ top:0;
 }
 
 .infographic{
-width: 700px;
-margin-left: auto;
-    margin-right: auto;
 }
 .infographic img{
 max-width: 100% ;
@@ -647,7 +644,7 @@ max-height: 100% ;
 }
 
 @media only screen and (max-width: 600px) {
-    .infographic {width: 400px; display: inline-block; margin: 1% 0;}  
+    .infographic img{width: 400px; display: inline-block; margin: 1% 0;}  
     .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
     .resultsbox {width: auto; height:auto; display: inline-block;} 
     .graph {width: 500px;} 
