@@ -427,7 +427,8 @@ max-width: 120px;
 }
 
 .grid{
-background: #F9F4EA}
+background: #F9F4EA;
+}}
 
 #oshi{
 background: white;
@@ -438,6 +439,8 @@ overflow: hidden;
 }
 
 .grid .item {
+  text-align:center;
+  
   display: block;
   padding: 10px;
   width: 48%;
@@ -445,6 +448,8 @@ overflow: hidden;
   margin:1%;
   overflow: hidden;
 }
+
+.text {text-align:left;}
 
 .grid .oshiitem {
   display: block;
