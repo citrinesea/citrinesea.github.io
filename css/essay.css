@@ -322,7 +322,7 @@ border-radius: 10px;
   display: none;
   overflow: hidden;
   max-height: max-content;
-  background-color: #white;
+  background-color: white;
 }
 
 #entraining {
@@ -648,9 +648,24 @@ max-width: 100% ;
 max-height: 100% ;
 }
 
+.trivia-grid {
+  grid-template-columns: 1fr 2fr;
+  gap: 5px;
+}
+.trivia-left {
+  display: inline-block;
+}
+.trivia-left img{
+  width: 120px;
+}
+.trivia-right {
+  display: inline-block;
+}
+
 @media only screen and (max-width: 600px) {
     .infographic img{width: 400px; display: inline-block; margin: 1% 0;}  
     .infographic-vid {width: 400px; display: inline-block; margin: 1% 0;} 
     .resultsbox {width: auto; height:auto; display: inline-block;} 
     .graph {width: 500px;} 
+    .trivia-grid {grid-template-columns: 1fr; display: inline-block; margin: 1% 0;}  
     }
