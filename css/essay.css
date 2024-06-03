@@ -437,7 +437,7 @@ overflow: hidden;
 .grid .item {
   text-align:center;
   
-  display: block;
+  display: flex;
   padding: 10px;
   width: 48%;
   box-sizing: border-box;
