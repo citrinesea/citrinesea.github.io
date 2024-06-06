@@ -384,20 +384,10 @@ a {
 
 .filterbox {
   width: 100%;
-  background: #151515;
+  background: #19254e;
   position: relative;
   padding: 15px 0;
   color: #fff;
-}
-
-#oshifilter {
-background: white;
-color: #6d9394;
-}
-
-#oshifilter li a{
-color: #707a64;
-text-decoration: none; 
 }
 
 .container{
@@ -417,7 +407,7 @@ max-width: 120px;
 }
 
 .filterbox li a {
-  color: #ffe2de;
+  color: #defffa;
   border-bottom: 1px solid #454545;
   margin: 0 5px;
 }
@@ -446,14 +436,6 @@ overflow: hidden;
 }
 
 .text {text-align:left;}
-
-.grid .oshiitem {
-  display: block;
-  padding: 5px;
-  box-sizing: border-box;
-  margin:1%;
-  overflow: hidden;
-}
 
 .grid .interview {
   display: block;
@@ -487,8 +469,8 @@ font-size: 16px;
 
 .item a {
   padding: 5px 15px;
-  background: #852938;
-  border: 1px solid #957D75;
+  background: #2c6c6e;
+  border: 1px solid #758b95;
   color: #fff;
   transition: 0.4s ease;
   font-size: 15px;
@@ -497,7 +479,7 @@ font-size: 16px;
 
 .item a:hover {
   background: transparent;
-  color: #852938;
+  color: #2c2985;
 }
 
 .detail-text{
@@ -506,16 +488,11 @@ font-size: 15px;
 
 .detail-text b{
 font-size: 15px;
-color: #852938;
+color: #193578;
 }
 
 .detail-text a {
-color: #0f6270;
-}
-
-#oshi b{
-font-size: 15px;
-color: green;
+color: #607b4b;
 }
 
 .chibi-filter{
@@ -540,7 +517,7 @@ background: green;
 font-size: 15px;
 width: fit-content;
 max-width: 50%;
-border: 1px solid #957D75;
+border: 1px solid #758195;
 background: white;
 border-radius: 5px;
 padding: 5px;

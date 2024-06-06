@@ -156,7 +156,7 @@ transform: scale(1.01);
   width: 100%;
   background: white;
   position: relative;
-  color: #4d140b;
+  color: #0b174d;
 border-radius: 5px;
 }
 
@@ -210,33 +210,19 @@ max-width: 100%;
 font-size: 15px;
 }
 
-.item a {
-  padding: 5px 15px;
-  background: #852938;
-  border: 1px solid #b8c7a5;
-  color: #fff;
-  transition: 0.4s ease;
-  font-size: 15px;
-  overflow: hidden;
-}
-
-.item a:hover {
-  background: transparent;
-  color: #852938;
-}
-
 .TLrecommendation-box {
 font-size: 15px;
 color: #0B0C22;
 display: inline-block;
 padding: 5px;
 text-align: left;
+height: 230px;
 max-width: auto;
 padding: 0 10px 0 10px;
 border-radius: 10px;
 border: 2px solid #1b1f4a;
 background-color: #FEFEFE;
-box-shadow: -3px 3px #b57474;
+box-shadow: -3px 3px #26646e;
 }
 
 .TLrecommendation-box img{
@@ -270,3 +256,9 @@ text-align: right;
   max-height: max-content;
   background-color: #white;
 }
+
+@media only screen and (min-width:0px) and (max-width:600px) {
+  .TLrecommendation-box {
+  height: 180px;
+  }
+  }
