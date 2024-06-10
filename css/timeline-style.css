@@ -171,6 +171,7 @@ border-radius: 5px;
 .timelinefilterbox li a {
   color: #3c9183;
   margin: 0 5px;
+  border-bottom: none;
 }
 
 .timelinefilterbox ul b {
@@ -179,6 +180,7 @@ border-radius: 5px;
 
 .selected {
   font-weight: 700;
+  color: red;
   border-bottom: 2px solid blue !important;
 }
 

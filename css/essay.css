@@ -408,8 +408,8 @@ max-width: 120px;
 
 .filterbox li a {
   color: #defffa;
-    margin: 0 5px;
-    border-bottom: none;
+  margin: 0 5px;
+  border-bottom: none;
 }
 
 .filterbox ul b {
@@ -451,8 +451,9 @@ max-width: 50%;
 }
 
 .selected {
-    font-weight: 700;
-    border-bottom: 2px solid var(--link-color) !important;
+  font-weight: 700;
+  color: red;
+  border-bottom: 2px solid blue !important;
 }
 
 .item {
