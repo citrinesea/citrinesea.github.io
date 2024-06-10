@@ -408,8 +408,8 @@ max-width: 120px;
 
 .filterbox li a {
   color: #defffa;
-  border-bottom: 1px solid #454545;
-  margin: 0 5px;
+    margin: 0 5px;
+    border-bottom: none;
 }
 
 .filterbox ul b {
@@ -450,17 +450,9 @@ overflow: hidden;
 max-width: 50%;
 }
 
-@media only screen and (max-width: 600px) {
-    filterbox {width: 100%;}
-    .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
-    .grid .oshiitem {display: inline-block; margin: 1% 0;}
-    .preview-thumbnail{max-width: 100%;}
-    }
-
 .selected {
-  color: #fff;
-  border-bottom-color: #97c5e0;
-  font-weight: bold;
+    font-weight: 700;
+    border-bottom: 2px solid var(--link-color) !important;
 }
 
 .item {
@@ -494,6 +486,13 @@ color: #193578;
 .detail-text a {
 color: #607b4b;
 }
+
+@media only screen and (max-width: 600px) {
+  filterbox {width: 100%;}
+  .grid .item {width: 100%; display: inline-block; margin: 1% 0;}
+  .grid .oshiitem {display: inline-block; margin: 1% 0;}
+  .preview-thumbnail{max-width: 100%;}
+  }
 
 .chibi-filter{
 width: 50px;
