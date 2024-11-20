@@ -145,7 +145,7 @@ align-items: center;
 
 .mainpage-box{
 position: absolute;
-top: 50%;
+top: 0;
 left: 0; 
 right: 0; 
 margin-left: auto; 
@@ -511,17 +511,54 @@ max-height: 100% ;
   text-align: center;
 }
 
-.citrinesea-item img{
+.citrinesea-item{
+position:relative;
+max-height: fit-content;
+border-radius: 5px;
+padding: 5px;
+transition: transform .1s;
 }
+
+.citrinesea-item:hover {
+  transform: scale(1.03);
+}
+
+.citrinesea-item .cname {
+  visibility: visible;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  
+  padding: 2px;
+  background-color:#002b27;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 0 25px 0 25px;
+  
+  max-width: 90%;
+  top: 0%;
+  }
+
+.citrinesea-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;  
+    opacity: 1;
+    border-radius: 20px;
+}
+
+.citrinesea-item img:hover{
+  opacity: 0.2;
+}
+
+
 
 .second-row{
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-.TLstars-row{
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .newholder{
@@ -547,21 +584,38 @@ max-height: 100% ;
 }
 
 .newfeatureTL{
+  position: relative;
   text-align: center;
-  border-radius: 5px;
   padding: 5px;
   transition: transform .1s;
   color:#4e7b36;
   }
+
+  .newfeatureTL img{
+  border-radius: 25px;
+  overflow: hidden;
+  }
   .newfeatureTL:hover {
     transform: scale(1.03);
   }
+  .newfeatureTL .cname {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+
+    background-color:#237254;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    padding: 0 10px 0 10px;
+    
+    max-width: 90%;
+    top: 0%;
+    }
   
-  .newfeatureTL img{
-  max-width: 100% ;
-  max-height: 200px ;
-  overflow: hidden;
-  }
 
 @media only screen and (max-width: 600px) {
     .newholder {
