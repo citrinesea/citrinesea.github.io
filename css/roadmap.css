@@ -79,6 +79,7 @@ position: absolute;
 .bin{
 display: grid;
 grid-template-columns: 1fr 1fr;
+gap: 15px;
 }
 
 .preview {
@@ -98,7 +99,6 @@ margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   margin: 0 auto;
 }
 
@@ -118,9 +118,12 @@ margin: 0 auto;
 }
 
 .event-plaque{
-  margin: 0 auto;
-  text-align: center; 
-  width: 900px;
+  margin: 0 auto; /* Remove unnecessary margin */
+  background-color: rgb(249, 249, 249);
+  padding: 10px;
+  width: 60%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+  text-align: center;
 }
 
 .event-plaque img{
@@ -148,24 +151,23 @@ transition: ease-in 0.2s;
     margin: 0 auto;
   }  
 
-  .bin {
-    grid-template-columns: 1fr; /* Stacks items vertically */
-    gap: 10px; /* Reduces spacing between grid items */
-  }
-
   .postcard, .preview {
-    height: auto; /* Adjusts height to fit content */
-    margin: 10px auto; /* Adds vertical spacing */
+    margin: 5px auto; /* Reduces vertical spacing */
   }
 
   .postcard-text {
     font-size: 17px;
-    width: 85%; /* Increases width for readability */
+    width: 85%;
   }
 
   .preview img {
     max-height: 500px; /* Keeps image size reasonable */
-    max-width: 100%; /* Prevents overflow */
+    max-width: 100%;
+  }
+
+  .bin {
+    grid-template-columns: 1fr; /* Stacks items vertically */
+    gap: 5px; /* Further reduces spacing between grid items */
   }
 
   .event-plaque {
