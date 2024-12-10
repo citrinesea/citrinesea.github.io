@@ -1,8 +1,25 @@
 .description{
   text-align: center;
-  font-size: 30px;
-  padding: 15px;
+  font-size: 40px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
 }  
+
+.first-bin {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; /* Adjust as needed for the container height */
+}
+
+.first-bin img {
+  width: 100%; /* Make it fill the width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container */
+  overflow: hidden; /* Keeps it within bounds */
+}
 
 .bin{
 display: grid;
@@ -64,6 +81,13 @@ transition: ease-in 0.2s;
 }
 
 @media only screen and (max-width: 600px) {
+  .description{
+    font-size: 25px;
+    padding: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }  
+
   .bin {
     grid-template-columns: 1fr; /* Stacks the items vertically */
     gap: 10px; /* Reduces the spacing between the grid items */
@@ -75,6 +99,7 @@ transition: ease-in 0.2s;
   }
 
   .postcard-text {
+    font-size: 17px;
     width: 85%; /* Slightly larger width for better readability */
   }
 
@@ -84,6 +109,14 @@ transition: ease-in 0.2s;
 
   .event-plaque {
     width: 400px;
+  }
+
+  .event-plaque img {
+    width: 150px;
+  }
+
+  .first-bin img {
+    max-height: auto; /* Reduce image size on smaller screens */
   }
 }
 
