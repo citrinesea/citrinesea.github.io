@@ -1,0 +1,102 @@
+.description{
+  text-align: center;
+  font-size: 30px;
+  padding: 15px;
+}  
+
+.bin{
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.preview {
+background-color: rgb(255, 253, 253);
+margin: 0 auto;
+}
+
+.preview img {
+  width: auto; /* Allows the width to adjust while maintaining aspect ratio */
+  height: auto;
+  max-height: 800px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.postcard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+/* Style for the postcard text content */
+.postcard-text {
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  width: 80%;
+  height: auto;
+  padding: 25px;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  border-radius: 8px;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.event-plaque{
+  margin: 0 auto;
+  text-align: center; 
+  width: 900px;
+}
+
+.event-plaque img{
+width: auto;
+height: auto;
+max-width: 300px;
+transition: ease-in 0.2s;
+}
+
+.event-plaque img:hover{
+  transform: rotate(10deg);
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 600px) {
+  .bin {
+    grid-template-columns: 1fr; /* Stacks the items vertically */
+    gap: 10px; /* Reduces the spacing between the grid items */
+  }
+
+  .postcard, .preview {
+    height: auto; /* Adjusts height to content on smaller screens */
+    margin: 10px auto; /* Adds some vertical breathing space */
+  }
+
+  .postcard-text {
+    width: 85%; /* Slightly larger width for better readability */
+  }
+
+  .preview img {
+    max-height: 500px; /* Reduce image size on smaller screens */
+  }
+
+  .event-plaque {
+    width: 400px;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-in-up {
+  animation: 0.75s both fadeInUp;
+}
