@@ -123,7 +123,7 @@ transition: ease-in 0.2s;
 }
 
 @media only screen and (max-width: 600px) {
-  .description{
+  .description {
     font-size: 25px;
     padding: 10px;
     width: 90%;
@@ -131,34 +131,36 @@ transition: ease-in 0.2s;
   }  
 
   .bin {
-    grid-template-columns: 1fr; /* Stacks the items vertically */
-    gap: 10px; /* Reduces the spacing between the grid items */
+    grid-template-columns: 1fr; /* Stacks items vertically */
+    gap: 10px; /* Reduces spacing between grid items */
   }
 
   .postcard, .preview {
-    height: auto; /* Adjusts height to content on smaller screens */
-    margin: 10px auto; /* Adds some vertical breathing space */
+    height: auto; /* Adjusts height to fit content */
+    margin: 10px auto; /* Adds vertical spacing */
   }
 
   .postcard-text {
     font-size: 17px;
-    width: 85%; /* Slightly larger width for better readability */
+    width: 85%; /* Increases width for readability */
   }
 
   .preview img {
-    max-height: 500px; /* Reduce image size on smaller screens */
+    max-height: 500px; /* Keeps image size reasonable */
+    max-width: 100%; /* Prevents overflow */
   }
 
   .event-plaque {
-    width: 400px;
+    width: 300px; /* Adjusts width for smaller screens */
   }
 
   .event-plaque img {
-    width: 150px;
+    max-width: 150px; /* Further scales image size down */
   }
 
   .first-bin img {
-    max-height: auto; /* Reduce image size on smaller screens */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures image fits the container */
   }
 }
 
