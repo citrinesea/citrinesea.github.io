@@ -1,3 +1,45 @@
+.navigation {
+  display: flex;
+  position: sticky;
+  padding: 10px;
+  
+  top: 0px;
+  background: rgb(255, 255, 255);
+  color: rgb(150, 121, 121);
+  justify-content: center;
+  font-size: 1 rem;
+
+  z-index: 100;
+  border-bottom: solid 4px #007691;
+}
+
+.navigation img {
+  margin-bottom: 0px;
+  width: 250px;
+}
+
+.navigation a {
+  border-bottom: none;
+  color: #8eae50;
+}
+
+.navigation i {
+  margin: 0px;
+  padding: 10px;
+}
+
+.navigation .top-arrow {
+  right: 0px;
+  position: absolute;
+}
+
+.navigation .home-button {
+left: 0px;
+position: absolute;
+}
+
+ /* Delete above later */
+
 .description{
   text-align: center;
   font-size: 40px;
