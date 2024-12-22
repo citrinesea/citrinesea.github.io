@@ -21,7 +21,7 @@ body {
 
 .navigation img {
   margin-bottom: 0px;
-  width: 250px;
+  width: 200px;
 }
 
 .navigation a {
@@ -85,6 +85,7 @@ gap: 15px;
 .preview {
 background-color: rgb(255, 253, 253);
 margin: 0 auto;
+padding: 50px;
 }
 
 .preview img {
@@ -160,6 +161,12 @@ transition: ease-in 0.2s;
     width: 85%;
   }
 
+.postcard-text a {background-color: #152c4d;
+    color: white;
+    padding: 10px;}
+    
+.postcard-text a:link {color: white;}
+
   .preview img {
     max-height: 500px; /* Keeps image size reasonable */
     max-width: 100%;
@@ -203,3 +210,4 @@ transition: ease-in 0.2s;
 .fade-in-up {
   animation: 0.75s both fadeInUp;
 }
+
