@@ -44,6 +44,41 @@ left: 0px;
 position: absolute;
 }
 
+.navigation2 {
+  display: flex;
+  position: sticky;
+  bottom: 0px;
+  background: hsl(200, 41%, 21%);
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.navigation2 img {
+  margin-bottom: 0px;
+  width: 70px;
+}
+
+.navigation2 a {
+  border-bottom: none;
+  color: #a8ca65;
+}
+
+.navigation2 i {
+  margin: 0px;
+  padding: 10px;
+}
+
+.navigation2 .top-arrow {
+  right: 0px;
+  position: absolute;
+}
+
+.navigation2 .home-button {
+left: 0px;
+position: absolute;
+}
+
  /* Delete above later */
 
 .description{
