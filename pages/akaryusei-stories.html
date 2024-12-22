@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>AKARYUSEI Interaction Analysis and Survey</title>
+   <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/essay.css">
+   <link rel="stylesheet" href="../css/quotes.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+ </head>
+
+ <body>
+   <header>
+<a href="/">
+<div class="logo">
+     <img src="../images/icons/logo.png"
+     alt="Analyses.">
+</div></a>
+     <div class="nav">
+	<div class="dropdown">
+		<button class="dropbtn"><a href="/"><b>home</b></a></button></div>
+	<div class="dropdown">
+		<button class="dropbtn"><a href="../contributor-pages/about.html"><b>about</b></a></button></div>
+  	</div></div></div>    
+	</div>
+   </header>
+
+   <main> 
+<div class="line"></div> 
+
+<div class="indexcontent-box">
+
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>AKARYUSEI Interaction Analysis and Survey</b></p></div>
+<div class="line"></div>
+</div>
+
+<div class="pollbin">
+
+<div class="pollitem">
+<div class="statistics-sheet">
+<img src = "../images/renders/keito-stats.png"></div></div>
+
+<div class="pollitem">
+
+<p><span style="color: #1e4a3b; font-size: 22px;"><b>AKATSUKI and RYUSEITAI have history</b></span></p>
+
+<p>Can we get precise about it? The answer may surprise you. This content analysis asks
+Q1) How many stories does an AKATSUKI member appear with a RYUSEITAI member? Q2) Who is most connected with the other group via story appearance? Q3) Which AKARYUSEI pair shows up together the most?</p>
+
+<p>I collected all <b>event and scout</b> stories from 2015-2023, which featured <b>at least one AKATSUKI member</b> and <b>at least one RYUSEITAI member</b>. Story appearances do not guarantee interactions.</p></div>
+</div>
+
+
+<section id="results-data">
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>RESULTS</b></p></div>
+<div class="line"></div>
+</div>
+
+<div class="fade-in-right-on-scroll">
+<div class="resultsbox">
+<p><span style="color: #1e4a3b; font-size: 22px;"><b>How many TOTAL CONNECTIONS does each member have with the other unit?</b></span></p>
+<p><i>How many times did one member of AKATSUKI and RYUSEITAI share a story with a member of the other unit?</i></p>
+<div style="height: 700px">  
+  <canvas id="stories"></canvas>
+</div>
+
+<div class="chartdec">
+<p><b>RYUSEITAI</b> Shinobu (52), Tetora (47), Kanata (41), Chiaki (33), Midori (31).</p>
+<p><b>AKATSUKI</b> Souma (71), Kuro (69), Keito (64)</p>
+<p><i>Because RYUSEITAI has more members than AKATSUKI, their numbers are spread out and look much lower.</i></p></div>
+</div>
+</div>
+
+<p></p>
+
+<div class="fade-in-right-on-scroll">
+<div class="resultsbox">
+<p><p><span style="color: #1e4a3b; font-size: 22px;"><b>How many times did one member share a story with EACH member of the other unit?</b></span></p></p>
+<div style="height: 700px">  
+  <canvas id="pairsreality"></canvas>
+</div>
+
+<div class="chartdec">
+<p><b>RYUSEITAI</b> Chiaki paired most with Kuro (14 stories), Kanata paired most with Souma (19), Tetora paired most with Kuro (19), Midori paired most with Keito and Kuro (12), Shinobu paired most with Souma (21)</p>
+<p><b>AKATSUKI</b> Keito paired most with Shinobu (19), Kuro paired most with Tetora (19), Souma paired most with Shinobu (21)</p>
+<p><i>You can narrow down by character, by selecting the characters you wish to remove in the key.</i></p></div>
+</div>
+</div>
+</section>
+
+<section id="poll-data">
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>PRODUCER POLLS</b></p></div>
+<div class="line"></div>
+</div>
+
+<section id="appendix">
+
+<div class="pollitem">
+<div class="essay-header">
+<div class="labelcategory">
+<p><b>Data Appendix</b></p></div>
+<div class="line"></div>
+<p>Below is the total list of stories I used for my calculations.</p>
+
+</div>
+
+<div class="statistics-sheet">
+  <img src = "../images/pdfs/AKARYUSEI-STATS.png"></div>
+</div>
+
+</section>
+
+</div>
+<br></br>
+</main>
+   <footer><h5>© 2023 citrinesea</h5>
+   <p></p></footer>
+
+<script>
+const elementsToFadeInRightOnScroll = document.querySelectorAll(".fade-in-right-on-scroll");
+if (elementsToFadeInRightOnScroll) {
+  window.addEventListener("scroll", function(event) {
+    elementsToFadeInRightOnScroll.forEach(function(element) {
+      if (window.scrollY >= (element.offsetTop - window.innerHeight)) {
+        element.classList.add("fade-in-right");
+      } else {
+        element.classList.remove("fade-in-right");
+      }
+    });
+  });
+}
+
+const databubble={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Total Stories (x, y, THIS NUMBER)',
+        data: [{x: 20, y: 75, r: 33}, 
+	       {x: 40, y: 70, r: 41}, 
+               {x: 30, y: 60, r: 47}, 
+               {x: 35, y: 50, r: 31}, 
+               {x: 25, y: 40, r: 52}, 
+               {x: 40, y: 30, r: 64}, 
+               {x: 30, y: 20, r: 69}, 
+               {x: 20, y: 10, r: 71}],
+	backgroundColor: ['rgba(230, 0, 51, 0.9)', 'rgba(0, 141, 183, 0.9)', 'rgba(48, 40, 51, 0.9)', 'rgba(0, 83, 63, 0.9)', 'rgba(255, 220, 0, 0.9)', 'rgba(49, 103, 69, 0.9)', 'rgba(232, 57, 41, 0.9)', 'rgba(86, 84, 162, 0.9)'],
+        borderWidth: 1
+      }]
+}
+
+const config2 =  {
+    type: 'bubble',
+    data: databubble,
+    options: {
+      responsive: true,
+	maintainAspectRatio: false,
+	plugins: {
+            title: {
+                display: true,
+                text: 'Total number of connections with other unit'
+            }
+	}
+    }
+  }; 
+
+const StoryChart = new Chart(
+document.getElementById('stories'),
+config2
+);
+
+// Pair Expectations vs. Reality votes
+  const datapairs2={
+labels: ['Chiaki', 'Kanata', 'Tetora', 'Midori', 'Shinobu', 'Keito', 'Kuro', 'Souma'],
+      datasets: [{
+        label: 'Chiaki',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 9, 14, 10],
+	backgroundColor: ['rgba(230, 0, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kanata',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 10, 12, 19],
+	backgroundColor: ['rgba(0, 141, 183, 1)'],
+        borderWidth: 1
+      }, {
+       label: 'Tetora',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 14, 19, 14],
+	backgroundColor: ['rgba(48, 40, 51, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Midori',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 12, 12, 7],
+	backgroundColor: ['rgba(0, 83, 63, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Shinobu',
+        type: "bar",
+        stack: "Reality",
+        data: [0, 0, 0, 0, 0, 19, 12, 21],
+	backgroundColor: ['rgba(255, 220, 0, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Keito',
+        type: "bar",
+        stack: "Reality",
+        data: [9, 10, 14, 12, 19, 0, 0, 0],
+	backgroundColor: ['rgba(49, 103, 69, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Kuro',
+        type: "bar",
+        stack: "Reality",
+        data: [14, 12, 19, 12, 12, 0, 0, 0],
+	backgroundColor: ['rgba(232, 57, 41, 1)'],
+        borderWidth: 1
+      }, {
+        label: 'Souma',
+        type: "bar",
+        stack: "Reality",
+        data: [10, 19, 14, 7, 21, 0, 0, 0],
+	backgroundColor: ['rgba(86, 84, 162, 1)'],
+        borderWidth: 1
+}]
+}
+
+const configPairsReality =  {
+    type: 'bar',
+    data: datapairs2,
+    options: {
+      responsive: true,
+	maintainAspectRatio: false,
+	indexAxis: 'y',
+      scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+                stacked: true
+            }
+      }
+    }
+  }; 
+
+
+const PairsRealityChart = new Chart(
+document.getElementById('pairsreality'),
+configPairsReality
+);
+
+</script>
+
+
+ </body>
+</html>

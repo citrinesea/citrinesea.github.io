@@ -1,0 +1,1518 @@
+<!--
+
+credits: isotope combination filtering tutorial by magnusthemes.tumblr.com
+
+-->
+
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>Reading Recommendations | citrinesea</title>
+   <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+   <link rel="stylesheet" href="../css/style.css">
+   <link rel="stylesheet" href="../css/essay.css">
+   <link rel="stylesheet" href="../css/translation.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".item", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
+</head>
+
+ <body>
+   <header></header>
+
+   <main>
+
+    <div class="navigation">
+      <a href="https://citrinesea.github.io/">
+        <img src="../images/logo5.png"
+        alt="Analyses."></a>
+ </div>
+
+<div class="first-bin">
+
+<img src="../images/reading-recc/submarinechiaki.jpg">
+
+<div class="first-bin-box">
+<p><b>AKATSUKI & RYUSEITAI Reading Recommendations</b></p>
+
+<span style="text-align: center; font-size: 16px;">
+<p>If you want a comprehensive look at RYUSEITAI and AKATSUKI as a whole, <b>Meteor Impact, Scroll of the Elements, and Submarine</b> are must-reads. Browse stories below! Click on a character to see which stories I recommend for them and various members of the other group!</p>
+</span>
+</div>
+
+</div>
+
+<div class="basics-bin">
+
+<div class="the-basics">
+<div class="title">
+<p><b>Meteor Impact</b></p>
+</div>
+<p><div class="detail-text">The backstories of RYUSEITAI and AKATSUKI</div></p>
+
+	<img
+            src="../images/reading-recc/meteor-impact.jpg"
+            alt="Meteor Impact.">
+
+<p><a href="https://310mc.github.io/meteor_impact/" target="_blank"><b>Read here</b></a></p>
+
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+</div>
+
+<div class="the-basics">
+<div class="title">
+<p><b>Scroll of the Elements</b></p>
+</div>
+<p><div class="detail-text">A live show between RYUSEITAI and AKATSUKI</div></p>
+
+	<img
+            src="../images/reading-recc/scrolls.jpg"
+            alt="Meteor Impact.">
+
+<p><a href="https://citrinesea.github.io/translation/scroll_of_the_elements/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+</div>
+
+<div class="the-basics">
+<div class="title">
+<p><b>Submarine</b></p>
+
+<p><div class="detail-text">RYUSEITAI and AKATSUKI meet up again during SS</div></p></div>
+
+	<img
+            src="../images/reading-recc/submarine.jpg"
+            alt="Meteor Impact.">
+
+<p><a href="https://310mc.github.io/submarine/" target="_blank"><b>Read here</b></a></p>
+
+<p><div class="detail-text"><i>translated by <b>verdantgrove, 310mc</b></i></div></p>
+
+</div>
+</div>
+
+<div class="filterbox">
+<span style="color: rgb(17, 0, 0); text-align: center; font-size: 20px;">
+  <p><b>Stories for AKATSUKI, RYUSEITAI, Madara and Ibuki</b></p>
+</span>
+
+<div class="filters">
+
+   <ul class="filter option-set exclusive" data-filter-group="charms">
+     <li><b>By Character</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".chiaki">Chiaki</a></li>
+     <li><a href="#" data-filter-value=".kanata">Kanata</a></li>
+     <li><a href="#" data-filter-value=".tetora">Tetora</a></li>
+     <li><a href="#" data-filter-value=".midori">Midori</a></li>
+     <li><a href="#" data-filter-value=".shinobu">Shinobu</a></li>
+     <li><a href="#" data-filter-value=".keito">Keito</a></li>
+     <li><a href="#" data-filter-value=".kuro">Kuro</a></li>
+     <li><a href="#" data-filter-value=".souma">Souma</a></li>
+     <li><a href="#" data-filter-value=".madara">Madara</a></li>
+     <li><a href="#" data-filter-value=".ibuki">Ibuki</a></li>
+   </ul>
+
+<ul class="filter option-set exclusive" data-filter-group="events">
+     <li><b>Story</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".event">Event</a></li>
+     <li><a href="#" data-filter-value=".scout">Scout</a></li>
+     <li><a href="#" data-filter-value=".idol">Idol</a></li>
+   </ul>
+
+   <ul class="filter option-set exclusive" data-filter-group="translations">
+     <li><b>Translated?</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".translated">Translated</a></li>
+     <li><a href="#" data-filter-value=".wbm">Wayback Machine Translation</a></li>
+   </ul>
+
+</div></div>
+
+<div class="grid">
+
+<div class="item scout translated kanata souma madara">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>ABYSS</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/abyss.jpg"
+              alt="ABYSS."></div>
+
+<p><a href="https://310mc.github.io/abyss/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>310mc</b></i></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>A Look Back story about Kanata, Madara, Souma and the Shinkai Clan that takes place when they're children.</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/kanata.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kanata.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/madara.png"></div>
+        </td>
+        <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+          <div class="chibi-filter"><img src="../images/chibis/madara.png"></div>
+          </td>
+    </tr>
+    <tr>
+      <th>Souma | Kanata</th>
+      <th>Kanata | Madara</th>
+      <th>Souma | Madara</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+
+<div class="item wbm scout shinobu keito">
+  <div class="recommendation-box">
+      
+      <div class="title">
+      <p><b>Air Ride</b></p></div>
+      
+      <div class="item-story">
+        <img
+                  src="../images/reading-recc/air-ride.jpg"
+                  alt="Air Ride."></div>
+      <p><a href="https://web.archive.org/web/20210825204400/https://ensemble-stars.fandom.com/wiki/Air_Ride" target="_blank"><b>Read here</b></a></p>
+      <p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
+      
+      
+      <div class="detail-text">
+        <p>One of the first times Shinobu and Keito meet.</p>
+      </div>
+      
+      <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+      <table>
+        <tr>
+          <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+        </tr>
+        <tr>
+          <th>Keito | Shinobu</th>
+        </tr>
+        <tr>
+          <td>★★☆☆☆</td>
+        </tr>
+      </table>
+      
+      <p></p>
+</div></div>
+
+<div class="item scout kuro chiaki">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Astraea's Atelier</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/astraea.jpg"
+                alt="Astraea's Atelier."></div>
+
+  <p><a href="https://clothyume.tumblr.com/post/741933350348079104/yyumemikas-eng-translation-of-astraeas-atelier" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>clothyume</b></i></div>
+
+    
+    <div class="detail-text">
+      <p>Kuro and Chiaki visit Shu in France and discover naughty books.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/chiaki.png" alt="chiaki"></div>
+      </tr>
+      <tr>
+        <th>Kuro | Chiaki</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+ 
+<div class="item translated scout midori keito">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Biblio</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/biblio.jpg"
+              alt="Biblio."></div>
+  <p><a href="https://310mc.github.io/biblio/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+  
+  
+  <div class="detail-text">
+    <p>Keito and Midori get trapped with Hajime and Tsumugi in the library during a summer storm.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+    </tr>
+    <tr>
+      <th>Keito | Midori</th>
+    </tr>
+    <tr>
+      <td>★★★☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+ <div class="item translated scout souma kanata midori tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Colorful Autumn</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/colorfulautumn.jpg"
+              alt="Colorful Autumn."></div>
+  <p><a href="https://310mc.github.io/colorful_autumn/" target="_blank"><b>Read here</b></a></p>
+  <div class="detail-text"><i>translated by <b>310mc</b></i></div>
+  
+  <div class="detail-text">
+    <p>Midori enlists Tetora, Souma and Kanata to help him paint signboards.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/kanata.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Souma | Midori</th>
+      <th>Souma | Kanata</th>
+      <th>Souma | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★★☆☆</td>
+      <td>★★★☆☆</td>
+      <td>★★☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+ <div class="item translated scout keito kuro kanata">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Comic World</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/comicworld.jpg"
+              alt="Crossroad."></div>
+  
+  <p><a href="https://310mc.github.io/comic_world/" target="_blank"><b>Read here</b></a></p>
+  <div class="detail-text"><i>translated by <b>310mc</b></i></div>
+  
+  <div class="detail-text">
+    <p>Kanata seeks Kuro for help and Keito comes with. This story covers Kanata's feelings about the War, Keito, and their differing philosophies about moving on from it. The passage we see of the doujin Keito finds revolves around him and Kanata</p>
+  </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png" alt="kuro"></div>
+        <div class="chibi-filter"><img src="../images/chibis/kanata.png" alt="chiaki"></div>
+      </td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="keito"></div>
+          <div class="chibi-filter"><img src="../images/chibis/kanata.png" alt="chiaki"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>Keito | Kanata</th>
+      <th>Kuro | Kanata</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+      <td>★★★★☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+
+<div class="item translated event souma kanata">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Crash Course</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/crashcourse.jpg"
+              alt="Supernova."></div>
+  
+<p><a href="https://enstars-translates.dreamwidth.org/9657.html" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>rii-translates</b></i></div>
+  
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Souma and Kanata train each other how to be a member of AKATSUKI and RYUSEITAI. Shinobu and Keito are also in this story, but separately.</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/kanata.png"></div></td>
+    </tr>
+    <tr>
+      <th>Souma | Kanata</th>
+    </tr>
+    <tr>
+      <td>★★★☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item translated event chiaki kuro keito">
+<div class="recommendation-box">
+
+<div class="title">
+<p><b>Crossroad</b></p></div>
+
+<div class="item-story">
+	<img
+            src="../images/reading-recc/crossroad.jpg"
+            alt="Crossroad."></div>
+
+<p><a href="https://310mc.github.io/crossroad/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>310mc</b> (Chiaki scenes only)</i></div>
+
+<div class="detail-text">
+  <p>Before the War begins, Keito grows an intrigue with Chiaki. You also see snippets of Kuro and Chiaki's friendship.</p>
+</div>
+
+<p><div class="detail-text"><b>Featured Pairs</b></div></p>
+<table>
+  <tr>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="kuro"></div>
+      <div class="chibi-filter"><img src="../images/chibis/chiaki.png" alt="chiaki"></div>
+    </td>
+    <td><div class="chibi-filter"><img src="../images/chibis/keito.png" alt="keito"></div>
+        <div class="chibi-filter"><img src="../images/chibis/chiaki.png" alt="chiaki"></div>
+    </td>
+  </tr>
+  <tr>
+    <th>Kuro | Chiaki</th>
+    <th>Keito | Chiaki</th>
+  </tr>
+  <tr>
+    <td>★★☆☆☆</td>
+    <td>★★★☆☆</td>
+  </tr>
+</table>
+
+<p></p>
+</div></div>
+
+<div class="item scout translated keito tetora madara">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Dominant</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/dominant.jpg"
+              alt="Supernova."></div>
+
+  <p><a href="https://citrinesea.github.io/translation/dominant/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>citrinesea</b></i></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Keito and Madara help Tetora study for a test in their own respective ways.</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/tetora.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/madara.png"></div>
+        </td>
+        <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+          <div class="chibi-filter"><img src="../images/chibis/madara.png"></div>
+          </td>
+    </tr>
+    <tr>
+      <th>Keito | Tetora</th>
+      <th>Tetora | Madara</th>
+      <th>Keito | Madara</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item translated event keito ibuki">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Final Ceremony</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/finalceremony.jpg"
+              alt="Final Ceremony."></div>
+  <p><a href="https://citrinesea.github.io/translation/final_ceremony/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+  
+  
+  <div class="detail-text">
+    <p>Keito invites Ibuki to perform with AKATSUKI post-VS AUDIENCE.</p>
+  </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/ibuki.png"></div></td>
+    </tr>
+    <tr>
+      <th>Keito | Ibuki</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item wbm scout kuro tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Four Beasts of Fistfighting</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/four-beasts.jpg"
+              alt="Four Beasts of Fistfighting."></div>
+  <p><a href="https://web.archive.org/web/20210817203121/https://ensemble-stars.fandom.com/wiki/The_Four_Beasts_of_Fistfighting" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>
+  
+  <div class="detail-text">
+    <p>A foundational story for Kuro and Tetora and what they mean to each other. This story also includes a deep dive on AKATSUKI lore, Tetora’s involvement in all of it, and how Tetora found RST post-Akatsuki rejection. Additionally, contains the origins of the Dragon King Competition, and why the Student Council broke it up during the Main Story.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Kuro | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item translated scout kuro chiaki">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Gang</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/gang.jpg"
+                alt="Crossroad."></div>
+    
+    <p><a href="https://310mc.github.io/gang/" target="_blank"><b>Read here</b></a></p>
+    <div class="detail-text"><i>translated by <b>310mc</b></i></div>
+    
+    <div class="detail-text">
+      <p>A good look at Chiaki and Kuro's friendship, as Kuro considers putting himself at risk.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/chiaki.png" alt="chiaki"></div>
+      </tr>
+      <tr>
+        <th>Kuro | Chiaki</th>
+      </tr>
+      <tr>
+        <td>★★★★☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+ 
+<div class="item scout souma shinobu keito">
+  <div class="recommendation-box">
+      
+      <div class="title">
+      <p><b>Hanafuda</b></p></div>
+      
+      <div class="item-story">
+        <img
+                  src="../images/reading-recc/hanafuda.jpg"
+                  alt="Hanafuda."></div>      
+      
+      <div class="detail-text">
+        <p>Shinobu joins Souma in looking for a missing Hanafuda card. What they don't know is that the card has history with AKATSUKI.</p>
+      </div>
+      
+      <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+      <table>
+        <tr>
+          <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+          <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+        </tr>
+        <tr>
+          <th>Keito | Shinobu</th>
+          <th>Souma | Shinobu</th>
+        </tr>
+        <tr>
+          <td>★★★☆☆</td>
+          <td>★★★★☆</td>
+        </tr>
+      </table>
+      
+      <p></p>
+</div></div>
+
+
+<div class="item translated idol tetora ibuki">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Ibuki Idol Story 2</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/ibukistory2.jpg"
+              alt="Ibuki Idol Story 2."></div>
+  <p><a href="https://310mc.github.io/idol_story/ibuki_2/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+  
+  
+  <div class="detail-text">
+    <p>Ibuki ambushes Tetora and confronts him about Crimson Production.</p>
+  </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/tetora.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/ibuki.png"></div></td>
+    </tr>
+    <tr>
+      <th>Tetora | Ibuki</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+ <div class="item translated scout keito kuro tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Keito Lecture</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/keito_lecture.jpg"
+              alt="Keito Lecture."></div>
+  <p><a href="https://mephinomaly.tumblr.com/post/689778066929696768/tl-keito-lecturestory-directory" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>mephinomaly</b></i></div></p>
+  
+  <div class="detail-text">
+    <p>Kuro and Tetora appear and eat lunch with Keito and the members of Keito Lecture.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Kuro | Tetora</th>
+      <th>Keito | Tetora</th>
+    </tr>
+    <tr>
+      <td>★☆☆☆☆</td>
+      <td>★☆☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item translated idol keito tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Keito Lecture: Spinoff Edition</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/keito_lecture_special_edition.jpg"
+              alt="Keito Lecture: Spinoff Edition."></div>
+  <p><a href="https://citrinesea.github.io/translation/keito_lecture_spinoff_edition/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+  
+  <div class="detail-text">
+    <p>Keito finds out Tetora and other students are hiding bad grades, and offers to help them study.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Keito | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+  
+  <div class="item translated scout midori keito">
+    <div class="recommendation-box">
+    
+    <div class="title">
+    <p><b>Manga Club</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/manga-club.jpg"
+                alt="Manga Club."></div>
+    <p><a href="https://310mc.github.io/manga_club/" target="_blank"><b>Read here</b></a></p>
+    <p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+    
+    
+    <div class="detail-text">
+      <p>Midori and Keito study together with the rest of their circle to compete in a manga trivia competition.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+          <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+      </tr>
+      <tr>
+        <th>Keito | Midori</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+    </div></div>
+
+ <div class="item translated idol kanata keito">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Many Minds One Flower</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/manymindsoneflower.jpg"
+                alt="Crossroad."></div>
+    
+    <p><a href="https://citrinesea.github.io/translation/many_minds_one_flower/" target="_blank"><b>Read here</b></a></p>
+    <div class="detail-text"><i>translated by <b>citrinesea</b></i></div>
+    
+    <div class="detail-text">
+      <p>Keito and Kanata do flower arrangement together.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/keito.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/kanata.png" alt="chiaki"></div>
+      </tr>
+      <tr>
+        <th>Keito | Kanata</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+ <div class="item scout tetora midori shinobu souma">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>One Man Army</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/one-man-army.jpg"
+              alt="One Man Army."></div>
+  
+  <div class="detail-text">
+    <p>The Student Council tries to confiscate Souma's sword, and Shinobu runs reconnaissance for them. Tetora and Midori take Souma's side and leave him be.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+    </tr>
+    <tr>
+      <th>Souma | Midori</th>
+      <th>Souma | Tetora</th>
+      <th>Souma | Shinobu</th>
+    </tr>
+    <tr>
+      <td>★★☆☆☆</td>
+      <td>★★☆☆☆</td>
+      <td>★★☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+ <div class="item scout translated kuro tetora keito souma">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Onigashima</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/onigashima.jpg"
+              alt="Opera."></div>
+
+<p><a href="https://citrinesea.github.io/translation/onigashima/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>citrinesea</b></i></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Tetora, Keito and Souma scheme to investigate Kuro after he mentions something suspicious.</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div>
+      </td>
+      <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>Keito | Tetora</th>
+      <th>Kuro | Tetora</th>
+      <th>Souma | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+</div></div>
+
+<div class="item event translated kuro tetora keito chiaki">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Opera</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/opera.jpg"
+              alt="Opera."></div>
+
+<p><a href="https://citrinesea.github.io/translation/opera/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>citrinesea</b></i></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Tetora requests to join the opera AKATSUKI is putting on. This story delves into Tetora's failed AKATSUKI exam and his feelings about Keito as they interact at the performance. Chiaki and Souma also appear.</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div>
+      </td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/chiaki.png"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>Keito | Tetora</th>
+      <th>Kuro | Tetora</th>
+      <th>Kuro | Chiaki</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+      <td>★★★★★</td>
+      <td>★☆☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+</div></div>
+
+<div class="item translated idol kanata souma shinobu">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Original Kanji</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/kanji.jpg"
+                alt="Shinsengumi."></div>
+    
+    <p><a href="https://twilightmalachite.tumblr.com/post/757759648410517504/kanata-shinkai-original-kanji" target="_blank"><b>Read here</b></a></p>
+    <div class="detail-text"><i>translated by <b>mika_enstars</b></i></div>
+    
+    <div class="detail-text">
+      <p>Souma, Shinobu and Kanata enjoy tea and discuss kanji on a cozy winter day.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/souma.png" alt="souma"></div>
+          <div class="chibi-filter"><img src="../images/chibis/kanata.png" alt="kanata"></div></td>
+        <td><div class="chibi-filter"><img src="../images/chibis/souma.png" alt="souma"></div>
+          <div class="chibi-filter"><img src="../images/chibis/shinobu.png" alt="shinobu"></div></td>
+      </tr>
+      <tr>
+        <th>Souma | Kanata</th>
+        <th>Souma | Shinobu</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+<div class="item translated scout souma kanata">
+<div class="recommendation-box">
+
+<div class="title">
+  <p><b>Palace of the Ocean</b></p></div>
+
+  <div class="item-story">
+	<img
+            src="../images/reading-recc/palaceoftheocean.jpg"
+            alt="Palace of the Ocean."></div>
+
+<p><a href="https://enstars-translates.dreamwidth.org/23761.html" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>rii-translates</b></i></div>
+
+<span style="width: 80%">
+  <div class="detail-text">
+  <p>Souma's activities in Marine Life Club. A good slice-of-life story with groundwork on how Souma and Kanata interact with each other</p>
+  </div></span>
+
+<p><div class="detail-text"><b>Featured Pairs</b></div></p>
+<table>
+  <tr>
+    <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/kanata.png"></div></td>
+  </tr>
+  <tr>
+    <th>Souma | Kanata</th>
+  </tr>
+  <tr>
+    <td>★★★☆☆</td>
+  </tr>
+</table>
+
+<p></p>
+</div></div>
+
+<div class="item translated event midori keito">
+  <div class="recommendation-box">
+      
+      <div class="title">
+      <p><b>Ring</b></p></div>
+      
+      <div class="item-story">
+        <img
+                  src="../images/reading-recc/ring.jpg"
+                  alt="Ring."></div>
+      <p><a href="https://ecemichi.tumblr.com/post/678365858276524032/ring1" target="_blank"><b>Read here</b></a></p>
+      <p><div class="detail-text"><i>translated by <b>kirinece</b></i></div></p>
+      
+      
+      <div class="detail-text">
+        <p>Midori and Keito participate in the same Shuffle Unit together.</p>
+      </div>
+      
+      <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+      <table>
+        <tr>
+          <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+        </tr>
+        <tr>
+          <th>Keito | Midori</th>
+        </tr>
+        <tr>
+          <td>★★★☆☆</td>
+        </tr>
+      </table>
+      
+      <p></p>
+</div></div>
+  
+<div class="item translated idol souma shinobu">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Samurai and Ninjas</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/samuraiandninjas.jpg"
+                alt="Crossroad."></div>
+    
+    <p><a href="https://citrinesea.github.io/translation/samurais_and_ninjas/" target="_blank"><b>Read here</b></a></p>
+    <div class="detail-text"><i>translated by <b>citrinesea</b></i></div>
+    
+    <div class="detail-text">
+      <p>One of the first times Shinobu and Souma meet.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/souma.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/shinobu.png" alt="chiaki"></div>
+      </tr>
+      <tr>
+        <th>Souma | Shinobu</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+<div class="item translated event kuro tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>School Festival 4</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/schoolfes4.jpg"
+              alt="Tough Guy."></div>
+  <p><a href="https://310mc.github.io/school_festival_4/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+  
+  <div class="detail-text">
+    <p>Tetora tries to emulate the cool delinquent look like Kuro, and learns how he stands out from the rest of them.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Kuro | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+<div class="item scout kuro tetora">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>Secret Jeweller</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/secret_jeweller.jpg"
+              alt="Tough Guy."></div>
+  
+  <div class="detail-text">
+    <p>Tetora has to bear with Kuro's odd behavior as Kuro tries to get his sister's attention.</p>
+    </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    </tr>
+    <tr>
+      <th>Kuro | Tetora</th>
+    </tr>
+    <tr>
+      <td>★★☆☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+  
+<div class="item translated event keito kuro souma madara">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>Shinsengumi</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/shinsengumi.jpg"
+                alt="Shinsengumi."></div>
+    
+    <p><a href="https://enstarsmasterlist.github.io/scoutevent" target="_blank"><b>Read here</b></a></p>
+    <div class="detail-text"><i>Find it on the masterlist.</i></div>
+    
+    <div class="detail-text">
+      <p>Madara and AKATSUKI perform a live show together in Keito's hometown.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/keito.png" alt="keito"></div>
+          <div class="chibi-filter"><img src="../images/chibis/madara.png" alt="madara"></div>
+        <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/madara.png" alt="madara"></div>
+        <td><div class="chibi-filter"><img src="../images/chibis/souma.png" alt="souma"></div>
+          <div class="chibi-filter"><img src="../images/chibis/madara.png" alt="madara"></div>
+      </tr>
+      <tr>
+        <th>Keito | Madara</th>
+        <th>Kuro | Madara</th>
+        <th>Souma | Madara</th>
+      </tr>
+      <tr>
+        <td>★★★★☆</td>
+        <td>★★★★★</td>
+        <td>★★☆☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+<div class="item translated event kuro chiaki kanata tetora">
+<div class="recommendation-box">
+
+<div class="title">
+  <p><b>Supernova</b></p></div>
+
+  <div class="item-story">
+	<img
+            src="../images/reading-recc/supernova.jpg"
+            alt="Supernova."></div>
+
+<p><a href="https://doublerainbow82.livejournal.com/35774.html" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>doublerainbow82</b></i></div></p>
+
+<span style="width: 80%">
+  <div class="detail-text">
+  <p>Kuro and Kanata bond over being their groups' second-in-commands. How Kuro repays Chiaki following the events of Meteor Impact. A standard story for Tetora and Kuro's relationship</p>
+  </div></span>
+
+<p><div class="detail-text"><b>Featured Pairs</b></div></p>
+<table>
+  <tr>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/chiaki.png"></div></td>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/kanata.png"></div>
+      </td>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+  </tr>
+  <tr>
+    <th>Kuro | Chiaki</th>
+    <th>Kuro | Kanata</th>
+    <th>Kuro | Tetora</th>
+  </tr>
+  <tr>
+    <td>★★☆☆☆</td>
+    <td>★★★☆☆</td>
+    <td>★★☆☆☆</td>
+  </tr>
+</table>
+
+<p></p>
+</div></div>
+
+<div class="item scout keito kuro madara">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Spy the MISSION</b></p></div>
+  
+    <div class="item-story">
+    <img
+              src="../images/reading-recc/spythemission.jpg"
+              alt="Supernova."></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Madara has stolen Keito's doujin and it's up to Kuro and Eichi to get it back!</p>
+    </div></span>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/madara.png"></div></td>
+      <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/madara.png"></div>
+        </td>
+    </tr>
+    <tr>
+      <th>Keito | Madara</th>
+      <th>Kuro | Madara</th>
+    </tr>
+    <tr>
+      <td>★★★☆☆</td>
+      <td>★★★☆☆</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+ <div class="item translated idol kuro midori">
+  <div class="recommendation-box">
+
+    <div class="title">
+    <p><b>The Crimson's Pure Heart</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/crimsonspureheart.jpg"
+                alt="Crossroad."></div>
+    
+   <p><a href="https://310mc.github.io/crimsons_pure_heart/" target="_blank"><b>Read here</b></a></p>
+<div class="detail-text"><i>translated by <b>310mc</b></i></div>
+    
+    <div class="detail-text">
+      <p>Kuro seeks out Midori for help learning about mascots, and Midori happily obliges. A post-Tough Guy story.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/kuro.png" alt="kuro"></div>
+          <div class="chibi-filter"><img src="../images/chibis/midori.png" alt="midori"></div>
+      </tr>
+      <tr>
+        <th>Kuro | Midori</th>
+      </tr>
+      <tr>
+        <td>★★★☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+ </div></div>
+
+<div class="item wbm scout souma shinobu kuro">
+  <div class="recommendation-box">
+      
+      <div class="title">
+      <p><b>The Wolf and Red Riding Hood</b></p></div>
+      
+      <div class="item-story">
+        <img
+                  src="../images/reading-recc/wolf.jpg"
+                  alt="The Wolf and Red Riding Hood."></div>
+      <p><a href="https://web.archive.org/web/20210818045005/https://ensemble-stars.fandom.com/wiki/The_Wolf_and_Red_Riding_Hood" target="_blank"><b>Read here</b></a></p>
+      <p><div class="detail-text"><i>Ensemble Stars Wiki</i></div></p>      
+      
+      <div class="detail-text">
+        <p>Kuro helps the Broadcasting Committee put on a play for a local school. Kuro fondly looks at Shinobu and Souma's relationship, happy to see Souma have a junior</p>
+      </div>
+      
+      <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+      <table>
+        <tr>
+          <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+          <td><div class="chibi-filter"><img src="../images/chibis/souma.png"></div>
+            <div class="chibi-filter"><img src="../images/chibis/shinobu.png"></div></td>
+        </tr>
+        <tr>
+          <th>Kuro | Shinobu</th>
+          <th>Souma | Shinobu</th>
+        </tr>
+        <tr>
+          <td>★★★☆☆</td>
+          <td>★★★☆☆</td>
+        </tr>
+      </table>
+      
+      <p></p>
+</div></div>
+
+<div class="item translated scout kuro chiaki tetora midori">
+<div class="recommendation-box">
+
+<div class="title">
+<p><b>Tough Guy</b></p></div>
+
+<div class="item-story">
+	<img
+            src="../images/reading-recc/toughguy.jpg"
+            alt="Tough Guy."></div>
+<p><a href="https://310mc.github.io/tough_guy/" target="_blank"><b>Read here</b></a></p>
+<p><div class="detail-text"><i>translated by <b>310mc</b></i></div></p>
+
+<div class="detail-text">
+  <p>Kuro needs help practicing for the filming of a school drama. Slapstick for Kuro, Chiaki, Tetora and Midori, and a fundamental story for Kuro and Midori</p>
+  </div>
+
+<p><div class="detail-text"><b>Featured Pairs</b></div></p>
+<table>
+  <tr>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/tetora.png"></div></td>
+    <td><div class="chibi-filter"><img src="../images/chibis/kuro.png"></div>
+      <div class="chibi-filter"><img src="../images/chibis/chiaki.png"></div></td>
+  </tr>
+  <tr>
+    <th>Kuro | Midori</th>
+    <th>Kuro | Tetora</th>
+    <th>Kuro | Chiaki</th>
+  </tr>
+  <tr>
+    <td>★★★★★</td>
+    <td>★★★★★</td>
+    <td>★★★★★</td>
+  </tr>
+</table>
+
+<p></p>
+</div></div>
+
+<div class="item translated event keito ibuki">
+  <div class="recommendation-box">
+  
+  <div class="title">
+  <p><b>VS AUDIENCE</b></p></div>
+  
+  <div class="item-story">
+    <img
+              src="../images/reading-recc/vsaudience.jpg"
+              alt="Zodiac."></div>
+  <p><a href="https://citrinesea.github.io/translation/vs_audience/" target="_blank"><b>Read here</b></a></p>
+  <p><div class="detail-text"><i>translated by <b>citrinesea</b></i></div></p>
+  
+  <div class="detail-text">
+    <p>Ibuki's debut event story where he meets Keito.</p>
+  </div>
+  
+  <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+  <table>
+    <tr>
+      <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+        <div class="chibi-filter"><img src="../images/chibis/ibuki.png"></div></td>
+    </tr>
+    <tr>
+      <th>Keito | Ibuki</th>
+    </tr>
+    <tr>
+      <td>★★★★★</td>
+    </tr>
+  </table>
+  
+  <p></p>
+  </div></div>
+
+  <div class="item translated scout midori keito">
+    <div class="recommendation-box">
+    
+    <div class="title">
+    <p><b>Zodiac</b></p></div>
+    
+    <div class="item-story">
+      <img
+                src="../images/reading-recc/zodiac.jpg"
+                alt="Zodiac."></div>
+    <p><a href="https://310mc.github.io/senpai_turned_into_a_dog/" target="_blank"><b>Read here</b></a></p>
+    <p><div class="detail-text"><i>translated by <b>310mc</b> (Midori scenes only)</i></div></p>
+    
+    
+    <div class="detail-text">
+      <p>Keito chases Midori down, who has a dog he thinks is Chiaki.</p>
+    </div>
+    
+    <p><div class="detail-text"><b>Featured Pairs</b></div></p>
+    <table>
+      <tr>
+        <td><div class="chibi-filter"><img src="../images/chibis/keito.png"></div>
+          <div class="chibi-filter"><img src="../images/chibis/midori.png"></div></td>
+      </tr>
+      <tr>
+        <th>Keito | Midori</th>
+      </tr>
+      <tr>
+        <td>★★☆☆☆</td>
+      </tr>
+    </table>
+    
+    <p></p>
+    </div></div>
+
+<br></br>
+</div></div>
+     </main>
+
+<footer><h5>© 2023 citrinesea</h5>
+   <p></p></footer>
+
+<script>
+</script>
+
+ </body>
+</html>
