@@ -4,46 +4,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scrolling due to overflow */
 }
 
-.navigation {
-  display: flex;
-  position: sticky;
-  padding: 10px;
-  
-  top: 0px;
-  background: rgb(255, 255, 255);
-  color: rgb(150, 121, 121);
-  justify-content: center;
-  font-size: 1 rem;
-
-  z-index: 100;
-  border-bottom: solid 4px #007691;
-}
-
-.navigation img {
-  margin-bottom: 0px;
-  width: 200px;
-}
-
-.navigation a {
-  border-bottom: none;
-  color: #8eae50;
-}
-
-.navigation i {
-  margin: 0px;
-  padding: 10px;
-}
-
-.navigation .top-arrow {
-  right: 0px;
-  position: absolute;
-}
-
-.navigation .home-button {
-left: 0px;
-position: absolute;
-}
-
 .navigation2 {
   display: flex;
   position: sticky;
@@ -51,7 +11,7 @@ position: absolute;
   background: hsl(200, 41%, 21%);
   color: rgb(255, 255, 255);
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .navigation2 img {
@@ -61,7 +21,7 @@ position: absolute;
 
 .navigation2 a {
   border-bottom: none;
-  color: #a8ca65;
+  color: #bdd886;
 }
 
 .navigation2 i {
@@ -177,7 +137,8 @@ transition: ease-in 0.2s;
 @media only screen and (max-width: 600px) {
   .navigation img {
     margin-bottom: 0px;
-    height: 100px;
+    width: 100%;
+    height: 90px;
   }
 
   .description {
@@ -195,12 +156,6 @@ transition: ease-in 0.2s;
     font-size: 17px;
     width: 85%;
   }
-
-.postcard-text a {background-color: #152c4d;
-    color: white;
-    padding: 10px;}
-    
-.postcard-text a:link {color: white;}
 
   .preview img {
     max-height: 500px; /* Keeps image size reasonable */
