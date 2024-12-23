@@ -79,8 +79,6 @@ position: absolute;
   margin: 0 auto;
 }  
 
-
-/* Fix for the container */
 .first-bin {
   position: relative;
   display: block;
@@ -89,16 +87,15 @@ position: absolute;
   height: 100%;
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Includes padding and borders in width calculation */
+  box-sizing: border-box; 
 }
 
-/* Fix for the image */
 .first-bin img {
-  width: 100%; /* Make it fill the width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensures the image covers the container */
-  display: block; /* Removes any inline spacing or gaps */
-  margin: 0; /* Removes default margin */
+  width: 100%; 
+  height: auto;
+  object-fit: cover;
+  display: block; 
+  margin: 0; 
 }
 
 .bin{
@@ -114,7 +111,7 @@ padding: 50px;
 }
 
 .preview img {
-  width: auto; /* Allows the width to adjust while maintaining aspect ratio */
+  width: auto;
   height: auto;
   max-height: 800px;
   max-width: 100%;
@@ -128,7 +125,6 @@ padding: 50px;
   margin: 0 auto;
 }
 
-/* Style for the postcard text content */
 .postcard-text {
   background-color: rgb(255, 255, 255);
   font-size: 18px;
@@ -179,7 +175,7 @@ transition: ease-in 0.2s;
   }  
 
   .postcard, .preview {
-    margin: 5px auto; /* Reduces vertical spacing */
+    margin: 5px auto;
   }
 
   .postcard-text {
@@ -188,30 +184,30 @@ transition: ease-in 0.2s;
   }
 
   .preview img {
-    max-height: 500px; /* Keeps image size reasonable */
+    max-height: auto;
     max-width: 100%;
   }
 
   .bin {
-    grid-template-columns: 1fr; /* Stacks items vertically */
-    gap: 5px; /* Further reduces spacing between grid items */
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   .event-plaque {
-    width: 300px; /* Adjusts width for smaller screens */
+    width: 300px;
   }
 
   .event-plaque img {
-    max-width: 150px; /* Further scales image size down */
+    max-width: 150px;
   }
 
   .first-bin {
-    width: 100%; /* Ensure it respects the viewport width */
-    margin: 0 auto; /* Center the container if needed */
+    width: 100%;
+    margin: 0 auto;
   }
 
   .first-bin img {
-    width: 100%; /* Ensure the image doesn't overflow */
+    width: 100%;
     height: auto;
     object-fit: cover;
   }
