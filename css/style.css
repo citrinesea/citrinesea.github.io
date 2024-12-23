@@ -13,8 +13,6 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
       text-align: left;
       font-size: 16px;
 
-      margin: 0;
-      padding: 0;
       overflow-x: hidden; /* Prevent horizontal scrolling due to overflow */
       }
 
@@ -248,11 +246,16 @@ transition: transform .1s;
   box-shadow: 0 0 11px rgba(33,33,33,.2);
 }  
 
-
 @media only screen and (max-width: 600px) {
-    .gallery-wrapper {
-        grid-template-columns: 1fr;
-    }
+  .gallery-wrapper {
+    grid-template-columns: 1fr; /* Use a single column on smaller screens */
+    gap: 5px; /* Reduce gap for better spacing on small devices */
+  }
+
+  .gallery-infographics img {
+    width: 100%; /* Ensure images scale properly for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
 }
 
 .category{
@@ -502,15 +505,30 @@ box-shadow: 0 0 3px 0 #888888;
   transform: scale(1.03);
 }
 
-.citrinesea-row{
+.citrinesea-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; /* Default for larger screens */
   text-align: center;
+  justify-items: center;
+  gap: 1em; /* Add some spacing between items */
 }
 
-.citrinesea-item{
+.citrinesea-item {
   position: relative;
-  overflow: hidden
+  overflow: hidden;
+  box-sizing: border-box; /* Includes padding/borders in width calculation */
+}
+
+.citrinesea-item img {
+  width: 100%; /* Scale the image to fit the container */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  opacity: 1;
+}
+
+.citrinesea-item img:hover {
+  transform: scale(1.05);
 }
 
 .citrinesea-item .cname {
@@ -519,30 +537,16 @@ box-shadow: 0 0 3px 0 #888888;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to bottom,transparent 0,#000000a3 90%);
+  background: linear-gradient(to bottom, transparent 0, #000000a3 90%);
   color: #fff;
   position: absolute;
-  padding: 5em .75em .75em;
+  padding: 5em 0.75em 0.75em;
   width: 100%;
   bottom: 0;
   left: 0;
-  border-width: 0;
-
   z-index: 1;
-  }
-
-.citrinesea-item img{
-  position: relative;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition:.2s ease;
-    opacity: 1;
 }
 
-.citrinesea-item img:hover{
-  transform: scale(1.05)
-}
 
 .second-row{
   display: grid;
@@ -594,17 +598,24 @@ max-height: 100% ;
   .navigation img {width: 130px;
   }
     .newholder {
-        grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
+      grid-template-columns: 1fr;
     }
     .citrinesea-row {
-      grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
-  }
-  .second-row {
-    grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
-}
-.TLstars-row {
-  grid-template-columns:repeat(auto-fill,minmax(200px,1fr))
-}
+      grid-template-columns: 1fr; /* Single column on small screens */
+      gap: 0.5em; /* Reduce spacing for better fit */
+    }
+  
+    .citrinesea-item img {
+      width: 100%; /* Ensure the image scales within the container */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .citrinesea-item .cname {
+      font-size: 0.9em; /* Slightly reduce font size for better visibility */
+      padding: 2em 0.5em 0.5em;
+    }
+
+    .mainpage-box {max-width: 90%}
 }
 
 @keyframes fadeInUp {
