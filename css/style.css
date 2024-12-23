@@ -558,8 +558,7 @@ box-shadow: 0 0 3px 0 #888888;
 display: grid;
 grid-template-columns: repeat(auto-fill,minmax(270px,1fr));
 }
-.newfeature{
-border-radius: 5px;
+.newfeature
 padding: 5px;
 transition: transform .1s;
 }
@@ -578,7 +577,6 @@ max-height: 100% ;
 
 .newfeatureTL{
   position: relative;
-  border-radius: .25em;
   overflow: hidden;
   padding: 5px;
   }
@@ -605,8 +603,7 @@ max-height: 100% ;
       grid-template-columns: 1fr;
     }
     .citrinesea-row {
-      grid-template-columns: 1fr; /* Single column on small screens */
-      gap: 0.5em; /* Reduce spacing for better fit */
+      grid-template-columns: 1fr;
     }
   
     .citrinesea-item img {

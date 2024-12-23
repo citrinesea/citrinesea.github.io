@@ -184,8 +184,8 @@ transition: ease-in 0.2s;
   }
 
   .preview img {
-    max-height: auto;
-    max-width: 100%;
+    max-height: 600px;
+    max-width: auto;
   }
 
   .bin {
