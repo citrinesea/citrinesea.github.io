@@ -480,10 +480,10 @@ width: 100%;
 
   .filterbox {
   width: 100%;
-  background: #f7f4f2;
+  background: #00032c;
   position: relative;
   padding: 15px 0;
-  color: #053167;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -504,7 +504,7 @@ max-width: 120px;
 }
 
 .filterbox li a {
-  color: #226a5f;
+  color: #e6f8fe;
   margin: 0 5px;
   border-bottom: none;
 }
@@ -543,7 +543,7 @@ max-width: 50%;
 .selected {
   font-weight: 700;
   color: red;
-  border-bottom: 4px solid rgb(66, 66, 86) !important;
+  border-bottom: 2px solid rgb(66, 66, 86) !important;
 }
 
 .item-story{}
