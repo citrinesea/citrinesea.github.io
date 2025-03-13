@@ -1,132 +1,248 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>citrinesea</title>
 
-   <title>citrinesea</title>
+    <meta property="og:url" content="https://citrinesea.github.io/" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="citrinesea" />
+    <meta property="og:description" content="A blog dedicated to Akatsuki, Ryuseitai, Ibuki and AKARYUSEIbuki together" />
+    <meta property="og:image" content="https://citrinesea.github.io/images/icons/site-logo-small.png" />
 
-   <meta property="og:url" content="https://citrinesea.github.io/" />
-   <meta property="og:type" content="website">
-   <meta property="og:title" content= "citrinesea"/>
-   <meta property="og:description" content="A blog dedicated to Akatsuki, Ryuseitai, Ibuki and AKARYUSEIbuki together" />
-   <meta property="og:image" content="https://citrinesea.github.io/images/icons/site-logo-small.png" />
+    <link rel="shortcut icon" href="images/icons/site-logo-small.png">
 
-   <link rel="shortcut icon" href="images/icons/site-logo-small.png"/>
-   <link rel="stylesheet" href="css/style.css">
-   <link rel="stylesheet" href="css/essay.css">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
-   <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/essay.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Iansui&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <script src="https://webring.hellogirls.info/src/webring.min.js"></script>
- </head>
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
- <body>
-   <header>
-   </header>
+    <script src="https://webring.hellogirls.info/src/webring.min.js"></script>
 
-   <main>
+    <style>
+        .where-do-i-start-box {
+            background-size: cover;
+            padding: 20px;
+            position: relative;
+        }
+    
+        .citrinesea-item-a {
+            width: 400px;
+            height: 300px;
+            transition: background-color 0.3s ease-in-out;
+            text-align: center;
+            background-color: #04001f00;
+        }
+    
+        .citrinesea-item-a-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            transition: background-size 0.3s ease-in-out;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            border-top: solid 3px rgb(6, 172, 238);
+            border-left: solid 3px rgb(135, 207, 20);
+            border-right: solid 1px rgb(6, 172, 238);
+            border-bottom: solid 1px rgb(135, 207, 20);
+        }
+        @keyframes floatyMotion {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+    
+        .citrinesea-item-a img {
+            transition: transform 0.3s ease-in-out;
+            max-height: 420px;
+            position: relative;
+            object-fit: cover;
 
-     <div class="navigation">
-          <a href="https://citrinesea.github.io/">
-            <img src="images/logo5.png"
-            alt="Analyses."></a>
-     </div>
-     
-<div class="mainpage-box">
-     
-<div class="where-do-i-start-box">
-<div class="citrinesea-row">
+        }
+    
+        .citrinesea-item-a-img-wrapper:hover img {
+            animation: floatyMotion 2.5s ease-in-out infinite;
+            transform: scale(1.1);
+        }
+    
+        .citrinesea-item-a .citrinesea-item-a-img-wrapper {
+            background: url('images/beach.jpg') no-repeat center center;
+        }        
 
-     <div class="citrinesea-item">
-          <a href="https://citrinesea.github.io/translations/" target="_blank">
-               <div class="cname">
-               <b>Translations Masterlist</b></div>
-               <img src="images/essay-previews/citrinesea-button-01a.jpg"
-                    alt="Analyses.">
-               </a>
-     </div>
+        .cname {
+            color: rgb(0, 0, 0);
+            font-size: 17px;
+            text-align: left;
+        }
+        .citrinesea-item-a a:link {color: #000000; text-decoration: none;}
 
-     <div class="citrinesea-item"><a href="pages/reading_recommendations.html" target="_blank">
-          <div class="cname">
-          <b>AKARYUSEI Recommendations Tool</b></div>
-          <img src="images/essay-previews/citrinesea-button-02a.jpg"
-               alt="Analyses.">
-          </a></div>
+        @media (max-width: 750px) {
+            h1{font-size: 56px;}
+            h3{font-size: 15px;}
+    
+    .citrinesea-item-a {
+        width: 95%;
+        height: 350px;
+        padding: 15px;
+    }
+    .citrinesea-item-a img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cname {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+}
 
-     <div class="citrinesea-item"><a href="pages/infographics.html" target="_blank">
-               <div class="cname">
-          <b>Infographic Gallery</b></div>
-          <img src="images/essay-previews/citrinesea-button-03a.jpg"
-               alt="Analyses.">
-          </a>
-     </div>
-</div>
+img {
+    max-width: 100%;  
+    height: auto;
+    display: block;
+}    </style>
+    
 
-<p>Welcome to my website! I'm Rin, a Keito-P who is way too obsessed with every aspect of RYUSEITAI, AKATSUKI and Ibuki Taki, as well as their interactions with each other.</p> 
+</head>
 
-<p>The goal of <b>citrinesea</b> is to house the polished versions of my thoughts and theories I have. Additionally, I also have lore written down with its sources, so the next time I go "when did that happen?" I actually have a clean space to sift through. This is essentially a glorified notebook. Lastly, I have translations (both finished and planned) that I'll post here!</p>
+<body>
+    <header></header>
+    
+    <main>  
 
-<div class="labelcategory">
-     <p><i class="fa fa-ship"></i> <b>CITRINESEA</b> PAGES</p></div>
-<div class="citrinesea-row">
+        <div class="where-do-i-start-box">
+            <h1>CITRINESEA</h1>
+            <h2>Designs, Tools and Translations by rin</h2>  
+            
+            <div class="citrinesea-row">
+                <div class="citrinesea-item-a">
+                    <a href="https://citrinesea.github.io/translations/" target="_blank">
+                        <div class="cname"><b><i>Translations Masterlist</i></b></div>
+                        <div class="citrinesea-item-a-img-wrapper">
+                            <img src="images/keito-test.png" alt="Analyses.">
+                        </div>
+                    </a>
+                </div>
 
-     <div class="citrinesea-item"><a href="pages/reading_recommendations.html" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/essay-previews/reading-reccomendations.jpg"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>AKARYUSEI Reading Recommendations</b>: A tool to filter through different AKARYUSEI translations, including Ibuki and Madara</p></span></div>
-               </a></div>
+                <div class="citrinesea-item-a">
+                    <a href="pages/reading_recommendations.html" target="_blank">
+                        <div class="cname"><b><i>AKARYUSEI Stories</i></b></div>
+                        <div class="citrinesea-item-a-img-wrapper">
+                            <img src="images/kanata-test.png" alt="Analyses.">
+                        </div>
+                    </a>
+                </div>
 
-     <div class="citrinesea-item"><a href="pages/roadmap_to_ibuki.html" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/roadmap/banner.png"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>Roadmap to Ibuki</b>: A roadmap detailing the different AKARYUSEI stories that have built up to Ibuki's inclusion in the cast.</p></span></div>
-               </a></div>
+                <div class="citrinesea-item-a">
+                    <a href="pages/infographics.html" target="_blank">
+                        <div class="cname"><i><b>Infographics Gallery</b></i></div>
+                        <div class="citrinesea-item-a-img-wrapper">
+                            <img src="images/ibuki.png" alt="Analyses.">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-</div>
+        <h3><a href="https://listography.com/8962521435" target="_blank">
+            <i class="fa fa-cloud"></i> </a>  Keep up with my projects | <a href="mailto:citrinesea.io@gmail.com" onclick="copyToClipboard('example@email.com'); return false;"><i class="fa fa-envelope"></i></a> Contact me </h3>
 
-<div class="labelcategory">
-     <p><b><i class="fa fa-ship"></i> OTHER RESOURCES</b></p></div>
-<div class="citrinesea-row">
+        <div class="citrinesea-container">
+            <div class="citrinesea-row2">
+                <div class="citrinesea-column">
+                    <div class="labelcategory">
+                        <p><b><i class="fa fa-ship"></i> CITRINESEA</b></p>
+                    </div>
 
-     <div class="citrinesea-item"><a href="https://citrinesea.github.io/tlstars/" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/essay-previews/keitotl.jpg"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>TLStars</b>: A tool that connects you with Ensemble Stars translators who TL your biases! Sort by filter, or look at the whole list of collaborators.</p></span></div>
-               </a></div>
+                    <div class="citrinesea-item">
+                        <a href="pages/reading_recommendations.html" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>AKARYUSEI Reading Recommendations</b>: A tool to filter through different AKARYUSEI translations, including Ibuki and Madara</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
 
-     <div class="citrinesea-item"><a href="https://enstarsmasterlist.github.io/scoutevent" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/essay-previews/yuuta.jpg"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>Mika Enstars's Translation Masterlist</b>: A tool that connects you with Ensemble Stars translations for every unit.</p></span></div>
-               </a></div>
+                    <div class="citrinesea-item">
+                        <a href="pages/roadmap_to_ibuki.html" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>Roadmap to Ibuki</b>: A roadmap detailing the different AKARYUSEI stories that have built up to Ibuki's inclusion in the cast.</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
 
-     <div class="citrinesea-item"><a href="https://310mc.github.io/ryuseitaitimeline/" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/essay-previews/rstimeline2.jpg"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>RYUSEITAI Timeline</b>: RYUSEITAI's events and scout stories in chronological order, by 310mc.</p></span></div>
-               </a></div>
+                <div class="citrinesea-column">
+                    <div class="labelcategory">
+                        <p><b><i class="fa fa-ship"></i> OTHER RESOURCES</b></p>
+                    </div>
 
-     <div class="citrinesea-item"><a href="https://310mc.github.io/ryuseitaistory/" target="blank">
-          <div class="newfeatureTL">
-               <img src="images/essay-previews/rstreading2.jpg"
-                    alt="Translations.">
-               <span style="color: #344744; font-size: 14px;"><p><b>RYUSEITAI Reading List</b>: New to RYUSEITAI? Wanna brush up? A tool sorted by character and lore relevance, by 310mc.</p></span></div>
-               </a></div>
-     
-</div>
-</div></div>
+                    <div class="citrinesea-item">
+                        <a href="https://citrinesea.github.io/tlstars/" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>TLStars</b>: A tool that connects you with Ensemble Stars translators who TL your biases! Sort by filter, or look at the whole list of collaborators.</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
 
-</div>
+                    <div class="citrinesea-item">
+                        <a href="https://enstarsmasterlist.github.io/scoutevent" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>Mika Enstars's Translation Masterlist</b>: A tool that connects you with Ensemble Stars translations for every unit.</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
 
-</main>
+                    <div class="citrinesea-item">
+                        <a href="https://310mc.github.io/ryuseitaitimeline/" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>310mc's RYUSEITAI Timeline</b>: RYUSEITAI's events and scout stories in chronological order.</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
 
-<footer></footer>
- </body>
+                    <div class="citrinesea-item">
+                        <a href="https://310mc.github.io/ryuseitaistory/" target="_blank">
+                            <div class="newfeatureTL">
+                                <span>
+                                    <p><b>310mc's RYUSEITAI Reading List</b>: New to RYUSEITAI? Wanna brush up? A tool that sorts stories by character and lore relevance.</p>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </main>
+
+    <script>function copyToClipboard(text) {
+        navigator.clipboard.writeText(text)
+          .then(() => {
+            alert("Email address copied to clipboard!");
+          })
+          .catch(err => {
+            console.error("Failed to copy: ", err);
+          });
+      }</script>
+</body>
 </html>

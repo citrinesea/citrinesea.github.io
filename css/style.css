@@ -6,8 +6,8 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
        "main"
        "footer";
 	
-      background-color: rgb(243, 245, 240);
-      color: #32403b;
+      background-color: rgb(255, 255, 255);
+      color: #051208;
       background-size:cover;
       background-repeat: no-repeat;
       text-align: left;
@@ -16,35 +16,26 @@ body {font-family: "Nunito Sans", Calibri, sans-serif;
       overflow-x: hidden;
       }
 
-h1, h2, h3, h4 {font-family: "Nunito Sans", Calibri, sans-serif;
+h1 {font-family: "Rock 3D", Calibri, sans-serif;}
+h2 {font-family: "Reenie Beanie", Calibri, sans-serif;}
+h3, h4 {font-family: "Nunito Sans", Calibri, sans-serif;
                   text-align: left;}
 h1{      font-size: 4em;
-         color: rgba(255, 255, 255, 1);
-         margin: 25px}
-h2{      font-size: 1.5em;
-         color: #32403b;
-	 margin: 15;
-	 text-align: center;}
-h3{      font-size: 18px;
-         color: #32403b;
-	 text-align: center;
-         text-indent: 5px;}
-h4{      font-size: 16px;
-         color: black;
-	 text-align: center;
-         text-indent: 5px;}
-h5{      font-size: 12px;
-         color:white;
-	 text-align: center;
-         text-indent: 5px;}
-h6{      font-size: 16px;
-         color:black;
+         color: rgb(58, 78, 2);
+         margin-bottom: 0;
+        }
+h2{      font-size: 1.8em;
+  padding: 5px;
+         color: #00554a;
 	 text-align: left;}
 
+h3 {text-align:center;
+font-size: 0.7em;
+color:#1b2310}
 
 header {
 background-color: white;
-text-align:center;
+text-align:left;
 font-size: 18px;
 }
 
@@ -149,22 +140,15 @@ z-index: 0;
   .navigation {
     display: flex;
     position: sticky;
-    padding: 10px;
-    
-    top: 0px;
-    background: rgb(255, 255, 255);
-    color: rgb(150, 121, 121);
-    justify-content: center;
-    font-size: 1 rem;
-  
+
+    justify-content: left;
     z-index: 100;
-    border-bottom: solid 4px #007691;
     overflow-x: hidden;
   }
   
   .navigation img {
-    margin-bottom: 0px;
-    width: 200px;
+    width: 100%;
+    max-width: 400px;
   }
   
   .navigation a {
@@ -250,13 +234,13 @@ transition: transform .1s;
 
 @media only screen and (max-width: 600px) {
   .gallery-wrapper {
-    grid-template-columns: 1fr; /* Use a single column on smaller screens */
-    gap: 5px; /* Reduce gap for better spacing on small devices */
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   .gallery-infographics img {
-    width: 100%; /* Ensure images scale properly for mobile */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -299,7 +283,7 @@ display: inline-block;
 display: inline-block;
 width: 100%;
 
-text-align: center;
+text-align: left;
 font-size: 22px;
 color: rgb(1, 4, 24);
 }
@@ -520,35 +504,6 @@ box-shadow: 0 0 3px 0 #888888;
   box-sizing: border-box;
 }
 
-.citrinesea-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-  opacity: 1;
-}
-
-.citrinesea-item img:hover {
-  transform: scale(1.05);
-}
-
-.citrinesea-item .cname {
-  font-size: 1em;
-  font-weight: 700;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  background: linear-gradient(to bottom, transparent 0, #000000a3 90%);
-  color: #fff;
-  position: absolute;
-  padding: 5em 0.75em 0.75em;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-
-
 .second-row{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -577,6 +532,7 @@ max-height: 100% ;
 }
 
 .newfeatureTL{
+  text-align: left;
   position: relative;
   overflow: hidden;
   padding: 5px;
@@ -593,6 +549,97 @@ max-height: 100% ;
  .newfeatureTL img:hover {
       transform: scale(1.05)
     }
+
+.riocontainer {
+      display: flex;
+      flex-direction: row;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  }
+
+  .image-container {
+      width: 50%;
+      max-height: 400px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      background: #ececec00;
+      padding: 20px 0 0 0;
+  }
+
+  .anime-boy {
+      width: 100%;
+      max-width: 400px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .squish {
+      transform: scaleY(0.98);
+  }
+
+  .text-container {
+    width: 50%;
+    padding: 20px;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+}
+
+.citrinesea-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.citrinesea-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.citrinesea-column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.citrinesea-row2 .citrinesea-item {
+  font-size: 14px;
+  width: 90%;
+  border-radius: 8px;
+}
+
+.labelcategory p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .citrinesea-row2 {
+      grid-template-columns: 1fr;
+  }
+}
+
+  @media (max-width: 600px) {
+      .container {
+          flex-direction: column;
+          text-align: center;
+      }
+
+      .image-container, .text-container {
+          width: 100%;
+      }
+
+      .text-container {
+          padding: 15px;
+          font-size: 16px;
+      }
+  }
 
 @media only screen and (max-width: 600px) {
   .navigation img {
@@ -690,8 +737,11 @@ max-height: 100% ;
 }
 
 
-a:link {color: #005063; text-decoration: none;}
-a:visited {color: #436e3f; text-decoration: none;}
-a:hover{color: #95b092; text-decoration: none;}
+a:link {color: #075baa; text-decoration: none;}
+a:visited {color: #5a6677; text-decoration: none;}
+a:hover{color: #427849; text-decoration: none;}
 a:active{color: black; text-decoration: none;}
+
+
+h3 a:link {color: #207f97; text-decoration: none;}
 
