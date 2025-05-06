@@ -34,24 +34,19 @@
   h1 {
     font-size: 2rem;
   }
-
   h3 {
     font-size: 15px;
   }
-
   .where-do-i-start-box {
     width: 90%;
   }
-
   .citrinesea-item-a {
     height: auto;
     padding: 15px;
   }
-
   .citrinesea-item-a img {
     object-fit: cover;
   }
-
   .cname {
     font-size: 14px;
   }
@@ -75,10 +70,13 @@
       transform: scale(1.1) rotate(-5deg);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 740px) {
+      .icon-container{
+        width: 100%;
+      }
       .icon {
-        width: 60px;
-        height: 60px;
+        width: 150px;
+        height: 150px;
       }
     }
 
@@ -110,7 +108,7 @@
   gap: 0;
   position: relative;
   height: auto;
-  min-height: 500px; /* Optional: to keep a consistent height */
+  min-height: 500px;
   background: url('../images/background/green_tree.jpg') no-repeat center center;
   background-size: cover;
   overflow: visible;
@@ -121,13 +119,12 @@
   position: relative;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
-  width: 100%; /* Allow the items to be responsive */
-  max-width: 400px; /* Ensure they don't grow beyond 400px */
-  flex: 1 1 30%; /* Allow items to scale properly */
-  box-sizing: border-box; /* Ensure padding and margin don't affect width calculation */
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 30%;
+  box-sizing: border-box;
 }
 
-/* Adjust images so they scale within the container */
 .citrinesea-item-a img {
   width: 100%;
   height: auto;
