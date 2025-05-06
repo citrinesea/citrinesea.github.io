@@ -443,19 +443,19 @@ width: 100%;
   width: 100%;
   max-width: 200px;
   border-radius: 50%;
-  border: solid 10px #d42a63;
+  border: solid 10px #7b7476;
   transition: ease-in 0.1s;
 }
 .the-basics img:hover{
   transform: rotate(10deg);
   transform: scale(1.05);
-  border: solid 10px #7aba20;
+  border: solid 10px #87acb7;
 }
 
 .the-basics a {
   padding: 5px 15px;
-  background: #e60a69;
-  border: 1px solid #e60a19;
+  background: #7b7476;
+  border: 1px solid #7b7476;
   color: #fff;
   transition: 0.4s ease;
   font-size: 15px;
@@ -465,8 +465,8 @@ width: 100%;
 }
 
 .the-basics a:hover{
-  background: #6fb156;
-  border: 1px solid #6fb156;
+  background: #87acb7;
+  border: 1px solid #87acb7;
 }
 
 .the-basics .detail-text b{
@@ -480,10 +480,10 @@ width: 100%;
 
   .filterbox {
   width: 100%;
-  background: #00032c;
+  background: #ffffff;
   position: relative;
   padding: 15px 0;
-  color: #ffffff;
+  color: #000818;
   text-align: center;
 }
 
@@ -504,7 +504,7 @@ max-width: 120px;
 }
 
 .filterbox li a {
-  color: #e6f8fe;
+  color: #003f53;
   margin: 0 5px;
   border-bottom: none;
 }
