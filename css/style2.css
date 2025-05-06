@@ -72,11 +72,11 @@
 
     @media (max-width: 740px) {
       .icon-container{
-        width: 100%;
+        width: 90%;
       }
       .icon {
-        width: 150px;
-        height: 150px;
+        width: 125px;
+        height: 125px;
       }
     }
 
@@ -146,7 +146,6 @@
   z-index: 1;
 }
 
-/* Hover brings image forward */
 .citrinesea-item-a img:hover {
   transform: scale(1.05) !important;
   z-index: 3;
