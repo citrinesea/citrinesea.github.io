@@ -70,13 +70,13 @@
       transform: scale(1.1) rotate(-5deg);
     }
 
-    @media (max-width: 740px) {
+    @media (max-width: 600px) {
       .icon-container{
-        width: 90%;
+        width: 95%;
       }
       .icon {
-        width: 75px;
-        height: 75px;
+        width: 125px;
+        height: 125px;
       }
     }
 
