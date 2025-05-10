@@ -293,7 +293,7 @@ text-align: center;
 .timelinerow{
 display: grid;
 grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-gap: .5em
+gap: .5em;
 z-index: 1;
 }
 
@@ -443,18 +443,18 @@ width: 100%;
   width: 100%;
   max-width: 200px;
   border-radius: 50%;
-  border: solid 10px #7b7476;
+  border: solid 10px #659a1c;
   transition: ease-in 0.1s;
 }
 .the-basics img:hover{
   transform: rotate(10deg);
   transform: scale(1.05);
-  border: solid 10px #87acb7;
+  border: solid 10px #0bc6e3;
 }
 
 .the-basics a {
   padding: 5px 15px;
-  background: #7b7476;
+  background: #659a1c;
   border: 1px solid #7b7476;
   color: #fff;
   transition: 0.4s ease;
@@ -465,7 +465,7 @@ width: 100%;
 }
 
 .the-basics a:hover{
-  background: #87acb7;
+  background:  #0bc6e3;
   border: 1px solid #87acb7;
 }
 
