@@ -54,6 +54,7 @@
 
     .icon-container {
       display: flex;
+      flex-wrap: wrap;
       margin: 0 auto;
       gap: 1rem;
       padding: 1rem;
@@ -72,11 +73,11 @@
 
     @media (max-width: 600px) {
       .icon-container{
-        width: 95%;
+        width: 100%;
       }
       .icon {
-        width: 125px;
-        height: 125px;
+        width: 200px;
+        height: 200px;
       }
     }
 
