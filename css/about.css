@@ -1,0 +1,61 @@
+.about{
+text-align: center;
+}
+.aboutTOS{
+display: inline-block;
+text-align: left;
+width:80%;
+background-color: white;
+}
+.aboutcolumn{
+  display: inline-block;
+}
+
+.producerdeco {
+  text-align: center;
+  display: inline-block;
+  margin: 15px;	
+  max-width: auto;
+}
+.producerdeco img{
+max-width: 100% ;
+max-height: 100% ;
+}
+.producersquare {
+  height: auto;
+  width: auto;
+  position: relative;
+  background-color: white;
+  border-radius:10px;
+  text-color: white;
+  padding: 10px;
+}
+.producersquare a:link {color: black; text-decoration: none;}
+.producersquare a:visited {color: #436e3f; text-decoration: none;}
+.producersquare a:hover{color: #95b092; text-decoration: none;}
+.producersquare a:active{color: black; text-decoration: none;}
+
+.author-box {
+  justify: center;
+  display: inline-block;
+}
+
+.TOSsquare {
+  height: auto;
+  width: auto;
+  position: relative;
+}
+.TOSsquare {
+transition: box-shadow .3s;
+background-color: white;
+font-size: 16px;
+margin: 15px;
+padding: 10px;
+border-radius:10px;
+border: 1px solid #ccc;
+float: center;
+color: black;
+text-align:left;
+}
+.TOSsquare:hover {
+  box-shadow: 0 0 15px rgba(33,33,33,.4);} 
