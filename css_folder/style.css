@@ -523,8 +523,7 @@ a {
   text-decoration: none;
 }
 
-a:visited { color: #af63db; }
-a:hover { color: #427849; }
+a:hover { color: #b3ec71; }
 a:active { color: black; }
 
 h3 a:link {

@@ -162,9 +162,10 @@
   max-height: 100px;
 }
 
-.strip-about         { background-image: url('../images/test.jpg'); }
-.strip-projects      { background-image: url('../images/test2.jpg'); }
-.strip-contact       { background-image: url('../images/test3.jpg'); }
+.strip-reading         { background-image: url('../images/test.jpg'); }
+.strip-ibuki      { background-image: url('../images/test2.jpg'); }
+.strip-mv       { background-image: url('../images/test3.jpg'); }
+.strip-shinsei         { background-image: url('../images/test4.jpg'); }
 .strip-tlstars       { background-image: url('../images/tlstars.jpg'); }
 .strip-mikamasterlist{ background-image: url('../images/mikamasterlist.jpg'); }
 .strip-310mc         { background-image: url('../images/310mc.jpg'); }
