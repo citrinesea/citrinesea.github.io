@@ -18,6 +18,13 @@
   margin-bottom: 0;
 }
 
+.topbanner { 
+  width: 90%; 
+}
+.topbanner img { 
+  width: 100%;
+}
+
 .citrinesea-item-a a:link {
   color: #000;
   text-decoration: none;
