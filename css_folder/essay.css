@@ -524,9 +524,10 @@ background: #ffffff;
   display: block;
   float: left;
   width: 31%;
+  height: 500px;
   box-sizing: border-box;
   margin:1%;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
