@@ -103,18 +103,18 @@
 }
 
 .tanabata-strip {
-  width: 100%;
-  height: 150px;
+  width: 300px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: left;
-  border: 3px solid #ff9e1f;
+  border: 2px solid #79bf38;
 }
 
 .tanabata-strip-outside {
   width: 100%;
-  height: 100px;
+  height: 300px;
   text-align: right;
   border: 3px solid #18bdd3;
 }
@@ -203,7 +203,8 @@
 
 @media (max-width: 740px) {
   .tanabata-strip {
-    height: 200px;
+    height: 350px;
+    width: 400px;
     padding: 15px;
   }
 

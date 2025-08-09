@@ -471,7 +471,7 @@ img {
 
 .citrinesea-row2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   width: 100%;
   margin: 0;
 }
@@ -530,3 +530,24 @@ h3 a:link {
   color: #207f97;
   text-decoration: none;
 }
+
+.unproofread-wrapper {
+  text-align: center;
+}
+
+.unproofread-block {  position: relative;
+    display: inline-block;
+    transition: transform .1s;
+    }
+.unproofread-block:hover {
+    transform: translate(0, -10px);
+}
+
+.unproofread-block img{
+  height: auto;
+  width: auto;
+max-width: 100px ;
+max-height: 100px ;
+
+  border-radius: 15%;
+  }
