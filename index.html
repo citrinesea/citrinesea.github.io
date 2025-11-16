@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="css_folder/style.css">
     <link rel="stylesheet" href="css_folder/style2.css">
+    <link rel="stylesheet" href="css_folder/uchina.css">
     <link rel="stylesheet" href="css_folder/essay.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Iansui&display=swap">
@@ -24,18 +25,19 @@
 </head>
 
 <body>    
-    <main>  
+<main>  
 
-        <div class="navigation">
-            <a href="https://citrinesea.github.io/">
-                <p><img src="images/logo5.png"
-              alt="Analyses."></p></a>
-      </div>
+<div class="navigation">
+   <a href="https://citrinesea.github.io/">
+    <p><img src="images/logo5.png"
+            alt="Analyses."></p></a>
+</div>
 
+ <!-- First Box -->
         <div class="where-do-i-start-box">            
             <div class="citrinesea-row">
                 <a href="https://citrinesea.github.io/translations/" target="_blank">
-                <div class="citrinesea-item-a">
+               <div class="citrinesea-item-a">
                            <img src="images/keito-test1.png" loading="lazy" alt="Translations Masterlist.">
                 </div></a>
 
@@ -51,8 +53,81 @@
                 </div>
         </div>
 
+ <!-- Chibi Icons -->
 <div class="icon-container" id="iconBox"></div>
 
+
+<div class="entire-box">
+
+  <div class="entire-box-left">
+ <!-- Homepage Word of the Day -->
+  <div class="homepage-word-of-day">
+    <h2>Word of the Day</h2>
+    
+
+    <img src="images/citrinetrio.png">
+    <p style="font-style: italic; font-size: 0.8rem; color: #777;">
+        drawn by <a href="https://x.com/salmunelo" target="_blank"><b>mel</b></a>
+      </p>
+    <p style="font-size: 0.9rem; color: #3e3b3b;">
+        <b>はいたい! まじゅーん うちなーぐち ならいん どー!</b> Uchinaaguchi refers to native languages used in Okinawa. I've developed this tool with the resources I've been using to study the Shuri-Naha dialect. Visit the homepage daily to learn a new word!
+      </p>
+    
+    <div class="language-toggle">
+      <button id="lang-en-home" class="active">English</button>
+      <button id="lang-ja-home">日本語</button>
+    </div>
+    
+    <div class="word-of-the-day-box">
+      <div class="date-stamp" id="date-stamp-home"></div>
+      <div class="word-category" id="word-category-home"></div>
+      <div class="word-uchinaaguchi" id="word-uchinaaguchi-home"></div>
+      <div class="pronunciation" id="pronunciation-home"></div>
+      <div class="meaning">
+        <div id="meaning-english-home"></div>
+        <div id="meaning-japanese-home" style="display: none;"></div>
+      </div>
+    </div>
+
+    <div class="notes-box">
+      <strong>Notes</strong>
+      <div id="notes-home">
+        <div id="notes-english-home"></div>
+        <div id="notes-japanese-home" style="display: none;"></div>
+      </div>
+    </div>
+
+    <div class="examples-box">
+      <h3>Example Sentences</h3>
+      <p style="font-style: italic; font-size: 0.8rem; color: #777;">
+        Click the blue sentences to view the pronunciation.
+      </p>
+      <div id="example-sentences-home"></div>
+    </div>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="" style="color: #2c7873;">
+        Full tool in progress!
+      </a>
+    </div>
+   <p></p>
+  <div class="sources-banner">
+ 
+    <div class="sources-links">
+      <a class="source-link" target="_blank">Rikka, Uchinaa-nkai! りっか、うちなーんかい！(EN)</a>
+      <a class="source-link" target="_blank">Waryujiten 和琉辞典 (JP)</a>
+      <a class="source-link" target="_blank">Okinawan-English Wordbook (EN)</a>
+      <a class="source-link" target="_blank">Basic Okinawan: From Conversation to Grammar (EN)</a>
+      <a class="source-link" target="_blank">Okinawan Language Conjugation Dictionary (JP)</a>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+<div class="entire-box-right">
+<!-- Main Pages -->
 <div class="citrinesea-container">
   <div class="citrinesea-row2">
 
@@ -86,8 +161,14 @@
         </a>
       </div>
 </div>
+</div>
+</div>
 
-<br></br>
+</div></div>
+<div class="summer-banner">      
+<img src="images/testbanner2.png"
+              alt="Analyses.">
+</div>
 
 <div class="unproofread-wrapper">
 
@@ -175,6 +256,7 @@
           }
         });
       </script>
+      <script src="js/uchinaa copy.js"></script>
 
 </body>
 </html>

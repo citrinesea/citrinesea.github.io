@@ -1,0 +1,193 @@
+.entire-box{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.entire-box-left {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.entire-box-right {
+
+}
+
+.homepage-word-of-day {
+  width: 500px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 2px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+  color: rgb(94, 84, 84);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.homepage-word-of-day h2, h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.homepage-word-of-day img{
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.word-of-the-day-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 15px;
+}
+
+.date-stamp {
+  font-size: 0.85rem;
+  color: #625959;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.word-uchinaaguchi {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #02a8d1;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pronunciation {
+  font-style: italic;
+  color: #615e5e;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.meaning {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.notes-box {
+  font-size: 0.9rem;
+  color: #625959;
+  margin-bottom: 5px;
+  text-align: left;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.examples-box {
+  font-size: 0.6fr;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.examples-box h3 {
+  font-size: 0.85rem;
+  color: #625959;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.example {
+  font-size: 0.9rem;
+  margin: 15px 0;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.example:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.example-uchi {
+  cursor: pointer;
+  color: #02a8d1;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.language-toggle button {
+  padding: 8px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(194, 185, 185);
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.1s ease;
+}
+
+.language-toggle button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.language-toggle button.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0e6e8b;
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+    .sources-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .source-link {
+      display: flex;
+      font-size: 0.5rem;
+      padding: 5px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: rgb(194, 185, 185);
+      cursor: pointer;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: all 0.1s ease;
+    }
+
+    .source-link:hover{
+      color:#02a8d1;
+    }
+
+    @media (max-width: 768px) {
+  .entire-box {
+    flex-direction: column;
+  }
+  
+  .entire-box-right {
+    width: 100%; 
+    margin-top: 20px; 
+  }
+  .homepage-word-of-day {
+      width: 90%;}
+}

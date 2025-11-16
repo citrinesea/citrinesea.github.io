@@ -126,11 +126,13 @@ img {
 
 .summer-banner {
   overflow: auto;
+  margin: 0 auto;
 }
 
 .summer-banner img {
-  width: 100%;
-  -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 100%);
+  width: 1000px;
+  height: auto;
+  
 }
 
 .mainwrapper {
@@ -430,6 +432,11 @@ img {
   .main-section-holder {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+  .summer-banner img {
+  width: 100%;
+  height: auto;
+  
+}
 }
 
 .main-square img {
