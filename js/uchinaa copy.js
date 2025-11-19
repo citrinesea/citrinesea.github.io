@@ -99,9 +99,9 @@
         wordUchinaaguchi: "ちゃーびらさい",
         pronunciation: "Chaabira-sai",
         category: "Greetings and Common Phrases",
-        meaning: { english: "Excuse me, I'm coming in", japanese: "おじゃまします" },
+        meaning: { english: "Excuse me, pardon me, sorry for interrupting.", japanese: "おじゃまします" },
         notes: { 
-          english: "The masculine suffix is -sai (e.g., chaabira-sai), while the feminine suffix is -tai (e.g., chaabira-tai).", 
+          english: "The masculine suffix is -sai (e.g., chaabira-sai), while the feminine suffix is -tai (e.g., chaabira-tai). Used when you're going into someone's home.", 
           japanese: "" 
         },
         exampleSentences: [
