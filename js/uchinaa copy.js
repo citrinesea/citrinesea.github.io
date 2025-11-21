@@ -157,7 +157,7 @@
         exampleSentences: [
           { 
             uchi: "うきてぃ。", 
-            romaji: "Ukitii", 
+            romaji: "Ukiti", 
             en: "Good morning (casual)", 
             jp: "おはよう。" 
           },
