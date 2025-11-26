@@ -300,8 +300,8 @@
           { 
             uchi: "くぬ くるじゃーたー や まーぬむん やいびーが", 
             romaji: "Kunu kurujaataa ya maa-nu mun yaibiiga", 
-            en: "Whose brown sugar is this?", 
-            jp: "これは誰の黒糖ですか" 
+            en: "Where is this brown sugar from?", 
+            jp: "これ黒糖はどこから来たか" 
           }
         ]
       },
