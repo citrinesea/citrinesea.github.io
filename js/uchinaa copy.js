@@ -322,8 +322,8 @@
           { 
             uchi: "たーがういびーが", 
             romaji: "Taa ga wuibii ga", 
-            en: "Who is there", 
-            jp: "誰かいますか" 
+            en: "Who is there?", 
+            jp: "そこにいるのは誰ですか" 
           },
           { 
             uchi: "たーがなういびーみ", 
