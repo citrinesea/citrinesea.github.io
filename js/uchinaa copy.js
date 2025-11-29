@@ -396,7 +396,7 @@
           { 
             uchi: "うれ や りーちー やいーびん", 
             romaji: "Ure-ya riichii yaibiin.", 
-            en: "This (there) is a lychee.", 
+            en: "That (right there) is a lychee.", 
             jp: "それはライチです" 
           }
         ]
@@ -430,7 +430,7 @@
           { 
             uchi: "あれ や りーちー やいーびん", 
             romaji: "Are-ya riichii yaibiin.", 
-            en: "This (way over there) is a lychee.", 
+            en: "That (way over there) is a lychee.", 
             jp: "あれはライチです" 
           }
         ]
