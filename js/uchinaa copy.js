@@ -411,7 +411,7 @@
           japanese: "あ- (こそあど言葉)" 
         },
         notes: { 
-          english: "Like a- in are, asoko. Aree (are ya) is a subject (That over there is X). Anu acts as an adjective (This X is Y). Kuma acts like koko (X is here)", 
+          english: "Like a- in are, asoko. Aree (are ya) is a subject (That over there is X). Anu acts as an adjective (That over there X is Y). Ama acts like asoko (X is over there)", 
           japanese: "" 
         },
         exampleSentences: [
