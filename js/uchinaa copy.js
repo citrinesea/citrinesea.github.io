@@ -563,7 +563,7 @@
         },
         exampleSentences: [
           { 
-            uchi: "くれーちゃっさやが。", 
+            uchi: "くれー ちゃっさ やいびーが。", 
             romaji: "kuree chassa yaibiga", 
             en: "How much would this be?", 
             jp: "これはいくらですか" 
