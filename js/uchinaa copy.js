@@ -741,7 +741,7 @@
           japanese: "は" 
         },
         notes: { 
-          english: "There are special rules when it comes to ya as 'is'. When the word before ya ends in ‘i’ or ‘u’, the ya creates contractions, and the word is elongated into a long 'oo' sound (nnsu + ya = nnsoo, sanshin +ya = sanshinoo, hiru + ya = hiroo). If the word already ends in a long vowel, it does not change, and you add -ya after it (manjuu + ya = manjuu-ya )", 
+          english: "There are special rules when it comes to ya as 'is'. When the word before ya ends with a short vowel or a consonant, the ya creates contractions, and the word is elongated into a long 'oo' sound (nnsu + ya = nnsoo, sanshin + a = sanshinoo, hiru + ya = hiroo). If the word already ends in a long vowel, it does not change, and you add -ya after it (manjuu + ya = manjuu-ya). You can also use ya as is, although it's more commonly contracted.", 
           japanese: "" 
         },
         exampleSentences: [
@@ -752,7 +752,7 @@
             jp: "出身はどこですか？" 
           },
           { 
-            uchi: "うちなーんちゅや すば じょーぐーやいびーん", 
+            uchi: "うちなーんちゅ や すば じょーぐーやいびーん", 
             romaji: "Uchinaanchu ya soba shouguu yaibiin", 
             en: "Okinawans love soba.", 
             jp: "沖縄人は、そばが好きです。" 
