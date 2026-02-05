@@ -177,6 +177,7 @@
 .strip-tlstars       { background-image: url('../images/tlstars.jpg'); }
 .strip-mikamasterlist{ background-image: url('../images/mikamasterlist.jpg'); }
 .strip-310mc         { background-image: url('../images/310mc.jpg'); }
+.strip-shinseiparts         { background: #00071f; }
 
 .main-text {
   font-size: 20px;

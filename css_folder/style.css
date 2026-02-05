@@ -174,22 +174,36 @@ img {
   max-width: 400px;
 }
 
-.navigation a {
-  border-bottom: none;
-  color: #8eae50;
+.navbar {
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  z-index: 100;
+  overflow-x: hidden;
+  background-color: #002b27;
 }
 
-.navigation i {
+.navbar a {
+  border-bottom: none;
+  color: #fcfff6;
+}
+
+.navbar a:hover {
+  border-bottom: none;
+  color: #a9ecdc;
+}
+
+.navbar i {
   margin: 0;
   padding: 10px;
 }
 
-.navigation .top-arrow {
+.navbar .top-arrow {
   right: 0;
   position: absolute;
 }
 
-.navigation .home-button {
+.navbar .home-button {
   left: 0;
   position: absolute;
 }
