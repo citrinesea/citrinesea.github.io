@@ -421,6 +421,7 @@ main {
 .strip-310mcstory { background-image: url('../images/310mcstory.jpg'); }
 .strip-310mctimeline { background-image: url('../images/310mctimeline.jpg'); }
 .strip-shinseiparts { background: #00071f; }
+.strip-savings { background-image: url('../images/keito4.png'); background-color: #c1d4c3; }
 
 /* =========
    ANIMATIONS
@@ -642,4 +643,20 @@ hr {
 img {
   width: auto;
   height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
