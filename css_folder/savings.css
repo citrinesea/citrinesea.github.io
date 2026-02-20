@@ -237,19 +237,19 @@ justify-content: flex-start;
 }
 
 @media (max-width: 1024px) {
-  .app {
+  .tool {
       flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
-  .app {
+  .tool {
       flex-direction: column;
   }
 }
 
 @media (max-width: 600px) {
-  .app {
+  .tool {
       flex-direction: column;
   }
 }
