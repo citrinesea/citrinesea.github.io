@@ -1,0 +1,243 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+  --primary-green: #a9da6e;
+  --secondary-green: green;
+  --teal: rgb(7, 173, 148);
+  --orange: #f79000;
+  --light-orange: #fff4e3;
+  --grey: #e9e8e7;
+}
+
+td {
+  padding: 5px;
+}
+
+.tool {
+  max-width: 90%;
+  max-height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.introduction-box{
+justify-content: flex-start;
+}
+
+/* =========
+   KEITO PART
+   ========= */
+
+.keito-panel {
+  flex: 1;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 180px;
+}
+.speech-bubble {
+  background: var(--grey);
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: #2d1f36;
+  margin: 8px 0 10px 0;
+  text-align: center;
+  width: fit-content;
+}
+
+/* =========
+   GENERAL MONEY STUFF
+   ========= */
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input-group input {
+  flex: 2;
+  min-width: 160px;
+  border: 2px solid var(--primary-green);
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  outline: none;
+  color: #455f2f;
+}
+
+.input-group button {
+  background: #7cb051;
+  width: 180px;
+  color: white;
+  font-weight: bold;
+
+  border: none;
+  border-radius: 10px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: 0.07s;
+}
+
+.input-group button:active {
+  transform: translateY(5px);
+}
+
+/* =========
+   BUDGET PART
+   ========= */
+
+.budget-panel {
+  flex: 1.7;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.goal-section {
+  background: #ffffff;
+  padding: 12px 14px;
+}
+
+.label {
+  font-weight: bold;
+  color: #3b2440;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.progress-container {
+  margin-top: 16px;
+  padding: 16px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2d1f36;
+}
+
+.bar-bg {
+  background: var(--grey);
+  height: 24px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 3px solid var(--teal);
+  margin: 10px 0;
+}
+
+.bar-fill {
+  background: var(--primary-green);
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s;
+}
+
+.goal-message {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  padding: 8px;
+  background: var(--grey);
+  text-align: center;
+}
+
+/* =========
+   50/30/20 PART
+   ========= */
+
+.paycheck-row {
+  background: var(--light-orange);
+  padding: 22px 24px;
+}
+
+.rule-50-30-20 {
+  padding: 22px 22px;
+}
+
+.rule-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2a1632;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.rule-description {
+  font-size: 1rem;
+  text-align: left;
+  color: #33203b;
+  margin-bottom: 18px;
+}
+
+#needsAmount {color: var(--teal)}
+#wantsAmount {color: var(--secondary-green)}
+#savingsAmount {color: var(--orange)}
+
+.suggest-box {
+  background: #fffbf4;
+  padding: 18px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.suggest-item {
+  min-width: 130px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* =========
+   GENERAL STUFF
+   ========= */
+
+.storage-note {
+  padding: 14px 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #281d2b;
+}
+
+.reset-local {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.small-btn {
+  background: var(--teal);
+  color: #ffffff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.small-btn:active {
+  transform: translateY(4px);
+}
+
+@media (max-width: 768px) {
+  .app {
+      flex-direction: column;
+  }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Assistant Keito</title>
+    <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+    <link rel="stylesheet" href="../css_folder/style3.css">
+    <link rel="stylesheet" href="../css_folder/savings.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    
+</head>
+<body>
+
+<div class="navigation">
+      <a href="https://citrinesea.github.io/">
+        <img src="../images/logo5.png"
+        alt="Analyses."></a>
+</div>
+
+<div class="navbar">
+  <a href="../citrinesea_pages.html">citrinesea pages<i class="fa fa-arrow-left"></i></a>
+</div>
+
+<div class="big-container">
+
+    <div class="tool">
+    <div class="keito-panel">
+
+        <div class="introduction-box">
+    <div class="intro1">
+        <h1>savings assistant</h1>
+        Here, Keito will help you track your goals for your savings and help you allocate your paychecks.
+    </div>
+    </div>
+
+        <div class="speech-bubble" id="keitoMessage">We are going to use the 50/30/20 rule to budget your paycheck.</div>
+        <div class="keito">
+            <img src="../images/keito4.png" alt="Keito">
+        </div>
+    </div>
+
+    <div class="budget-panel">
+    
+        <div class="goal-section">
+            <div class="label">Tracking Your Savings Goals</div>
+            <div class="rule-description">Have anything you want to save up for? Want a rainy day fund in case of emergencies? If you have a specific saving goal in mind, track your progress here. In general, it's a good idea to have <b>3-6 months' worth of living expenses</b> saved up, but in this economy, saving any penny counts.</div>
+
+            <div class="input-group">
+                <input type="number" id="balance" value="0" min="0" step="10" placeholder="input your current savings">
+                <button id="updateBalance">update</button>
+            </div>
+            <div class="input-group" style="margin-top: 10px;">
+                <input type="number" id="goal" value="1000" min="1" step="100" placeholder="set your goal amount">
+                <button id="updateGoal">set goal</button>
+            </div>
+            
+            <div class="progress-container">
+                <div class="stats">
+                    <span id="current">$0</span>
+                    <span id="target">$1,000 goal</span>
+                </div>
+                <div class="bar-bg">
+                    <div class="bar-fill" id="progressBar"></div>
+                </div>
+                <div class="goal-message" id="goalMessage">
+                    Set your savings goal!
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-50-30-20">
+            <div class="rule-title">Your 50/30/20 Split</div>
+            <div class="rule-description">While you should proportion your paycheck however you see fit, the 50/30/20 rule is a great start if you don't know where to begin. This rule dictates that <b>you should allocate 50% of your paycheck towards your needs, 30% towards your wants and 20% towards your savings.</b></div>
+            <div class="rule-description" style="padding: 20px;"><span style="color: var(--teal)"><b>Needs</b></span> are essential purchases like rent, food, utilities. <span style="color: var(--secondary-green)"><b>Wants</b></span> are ways you spend money for fun, like entertainment, hobbies, treats, or other sources of enjoyment. <span style="color: var(--orange)"><b>Savings</b></span> is money set aside for emergencies, retirement or repaying debt.</div>
+
+        <div class="paycheck-row">
+            <div class="label">Enter your paycheck or earnings</div>
+            <div class="input-group">
+                <input type="number" id="paycheckInput" placeholder="input your amount here" value="0" min="0" step="100">
+                <button id="calcPaycheckBtn">split my check</button>
+            </div>
+            <div style="font-size:0.9rem; margin-top:12px; color:#433147; text-align: left;">Work gig shifts? You can enter individual earnings, weekly earnings, biweekly earnings; whatever you want to divide.</div>
+        </div>
+
+            <div class="suggest-box" id="suggestionBox">
+                <table>
+                    <tr>
+                        <td>You should put</td>
+                        <td>You should put</td>
+                        <td>You should put</td>
+                    </tr>
+                    <tr>
+                        <td><span class="suggest-item" id="needsAmount">$0</span></td>
+                        <td><span class="suggest-item" id="wantsAmount">$0</span></td>
+                        <td><span class="suggest-item" id="savingsAmount">$0</span></td>
+                    </tr>
+                    <tr>
+                        <td>towards your needs</td>
+                        <td>towards your wants</td>
+                        <td>in savings</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="storage-note">
+            Your savings and goals are remembered. <strong>This data is saved locally</strong> so nothing you input here is sent to me. Click the button below to clear your data.<br>
+        </div>
+
+        <div class="reset-local">
+            <button class="small-btn" id="resetLocalBtn">Clear local data</button>
+        </div>
+
+        <div id="feedbackMsg" style="color:#492c4a; font-weight:500; text-align:center; margin-top:10px; min-height:24px;"></div>
+    </div>
+</div>
+</div>
+
+<script src="../js/savings.js"></script>
+</body>
+</html>
