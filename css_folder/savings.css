@@ -145,7 +145,7 @@ justify-content: flex-start;
   background: var(--primary-green);
   height: 100%;
   width: 0%;
-  transition: width 0.3s;
+  transition: width 0.7s;
 }
 
 .goal-message {
