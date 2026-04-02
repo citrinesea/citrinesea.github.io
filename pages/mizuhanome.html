@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+    <link rel="stylesheet" href="../css_folder/style3.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Mizuhanome Chart</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        h2 {
+            font-size: 1.9rem;
+            text-align: center;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+              
+        .idolcard {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .idolcard:hover {
+            transform: translateX(5px);
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        }
+        
+        .card-yes {
+            background: linear-gradient(to right, #ffffff, #f3ffe4);
+        }     
+        .card-probably {
+            background: linear-gradient(to right, #ffffff, #f7ffe9);
+        }
+        .card-probablynot {
+            background: linear-gradient(to right, #ffffff, #ffefeb);
+        }   
+        .card-no {
+            background: linear-gradient(to right, #ffffff, #fff3f2);
+        }
+        .card-maybe {
+            background: linear-gradient(to right, #ffffff, #ffffeb);
+        }
+        .card-null {
+            background: rgb(250, 250, 250)
+        }
+        
+        .idol-info {
+            flex: 1;
+        }
+        
+        .idol-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .explanation {
+            font-size: 0.9em;
+            color: #666;
+            margin-right: 5px;
+        }
+        
+        .status {
+            padding: 8px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 1em;
+            text-align: center;
+            min-width: 80px;
+            color: white;
+        }
+        
+        .status-yes {
+            background: #71ae20;
+        }
+        .status-probably {
+            background: #b1d432;
+        }
+        .status-probablynot {
+            background: #fe943d;
+        }        
+        .status-no {
+            background: #f75050;
+        }
+        .status-maybe {
+            background: #f2b33e;
+        }
+        .status-null {
+            background: #c4c1be;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .idolcard {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .idolcard:nth-child(1) { animation-delay: 0.1s; }
+        .idolcard:nth-child(2) { animation-delay: 0.2s; }
+        .idolcard:nth-child(3) { animation-delay: 0.3s; }
+        .idolcard:nth-child(4) { animation-delay: 0.4s; }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;  
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                grid-template-columns: 1fr;  
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navigation">
+      <a href="https://citrinesea.github.io/">
+        <img src="../images/logo5.png"
+        alt="Analyses."></a>
+</div>
+
+<div class="navbar">
+  <a href="../citrinesea_pages.html">citrinesea pages<i class="fa fa-arrow-left"></i></a>
+</div>
+
+<div class="big-container">
+    <div class="introduction-box">
+        <div class="intro1">
+            <h1>who knows mizuhanome-sensei?</h1>
+            <p>This page keeps track of the stories and characters who <span style="color: #58981b;"><b>do know</b></span> that Keito is the mangaka Mizuhanome-sensei. Characters that <span style="color: #f2b33e;"><b>partially</b></span> know are either aware of the name, or aware that Keito can draw, but have not connected the two. <span style="color: #555555;"><b>Unconfirmed names</b></span> are ones whose stories haven't been combed through to definitively say they <span style="color: #ba3737;"><b>do not</b></span> know Keito is Mizuhanome.</p>
+            <p>This page will update and be corrected over time.</p>
+        </div>
+        <div class="intro2">
+            <img src="../images/chibis/eichimizu.png" alt="Mizusaba map">
+        </div>
+    </div>
+
+    <div class="infodump">
+    <h2>Some facts about Mizuhanome-sensei...</h2>
+    <p>Before attending Yumenosaki, Keito wanted to become a mangaka. Mizuhanome-sensei is the pen name Keito uses for his doujinshi. It’s Keito worst-kept secret, but he still attempts to keep it discreet for the sake of Akatsuki’s image (Philosopher's Guidance). During his time in Yumenosaki, Keito drew posters for events around campus and kept up his manga as a hobby. He also has an eye for graphic design and data visualization (Philosopher’s Guidance). When it comes to medium, he is more familiar with traditional art than digital art (Philosopher’s Guidance, Scroll of the Elements). His style is described as cute and sparkly, like when he drew Kuro a portrait for his birthday.
+        
+    <p>Anzu is his biggest fan and constantly lets his secret out to others. Her art style resembles Keito’s (Tea Party). One known work of his is "Wonderland Alice VS. Looking Glass Alice": it is unfinished, so Eichi entrusts Anzu to finish drawing the rest (Tea Party). Mizuhanome has also written text-only fanfiction for a discontinued series (Biblio) and has a fanart book (Mission of the Spy), and the stage play adaptation of Pirate Festival retcons the lore of Captain Kidoairaku, the mascot Midori becomes infatuated with, so that Keito is its creator.</p>
+    </div>
+
+    <!--STARPRO container-->
+    <h2>Starmaker Productions</h2>
+    <div class="container">
+
+    
+    <!-- TRICKSTAR -->
+            
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Subaru Akehoshi</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Hokuto Hidaka</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Mao Isara</div>
+                <div class="explanation">Anzu tells him Keito is Mizuhanome in <b>Agents</b>, when drawing fliers for Star Fes.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Makoto Yuuki</div>
+                <div class="explanation">After Anzu reveals herself to be a fan of Keito, Keito has to tell Makoto he is Mizuhanome in <b>Philosopher's Guidance</b> to clear a misunderstanding.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+
+    <!-- fine -->
+
+    <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Eichi Tenshouin</div>
+                <div class="explanation">Eichi consistently attempts to expose Keito as Mizuhanome to tease him, including in <b>Tea Party</b> and <b>Arsene.</b> He tells Anzu in <b>A Soul in a Single Stroke.</b></div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Wataru Hibiki</div>
+                <div class="explanation">In <b>Fist of the Shangri-la Idol</b>, Eichi mentions a "certain Mizuhanome", and Wataru says he'll have that "certain someone" write his next script for Dramatica.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Yuzuru Fushimi</div>
+                <div class="explanation">Anzu tells him Keito is Mizuhanome in <b>The Essence of a Butler</b>, when Keito helps draw him rough drafts for his personalized outfit.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tori Himemiya</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- RYUSEITAI -->
+
+    <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="explanation">Kanata learns of the name Mizuhanome in <b>Comic World</b>, but does not put together that it is Keito.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="explanation">Midori learns of Keito's talent of drawing manga in <b>Scroll of the Elements</b>, but does not learn the name Mizuhanome. Tsumugi mentions Mizuhanome around Hajime, Midori, and Keito in <b>Biblio</b>, but doesn't directly out him.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- ALKALOID -->
+
+    <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Aira Shiratori</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Hiiro Amagi</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Mayoi Ayase</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tatsumi Kazehaya</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+    </div>
+
+    <!--cospro container-->
+        <h2>Cosmic Production</h2>
+    <div class="container">
+        
+    <!-- EDEN -->
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Nagisa Ran</div>
+                <div class="explanation">Nagisa is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Hiyori Tomoe</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Ibara Saegusa</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Jun Sazanami</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- valkyrie -->
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Shu Itsuki</div>
+                <div class="explanation">Shu is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Mika Kagehira</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- 2wink -->
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Hinata Aoi</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Yuuta Aoi</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- C:B -->
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Rinne Amagi</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Niki Shiina</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">HiMERU</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kohaku Oukawa</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+                
+    </div>
+
+    <!--rhylin container-->
+    <h2>Rhythm Link</h2>
+    <div class="container">
+    
+    <!-- undead -->
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Rei Sakuma</div>
+                <div class="explanation">In <b>Arsene</b>, Rei indicates that he recognizes the Mizuhanome works Eichi brought to the funeral.</div>
+            </div>
+            <div class="status status-probably">Probably</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kaoru Hakaze</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Koga Ogami</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Adonis Otogari</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- rabbits -->
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Tomoya Mashiro</div>
+                <div class="explanation">Tomoya is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+        
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Hajime Shino</div>
+                <div class="explanation">Eichi shows Hajime Mizuhanome's work in <b>Tea Party</b>. While Hajime knows it means a great deal to Keito, he does not know that Keito is Mizuhanome. Tsumugi mentions Mizuhanome around Hajime, Midori, and Keito in <b>Biblio</b>, but doesn't directly out him.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Mitsuru Tenma</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Nazuna Nito</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- akatsuki/shinsei -->
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="explanation">Keito knows he's Mizuhanome and tries to keep it a secret.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="explanation">Kuro first hears the name Mizuhanome in <b>Comic World</b>, but doesn't know it is. By <b>Spy the Mission</b>, Kuro knows that Keito draws his own doujinshi, and so presumably, knows he is Mizuhanome.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+
+        <div class="idolcard card-no">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="explanation">When Anzu brings up Mizuhanome in <b>Colorful Autumn</b>, Souma thinks he and Keito are two different people, wondering if Mizuhanome's art skills rival Keito's.</div>
+            </div>
+            <div class="status status-no">No</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="explanation">Ibuki is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+    <!-- mdu -->
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Juis Kojika</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Nozomi Madoka</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Mashu Kuon</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Chitose Tsuzura</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+    </div>
+
+    <!--newdi container-->
+    <h2>NEW DIMENSION</h2>
+    <div class="container">
+        
+    
+    <!-- knights -->  
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Tsukasa Suou</div>
+                <div class="explanation">Eichi shows Tsukasa Mizuhanome's work in <b>Tea Party</b>. While Tsukasa knows it means a great deal to Keito, he does not know that Keito is Mizuhanome.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Leo Tsukinaga</div>
+                <div class="explanation">Leo is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Arashi Narukami</div>
+                <div class="explanation">Arashi is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Ritsu Sakuma</div>
+                <div class="explanation">Eichi shows Ritsu Mizuhanome's work in <b>Tea Party</b>. While Ritsu knows it means a great deal to Keito, he does not know that Keito is Mizuhanome.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Izumi Sena</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+    <!-- switch -->  
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Natsume Sakasaki</div>
+                <div class="explanation">Natsume is at the funeral when Eichi brings Mizuhanome's works in <b>Arsene</b>, but has no reaction.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Tsumugi Aoba</div>
+                <div class="explanation">Tsumugi expresses his admiration for a text-only Mizuhanome work, and describes Keito as someone who loves to come up with stories in <b>Biblio</b>. Keito also mentions that Tsumugi gave him tips on how to write.</div>
+            </div>
+            <div class="status status-probably">Probably</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Sora Harukawa</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <!-- mam-->
+
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Madara Mikejima</div>
+                <div class="explanation">In <b>Spy the Mission</b>, Keito enlists Madara's help in punishing Eichi for reading his doujinshi.</div>
+            </div>
+            <div class="status status-probably">Probably</div>
+        </div>
+
+        <!-- esupuri-->
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Esu Sagiri</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Yume Hanamura</div>
+                <div class="explanation">Yume finds the art-style of Mizuhanome cute in <b>Arsene</b>, when Eichi brings his works to the funeral, but does not know it's Keito.</div>
+            </div>
+            <div class="status status-probablynot">Probably Not</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Raika Hojo</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kanna Natsu</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+    </div>
+
+</div>
+</body>
+</html>
