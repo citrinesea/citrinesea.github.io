@@ -1,0 +1,144 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        p {
+            padding: 3px;
+        }
+
+        :root {
+            --primary: #60cad1;
+            --secondary: #0351b0;
+            --green: #73a00b;
+            --background: #ffffff;
+            --text-color: #000000;
+            }
+
+        .wrapper {
+            padding: 2px;
+        }
+        .container {
+            position: relative;
+            background: white;
+            background-size: cover;
+            min-height: 700px;
+            border-radius: 24px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .container {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/roadmap/oki3.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .pinpoint {
+            position: absolute;
+            background: #ffffff;
+            padding: 0.25rem 0.8em;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2d3e3c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .pinpoint:hover {
+            background: var(--primary);
+            border: none;
+            color: white;
+            z-index: 15;
+        }
+        .pinpoint.active {
+            color: white;
+            background: var(--green);
+            border-color: var(--primary);
+            z-index: 20;
+        }
+
+        .info-panel {
+            position: fixed;
+            top: 50%;
+            right: 2rem;
+            transform: translateY(-50%);
+            width: 320px;
+            max-height: 80vh;
+            background: #ffffff;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.25);
+            padding: 1.5rem;
+            border: 1px solid #ece2d4;
+            display: none;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .info-panel h3 {
+            font-size: 1.35rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+            color: #000202;
+            border-left: 4px solid #a5d35c;
+            padding-left: 0.7rem;
+        }
+        .info-panel img {
+            border-radius: 2px;
+            margin: 0.5rem 0;
+            max-width: 100%;
+        }
+        .info-panel ul {
+            margin: 0.5rem 0 0.75rem 1.2rem;
+        }
+        .info-panel li {
+            font-size: 0.85rem;
+            color: #3f5250;
+        }
+        
+        .rationale-note {
+            color: #9e8e78;
+            margin-top: 0.35rem;
+            padding-top: 0.4rem;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .location-rationale {
+            font-size: 0.8rem;
+            color: #3b2f1e;
+            padding: 0.4rem 0.6rem;
+            margin: 0.6rem 0 0.2rem;
+            line-height: 1.4;
+        }
+        hr {
+            margin: 0.6rem 0;
+            border: 0;
+            height: 1px;
+            background: #e4dbce;
+        }
+
+        @media (max-width: 780px) {
+            .info-panel {
+                width: 280px;
+                right: 1rem;
+                max-height: 70vh;
+            }
+            .container {
+                min-height: 600px;
+            }
+            .pinpoint {
+                font-size: 0.65rem;
+                padding: 0.15rem 0.55rem;
+                width: fit-content;
+            }
+            .intro1 p {
+                max-width: 100%;
+            }
+        }
