@@ -21,6 +21,148 @@
 
     <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
 
+    <style>
+      :root {
+        --primary: #00657f;
+        --secondary: #00a89f;
+        --accent: #75b106;
+        --accent2: #eb9634;
+
+      }
+
+      .grid{
+        margin: 0 auto;
+        width: 92%;
+      }
+      .grid .item {
+          width: 31%;
+          height: 425px;
+          background: #ffffff;
+          box-sizing: border-box;
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+          font-size: 15px;
+          margin: 1%;
+          padding: 3px;
+          overflow: scroll;
+          display: block;
+          float: left;
+      }
+
+      .preview-thumbnail {
+          max-width: 50%;
+      }
+
+      .item a {
+          background: #000127;
+          color: #fff;
+          font-size: 15px;
+          padding: 5px 15px;
+          transition: 0.4s ease;
+          overflow: hidden;
+      }
+
+      .item img {
+          width: 100%;
+          height: 100%;
+          max-height: 200px;
+          object-fit: cover;
+          position: relative;
+          text-align: center;
+      }
+
+      .item a:hover {
+          background: transparent;
+          color: #7aba20;
+      }
+
+      .detail-text {
+          font-size: 14px;
+      }
+
+      .status-labels {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          z-index: 2;
+      }
+
+      .status-label {
+          padding: 6px 12px;
+          border-radius: 20px;
+          font-size: 0.75rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 2px solid white;
+      }
+
+      .status-label::before {
+          content: attr(data-label);
+          opacity: 1;
+      } 
+
+    .charalore { background: var(--primary); color: white; }
+    .analysis { background: var(--secondary); color: white; }
+    .tool { background: var(--accent); color: white; }
+    .cultures { background: var(--accent2); color: white; }
+
+    @media only screen and (max-width: 600px) {
+    .filterbox {
+        width: 100%;
+    }
+    .grid {
+        width: 100%;
+    }
+    .grid .item {
+        width: 48%;
+        font-size: 11px;
+        gap: 2px;
+        display: inline-block;
+    }
+}
+    </style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".item", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
 </head>
 
 <body>    
@@ -48,89 +190,354 @@
   </div>
 </div>
 
-<div class="entire-box">
-<div class="citrinesea-container">
-  <div class="citrinesea-row2">
 
-    <div class="citrinesea-column main-items">
-      <div class="labelcategory">
-      </div>
-      <div class="tanabata-container">      
-        <a href="https://citrinesea.github.io/pages/reading_recommendations" target="_blank" class="tanabata-strip strip-reading">
-          <div class="main-text"><b>AKARYUSEI Reading Recommendations</b></div>
-          <div class="details">A tool to filter through different AKARYUSEI translations, including Ibuki and Madara.</div>
-        </a>
+<div class="filterbox">
+<div class="filters">
 
-        <a href="pages/roadmap_to_ibuki.html" target="_blank" class="tanabata-strip strip-ibuki">
-          <div class="main-text"><b>Roadmap to Ibuki</b></div>
-          <div class="details">A roadmap detailing the different AKARYUSEI stories that have built up to Ibuki's inclusion in the cast.</div>
-        </a>
-
-        <a href="pages/mv_analyses.html" target="_blank" class="tanabata-strip strip-mv">
-          <div class="main-text"><b>MV Analyses</b></div>
-          <div class="details">A collection of the choreography analysis videos I've done for AKARYUSEI.</div>
-        </a>
-
-        <a href="pages/akaryusei_color_palettes.html" target="_blank" class="tanabata-strip strip-colors">
-          <div class="main-text"><b>AKARYUSEI Color Palettes</b></div>
-          <div class="details">(WIP) Looking for inspiration? Filter through color palettes based off of various AKARYUSEIbuki cards. Current characters added: Keito, Kuro.</div>
-        </a>
-      </div>
-      
-      <div class="tanabata-container">   
-          <a href="pages/family.html" target="_blank" class="tanabata-strip strip-family">
-          <div class="main-text"><b>AKARYUSEIbuki Family Pages</b></div>
-          <div class="details">(WIP) Building a character bible for the families and family members of AKARYUSEIbuki. Current characters added: Keito, Souma.</div>
-        </a>
-
-        <a href="pages/mizuhanome.html" target="_blank" class="tanabata-strip strip-mizuhanome">
-          <div class="main-text"><b>Who Knows Mizuhanome?</b></div>
-          <div class="details">(WIP) A guide to which characters know Keito's mangaka alias, Mizuhanome</div>
-        </a>
-
-        <a href="pages/savings_assistant.html" target="_blank" class="tanabata-strip strip-savings">
-          <div class="main-text"><b>Savings Assistant Keito</b></div>
-          <div class="details">Here, Keito will help you track your goals for your savings and help you allocate your paychecks.</div>
-        </a>
-
-        <a href="pages/word_of_the_day.html" target="_blank" class="tanabata-strip strip-ibuki">
-          <div class="main-text"><b>Word of the Day</b></div>
-          <div class="details">Learn a word in <i>Uchinaaguchi</i> each day!</div>
-        </a>
-
-      </div>
-
-      <div class="tanabata-container">
-        <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/" target="_blank" class="tanabata-strip strip-shinsei">
-          <div class="main-text"><b>Contextualizing Shinsei AKATSUKI</b></div>
-          <div class="details">An analysis on the parallels between Shinsei AKATSUKI and the history of the Ryukyu Kingdom and Japan.</div>
-        </a>
-
-        <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#westernization" target="_blank" class="tanabata-strip strip-shinseiparts">
-          <div class="main-text"><b>I. Contextualizing Shinsei AKATSUKI: Westernization</b></div>
-          <div class="details">Part one of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki and AKATSUKI and a) the Black Ships, b) Japanese Spirit, Western Technology, and c) the Meiji Restoration.</div>
-        </a>
-
-        <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#ryukyu_disposition" target="_blank" class="tanabata-strip strip-shinseiparts">
-          <div class="main-text"><b>II. Contextualizing Shinsei AKATSUKI: Assimilation</b></div>
-          <div class="details">Part two of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki's search for true Japanese-style and a) the Ryukyu Disposition and b) Ifa Fuyu's Common Ancestry Theory.</div>
-        </a>
-
-        <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#militarism" target="_blank" class="tanabata-strip strip-shinseiparts">
-          <div class="main-text"><b>III. Contextualizing Shinsei AKATSUKI: Militarization</b></div>
-          <div class="details">Part three of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki's entrance into the "war unit" AKATSUKI and the Battle of Okinawa.</div>
-        </a>
-
-</div>
-</div>
-</div>
+   <ul class="filter option-set exclusive" data-filter-group="charms">
+     <li><b>Categorize by Type</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".lore">Lore</a></li>
+     <li><a href="#" data-filter-value=".analyses">Analyses</a></li>
+     <li><a href="#" data-filter-value=".culture">Culture</a></li>
+     <li><a href="#" data-filter-value=".tools">Tools</a></li>
+   </ul>
 
 </div></div>
 
+<div class="grid">
+
+<div class="item tools">
+  <div class="status-labels">
+    <span class="status-label tool" data-label="Tool"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>AKARYUSEI Reading Recommendations</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test3.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>A tool to filter through different AKARYUSEI translations, including Ibuki and Madara.</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/pages/reading_recommendations" target="_blank"><b>Read here</b></a>
 </div>
+  
+</div></div>
+
+<div class="item lore">
+  <div class="status-labels">
+    <span class="status-label charalore" data-label="Lore"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Roadmap to Ibuki</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test2.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>A roadmap detailing the different AKARYUSEI stories that have built up to Ibuki's inclusion in the cast.</p> 
+    </div></span>
+
+    <a href="pages/roadmap_to_ibuki.html" target="_blank"><b>Read here</b></a>
+
 </div>
-      
-    </main>
+</div></div>
+
+
+<div class="item analyses">
+  <div class="status-labels">
+    <span class="status-label analysis" data-label="Analysis"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>MV Analyses</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test9.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>A collection of the choreography analysis videos I've done for AKARYUSEI.</p> 
+    </div></span>
+
+    <a href="pages/mv_analyses.html" target="_blank"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item tools">
+  <div class="status-labels">
+    <span class="status-label tool" data-label="Tool"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>AKARYUSEI Color Palettes</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test5.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p><b>(WIP)</b> Looking for inspiration? Filter through color palettes based off of various AKARYUSEIbuki cards. Current characters added: Keito, Kuro.</p> 
+    </div></span>
+
+    <a href="pages/akaryusei_color_palettes.html"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item lore">
+  <div class="status-labels">
+    <span class="status-label charalore" data-label="Lore"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>AKARYUSEIbuki Family</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test6.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p><b>(WIP)</b> Building a character bible for the families and family members of AKARYUSEIbuki. Current characters added: Keito, Souma.</p> 
+    </div></span>
+
+    <a href="pages/family.html"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item lore">
+  <div class="status-labels">
+    <span class="status-label charalore" data-label="Lore"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Who Knows Mizuhanome?</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test7.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p><b>(WIP)</b> A guide to which characters know Keito's mangaka alias, Mizuhanome.</p> 
+    </div></span>
+
+    <a href="pages/mizuhanome.html"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item tools">
+  <div class="status-labels">
+    <span class="status-label tool" data-label="Tool"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Savings Assistant Keito</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/reading-recc/biblio.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Here, Keito will help you track your goals for your savings and help you allocate your paychecks.</p> 
+    </div></span>
+
+    <a href="pages/savings_assistant.html"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item tools">
+  <div class="status-labels">
+    <span class="status-label tool" data-label="Tool"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Word of the Day</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test8.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Learn a word in <i>Uchinaaguchi</i> each day!</p> 
+    </div></span>
+
+    <a href="pages/word_of_the_day.html"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+
+<div class="item culture">
+  <div class="status-labels">
+    <span class="status-label cultures" data-label="Culture"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Origins in Okinawa</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/reading-recc/dragonboat.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Bite-sized translation note entries about traditions rooted in Ryukyuan culture</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/translation/origins_in_okinawa/"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item analyses">
+  <div class="status-labels">
+    <span class="status-label analysis" data-label="Analysis"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>Contextualizing Shinsei AKATSUKI</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test4.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>An analysis on the parallels between Shinsei AKATSUKI and the history of the Ryukyu Kingdom and Japan.</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item analyses">
+  <div class="status-labels">
+    <span class="status-label analysis" data-label="Analysis"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>I. Contextualizing Shinsei: Westernization</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test4fade.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Part one of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki and AKATSUKI and a) the Black Ships, b) Japanese Spirit, Western Technology, and c) the Meiji Restoration.</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#westernization"><b>Read here</b></a>
+</div>
+</div></div>
+
+
+<div class="item analyses">
+  <div class="status-labels">
+    <span class="status-label analysis" data-label="Analysis"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>II. Contextualizing Shinsei: Assimilation</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test4fade.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Part two of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki's search for true Japanese-style and a) the Ryukyu Disposition and b) Ifa Fuyu's Common Ancestry Theory.</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#ryukyu_disposition"><b>Read here</b></a>
+
+</div>
+</div></div>
+
+<div class="item analyses">
+  <div class="status-labels">
+    <span class="status-label analysis" data-label="Analysis"></span>
+  </div>
+
+  <div class="recommendation-box">
+  
+  <div class="title"><p>
+          <div class="main-text"><b>III. Contextualizing Shinsei: Militarization</b></p></div>
+  
+    <div class="item-story">
+    <img
+        src="images/test4fade.jpg"
+        alt="Vampire Shogun."></div>
+    
+  <span>
+    <div class="detail-text">
+    <p>Part three of <i>Contextualizing Shinsei AKATSUKI</i>, discussing the parallels between Ibuki's entrance into the "war unit" AKATSUKI and the Battle of Okinawa.</p> 
+    </div></span>
+
+    <a href="https://citrinesea.github.io/translation/contextualizing_shinsei_akatsuki/#westernization"><b>Read here</b></a>
+
+</div>
+</div></div>
+     
+</div>
+
+<br>
+</main>
 
 </body>
 </html>

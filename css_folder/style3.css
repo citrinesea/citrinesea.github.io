@@ -432,19 +432,10 @@ main {
 }
 
 /* TANABATA BACKGROUNDS */
-.strip-reading { background-image: url('../images/test.jpg'); }
-.strip-ibuki { background-image: url('../images/test2.jpg'); }
-.strip-mv { background-image: url('../images/test3.jpg'); }
-.strip-shinsei { background-image: url('../images/test4.jpg'); }
-.strip-colors { background-image: url('../images/test5.jpg'); }
-.strip-family { background-image: url('../images/test6.jpg'); }
-.strip-mizuhanome { background-image: url('../images/test7.jpg'); }
 .strip-tlstars { background-image: url('../images/tlstars.jpg'); }
 .strip-mikamasterlist { background-image: url('../images/mikamasterlist.jpg'); }
 .strip-310mcstory { background-image: url('../images/310mcstory.jpg'); }
 .strip-310mctimeline { background-image: url('../images/310mctimeline.jpg'); }
-.strip-shinseiparts { background: #00071f; }
-.strip-savings { background-image: url('../images/keito4.png');}
 
 /* =========
    ANIMATIONS
