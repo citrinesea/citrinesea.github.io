@@ -1,7 +1,3 @@
-/* =========
-   CSS & BASE STYLES
-   ========= */
-
 * {
   box-sizing: border-box;
 }
@@ -57,13 +53,18 @@ h3, h4 {
 
 h3 {
   text-align: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
   color: #1b2310;
 }
 
 h3 a:link {
   color: #207f97;
   text-decoration: none;
+}
+
+h5 {
+  color: #207f97;
+  font-size: 1rem;
 }
 
 .main-text {
@@ -127,6 +128,19 @@ main {
   align-items: center;
   margin: 0 auto;
   background: white;
+}
+
+.TLprojectqueue {
+  text-align: center;
+}
+
+.TLprojectqueue img {
+  height: 90px;
+  transition: transform 0.2s ease;
+}
+
+.TLprojectqueue img:hover {
+  transform: translate(0, -2px);
 }
 
 /* =========
@@ -336,7 +350,7 @@ main {
 }
 
 /* =========
-   TANABATA COMPONENTS (Originally I was going to make these like tanabata strips, but I ended up changing the format. Kept the name here because it works as something distinct!)
+   TANABATA COMPONENTS (Originally I was going to make these like tanabata strips, but I ended up changing the format. Kept the name here because it works as something distinct)
    ========= */
 
 .tanabata-container {
