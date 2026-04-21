@@ -867,7 +867,7 @@
             jp: "今日は行きません" 
           },
           { 
-            uchi: "維吹さん が いちょーん", 
+            uchi: "維吹さん や いちょーん", 
             romaji: "Ibuki-san ya ichoon", 
             en: "Ibuki is going", 
             jp: "維吹さんは行っている" 
@@ -907,7 +907,7 @@
             jp: "" 
           },
           { 
-            uchi: "維吹さん が ちゅーん", 
+            uchi: "維吹さん や ちゅーん", 
             romaji: "Ibuki-san ya chuun", 
             en: "Ibuki is coming", 
             jp: "維吹さんは来ている" 
@@ -947,7 +947,7 @@
             jp: "今日は食べません" 
           },
           { 
-            uchi: "維吹さん が かどーん", 
+            uchi: "維吹さん や かどーん", 
             romaji: "Ibuki-san ya kadoon", 
             en: "Ibuki is eating", 
             jp: "維吹さんは食べている" 
@@ -987,7 +987,7 @@
             jp: "" 
           },
           { 
-            uchi: "維吹さん が ぬどーん", 
+            uchi: "維吹さん や ぬどーん", 
             romaji: "Ibuki-san ya nudoon", 
             en: "Ibuki is drinking", 
             jp: "維吹さんは飲みている" 
