@@ -599,6 +599,10 @@ main {
     width: 100%;
     height: auto;
   }
+
+  .intro2 img {
+    max-width: 100%;
+  }
 }
 
 /* =========
