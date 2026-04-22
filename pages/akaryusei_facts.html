@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+    <link rel="stylesheet" href="../css_folder/style3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+   <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+    <title>Can AKARYUSEIbuki do this...?</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+        h2 {
+            font-size: 1.9rem;
+            text-align: center;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+              
+        .idolcard {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .idolcard:hover {
+            transform: translateX(5px);
+            box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+        }
+        
+        .card-yes {
+            background: linear-gradient(to right, #ffffff, #f3ffe4);
+        }     
+        .card-probably {
+            background: linear-gradient(to right, #ffffff, #f7ffe9);
+        }
+        .card-probablynot {
+            background: linear-gradient(to right, #ffffff, #fff5eb);
+        }   
+        .card-no {
+            background: linear-gradient(to right, #ffffff, #fff3f2);
+        }
+        .card-maybe {
+            background: linear-gradient(to right, #ffffff, #ffffeb);
+        }
+        .card-null {
+            background: rgb(250, 250, 250)
+        }
+        
+        .idol-info {
+            flex: 1;
+            padding: 0px 10px;
+        }
+        
+        .idol-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #353a4d;
+            margin-bottom: 8px;
+        }
+        
+        .explanation {
+            font-size: 0.9em;
+            color: #4e5059;
+            margin-right: 5px;
+        }
+        
+        .status {
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1em;
+            text-align: center;
+            min-width: 50px;
+            color: white;
+        }
+        
+        .status-yes {
+            background: #71ae20;
+        }
+        .status-probably {
+            background: #b1d432;
+        }
+        .status-probablynot {
+            background: #fea73d;
+        }        
+        .status-no {
+            background: #f75050;
+        }
+        .status-maybe {
+            background: #f2b33e;
+        }
+        .status-null {
+            background: #c4c1be;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .idolcard {
+            animation: fadeIn 0.5s ease-out forwards;
+            opacity: 0;
+        }
+        
+        .idolcard:nth-child(1) { animation-delay: 0.1s; }
+        .idolcard:nth-child(2) { animation-delay: 0.2s; }
+        .idolcard:nth-child(3) { animation-delay: 0.3s; }
+        .idolcard:nth-child(4) { animation-delay: 0.4s; }
+
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;  
+            }
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                grid-template-columns: 1fr;  
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navigation">
+      <a href="https://citrinesea.github.io/">
+        <img src="../images/logo5.png"
+        alt="Analyses."></a>
+</div>
+
+<div class="navbar">
+  <a href="../citrinesea_pages.html">citrinesea pages<i class="fa fa-arrow-left"></i></a>
+</div>
+
+<div class="big-container">
+    <div class="introduction-box">
+        <div class="intro1">
+            <h1>can AKARYUSEIbuki...?</h1>
+            <p>This page keeps track of random lore bits about AKARYUSEIbuki, updated and corrected over time.</p>
+        </div>
+        <div class="intro2">
+            <img src="../images/chibis/akaryuseicook.png" alt="Mizusaba map">
+        </div>
+    </div>
+
+    <!--Cooking container-->
+    <h2>Can AKARYUSEIbuki cook?</h2>
+    <div class="container">
+    
+    <!-- Cook -->
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="explanation">Keito does not recreationally cook often, but can follow a recipe when he needs to. He makes Chinese steamed buns in <b>Chinatown</b> and Valentine's-themed wagashi in <b>Gourmand.</b></div>
+            </div>
+            <div class="status status-probably">Cooks if he has to</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="explanation">Because his father has to work, Kuro takes over the cooking in his family.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="explanation">As explained in <b>Souma Substory 2</b>, Souma specializes in a range of dishes, from Japanese to Western to Chinese and even confectionary. He also specializes in preparing seafood, as seen in <b>A Favor Given, A Favor Received</b>.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-maybe">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="explanation">Chiaki starts learning how to cook in <b>I'm At Your Service, Master</b>, where he mentions trying to learn through following recipe books. 
+</div>
+            </div>
+            <div class="status status-maybe">Learning</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="explanation">Kanata specializes in seafood. He does not enjoy eating hot meals, and so prefers cold.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="explanation">Initially, Tetora is bad at cooking, managing to char his attempts or cause fires in kitchens, as seen in <b>Hot & Elegant Chocolat Fes</b>, <b>Sweets Box</b>, and <b>High and Low</b>. He is currently learning how to cook; he can be seen buying ingredients to prepare seafood in his <b>Stella Maris</b> minitalks and has recently made edible (burnt) pancakes.
+</div>
+            </div>
+            <div class="status status-probablynot">Not well, but learning</div>
+        </div>
+
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="explanation">Midori he is able to cook meals if he has to, like in <b>Hot & Elegant Chocolat Fes</b>, <b>Changing The Flavor Up A Bit</b>, and <b>Delicious Happiness</b>.</div>
+            </div>
+            <div class="status status-probably">Cooks if he has to</div>
+        </div>
+
+        <div class="idolcard card-maybe">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="explanation">In <b>Hot & Elegant Chocolat Fes</b>, Shinobu says he's made sweets with Souma before so he's quite good at it. He mentions that he buys ingredients to make hyorogan (ninja provisions) in <b>The Place I Finally Reached.</b></div>
+            </div>
+            <div class="status status-maybe">Sweets and snacks</div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="explanation">Ibuki prepares sushi platters for Niki, Rinne, Tatsumi and Jun in <b>Hey Guys, Let's Have Some SUSHI</b>.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+    </div>
+
+    
+    <!--INSTRuments container-->
+    <h2>Can AKARYUSEIbuki play instruments?</h2>
+    <div class="container">
+    
+    <!-- Instruments -->
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="explanation">Keito can play shamisen, as seen in <b>Crossroad</b> and <b>VS AUDIENCE</b>, and acoustic guitar according to the office items. He can also play shakuhachi, as seen when he teaches Wataru in <b>Crash Course.</b> According to the <b>Oshi Room</b> filter system, he is the only one of AKARYUSEI who is listed as "proficient at a musical instrument."</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="explanation">Souma explains in <b>Lupine Halloween</b> that he can play koto and shamisen.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="explanation">Kanata can play acoustic guitar according to the office items.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="explanation"></div>
+            </div>
+            <div class="status status-null">Unconfirmed</div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="explanation">Ibuki can play electric guitar, as seen in <b>VS AUDIENCE</b>, and the acoustic guitar and piano according to the office items.</div>
+            </div>
+            <div class="status status-yes">Yes</div>
+        </div>
+        
+    </div>
+
+</div>
+</body>
+</html>
