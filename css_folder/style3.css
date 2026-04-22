@@ -530,6 +530,10 @@ main {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
+  .intro2 img {
+    max-width: 100%;
+  }
   
   .citrinesea-row {
     flex-direction: column;
