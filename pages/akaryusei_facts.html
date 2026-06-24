@@ -21,6 +21,16 @@
             text-align: center;
         }
 
+        .previewimg {
+            width: 100%;
+            
+        }
+        .previewimg img {
+            max-width: 100%;
+            border-top: 5px solid;
+            border-bottom: 5px solid
+        }
+
         .container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -36,6 +46,9 @@
             display: relative;
             align-items: center;
             transition: transform 0.2s, box-shadow 0.2s;
+
+            max-height: 400px;
+            overflow-y: scroll;
         }
         
         .idolcard:hover {
@@ -110,6 +123,24 @@
         .status-null {
             background: #c4c1be;
         }
+
+        .sports-veryhigh {
+            color: #447503;
+        }
+        .sports-high {
+            color: #8b9413;
+        }
+        .sports-moderate {
+            color: #ea7d3e
+        }
+
+        .sports-low {
+            color: #de3a3a
+        }
+
+        .subtitle {
+            color: rgb(167, 167, 179);
+        }
         
         @keyframes fadeIn {
             from {
@@ -169,7 +200,7 @@
     <div class="introduction-box">
         <div class="intro1">
             <h1>can AKARYUSEIbuki...?</h1>
-            <p>This page keeps track of random lore bits about AKARYUSEIbuki, updated and corrected over time.</p>
+            <p>This page keeps track of random lore bits about AKARYUSEIbuki, updated and corrected over time. Feel free to email or contact me if you have answers, citations or additional information for any of the boxes below!</p>
         </div>
         <div class="intro2">
             <img src="../images/chibis/akaryuseicook.png" alt="Mizusaba map">
@@ -227,7 +258,7 @@
             <div class="idol-info">
                 <div class="idol-name">Shinobu Sengoku</div>
                 <div class="status status-maybe">Sweets and snacks</div>
-                <div class="explanation">In <b>Hot & Elegant Chocolat Fes</b>, Shinobu says he's made sweets with Souma before so he's quite good at it. He mentions that he buys ingredients to make hyorogan (ninja provisions) in <b>The Place I Finally Reached.</b></div>
+                <div class="explanation">In <b>Hot & Elegant Chocolat Fes</b>, Shinobu says he's made sweets with Souma before so he's quite good at it. He mentions that he makes his own hyorogan  (ninja provisions) in <b>Tropical</b>, and buys ingredients for it in <b>The Place I Finally Reached.</b></div>
             </div>
         </div>
 
@@ -338,63 +369,67 @@
         
     </div>
 
-    <!--INSTRuments container
+    <!--ATHLETICISM container-->
     <h2>How Athletic is AKARYUSEIbuki?</h2>
     <div class="container">
     
-        <div class="idolcard card-probably">
+        <div class="idolcard card-maybe">
             <div class="idol-info">
                 <div class="idol-name">Keito Hasumi</div>
-                <div class="status status-probably">Athletic</div>
-                <div class="explanation">Keito has <b>moderate</b> strength, <b>low</b> endurance, and <b>X</b> agility. <p>Keito practiced kyudo growing up into high school, and is said to be strong when he takes Anzu by the arm in <b>Keito Sub Story 3.</b> However, he's noted to be markedly less athletic from Kuro and Souma.</p></div>
+                <div class="status status-maybe">Kind of Athletic</div>
+                <div class="explanation">Keito has <b class="sports-moderate">moderate</b> strength, <b class="sports-low">low</b> endurance, <b>TBD</b> agility, and <b>TBD</b> speed. 
+                <p>Keito practiced kyudo growing up into high school, and is said to be strong when he takes Anzu by the arm in <b>Keito Sub Story 3</b>. However, he's noted to be markedly less athletic from Kuro and Souma, and he even loses an arm-wrestling contest in <b>The Rhythm Link Arm Wrestling Cup</b>.</p>
+                <p><b class="subtitle">Sports -</b> Keito grew up doing kyudo, and was the captain of the Archery Club in his days in Yumenosaki.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Keito is comfortable with jumprope
+                <p>He has trouble with striking a kendo dummy, snowboarding, trampoline, batting in a batting cage, hitting a tennis ball against the wall, wakeboarding in the surf tank, and breaking stone tiles all the way through.</p>
+            </div>
             </div>            
         </div>
         
         <div class="idolcard card-yes">
             <div class="idol-info">
                 <div class="idol-name">Kuro Kiryu</div>
-                <div class="status status-yes">Very Athletic</div>
-                <div class="explanation">Kuro has <b>high</b> strength, <b>high</b> endurance, and <b>X</b> agility. <p></p></div>
+                <div class="status status-yes">Freakishly Athletic</div>
+                <div class="explanation">Kuro has <b class="sports-veryhigh">very high strength</b>, <b class="sports-veryhigh">very high endurance</b>, <b class="sports-high">high agility</b> and <b>TBD</b> speed. 
+                <p>Kuro was the undefeated champion in the Dragon King Competitions, and known as the "Strongest Man in Yumenosaki." In <b>Unification by Force</b>, Souma and Kuro spar seriously for three days straight, lending to very high amounts of endurance.</p>
+                <p><b class="subtitle">Sports -</b> Kuro is a black belt in karate, and was captain of the karate club in his days in Yumenosaki. In Ensemble Square, he is part of the SHIN Circle, a club for martial arts enthusiasts.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Kuro is comfortable with jumprope, striking a kendo dummy, batting in a batting cage,or breaking stone tiles all the way through.
+                <p>He seems to have trouble with activities that move or require balance or coordination, like snowboarding, trampoline, hitting a tennis ball against the wall, and wakeboarding in the surf tank.</p></div>
             </div>
         </div>
 
         <div class="idolcard card-yes">
             <div class="idol-info">
                 <div class="idol-name">Souma Kanzaki</div>
-                <div class="status status-yes">Very Athletic</div>
-                <div class="explanation">Souma has <b>X</b> strength, <b>high</b> endurance, and <b>X</b> agility. <p></p></div>
-            </div>
-        </div>
-
-        <div class="idolcard card-probably">
-            <div class="idol-info">
-                <div class="idol-name">Chiaki Morisawa</div>
-                <div class="status status-probably">Athletic</div>
-                <div class="explanation">Chiaki has <b>X</b> strength, <b>X</b> endurance, and <b>X</b> agility. <p></p></div>
-            </div>
-        </div>
-        
-        <div class="idolcard card-probablynot">
-            <div class="idol-info">
-                <div class="idol-name">Kanata Shinkai</div>
-                <div class="status status-probablynot">Kind Of Athletic</div>
-                <div class="explanation">Kanata has <b>high</b> strength, <b>X</b> endurance, and <b>low</b> agility. <p></p></div>
+                <div class="status status-yes">Freakishly Athletic</div>
+                <div class="explanation">Souma has <b class="sports-veryhigh">very high strength</b>, <b class="sports-veryhigh">very high endurance</b>, <b>TBD</b> agility and <b>TBD</b> speed.
+                <p>According to <b>As Unbridled as a Heavenly Steed</b> and <b>Repayment Fes</b>, Souma's training routine on his family's mountain includes wrestling bears and walking twice the distance from the city to the top of the mountain, lending to both very high strength and endurance. In <b>Unification by Force</b>, Souma and Kuro spar seriously for three days straight, lending to very high amounts of endurance.</p>
+                <p><b class="subtitle">Sports -</b> Souma was raised with martial arts and was trained extensively by his father.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Souma is comfortable with striking a kendo dummy, wakeboarding in the surf tank, batting in a batting cage, hitting a tennis ball against the wall and breaking stone tiles all the way through.
+                <p>He seems to have trouble with activities that require unconventional coordination to a samurai, like jumprope, snowboarding, or trampoline.</p></div>
             </div>
         </div>
 
         <div class="idolcard card-yes">
             <div class="idol-info">
                 <div class="idol-name">Tetora Nagumo</div>
-                <div class="status status-yes">Very Athletic</div>
-                <div class="explanation">Tetora has <b>X</b> strength, <b>X</b> endurance, and <b>X</b> agility. <p></p></div>
+                <div class="status status-probably">Very Athletic</div>
+                <div class="explanation">Tetora has <b class="sports-high">high strength</b>, <b class="sports-high">high endurance</b>, <b class="sports-high">high agility</b> and <b class="sports-high">high speed</b>. 
+                <p>Tetora is generally well-rounded, athletically. He goes to the gym often. His speed and agilty helps him dodge incoming attacks from combatants like Kuro (<b>Four Beasts of Fistfighting</b>) and Ibuki (<b>Ibuki Idol Story 2</b>). According to Tetora in <b>An Exchange out of Left Field,</b> if he threw a punch at anyone other than Kuro, he might really hurt them.</p>
+                <p><b class="subtitle">Sports -</b> Tetora is in the karate club, and is captain of the karate club in his second and third years in Yumenosaki. He became a black belt right before Motor Show. He is also part of SHIN Circle, a club centered around martial arts.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Tetora is comfortable with jumprope, striking a kendo dummy, trampoline, snowboarding, wakeboarding in the surf tank, batting in a batting cage, hitting a tennis ball against the wall, and breaking stone tiles all the way through. Overall, it seems sports are his forte.</p></div>
             </div>
         </div>
 
         <div class="idolcard card-probablynot">
             <div class="idol-info">
                 <div class="idol-name">Midori Takamine</div>
-                <div class="status status-probablynot">Kind Of Athletic</div>
-                <div class="explanation">Midori has <b>high</b> strength, <b>X</b> endurance, and <b>X</b> agility. <p></p></div>
+                <div class="status status-probablynot">Athletic Enough</div>
+                <div class="explanation">Midori has <b class="sports-high">high strength</b>, <b class="sports-low">low endurance</b>, <b class="sports-low">low agility</b> and <b class="sports-low">low speed</b>. 
+                <p>As Midori says in <b>Colorful Autumn</b>, he carries vegetables at work at his home, so he naturally has high physical strength. Otherwise, he is naturally unmotivated.</p>
+                <p><b class="subtitle">Sports -</b> Midori is on the basketball team in his days in Yumenosaki.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Midori is comfortable with snowboarding, wakeboarding in the surf tank, and hitting a tennis ball against the wall.
+                <p>He seems to have trouble with jumprope, striking a kendo dummy, trampoline, snowboarding, batting in a batting cage and breaking stone tiles all the way through.</p></div>
             </div>            
         </div>
 
@@ -402,15 +437,385 @@
             <div class="idol-info">
                 <div class="idol-name">Shinobu Sengoku</div>
                 <div class="status status-maybe">Kind Of Athletic</div>
-                <div class="explanation">Shinobu has <b>low</b> strength, <b>X</b> endurance, and <b>high</b> agility. <p></p></div>
+                <div class="explanation">Shinobu has <b class="sports-low">low strength</b>, <b class="sports-moderate">low to moderate endurance</b>, <b class="sports-veryhigh">very high agility</b> and <b class="sports-high">moderate to high speed</b>.
+                <p></p>
+                <p><b class="subtitle">Sports -</b> Part of Shinobu's ninja training for both himself and the Ninja Association includes parkour, climbing walls, and running around a track for endurance.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Tetora is comfortable with jumprope, striking a kendo dummy, trampoline, snowboarding, wakeboarding in the surf tank, batting in a batting cage, hitting a tennis ball against the wall, and breaking stone tiles all the way through. Overall, it seems sports are his forte.</p></div>
             </div>            
-        </div>       
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="status status-probably">Pretty Athletic</div>
+                <div class="explanation">Chiaki has <b class="sports-moderate">moderate strength</b>, <b class="sports-high">high endurance</b>, <b class="sports-high">high agility</b> and <b class="sports-moderate">moderate speed</b>.
+                <p>In <b>Crossfire</b>, Tetora points out that Chiaki is far from being the strongest of the idols. As a stuntman, member of the Dream Unit MODE/D and his general tokusatsu poses and routines, Chiaki has high agility. Chiaki has high endurance overall, but is susceptible to heatstroke in summer and thus loses energy faster.</p>
+                <p><b class="subtitle">Sports -</b> Chiaki was the captain of the basketball club in his days in Yumenosaki. In Ensemble Square, he is part of the SHIN Circle, a club for martial arts enthusiasts, and the Sports Survivors Circle, which gets together to play sports and recreational games.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Chiaki is comfortable with jumprope, striking a kendo dummy, trampoline, snowboarding, wakeboarding in the surf tank, batting in a batting cage, hitting a tennis ball against the wall, and breaking stone tiles all the way through. Overall, it seems sports are his forte.</p></div>
+            </div>
+        </div>
+        
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="status status-probablynot">Athletic Enough</div>
+                <div class="explanation">Kanata has <b class="sports-high">high strength</b>, <b class="sports-moderate">moderate endurance</b>, <b class="sports-moderate">moderate agility</b> and <b class="sports-low">low speed</b> 
+                <p>In <b>Deep Sea Mystery,</b> Kanata shows that his running speed is very, very low.</p>
+                <p><b class="subtitle">Sports -</b> Kanata does not play sports.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Kanata is comfortable with trampoline, breaking stone tiles all the way through and hitting a tennis ball against the wall.
+                <p>He seems to have trouble with jumprope, striking a kendo dummy, snowboarding, wakeboarding in the surf tank, and batting in a batting cage.</p>
+            </div>
+            </div>
+        </div>
 
         <div class="idolcard card-yes">
             <div class="idol-info">
                 <div class="idol-name">Ibuki Taki</div>
-                <div class="status status-yes">Very Athletic</div>
-                <div class="explanation">Ibuki has <b>X</b> strength, <b>high</b> endurance, and <b>high</b> agility. <p></p>.</div>
+                <div class="status status-yes">Freakishly Athletic</div>
+                <div class="explanation">Ibuki has <b class="sports-veryhigh">very high strength</b>, <b>high</b> endurance, <b>high</b> agility, and <b>high</b> speed. 
+                <p>According to Ibuki in <b>The Legend of KAGETSU</b> and <b>Dynamic Diamond</b>, he has wrestled both grizzly bears and wild boars in America, lending to very high strength. His fighting tactics are hit-and-run, so he has high speed and agility. However, his "stats" drop when he loses the will to fight, as seen in <b>The Legend of KAGETSU</b> and <b>AKATSUKI VS. Crazy:B</b>.</p>
+                <p><b class="subtitle">Sports -</b> Ibuki grew up learning self-taught martial arts (<b>Ibuki Idol Story 2</b>).</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Ibuki is comfortable with jumprope, striking a kendo dummy, trampoline, snowboarding, wakeboarding in the surf tank, batting in a batting cage, hitting a tennis ball against the wall, and breaking stone tiles all the way through. Overall, it seems sports are his forte.</p></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--SWIMMING container-->
+    <h2>Can AKARYUSEIbuki Swim?</h2>
+    <div class="container">
+    
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">In <b>Dragon Boat</b>, Kuro says that he is typically a strong swimmer, provided he isn't motion sick beforehand.</div>
+            </div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">In <b>Submarine</b>, Souma swims the length from the main Okinawa Island to Hoshijima (about an hour's journey by boat).</div>
+            </div>
+        </div>
+
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">Kanata mentions in <b>Fondness and Summer Love</b> that Chiaki and Tetora went swimming long-distance on the beach together.</div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">In <b>Air Ride</b>, Shinobu escapes Akiomi by jumping into Kanata's fountain, where he can be seen swimming with a <i>suichu tsutsu</i> (水中筒) to breathe.</div>
+            </div>            
+        </div>       
+
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">In <b>Meteor Impact</b>, Chiaki mentions that he was a lifeguard, when he goes to save Kanata from drowning. Kanata mentions in <b>Fondness and Summer Love</b> that Chiaki and Tetora went swimming long-distance on the beach together.</div>
+            </div>
+        </div>
+        
+        <div class="idolcard card-no">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="status status-no">No</div>
+                <div class="explanation">Kanata cannot swim in deep water. He wades and floats in shallow water.</div>
+            </div>
+        </div>
+
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="status status-yes">Yes</div>
+                <div class="explanation">Ibuki can be seen swimming in <b>Ibuki Idol Story 2</b>. He also free-dives to look at coral reefs, as seen in <b>The Fragrance of the Southern Islands Across the Sea</b>, which he's done since he was a kid.</div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--INSTRuments container-->
+    <h2>Is AKARYUSEIbuki Good At Drawing?</h2>
+    <div class="container">
+    
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="status status-yes">Yes (manga, poster design)</div>
+                <div class="explanation">Keito knows how to draw, as he wanted to be a mangaka when he was young. His style before high school is described as cute <b>(Arsene)</b>. When Keito draws Kuro for his birthday in Yumenosaki, Kuro describes his style as beautiful (美形; bikei) and sparkly <b>(Yumenosaki - Kuro Birthday Conversation)</b>
+                <p><b class="subtitle">Office Items -</b> According to office items, Keito can draw on the whiteboard.</p>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="status status-yes">Probably (costume design)</div>
+                <div class="explanation"><p>We might be able to assume he can draw outfits designs well.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Kuro can draw on the whiteboard.</p></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="status status-probablynot">Not his Specialty</div>
+                <div class="explanation"><p>In <b>Colorful Autumn</b>, Souma explains that he does not excel in drawing, but he can copy a picture that is drawn. He is tense when he tries to draw, and makes clean, firm lines. According to Midori, his normal drawings resemble ink paintings.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Souma cannot draw on the whiteboard.</p></div>
+            </div>
+        </div>
+
+        
+        <div class="idolcard card-no">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="status status-no">No</div>
+                <div class="explanation"><p>In <b>Colorful Autumn</b>, Tetora cannot draw well at all. This makes Midori love his art even more.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Tetora cannot draw on the whiteboard.</p></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"><p><i>One of those facts I believe is true but needs citation.</i></p>                   <p><b class="subtitle">Office Items -</b> According to office items, Midori can draw on the whiteboard.</p></div>
+            </div>            
+        </div>
+
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="status status-probably">Yes (costume design)</div>
+                    <div class="previewimg"><img
+                    src="../images/background/facts-shinobudraw.jpg"
+                    alt="Underdoctor."></div>
+                <div class="explanation">Midori thinks that Shinobu's art style is cute. Shinobu and Midori doodle mascot characters together, as mentioned in <b>A Raininja Day to Convey</b>. You can see Shinobu's doodle on the windowpane in the same story. He also draws the design for their outfits in <b>Ninja Clan</b>, alongside Tetora's advice.
+                <p><b class="subtitle">Office Items -</b> According to office items, Shinobu cannot draw on the whiteboard.</p></div>
+            </div>            
+        </div>      
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="status status-probably">Yes (mecha, character design)</div>
+                    <div class="previewimg"><img
+                    src="../images/background/facts-chiakidraw.jpg"
+                    alt="Underdoctor."></div>
+                <div class="explanation"><p>Chiaki has drawn mecha-robots on past proposals for RYUSEITAI shows, as seen in the anime adaptation of <b>Supernova</b>, and in the original story, Midori notes that his designs of the monsters are cute. These designs were used to create mascot outfits like the Umbrella Octopus costume.</p>
+                <p><b class="subtitle">Office Items -</b> According to office items, Chiaki cannot draw on the whiteboard.</p></div>
+            </div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"><p><i>One of those facts I believe is true but needs citation.</i></p>                    
+                </p><p><b class="subtitle">Office Items -</b> According to office items, Kanata can draw on the whiteboard.</p></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-no">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="status status-no">Probably Not</div>
+                <div class="explanation"><p><b class="subtitle">Office Items -</b> According to office items, Ibuki cannot draw on the whiteboard.</p></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--INSTRuments container-->
+    <h2>How Often Does AKARYUSEIbuki Do Crafts?</h2>
+    <div class="container">
+    
+        <div class="idolcard card-probably">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="status status-probably">Occasionally</div>
+                <div class="explanation">
+                <p>Before his time as an idol, Keito aspired to be a mangaka. Given he made his own doujin, we might be able to assume he knows how to bind books (as seen by the existence of the Alice in Wonderland doujin Eichi holds in <b>Tea Party</b>).</p>
+                <p>In Yumenosaki, Keito often drew or designed posters used throughout the school (<b>Soul in a Single Stroke, Philsopoher's Guidance</b>). He also crafted together a hanafuda card (<b>Hanafuda</b>), and has done <a href="https://en.wikipedia.org/wiki/Japanese_calligraphy" target="_blank">shodo</a> (書道) in front of the school for New Year's (<b>Daikagura</b>).</p>
+                <p>In Ensemble Square, Keito practiced ikebana with Kanata, Koga and Ritsu for a show they were going to appear on.</p>
+                </div>
+            </div>            
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="status status-yes">Routinely</div>
+                <div class="explanation"><p>Kuro routinely crafts, both as a job and as a hobby. Taught by his mother, his specialties include handicrafts like sewing, knitting and costume-making. Because his family is low-income, he made his own version of trendy clothes his sister wanted to wear (<b>Folksong</b>).
+                <p>While in Yumenosaki, his official part-time job was making commissioned outfits for other idols and units, as well as maintaining, adjusting and fixing their stitches. According to Kuro in <b>Kuro Idol Story 1</b>, he always has a needle in his hand, since it improves his mood and serves as an outlet for stress. While striving to be an idol, he also wants to become a fashion designer and make a name for himself in the industry.
+                <p>He has made plushies for his sister (<b>The Crimson's Pure Heart</b>) as well as puppets for Nazuna and the Broadcasting Committee (<b>The Wolf and Red Riding Hood</b>). He also partakes in occasional arts and crafts, like making <a href="https://en.wikipedia.org/wiki/Teru_teru_b%C5%8Dzu" target="_blank">teru-teru bouzu</a> (照る照る坊主) with his sister <b>(Kabukimono minitalk)</b>.</p>
+                <p>According to a <b>winter 2025 voiceline</b> from Keito, once Kuro gets obsessed with learning a new needlework method, he ends up getting obssessed and overdoing it, making a surplus of items.</p>
+                <p>Read more about all the outfits he has made for his units and others <a href="https://ensemble-stars.fandom.com/wiki/Kuro_Kiryu/Outfits_Made" target="_blank">here</a>.</p></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-maybe">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="status status-maybe">From time-to-time</div>
+                <div class="explanation"><p>In Yumenosaki, <b>Colorful Autumn</b>, Souma helps Midori, Tetora and Kanata draw and paint banners for the Takamine grocer, and has made <a href="https://en.wikipedia.org/wiki/Japanese_calligraphy" target="_blank">shodo</a> (書道) banners for Christmas (<b>Blackjack</b>).</p></div>
+            </div>
+        </div>
+
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"><p><i>One of those facts I believe is true but needs citation.</i></p></div>
+            </div>            
+        </div>      
+
+        <div class="idolcard card-probablynot">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="status status-probablynot">Learning</div>
+                <div class="explanation">Chiaki is seen learning how to sew from Kuro and Anzu in <b>Misshapen Masterpiece</b>.</div>
+            </div>
+        </div>
+        
+        <div class="idolcard card-yes">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="status status-yes">Routinely</div>
+                <div class="explanation">Kanata makes his own plushies, floating toys, miniatures and keychains of sea creatures. According to Kanata in <b>A Walk With Me</b>, he has learn sewing from home economics courses, but not well enough to fix a busted seam for a stuffed animal.</div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <!--TEMPLATE CONTAINER
+    <h2>Can AKARYUSEIbuki do X?</h2>
+    <div class="container">
+    
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Keito Hasumi</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kuro Kiryu</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Souma Kanzaki</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Tetora Nagumo</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Midori Takamine</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>
+
+        <div class="idolcard card-maybe">
+            <div class="idol-info">
+                <div class="idol-name">Shinobu Sengoku</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>            
+        </div>      
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Chiaki Morisawa</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+        
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Kanata Shinkai</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
+            </div>
+        </div>
+
+        <div class="idolcard card-null">
+            <div class="idol-info">
+                <div class="idol-name">Ibuki Taki</div>
+                <div class="status status-null">Unconfirmed</div>
+                <div class="explanation"></div>
             </div>
         </div>
         
