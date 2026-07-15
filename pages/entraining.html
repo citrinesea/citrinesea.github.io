@@ -14,7 +14,6 @@ credits: isotope combination filtering tutorial by magnusthemes.tumblr.com
    <link rel="stylesheet" href="../css_folder/style3.css">
    <link rel="stylesheet" href="../css_folder/essay.css">
    <link rel="stylesheet" href="../css_folder/roadmap.css">
-   <link rel="stylesheet" href="../css_folder/translation.css">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
@@ -44,10 +43,41 @@ th {
 td {
   padding: 10px;
     color: black;
+    width: 25%; 
 }
 
 td:hover {
     color: black;
+}
+
+td audio {
+    flex: 1 1 100px;
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 600px) {
+    table, tbody, tr, td, th {
+        display: block;
+    }
+    
+    tr {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    
+    th {
+        grid-column: 1 / -1;
+        text-align: center;
+        background: #f0f8fa;
+    }
+    
+    td {
+      width: 100%; 
+        text-align: center;
+    }
 }
 
   @keyframes shakeX {
@@ -251,10 +281,11 @@ $(document).ready(function() {
 
 <table>
   <tr>
-    <td><img class="chibi" src="../images/chibis/keito.png"> Mm, you worked up quite the sweat. Good work.</td>
-    <td><img class="chibi" src="../images/chibis/keito.png"> Oh, that was excellent work, wasn’t it? Good job.</td>
-    <td><img class="chibi" src="../images/chibis/keito.png"> All done. How was that workout plan? If you’re feeling awfully worn out, make sure to get some rest.</td>
-    <td><img class="chibi" src="../images/chibis/keito.png"> I could tell you gave it your all. That fatigue should certainly lead to results.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png">
+    Mm, you worked up quite the sweat. Good work.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> <audio controls src="../images/entrain/trainerline-keito2.mp3"></audio><p>Oh, that was excellent work, wasn’t it? Good job.</p></td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> <audio controls src="../images/entrain/trainerline-keito3.mp3"></audio><p>All done. How was that workout plan? If you’re feeling awfully worn out, make sure to get some rest.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> <audio controls src="../images/entrain/trainerline-keito4.mp3"></audio><p>I could tell you gave it your all. That fatigue should certainly lead to results.</td>
   </tr>
   <tr>
     <td><img class="chibi" src="../images/chibis/kuro.png"> Whoa, you saw it through to the end. Keep trainin’ and aim for those big, strong muscles.
