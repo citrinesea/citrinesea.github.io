@@ -1,0 +1,272 @@
+<!--
+
+credits: isotope combination filtering tutorial by magnusthemes.tumblr.com
+
+-->
+
+<!doctype html>
+<html lang="en">
+ <head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>Ensemble Training Circuits | citrinesea</title>
+   <link rel="shortcut icon" href="../images/icons/site-logo-small.png"/>
+   <link rel="stylesheet" href="../css_folder/style3.css">
+   <link rel="stylesheet" href="../css_folder/essay.css">
+   <link rel="stylesheet" href="../css_folder/roadmap.css">
+   <link rel="stylesheet" href="../css_folder/translation.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+   <link href="https://fonts.googleapis.com/css2?family=Rock+3D&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.css">
+
+   <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/p0knose/FpAp5c11c/magnusthemes.combofilters.js"></script>
+
+<style>
+table {
+    margin: 0 auto;
+    border: 0px solid;
+    color: #035b75;
+
+    width: 80%;
+}
+
+th {
+    font-size: 16px;
+}
+
+td {
+  padding: 10px;
+    color: black;
+}
+
+td:hover {
+    color: black;
+}
+
+  @keyframes shakeX {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+  .chibi {position: relative; width: 30px; transition: 0.4s ease;}
+
+  .chibi:hover{
+    animation: shakeX 0.4s ease-in-out;
+  }
+
+  .item a {
+      background: none;
+      transition: 0.4s ease;
+  }
+
+  .item a:hover {
+      transform: scale(1.05);
+  }
+</style>
+
+<script>
+$(document).ready(function() {
+ var $container = $(".grid"); // the container with all the elements to filter inside
+ var filters = {}; //should be outside the scope of the filtering function
+ /* --- read the documentation on isotope.metafizzy.co for more options --- */
+ var $grid = $container.isotope({
+   itemSelector: ".item", // the elements to filter
+   percentPosition: true // put true if you use percentage widths, otherwise put false
+ });
+ $(".option-set a").click(function(e) {
+   var $this = $(this); // cache the clicked link
+   var filterAttr = "data-filter-value";
+   var filterValue = $this.attr(filterAttr); // cache the filter
+   var $optionSet = $this.parents(".option-set"); // cache the parent element
+   var group = $optionSet.attr("data-filter-group"); // cache the parent filter group
+   var filterGroup = filters[group];
+   if (!filterGroup) {
+     filterGroup = filters[group] = [];
+   }
+   var $selectAll = $optionSet.find('a['+filterAttr+'=""]'); // the 'select all' button in the current group
+   var activeClass = "selected", // the class for active links
+     exclClass = "exclusive"; // the class for exclusive groups
+ comboFiltering($this,filters,filterAttr,filterValue,$optionSet,group,$selectAll,activeClass,exclClass);
+   var comboFilter = getComboFilter(filters);
+   $grid.isotope({
+     filter: comboFilter
+   });
+   $this.toggleClass(activeClass);
+   e.preventDefault();
+ });
+});
+</script>
+
+</head>
+
+ <body>
+<header></header>
+
+   <main>
+
+        <div class="navigation">
+            <a href="https://citrinesea.github.io/">
+                <img src="../images/logo5.png" alt="Analyses.">
+            </a>
+        </div>
+
+        <div class="navbar">
+            <a href="../citrinesea_pages.html">citrinesea pages<i class="fa fa-arrow-left"></i></a>
+        </div>
+
+<div class="big-container">
+
+<div class="introduction-box">
+  <div class="intro1">
+    <h1>ensemble training exercises</h1>
+    A translated guide to help you see which exercises go with each target-area.
+  </div>
+</div>
+
+<div class="filterbox">
+
+<div class="filters">
+
+   <ul class="filter option-set exclusive" data-filter-group="charms">
+     <li><b>By Target-Area</b></li>
+     <li><a href="#" data-filter-value="" class="selected">All</a></li>
+     <li><a href="#" data-filter-value=".arms">Arms (うで)</a></li>
+     <li><a href="#" data-filter-value=".legs">Legs (あし)</a></li>
+     <li><a href="#" data-filter-value=".abs">Abs (腹筋)</a></li>
+     <li><a href="#" data-filter-value=".back">Back (背筋)</a></li>
+     <li><a href="#" data-filter-value=".trunk">Trunk (体幹)</a></li>
+     <li><a href="#" data-filter-value=".cardio">Cardio (有酸素運動)</a></li>
+   </ul>
+
+</div></div>
+
+<div class="grid">
+
+<div class="item cardio">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Knee Extensions</b></p></div>
+    <div class="detail-text"><p>ニーフレックス</p></div>
+    
+
+    <div class="item-story">
+    <img
+              src="../images/entrain/knee-flex.jpg"
+              alt="Tricep Kickback."></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p><b>Lie on your stomach, lift your knees off the floor, and tap your butt with your heels!</b> Get into the rhythm and burn fat!</p>
+    </div></span>
+
+    <img class="chibi" src="../images/chibis/midori.png">
+  
+  </div></div>
+
+<div class="item arms">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Kneeling Push-Ups</b></p></div>
+    <div class="detail-text"><p>ニーリングプッシュアップ</p></div>
+    
+
+    <div class="item-story">
+    <img
+              src="../images/entrain/kneeling-pushup.jpg"
+              alt="Tricep Kickback."></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p><b>Bend and straighten your arms while kneeling</b> to strengthen your arms and chest muscles!</p>
+    </div></span>
+
+    <img class="chibi" src="../images/chibis/midori.png">
+  
+  </div></div>
+
+  
+<div class="item cardio">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Side Lunge Propellers</b></p></div>
+    <div class="detail-text"><p>サイドランジプロペラ</p></div>
+    
+
+    <div class="item-story">
+    <img
+              src="../images/entrain/sidelunge-propeller.jpg"
+              alt="Tricep Kickback."></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p><b>Spread your arms out and twist your body so that you can touch your toes on the opposite side of your hands!</b> Get into the rhythm and burn fat!</p>
+    </div></span>
+
+   <img class="chibi" src="../images/chibis/tetora.png">
+  
+  </div></div>
+
+
+<div class="item arms">
+  <div class="recommendation-box">
+  
+  <div class="title">
+    <p><b>Tricep Extensions</b></p></div>
+    <div class="detail-text"><p>トライセプスキックバック</p></div>
+    
+
+    <div class="item-story">
+    <img
+              src="../images/entrain/kickback-tricep.jpg"
+              alt="Tricep Kickback."></div>
+    
+  <span style="width: 80%">
+    <div class="detail-text">
+    <p>Work out by <b>leaning forward and lifting your elbows! Focus on putting pressure on your upper arms!</b> Grab a weight or plastic bottle for a more effective workout!</p>
+    </div></span>
+
+   <img class="chibi" src="../images/chibis/tetora.png">
+  
+  </div></div>
+
+
+</div>
+
+<div class="introduction-box">
+  <div class="intro1">
+    <h1>post-workout words of encouragement</h1>
+    Words of encouragement from your favorite trainer!
+  </div>
+</div>
+
+<table>
+  <tr>
+    <td><img class="chibi" src="../images/chibis/keito.png"> Mm, you worked up quite the sweat. Good work.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> Oh, that was excellent work, wasn’t it? Good job.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> All done. How was that workout plan? If you’re feeling awfully worn out, make sure to get some rest.</td>
+    <td><img class="chibi" src="../images/chibis/keito.png"> I could tell you gave it your all. That fatigue should certainly lead to results.</td>
+  </tr>
+  <tr>
+    <td><img class="chibi" src="../images/chibis/kuro.png"> Whoa, you saw it through to the end. Keep trainin’ and aim for those big, strong muscles.
+</td>
+    <td><img class="chibi" src="../images/chibis/kuro.png"> Al-<i>righty</i>, good work. That was a great session, yeah?</td>
+    <td><img class="chibi" src="../images/chibis/kuro.png"> You gave it your best. That's great. I’ll devote myself to workin at it too, so I don't fall behind ya.</td>
+  </tr>
+</table>
+
+</div>
+
+</main>
+
+</body>
+</html>
