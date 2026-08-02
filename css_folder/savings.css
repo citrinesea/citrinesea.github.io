@@ -253,3 +253,32 @@ justify-content: flex-start;
       flex-direction: column;
   }
 }
+
+
+/* Dashboard Grid Layout */
+.dashboardsavings {
+    display: grid;
+    grid-template-areas: 
+        "character stories"
+        "savings stories";
+    grid-template-columns: 1fr 380px;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+    min-height: calc(100vh - 120px); /* Adjust based on header height */
+}
+
+/* Grid Area Assignments */
+.character-card {
+    grid-area: character;
+}
+
+.savings-card {
+    grid-area: savings;
+}
+
+.stories-card {
+    grid-area: stories;
+}
